@@ -6,6 +6,8 @@
 
 An unofficial, free Chinese helper for MapleStory Classic World on macOS. In development.
 
+觉得好用，就点一下本页右上方的 **☆ Star**（要先登录 GitHub，免费）。
+
 ## 系统要求
 
 | 项目 | 要求 |
