@@ -1,0 +1,1034 @@
+{
+ "_说明": "任务东西怎么弄到，自己的话写的；没核实的写明。没有游戏原文。drops 来自自己玩的记录；notes 的做法对照公开攻略（mapleclassic.wiki、maplestory-classic.com）的事实重写，没抄句子",
+ "items": {
+  "Pink Anthurium": {
+   "tip": "去 Ellinia 找 Shane，让他送你进忍耐之林（跳跳图），在里面采带小粉花的草，回 Sleepywood 交",
+   "npc": "Shane"
+  },
+  "Double-Rooted Red Ginseng": {
+   "tip": "也在忍耐之林（跳跳图），从 Ellinia 的 Shane 那里进；做完粉红花烛那个任务后进去不用再付钱",
+   "npc": "Shane"
+  },
+  "Pink Viola": {
+   "tip": "去 Sleepywood 找 Mysterious Statue 进忍耐之林深处（跳跳图）采，要 10 朵",
+   "npc": "Mysterious Statue"
+  },
+  "Shumi's Coin": {
+   "tip": "Kerning City 地铁站里的跳跳图 Construction Site B1"
+  },
+  "Shumi's Roll of Cash": {
+   "tip": "Kerning City 地铁站里的跳跳图 Construction Site B2"
+  },
+  "Shumi's Sack of Cash": {
+   "tip": "Kerning City 地铁站里的跳跳图 Construction Site B3"
+  },
+  "Rusty Screw": {
+   "tip": "打碎 Amherst 镇上的木箱"
+  },
+  "Old Wooden Board": {
+   "tip": "打碎 Amherst 镇上的木箱"
+  },
+  "Firewood": {
+   "tip": "打 Axe Stump 掉",
+   "mobs": [
+    "Axe Stump"
+   ]
+  },
+  "Stump's Teardrop": {
+   "tip": "打 Dark Axe Stump 掉，很少见",
+   "mobs": [
+    "Dark Axe Stump"
+   ]
+  },
+  "Seedling": {
+   "tip": "打 Ghost Stump 掉，在发掘地（Excavation Site）",
+   "mobs": [
+    "Ghost Stump"
+   ]
+  },
+  "Plant Fossil": {
+   "tip": "打 Green Mushroom 和 Axe Stump 掉",
+   "mobs": [
+    "Green Mushroom",
+    "Axe Stump"
+   ]
+  },
+  "Animal Fossil": {
+   "tip": "打 Green Mushroom 和 Axe Stump 掉",
+   "mobs": [
+    "Green Mushroom",
+    "Axe Stump"
+   ]
+  },
+  "Wooden Board": {
+   "tip": "打 Wooden Mask 掉，在发掘地",
+   "mobs": [
+    "Wooden Mask"
+   ]
+  },
+  "Slate": {
+   "tip": "打 Rocky Mask 掉，在发掘地",
+   "mobs": [
+    "Rocky Mask"
+   ]
+  },
+  "Skeledog's Bone": {
+   "tip": "打 Skeledog 掉",
+   "mobs": [
+    "Skeledog"
+   ]
+  },
+  "Dirty Bandage": {
+   "tip": "打 Mummydog 掉",
+   "mobs": [
+    "Mummydog"
+   ]
+  },
+  "Arwen's Glass Shoe": {
+   "tip": "打 Perion 附近的 Fire Boar 掉",
+   "mobs": [
+    "Fire Boar"
+   ]
+  },
+  "Cursed Doll": {
+   "tip": "打 Zombie Lupin 掉",
+   "mobs": [
+    "Zombie Lupin"
+   ]
+  },
+  "Medicine With Weird Vibes": {
+   "tip": "打 Wraith 掉",
+   "mobs": [
+    "Wraith"
+   ]
+  },
+  "Malady's Experimental Frog": {
+   "tip": "打 Malady 掉",
+   "mobs": [
+    "Malady"
+   ]
+  },
+  "Mushmom Spore": {
+   "tip": "打 Mushmom 掉，它是头目，要等刷新",
+   "mobs": [
+    "Mushmom"
+   ]
+  },
+  "Lupin's Banana": {
+   "tip": "打 Ellinia 西边的 Lupin 掉",
+   "mobs": [
+    "Lupin"
+   ]
+  },
+  "Raffle Petal": {
+   "tip": "打 Forgotten Hollow 东边的 Raffle 掉",
+   "mobs": [
+    "Raffle"
+   ]
+  },
+  "Luminous Magical Resonance": {
+   "tip": "打森林里的 Lupin 掉",
+   "mobs": [
+    "Lupin"
+   ]
+  },
+  "Glowing Mushroom Spore": {
+   "tip": "打 Glowshroom 掉",
+   "mobs": [
+    "Glowshroom"
+   ]
+  },
+  "Echopus Leg": {
+   "tip": "打 Echopus 掉",
+   "mobs": [
+    "Echopus"
+   ]
+  },
+  "Golden Stirge Wing": {
+   "tip": "打 Golden Stirge 掉",
+   "mobs": [
+    "Golden Stirge"
+   ]
+  },
+  "Wild Kargo Eye": {
+   "tip": "打蚂蚁洞深处的 Wild Kargo 掉",
+   "mobs": [
+    "Wild Kargo"
+   ]
+  },
+  "Rotten Mushmom Cap": {
+   "tip": "打 Rotten Mushmom 掉",
+   "mobs": [
+    "Rotten Mushmom"
+   ]
+  },
+  "Plant Sample": {
+   "tip": "Ellinia 一带的森林里收集，具体谁掉没有核实"
+  },
+  "Sparkling Glass Marble": {
+   "tip": "找 Henesys 的 Camila 拿",
+   "npc": "Camila"
+  },
+  "Sparkling Rock": {
+   "tip": "把材料交给 Sophia，她做好给你",
+   "npc": "Sophia"
+  },
+  "Weird Medicine": {
+   "tip": "把 Sparkling Rock 交给 Lith Harbor 的 Teo 就给",
+   "npc": "Teo"
+  },
+  "Red Cape": {
+   "tip": "把 Pia 欠的东西还给 Henesys 的 Rina，她就给",
+   "npc": "Rina"
+  },
+  "Ayan's Toy Sword": {
+   "tip": "Henesys 的 Bruce 给",
+   "npc": "Bruce"
+  },
+  "The Snail Legend": {
+   "tip": "Henesys 的 Pia 给",
+   "npc": "Pia"
+  },
+  "Old Gold Watch": {
+   "tip": "Henesys 的 Chief Stan 给",
+   "npc": "Chief Stan"
+  },
+  "Old Gladius": {
+   "tip": "Perion 的 Manji 给",
+   "npc": "Manji"
+  },
+  "Hero's Gladius": {
+   "tip": "把材料交给 Sleepywood 的 Chrishrama 就给",
+   "npc": "Chrishrama"
+  },
+  "Winston's Recommendation": {
+   "tip": "找 Winston 拿，他在 Perion 东边的岩石山",
+   "npc": "Winston"
+  },
+  "Fossil Box": {
+   "tip": "找 Winston 拿，他在 Perion 东边的岩石山",
+   "npc": "Winston"
+  },
+  "Flying Medicine": {
+   "tip": "Ellinia 的 Wing the Fairy 做好给你",
+   "npc": "Wing the Fairy"
+  },
+  "Rina's Unagi Special": {
+   "tip": "把材料交给 Henesys 的 Rina，她做好给你",
+   "npc": "Rina"
+  },
+  "Fresh Milk": {
+   "tip": "拿钻石跟 Ellinia 的 Rowen the Fairy 换",
+   "npc": "Rowen the Fairy"
+  },
+  "Secret Book": {
+   "tip": "喂饱 Ronnie（几个吃的都给完）他就给",
+   "npc": "Ronnie"
+  },
+  "Hearthkeeper's Journal": {
+   "tip": "Tamya 给",
+   "npc": "Tamya"
+  },
+  "Elda's Last Message": {
+   "tip": "Daniel the Scholar 读完给你",
+   "npc": "Daniel the Scholar"
+  },
+  "Myen's Ward Scrolls": {
+   "tip": "Whitney 给",
+   "npc": "Whitney"
+  },
+  "Glowspore Ward": {
+   "tip": "Myen 做好给你",
+   "npc": "Myen"
+  },
+  "Mrs. Ming Ming's Cooking Recipe": {
+   "tip": "Henesys 的 Mrs. Ming Ming 给",
+   "npc": "Mrs. Ming Ming"
+  },
+  "Bruce's Special Cake": {
+   "tip": "Henesys 的 Bruce 给",
+   "npc": "Bruce"
+  },
+  "Chief Stan's Hammer": {
+   "tip": "Henesys 的 Mrs. Ming Ming 给",
+   "npc": "Mrs. Ming Ming"
+  },
+  "Smooth Horn Marble": {
+   "tip": "Henesys 的 Camila 给",
+   "npc": "Camila"
+  },
+  "Repaired Wooden Bow": {
+   "tip": "把材料交给 Henesys 市场的 Vicious，修好给你",
+   "npc": "Vicious"
+  },
+  "Vitamin Gummy": {
+   "tip": "Lith Harbor 的 Mr. Goldstein 给",
+   "npc": "Mr. Goldstein"
+  },
+  "Special Stirge Phobia Cure": {
+   "tip": "材料交给 Kerning City 的 Mong from Kong，做好给你",
+   "npc": "Mong from Kong"
+  },
+  "A Gift for Nella": {
+   "tip": "Kerning City 的 Alex 给",
+   "npc": "Alex"
+  },
+  "A Gift for JM": {
+   "tip": "Kerning City 的 Alex 给",
+   "npc": "Alex"
+  },
+  "Deciphered Document": {
+   "tip": "The Hermit's Cabin 的 Slade 解读好给你",
+   "npc": "Slade"
+  },
+  "Garnet": {
+   "tip": "宝石，要自己去弄到，具体来源没有核实"
+  },
+  "Star Rock": {
+   "tip": "先去问 Perion 地牢入口的 Mike；哪里有还没有核实",
+   "npc": "Mike"
+  },
+  "Piece of Ice": {
+   "tip": "先去问 Perion 地牢入口的 Mike；哪里有还没有核实",
+   "npc": "Mike"
+  },
+  "Flaming Feather": {
+   "tip": "先去问 Perion 地牢入口的 Mike；哪里有还没有核实",
+   "npc": "Mike"
+  },
+  "The Proof of a Hero": {
+   "tip": "通过转职教官的考验后给"
+  }
+ },
+ "quests": {
+  "1013": "梯子、绳子：站到它前面按 ↑ 就会抓住",
+  "1014": "穿装备：打开背包（默认按 I），在 Equip 页双击那件",
+  "1015": "脱装备：打开装备窗口（默认按 E），双击身上那件",
+  "1016": "回血的办法：吃药和食物、站着不动慢慢回、坐椅子或长凳回得更快",
+  "1017": "转职：战士、飞侠、弓箭手、魔法师都按 10 级算",
+  "1018": "升级给的是 AP（能力点），自己加到力量、敏捷这些上面",
+  "1019": "离开新手岛：去 Southperry 坐船到金银岛（Victoria Island），在那里转职",
+  "10311": "正好 4 个人，都要 21 级以上，队长找 Kerning City 的 Lakelis；限时 30 分钟，要在指定频道（资料说 3～12，没核实）",
+  "500015": "正好 3 个人，11 级以上，找 Henesys Park 的 Tory；限时 15 分钟；活动到 12 月 9 日，要在指定频道（Windia 20～30、Zenith 7～10）"
+ },
+ "quiz": [
+  {
+   "npc": "Rain",
+   "ids": [
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+   ],
+   "keys": {
+    "1013": [
+     "ladder",
+     "rope",
+     "hang"
+    ],
+    "1014": [
+     "wear",
+     "put on",
+     "equip an item",
+     "double-click"
+    ],
+    "1015": [
+     "take off",
+     "unequip",
+     "wearing",
+     "equipped",
+     "equipment inventory"
+    ],
+    "1016": [
+     "hp",
+     "recover"
+    ],
+    "1017": [
+     "level 10",
+     "advance",
+     "advancement",
+     "job",
+     "warrior",
+     "thief",
+     "bowman",
+     "magician"
+    ],
+    "1018": [
+     "ap",
+     "stat",
+     "level up"
+    ],
+    "1019": [
+     "victoria",
+     "southperry",
+     "maple island"
+    ]
+   },
+   "answers": [
+    {
+     "ask": [
+      "ladder",
+      "rope"
+     ],
+     "pick": "up arrow"
+    },
+    {
+     "ask": [
+      "wear",
+      "double-clicking"
+     ],
+     "pick": "oh yes"
+    },
+    {
+     "ask": [
+      "window",
+      "check",
+      "wearing"
+     ],
+     "pick": "equipment inventory"
+    },
+    {
+     "ask": [
+      "not a",
+      "recover health"
+     ],
+     "pick": "sleep"
+    },
+    {
+     "ask": [
+      "level",
+      "job advancement as a magician"
+     ],
+     "pick": "level 10"
+    },
+    {
+     "ask": [
+      "with each level"
+     ],
+     "pick": "5 points"
+    },
+    {
+     "ask": [
+      "ride to victoria"
+     ],
+     "pick": "southperry"
+    }
+   ]
+  },
+  {
+   "npc": "Icarus",
+   "ids": [],
+   "keys": {},
+   "answers": [
+    {
+     "ask": [
+      "monsters",
+      "not see near"
+     ],
+     "pick": "wild kargo"
+    },
+    {
+     "ask": [
+      "which of these np",
+      "not see in k"
+     ],
+     "pick": "valen"
+    },
+    {
+     "ask": [
+      "go to by cab"
+     ],
+     "pick": "amherst"
+    }
+   ]
+  },
+  {
+   "npc": "Riel",
+   "ids": [],
+   "keys": {},
+   "answers": [
+    {
+     "ask": [
+      "monsters",
+      "seeing at florina"
+     ],
+     "pick": "croco"
+    }
+   ]
+  }
+ ],
+ "rides": [
+  {
+   "from": "Southperry",
+   "npc": "Shanks",
+   "to": "Lith Harbor",
+   "how": "坐船"
+  },
+  {
+   "from": "Lith Harbor",
+   "npc": "Pason",
+   "to": "Florina Beach",
+   "how": "坐船（没核实）"
+  },
+  {
+   "from": "Florina Beach",
+   "npc": "Pison",
+   "to": "Lith Harbor",
+   "how": "坐船（没核实）"
+  },
+  {
+   "from": "Ellinia",
+   "npc": "Shane",
+   "to": "The Forest of Patience <Step 1>",
+   "how": "送你去"
+  },
+  {
+   "from": "Sleepywood",
+   "npc": "Mysterious Statue",
+   "to": "The Deep Forest of Patience <Step 1>",
+   "how": "送你去"
+  },
+  {
+   "from": "Subway Ticketing Booth",
+   "npc": "The Ticket Gate",
+   "to": "B1 <Area 1>",
+   "how": "检票进站（要先买票，没核实）"
+  },
+  {
+   "from": "Subway Ticketing Booth",
+   "npc": "The Ticket Gate",
+   "to": "B2 <Area 1>",
+   "how": "检票进站（要先买票，没核实）"
+  },
+  {
+   "from": "Subway Ticketing Booth",
+   "npc": "The Ticket Gate",
+   "to": "B3 <Area 1>",
+   "how": "检票进站（要先买票，没核实）"
+  },
+  {
+   "from": "Kerning City",
+   "npc": "Lakelis",
+   "to": "1st Accompaniment <1st Stage>",
+   "how": "组队进去"
+  },
+  {
+   "from": "Henesys Park",
+   "npc": "Tory",
+   "to": "Primrose Hill",
+   "how": "组队进去（没核实）"
+  },
+  {
+   "from": "The Road to the Dungeon",
+   "npc": "Bowman Job Instructor",
+   "to": "Ant Tunnel For Bowman",
+   "how": "送你去试炼"
+  },
+  {
+   "from": "The Forest North of Ellinia",
+   "npc": "Magician Job Instructor",
+   "to": "Magician's Tree Dungeon",
+   "how": "送你去试炼"
+  },
+  {
+   "from": "Construction Site North of Kerning City",
+   "npc": "Thief Job Instructor",
+   "to": "Thief's Construction Site",
+   "how": "送你去试炼"
+  },
+  {
+   "from": "West Rocky Mountain IV",
+   "npc": "Warrior Job Instructor",
+   "to": "Warrior's Rocky Mountain",
+   "how": "送你去试炼"
+  },
+  {
+   "from": "Henesys",
+   "npc": "",
+   "to": "Free Market Entrance",
+   "how": ""
+  },
+  {
+   "from": "Perion",
+   "npc": "",
+   "to": "Free Market Entrance",
+   "how": ""
+  }
+ ],
+ "guides": [
+  {
+   "map": "1st Accompaniment <1st Stage>",
+   "title": "废弃都市 第 1 关",
+   "lines": [
+    "除队长外每人问 Cloto：答案是一个数，就打 Ligator 攒几张券，正好去换通行证，给队长",
+    "多一张都不行，多的丢掉再交",
+    "常见：能转职的等级 10 · 1 升 2 级的经验 15 · 魔法师智力 20 · 能组队的等级 21 · 弓箭手、飞侠敏捷 25 · 二转等级 30 · 战士力量 35"
+   ]
+  },
+  {
+   "map": "1st Accompaniment <2nd Stage>",
+   "title": "废弃都市 第 2 关 · 绳子",
+   "lines": [
+    "4 根绳子，3 个人各挂 1 根，队长问 Cloto 对不对",
+    "一次只换一个人。试过的点一下，剩几种一眼看到"
+   ],
+   "pick": {
+    "of": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "n": 3,
+    "note": "A、B 上面两根，C、D 下面两根"
+   }
+  },
+  {
+   "map": "1st Accompaniment <3rd Stage>",
+   "title": "废弃都市 第 3 关 · 猫平台",
+   "lines": [
+    "5 个平台，按猫的只数叫 1～5，3 个人各站 1 个，队长问 Cloto",
+    "一次只换一个人"
+   ],
+   "pick": {
+    "of": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "n": 3,
+    "note": "数字是平台上有几只猫"
+   }
+  },
+  {
+   "map": "1st Accompaniment <4th stage>",
+   "title": "废弃都市 第 4 关 · 木桶",
+   "lines": [
+    "6 个带号的木桶，3 个人各站 1 个，队长问 Cloto",
+    "一次只换一个人"
+   ],
+   "pick": {
+    "of": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "n": 3,
+    "note": "从上到下 1、2 3、4 5 6"
+   }
+  },
+  {
+   "map": "1st Accompaniment <Last Stage>",
+   "title": "废弃都市 最后一关",
+   "lines": [
+    "先打上面 3 只 Curse Eye，再打 6 只 Jr. Necki，最后 King Slime；每只掉 1 张，一共 10 张都给队长交 Cloto",
+    "漏一张就交不了。King Slime 砸地前跳一下"
+   ]
+  },
+  {
+   "map": "1st Accompaniment <Bonus>",
+   "title": "废弃都市 奖励关",
+   "lines": [
+    "打蘑菇捡东西，打完或想走就找 Nella"
+   ]
+  },
+  {
+   "map": "Primrose Hill",
+   "title": "月妙",
+   "lines": [
+    "先捡月见草种子，种到对的位置，种齐了月妙出来",
+    "然后护着月妙别让怪打，年糕一个都别漏：2 个人打怪，1 个人捡",
+    "种子颜色和位置、交给谁：没核实"
+   ]
+  }
+ ],
+ "drops": {
+  "Blue Snail Shell": [
+   "Right Around Lith Harbor",
+   "A Split Road"
+  ],
+  "Bronze Ore": [
+   "Excavation Site III"
+  ],
+  "Firewood": [
+   "Rocky Road II",
+   "East Rocky Mountain IV"
+  ],
+  "Green Mushroom Cap": [
+   "Tree Dungeon, Forest Up North V"
+  ],
+  "Iron Ore": [
+   "Thicket Around the Beach I"
+  ],
+  "Jr. Sentinel Shellpiece": [
+   "East Entrance to Mushroom Town"
+  ],
+  "Leaf": [
+   "The Tree That Grew II",
+   "East Rocky Mountain III"
+  ],
+  "Leather": [
+   "The Rain-Forest East of Henesys",
+   "Thicket Around the Beach II"
+  ],
+  "Milk Jug": [
+   "Excavation Site III",
+   "Caution Falling Down"
+  ],
+  "Mushroom Spore": [
+   "A Split Road"
+  ],
+  "Octopus Leg": [
+   "Caution Falling Down"
+  ],
+  "Opal Ore": [
+   "Right Around Lith Harbor"
+  ],
+  "Orange Mushroom Cap": [
+   "Caution Falling Down",
+   "Thicket Around the Beach II"
+  ],
+  "Pie Flour": [
+   "Excavation Site II",
+   "Excavation Site I"
+  ],
+  "Pig's Head": [
+   "The Rain-Forest East of Henesys"
+  ],
+  "Pumpkin Piece": [
+   "Excavation Site I",
+   "Excavation Site II"
+  ],
+  "Red Snail Shell": [
+   "Right Around Lith Harbor",
+   "Thicket Around the Beach I"
+  ],
+  "Seedling": [
+   "Excavation Site I",
+   "Excavation Site II"
+  ],
+  "Silver Ore": [
+   "Excavation Site II"
+  ],
+  "Slate": [
+   "Excavation Site III",
+   "Excavation Site II"
+  ],
+  "Slime Bubble": [
+   "The Forest North of Ellinia"
+  ],
+  "Snail Shell": [
+   "Thicket Around the Beach I",
+   "Snail Hunting Ground I"
+  ],
+  "Sniper Potion": [
+   "Excavation Site II"
+  ],
+  "Squishy Liquid": [
+   "Thicket Around the Beach I",
+   "The Forest North of Ellinia"
+  ],
+  "Stiff Feather": [
+   "The Rain-Forest East of Henesys",
+   "Excavation Site III"
+  ],
+  "Tree Branch": [
+   "Thicket Around the Beach I",
+   "East Rocky Mountain VI"
+  ],
+  "Wooden Board": [
+   "Excavation Site II",
+   "Excavation Site III"
+  ]
+ },
+ "notes": [
+  {
+   "keys": [
+    "Don Hwang's Request"
+   ],
+   "npc": "Nella",
+   "need": [
+    "Orange Mushroom Cap",
+    "Pig's Ribbon"
+   ],
+   "text": "接的时候要付 1,000 金币；帽子、丝带只从各自的怪掉",
+   "town": "Kerning City",
+   "title": "Don Hwang 的委托",
+   "parts": {
+    "start": "接的时候要付 1,000 金币",
+    "Orange Mushroom": "帽子只有橙蘑菇掉",
+    "Ribbon Pig": "丝带只有蝴蝶结猪掉"
+   }
+  },
+  {
+   "keys": [
+    "Andre's Request"
+   ],
+   "npc": "Nella",
+   "need": [
+    "Octopus Leg",
+    "Pure Water"
+   ],
+   "text": "章鱼腿边打边掉；纯净水要另外弄，在哪弄没核实",
+   "town": "Kerning City",
+   "title": "Andre 的委托",
+   "parts": {
+    "Octopus": "章鱼腿边打边掉",
+    "Pure Water": "在哪弄没核实"
+   }
+  },
+  {
+   "keys": [
+    "JM From tha Streetz"
+   ],
+   "npc": "JM From tha Streetz",
+   "need": [
+    "Leather",
+    "Pig"
+   ],
+   "text": "打蝴蝶结猪也会掉皮革",
+   "town": "Kerning City",
+   "title": "JM 在找伙伴",
+   "parts": {
+    "Pig": "打蝴蝶结猪也会掉皮革"
+   }
+  },
+  {
+   "keys": [
+    "I'm Bored 2"
+   ],
+   "npc": "Icarus",
+   "need": [
+    "Tree Branch",
+    "Squishy Liquid"
+   ],
+   "text": "树枝打木妖、液体打绿水灵，一趟打齐",
+   "town": "Kerning City",
+   "title": "好无聊 2",
+   "parts": {
+    "Stump": "树枝打木妖掉",
+    "Slime": "液体打绿水灵掉"
+   }
+  },
+  {
+   "keys": [
+    "Cutthroat Manny's Request"
+   ],
+   "npc": "Nella",
+   "need": [],
+   "text": "22 级能接",
+   "town": "Kerning City",
+   "title": "Manny 的委托",
+   "parts": {
+    "start": "22 级能接"
+   }
+  },
+  {
+   "keys": [
+    "Mrs. Ming Ming's First Worry"
+   ],
+   "npc": "Mrs. Ming Ming",
+   "need": [
+    "Slime Bubble",
+    "Pig's Ribbon"
+   ],
+   "text": "15 级能接",
+   "town": "Henesys",
+   "title": "明明夫人的烦恼 1",
+   "parts": {
+    "start": "15 级能接"
+   }
+  },
+  {
+   "keys": [
+    "Mrs. Ming Ming's Second Worry"
+   ],
+   "npc": "Estelle",
+   "need": [],
+   "text": "不用打怪，走过去说话就行",
+   "town": "The Field South of Ellinia",
+   "from": "Mrs. Ming Ming（Henesys）",
+   "title": "明明夫人的烦恼 2",
+   "parts": {
+    "end": "不用打怪，走过去说话就行"
+   }
+  },
+  {
+   "keys": [
+    "Delivering the Weird Medicine"
+   ],
+   "npc": "Maya",
+   "need": [],
+   "text": "不用打怪，药接任务时就给了",
+   "town": "Henesys Townstreet",
+   "from": "Teo（Lith Harbor）",
+   "title": "送奇怪的药",
+   "parts": {
+    "end": "不用打怪，药接任务时就给了"
+   }
+  },
+  {
+   "keys": [
+    "Phil's Call"
+   ],
+   "npc": "Phil",
+   "need": [],
+   "text": "8 级能接，到 10 级才能交",
+   "town": "Lith Harbor",
+   "title": "Phil 的召唤",
+   "parts": {
+    "start": "8 级能接",
+    "end": "到 10 级才能交"
+   }
+  },
+  {
+   "keys": [
+    "Olaf's First Training"
+   ],
+   "npc": "Olaf",
+   "need": [
+    "Stump",
+    "Slime"
+   ],
+   "text": "",
+   "town": "Lith Harbor",
+   "title": "Olaf 的第一次训练",
+   "parts": {}
+  },
+  {
+   "keys": [
+    "Olaf's Second Training"
+   ],
+   "npc": "Olaf",
+   "need": [
+    "Pig",
+    "Orange Mushroom"
+   ],
+   "text": "",
+   "town": "Lith Harbor",
+   "title": "Olaf 的第二次训练",
+   "parts": {}
+  },
+  {
+   "keys": [
+    "Teo's Weird Hobby"
+   ],
+   "npc": "Teo",
+   "need": [
+    "Slime",
+    "Slime Bubble"
+   ],
+   "text": "",
+   "town": "Lith Harbor",
+   "title": "Teo 的怪爱好",
+   "parts": {}
+  }
+ ],
+ "spots": {
+  "Pig": [
+   "The Pig Beach"
+  ],
+  "Leather": [
+   "The Pig Beach"
+  ],
+  "Ribbon Pig": [
+   "L Forest I"
+  ],
+  "Pig's Ribbon": [
+   "L Forest I"
+  ],
+  "Orange Mushroom": [
+   "Caution Falling Down"
+  ],
+  "Orange Mushroom Cap": [
+   "Caution Falling Down"
+  ],
+  "Octopus": [
+   "Caution Falling Down"
+  ],
+  "Octopus Leg": [
+   "Caution Falling Down"
+  ],
+  "Tree Branch": [
+   "The Tree That Grew II"
+  ],
+  "Stump": [
+   "The Tree That Grew II"
+  ],
+  "Squishy Liquid": [
+   "The Tree That Grew II",
+   "Henesys Hunting Ground III"
+  ],
+  "Slime": [
+   "The Tree That Grew II",
+   "Henesys Hunting Ground III"
+  ],
+  "Slime Bubble": [
+   "Henesys Hunting Ground III",
+   "The Tree That Grew II"
+  ],
+  "Evil Eye": [
+   "Ant Tunnel Park"
+  ],
+  "Evil Eye Tail": [
+   "Ant Tunnel Park"
+  ]
+ },
+ "from": {
+  "Pig's Ribbon": "Ribbon Pig",
+  "Orange Mushroom Cap": "Orange Mushroom",
+  "Leather": "Pig",
+  "Octopus Leg": "Octopus",
+  "Tree Branch": "Stump",
+  "Squishy Liquid": "Slime",
+  "Slime Bubble": "Slime",
+  "Evil Eye Tail": "Evil Eye"
+ },
+ "mobs": {
+  "Ribbon Pig": "蝴蝶结猪",
+  "Orange Mushroom": "橙蘑菇",
+  "Pig": "猪猪",
+  "Octopus": "章鱼怪",
+  "Stump": "木妖",
+  "Slime": "绿水灵",
+  "Evil Eye": "风独眼兽"
+ },
+ "ways": {
+  "L Forest I": [
+   "Kerning City",
+   "Kerning City Construction Site"
+  ],
+  "The Pig Beach": [
+   "Kerning City",
+   "Kerning City Construction Site",
+   "L Forest I",
+   "L Forest II",
+   "L Forest III",
+   "Kerning City Middle Forest I",
+   "3-Way Road-Split"
+  ],
+  "The Tree That Grew II": [
+   "Ellinia",
+   "The Field Up North of Ellinia",
+   "The Tree That Grew I"
+  ],
+  "Henesys Hunting Ground III": [
+   "Henesys",
+   "Henesys Hunting Ground I",
+   "Henesys Hunting Ground II"
+  ]
+ },
+ "hidden": [
+  "The Pig Beach",
+  "The Tree That Grew II",
+  "Henesys Hunting Ground III"
+ ]
+}

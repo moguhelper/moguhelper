@@ -1,0 +1,9 @@
+.build/
+build/
+signing/
+.DS_Store
+__pycache__/
+*.mogu
+private/
+CLAUDE.local.md
+dist/
