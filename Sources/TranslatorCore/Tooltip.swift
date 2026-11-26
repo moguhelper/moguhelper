@@ -531,7 +531,7 @@ extension ChatTranslator {
         let g = glossary
         let item = ItemDB.shared.title(d.title)
         let title: String
-        if let i = item { title = i.zh } else { title = await plain(d.title) }
+        if let i = item { title = i.zh } else if let z = ItemNames.zh(ItemNames.fix(d.title) ?? d.title) { title = z } else { title = await plain(ItemNames.fix(d.title) ?? d.title) }
         let flags = d.flags.map { g.tipFlags[$0] ?? g.tipFlags[$0.trimmingCharacters(in: .punctuationCharacters)] ?? $0 }
         let reqs = d.reqs.filter { $0.value != "0" }.map { "\(g.tipLabels[$0.label] ?? $0.label) \($0.value)" }
         let jobs = d.jobs.map { g.tipJobs[$0] ?? $0 }
@@ -592,7 +592,9 @@ extension ChatTranslator {
         else if ls.count > 1, ls[1].minY - first.maxY < (first.maxY - first.minY), let i = ItemDB.shared.title(doc.title + " " + clean(ls[1].text)) {
             titleZh = i.zh; item = i.entry; titleLines.append(ls[1])
         }
-        else { titleZh = await plain(doc.title) }
+        // 公开版：认错一两个字母的按名单纠正，有自己翻的中文名就用
+        else if let z = ItemNames.zh(ItemNames.fix(doc.title) ?? doc.title) { titleZh = z }
+        else { titleZh = await plain(ItemNames.fix(doc.title) ?? doc.title) }
         var tp = piece(.title, titleZh, titleLines)
         // 名称前面的小圆点被认成 “*”“•”：覆盖从名字开始，圆点露出来
         let raw = first.text.trimmingCharacters(in: .whitespaces)
@@ -663,7 +665,9 @@ extension ChatTranslator {
         }
         // 灰色的需求行（数值 0，识别不出来）：六行顺序固定，用两行已认出的需求算出行距，把缺的行补成灰色中文
         let known = reqRows.filter { $0.0 >= 0 }.sorted { $0.0 < $1.0 }
-        if let a = known.first, let b = known.last, b.0 > a.0 || boxHeightPt != nil {
+        // 只有装备才有六行需求（框里有职业那一行）；飞镖、药水只有“等级”一行，别凭空补出“力量：0”这些
+        let isEquip = out.contains { $0.kind == .jobs || ($0.kind == .gray && !$0.zh.contains("：")) }
+        if let a = known.first, let b = known.last, b.0 > a.0 || (boxHeightPt != nil && isEquip) {
             let pitch = b.0 > a.0 ? (b.1.minY - a.1.minY) / Double(b.0 - a.0) : 12 / boxHeightPt!
             let h = a.1.maxY - a.1.minY
             let have = Set(known.map(\.0))

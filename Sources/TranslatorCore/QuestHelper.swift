@@ -22,10 +22,13 @@ public enum QuestHelper {
             // “26 / 40 Charm of the Undead”；0 常认成 O
             if let r = t.range(of: "^[0-9Oo]+\\s*/\\s*[0-9]+\\s*", options: .regularExpression) {
                 let c = t[r].replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "[Oo]", with: "0", options: .regularExpression)
-                let name = t[r.upperBound...].trimmingCharacters(in: .whitespaces)
+                let name = ItemNames.clean(t[r.upperBound...].trimmingCharacters(in: .whitespaces))
                 if !out.isEmpty, name.count >= 3 { out[out.count - 1].objectives.append((name, c)) }
             } else if t.range(of: "^[^A-Za-z]*[0-9]", options: .regularExpression) != nil {
                 // 数字开头却拆不出数量：认花的目标行，别当成新任务（后面的目标会全挂到它下面）
+                continue
+            } else if t.hasSuffix(":") || t.contains(where: { $0.isLetter && !$0.isASCII }) {
+                // 头上聊天气泡的“Noona :”、认花的外文字母：不是任务名
                 continue
             } else if t.filter(\.isLetter).count >= 4 {
                 // 右边的关闭按钮可能连成 “Arcon's Blood? X”
@@ -56,15 +59,21 @@ public enum QuestHelper {
     /// 没有资料的任务：目标名一两个字母认花的（Orange Moshroom Cap、Tree Dranch）并到一个。要的数量一样才算
     public static func unify(_ read: [String: [Int]], with old: [String: [Int]]) -> (read: [String: [Int]], drop: [String]) {
         var out: [String: [Int]] = [:], drop: [String] = []
-        for (k, v) in read.sorted(by: { $0.key < $1.key }) {
+        // 以前记下的认花的名字（经验里有正确写法的）去掉
+        for o in old.keys { if let c = QuestTips.snap(o), c != o { drop.append(o) } }
+        for (k0, v) in read.sorted(by: { $0.key < $1.key }) {
+            let k = QuestTips.snap(k0) ?? k0
             var name = k
             for (o, w) in old.merging(out, uniquingKeysWith: { a, _ in a }).sorted(by: { $0.key < $1.key }) where o != k && w.count == 2 && v.count == 2 && w[1] == v[1] {
                 if let b = ItemDB.better(k, o) { if b == o { name = o } else { drop.append(o); out[o] = nil } }
-                else if old[o] != nil, old[k] == nil, k.count >= 8, Fuzzy.distance(Array(k.lowercased()), Array(o.lowercased()), limit: 1) <= 1 { name = o }
+                else if old[o] != nil, old[k] == nil, k.count >= 4, Fuzzy.distance(Array(k.lowercased()), Array(o.lowercased()), limit: 1) <= 1 { name = o }
             }
-            if out[name] == nil { out[name] = v }
+            // 同一个目标认成了两种写法：数大的那次读得准
+            if let w = out[name], w.count == 2, v.count == 2 { if v[0] > w[0] { out[name] = v } } else if out[name] == nil { out[name] = v }
         }
-        return (out, drop)
+        // 同一个名字可能在上面两处都被记成要删的
+        var seen = Set<String>()
+        return (out, drop.filter { seen.insert($0).inserted })
     }
 
     /// 半透明深灰底上的黑字，和背后颜色接近：提亮拉开对比

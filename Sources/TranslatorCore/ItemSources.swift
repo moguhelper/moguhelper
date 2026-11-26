@@ -30,6 +30,55 @@ public struct StageGuide: Decodable, Sendable, Equatable {
         return go(0, p.n).map { $0.joined() }
     }
 }
+/// 任务卡（知识包，docs/任务卡与知识包设计.md）：攻略整理出的事实。没有这个文件时就只用自己写的经验
+public enum QuestCards {
+    struct Step: Decodable { var `do`: String; var what: String?; var n: Int?; var from: [String]?; var `where`: [String]?; var huntAt: [String: [String]]? }
+    struct Place: Decodable { var npc: String?; var place: String? }
+    struct Card: Decodable {
+        var id: String, title: String, arc: String?, start: Place?, end: Place?, steps: [Step]
+        /// 换成经验的格式：说明是按事实拼的中文，标“攻略整理”
+        var note: QuestTips.Note {
+            let need = steps.filter { $0.do == "kill" || $0.do == "collect" }.compactMap(\.what)
+            var parts: [String: String] = [:]
+            for st in steps {
+                guard let w = st.what else { continue }
+                var t: [String] = []
+                if let f = st.from, !f.isEmpty { t.append((f.count == 1 ? "只有 " : "") + f.joined(separator: "、") + " 掉") }
+                let maps = st.where ?? st.huntAt?.values.first ?? []
+                if !maps.isEmpty { t.append("多在 " + maps.prefix(3).joined(separator: "、")) }
+                if !t.isEmpty { parts[w] = t.joined(separator: "；") + "（攻略整理，没核实）" }
+            }
+            let start = start?.npc.map { n in n + (start?.place.map { "（\($0)）" } ?? "") }
+            return QuestTips.Note(keys: [title], title: title, npc: end?.npc ?? self.start?.npc, town: end?.place ?? self.start?.place, from: start, need: need,
+                                  text: parts.isEmpty ? "" : parts.map { "\($0.key)：\($0.value)" }.sorted().joined(separator: "；"), parts: parts.isEmpty ? nil : parts)
+        }
+    }
+    struct Pack: Decodable { var cards: [Card] }
+    static let cards: [Card] = {
+        let u = ProcessInfo.processInfo.environment["CT_QUESTCARDS"].map { URL(fileURLWithPath: $0) } ?? GameData.url("QuestCards") ?? Bundle.main.url(forResource: "QuestCards", withExtension: "json")
+        return u.flatMap { try? Data(contentsOf: $0) }.flatMap { try? JSONDecoder().decode(Pack.self, from: $0) }?.cards ?? []
+    }()
+    public static var count: Int { cards.count }
+    /// 要打的怪、掉东西的怪
+    static let mobs: Set<String> = Set(cards.flatMap { c in c.steps.flatMap { ($0.do == "kill" ? [$0.what].compactMap { $0 } : []) + ($0.from ?? []) + Array(($0.huntAt ?? [:]).keys) } })
+    static let items: Set<String> = Set(cards.flatMap { $0.steps.filter { $0.do == "collect" }.compactMap(\.what) })
+    /// 东西 → 谁掉（只有一种怪掉的才算）
+    static let from: [String: String] = {
+        var out: [String: String] = [:]
+        for st in cards.flatMap(\.steps) where st.do == "collect" { if let w = st.what, let f = st.from, f.count >= 1 { out[w] = out[w] ?? f[0] } }
+        return out
+    }()
+    /// 怪、东西 → 去哪几张图
+    static let spots: [String: [String]] = {
+        var out: [String: [String]] = [:]
+        for st in cards.flatMap(\.steps) {
+            if st.do == "kill", let w = st.what, let m = st.where { out[w] = out[w] ?? m }
+            for (mob, m) in st.huntAt ?? [:] { out[mob] = out[mob] ?? m; if let w = st.what { out[w] = out[w] ?? m } }
+        }
+        return out
+    }()
+}
+
 public enum QuestTips {
     private struct File: Decodable { var items: [String: QuestTip], quests: [String: String]?, quiz: [Quiz]?, rides: [Ride]?, guides: [StageGuide]?; var drops: [String: [String]]?; var notes: [Note]?; var spots: [String: [String]]?; var from: [String: String]?; var mobs: [String: String]?; var ways: [String: [String]]?; var hidden: [String]? }
     struct Note: Decodable { var keys: [String], title: String?, npc: String?, town: String?, from: String?, need: [String], text: String, parts: [String: String]? }
@@ -39,11 +88,11 @@ public enum QuestTips {
     public static func note(text: String, items: [String]) -> String? { match(text, items)?.text }
     /// 这样东西、这种怪去哪：攻略里的在前，再是自己记录里捡到过的
     public static func spots(_ item: String) -> [String] {
-        let a = file?.spots?[item] ?? []
+        let a = (file?.spots?[item] ?? []) + (QuestCards.spots[item] ?? []).filter { !(file?.spots?[item] ?? []).contains($0) }
         return a + places(item).filter { !a.contains($0) }
     }
     /// 这样东西打谁掉；是怪就是它自己
-    public static func mob(_ n: String) -> String? { file?.mobs?[n] != nil ? n : file?.from?[n] }
+    public static func mob(_ n: String) -> String? { file?.mobs?[n] != nil || QuestCards.mobs.contains(n) ? n : fromAll[n] }
     /// 这一步的经验：start 接、end 交，其余是怪名、东西名
     public static func part(_ k: String, text: String, items: [String]) -> String? { match(text, items)?.parts?[k] }
     /// 去这张图一路经过哪些图（公开攻略对照过的）
@@ -51,8 +100,23 @@ public enum QuestTips {
     /// 进这张图的门是隐藏门
     public static func hiddenDoor(_ place: String) -> Bool { file?.hidden?.contains(place) ?? false }
     /// 这种怪掉的（经验里写过的）
-    public static func drops(of m: String) -> [String] { (file?.from ?? [:]).filter { $0.value == m }.keys.sorted() }
+    public static func drops(of m: String) -> [String] { fromAll.filter { $0.value == m }.keys.sorted() }
+    /// 东西 → 谁掉：自己写的优先，再用任务卡的
+    static let fromAll: [String: String] = (file?.from ?? [:]).merging(QuestCards.from) { a, _ in a }
     public static func mobZh(_ n: String) -> String? { file?.mobs?[n] }
+    /// 经验里写过的怪（英文名）
+    public static var mobNames: [String] { Set((file?.mobs ?? [:]).keys).union(QuestCards.mobs).sorted() }
+    /// 认花一两个字母的怪名、东西名（Ribber Pig）→ 经验里写过的正确写法。没写过、差太多返回 nil
+    public static func snap(_ n: String) -> String? {
+        let names = Set((file?.mobs ?? [:]).keys).union(fromAll.keys).union(fromAll.values).union(QuestCards.mobs).union(QuestCards.items)
+        if names.contains(n) { return n }
+        let k = Array(n.lowercased())
+        guard k.count >= 4 else { return nil }
+        // 短名字（Leat → Leaf）只容一个字母，长的容两个
+        let lim = k.count >= 8 ? 2 : 1
+        let near = names.filter { abs($0.count - k.count) <= lim && Fuzzy.distance(k, Array($0.lowercased()), limit: lim) <= lim }
+        return near.count == 1 ? near.first : nil
+    }
     public static func title(text: String, items: [String]) -> String? { match(text, items)?.title }
     /// 交任务的 NPC 在哪
     public static func town(text: String, items: [String]) -> String? { match(text, items)?.town }
@@ -60,12 +124,33 @@ public enum QuestTips {
     public static func from(text: String, items: [String]) -> String? {
         match(text, items).flatMap { n in n.from ?? n.npc.map { $0 + (n.town.map { "（\($0)）" } ?? "") } }
     }
+    /// 日志用：对上的是哪条经验（自己写的 / 任务卡），没对上返回 nil
+    public static func matched(text: String, items: [String]) -> String? {
+        guard let n = match(text, items) else { return nil }
+        return (n.keys.first ?? "?") + ((file?.notes ?? []).contains { $0.keys == n.keys } ? "（自己写的经验）" : "（任务卡）")
+    }
     /// 这个任务交给谁
     public static func npc(text: String, items: [String]) -> String? { match(text, items)?.npc }
+    /// 自己写的经验在前，任务卡补上没写过的任务
+    static let notes: [Note] = {
+        let own = file?.notes ?? []
+        let have = Set(own.flatMap(\.keys))
+        return own + QuestCards.cards.filter { !have.contains($0.title) }.map(\.note)
+    }()
     private static func match(_ text: String, _ items: [String]) -> Note? {
-        let l = file?.notes ?? []
-        if let n = l.first(where: { $0.keys.contains { text.localizedCaseInsensitiveContains($0) } }) { return n }
-        return l.first { !$0.need.isEmpty && $0.need.count >= 2 && $0.need.allSatisfy(items.contains) }
+        let l = notes
+        // 任务名出现在正文里（任务窗口、追踪框的小标题）：几张都对上时取名字最长的、再看要的东西
+        let hit = l.filter { $0.keys.contains { text.localizedCaseInsensitiveContains($0) } }
+        if hit.count > 1 {
+            let best = hit.max { a, b in
+                (a.keys.map(\.count).max() ?? 0, a.need.filter(items.contains).count) < (b.keys.map(\.count).max() ?? 0, b.need.filter(items.contains).count)
+            }
+            return best
+        }
+        if let n = hit.first { return n }
+        // 只认要的东西：两样以上全对上、而且只有一张
+        let byNeed = l.filter { $0.need.count >= 2 && $0.need.allSatisfy(items.contains) }
+        return byNeed.count == 1 ? byNeed[0] : byNeed.first { n in (file?.notes ?? []).contains { $0.keys == n.keys } }
     }
     /// 这张图（组队任务的一关）怎么过
     public static func guide(map: String) -> StageGuide? { file?.guides?.first { $0.map == map } }
@@ -88,7 +173,7 @@ public enum QuestTips {
     }
     /// 出题的 NPC（名字允许认错一个字母）。是就返回这一题的要点；对不上是哪题时给全部
     public static func quiz(npc: [String], body: String) -> [String]? {
-        guard let q = file?.quiz?.first(where: { z in npc.contains { $0.trimmingCharacters(in: .whitespaces).caseInsensitiveCompare(z.npc) == .orderedSame || Fuzzy.similar($0, z.npc, tolerance: 0.2) } }) else { return nil }
+        guard let q = file?.quiz?.first(where: { z in npc.contains { $0.trimmingCharacters(in: .whitespaces).caseInsensitiveCompare(z.npc) == .orderedSame || z.npc.count >= 6 && abs($0.count - z.npc.count) <= 2 && Fuzzy.similar($0, z.npc, tolerance: 0.2) } }) else { return nil }
         // 没写要点的 NPC：平时也有菜单，只有问到认得的题才算考题
         if q.ids.isEmpty {
             let k = body.lowercased().filter { $0.isLetter || $0.isNumber }
@@ -97,7 +182,9 @@ public enum QuestTips {
         let b = body.lowercased()
         func hits(_ id: Int) -> Int { (q.keys[String(id)] ?? []).filter { k in b.range(of: "\\b" + NSRegularExpression.escapedPattern(for: k) + "\\b", options: .regularExpression) != nil }.count }
         let best = q.ids.map(hits).max() ?? 0
-        return (best > 0 ? q.ids.filter { hits($0) == best } : q.ids).compactMap(quest)
+        // 题目里一个关键词都没对上：不是在出题（可能是认错了 NPC），不列要点
+        guard best > 0 else { return nil }
+        return q.ids.filter { hits($0) == best }.compactMap(quest)
     }
     private static let file: File? = {
         let u = Bundle.main.url(forResource: "QuestTips", withExtension: "json") ?? Bundle.module.url(forResource: "QuestTips", withExtension: "json")

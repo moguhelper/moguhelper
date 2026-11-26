@@ -22,7 +22,9 @@ cp .build/release/ChatTranslator "$APP/Contents/MacOS/ChatTranslator"
 cp .build/release/ocr-helper "$APP/Contents/MacOS/ocr-helper"
 # 发给别人的：去掉调试信息（里面有本机文件夹路径）
 if [ "$MODE" = dist ]; then strip -S -x "$APP/Contents/MacOS/ChatTranslator" "$APP/Contents/MacOS/ocr-helper" 2>/dev/null; fi
-for f in Glossary Quests QuestNames Items Maps ItemSources QuestTips Glyphs; do cp Sources/TranslatorCore/$f.json "$APP/Contents/Resources/$f.json"; done
+for f in Glossary Slang Quests QuestNames Items Maps ItemSources QuestTips Glyphs; do cp Sources/TranslatorCore/$f.json "$APP/Contents/Resources/$f.json"; done
+# 随程序附带的攻略资料（CC BY 4.0，署名见 Packs/资料来源与署名.md）
+for f in QuestCards.json ItemNames.json GuideMaps.mogu 资料来源与署名.md; do cp "Packs/$f" "$APP/Contents/Resources/$f"; done
 if [ "$MODE" = personal ] && [ -d private/data ]; then python3 -I private/overlay.py "$APP/Contents/Resources"; fi
 # 程序图标（由 tools/make_icon.swift 生成）
 cp Assets/Mushroom.png "$APP/Contents/Resources/Mushroom.png"
@@ -70,7 +72,9 @@ if [ "$MODE" != personal ]; then
     n=$(basename "$f")
     case "$n" in
       Mushroom.png|AppIcon.icns) cmp -s "$f" "Assets/$n" || { echo "❌ $n 不对"; exit 1; } ;;
-      Glossary.json|Quests.json|QuestNames.json|Items.json|Maps.json|ItemSources.json|QuestTips.json|Glyphs.json)
+      QuestCards.json|ItemNames.json|GuideMaps.mogu|资料来源与署名.md)
+        cmp -s "$f" "Packs/$n" || { echo "❌ $n 不是仓库里的"; exit 1; } ;;
+      Glossary.json|Slang.json|Quests.json|QuestNames.json|Items.json|Maps.json|ItemSources.json|QuestTips.json|Glyphs.json)
         cmp -s "$f" "Sources/TranslatorCore/$n" || { echo "❌ $n 不是仓库里的"; exit 1; } ;;
       *) echo "❌ 公开版里不该有 $n"; exit 1 ;;
     esac

@@ -25,6 +25,94 @@ final class MapCollectModel: ObservableObject {
         npcs = (try? Data(contentsOf: npcsURL)).flatMap { try? JSONDecoder().decode([MetNpc].self, from: $0) } ?? []
         publishLinks()
         met = (try? Data(contentsOf: metURL)).flatMap { try? JSONDecoder().decode(NpcBook.self, from: $0) } ?? NpcBook()
+        mobs = (try? Data(contentsOf: mobsURL)).flatMap { try? JSONDecoder().decode(MobSeen.self, from: $0) } ?? MobSeen()
+    }
+
+    /// 导入资料里的图（认花的标题按它纠正）
+    func setReference(_ l: [(String, (String, String))]) {
+        guard l.count != collector.reference.count else { return }
+        var d: [String: (street: String, name: String)] = [:]
+        for (k, v) in l { d[k] = (v.0, v.1) }
+        collector.reference = d
+        trace("collect: 资料里的图 \(d.count) 张，认花的标题按它纠正")
+    }
+    private var titleAt = Date(), titleReads = 0
+    // MARK: 室内图（小地图收起，只有一行标题）
+    private var oneLineSeen: (String, Date)?
+    /// known：自己走过的、导入资料里有的街道（防止认花的标题当成新图）
+    func titleLine(_ lines: [String], known: Set<String>) {
+        guard NavDB.shared.maps.isEmpty, let t = lines.lazy.compactMap({ MapCollector.oneLine($0) }).first, known.contains(MapCollector.streetKey(t.street)) else { return }
+        let id = t.street + ":" + t.name
+        // 连着两次读到一样的才算
+        guard let o = oneLineSeen, o.0 == id, Date().timeIntervalSince(o.1) < 8 else { oneLineSeen = (id, Date()); return }
+        if collector.enterTitle(street: t.street, name: t.name) {
+            enteredAt = Date(); meFx = nil; maps = collector.maps; current = collector.current
+            if let d = try? JSONEncoder().encode(maps) { try? d.write(to: url, options: .atomic) }
+            trace("collect: 室内图（一行标题）在 \(t.name)"); onChange?(); onMe?()
+        }
+    }
+
+    // MARK: 每张图有哪些怪（没有怪物资料时）
+    @Published private(set) var mobs = MobSeen()
+    private var mobsURL: URL { url.deletingLastPathComponent().appendingPathComponent("mymobs.json") }
+    private var mobAt = Date.distantPast
+    private func saveMobs() { if let d = try? JSONEncoder().encode(mobs) { try? d.write(to: mobsURL, options: .atomic) } }
+    /// 任务追踪框里某个目标在这张图涨了 n：是怪就记“这张图打了 n 只”；是东西、知道谁掉的，就记“这张图有那种怪”
+    func gained(_ name: String, _ n: Int) {
+        guard NavDB.shared.maps.isEmpty, let key = steadyMap else { return }
+        let tip = QuestTips.mob(name)
+        let mob: String, kills: Int
+        if tip == name || tip == nil && mobs.known(name) != nil { mob = name; kills = n }
+        else if let m = tip { mob = m; kills = 0 }
+        else { return }
+        mobs.killed(mob, map: key, n: kills); saveMobs(); onChange?()
+        trace("collect: \(key) 有 \(mob)（追踪框 \(name) +\(n)）")
+    }
+    /// 打怪时怪头上的 “Lv. 5 Stump”
+    private var mobLogAt = Date.distantPast, mobDumps = 0
+    /// 自己宠物的名字（学到的）
+    private var pets = Set(UserDefaults.standard.stringArray(forKey: "petNames") ?? []), petSeen: [String: Int] = [:]
+    private func mobPass(_ img: CGImage, key: String, _ client: OCRClient) async {
+        // 自己的名牌那一块抹掉（怪贴着自己时会读成一行）
+        var skip: CGRect?, mine: CGPoint?
+        if let shape = TagShape.make(playerName()), let c = await Task.detached(operation: { shape.spot(img, scale: 2) }).value {
+            let hw = Double(shape.w + 10) , hh = Double(shape.h + 8)
+            mine = c
+            skip = CGRect(x: Double(c.x) * Double(img.width) - hw, y: Double(c.y) * Double(img.height) - hh, width: hw * 2, height: hh * 2)
+        }
+        let cut = skip
+        let w = await Task.detached(operation: { MobTags.isolate(img, skip: cut) }).value
+        guard let w else { if Date().timeIntervalSince(mobLogAt) > 30 { mobLogAt = Date(); trace("collect: 怪物名牌 白字太少或太多，没识别") }; return }
+        guard let lines = await withTimeout(3, { client.recognize(w) }), collector.current == key else { return }
+        // 调试：CT_DEBUG_DUMP 时，读到 “Lv” 的那几帧存下截图和挑出的白字（各留 10 张轮换）
+        if let dir = ProcessInfo.processInfo.environment["CT_DEBUG_DUMP"], lines.contains(where: { $0.text.range(of: "^L[vV]?[.,:]? ?[0-9]", options: .regularExpression) != nil }) {
+            for (n, im) in [("mob-raw", img), ("mob-white", w)] {
+                if let d = CGImageDestinationCreateWithURL(URL(fileURLWithPath: dir + "/\(n)-\(mobDumps % 10).png") as CFURL, "public.png" as CFString, 1, nil) { CGImageDestinationAddImage(d, im, nil); CGImageDestinationFinalize(d) }
+            }
+            mobDumps += 1
+            trace("collect: 怪物名牌 存图 \(mobDumps) \(lines.map(\.text).filter { $0.range(of: "^L[vV]?[.,:]? ?[0-9]", options: .regularExpression) != nil })")
+        }
+        // 只记像名牌的几行（带 Lv 或数字的），不记别的
+        if Date().timeIntervalSince(mobLogAt) > 10 {
+            mobLogAt = Date()
+            let l = lines.map(\.text).filter { $0.count <= 30 && $0.range(of: "L[vV]|[0-9]", options: .regularExpression) != nil }
+            trace("collect: 怪物名牌 识别 \(lines.count) 行，像的 \(l.prefix(6))")
+        }
+        var changed = false
+        let known = Array(Set(mobs.maps.values.flatMap(\.keys)))
+        // 宠物名：老在自己名牌旁边、不带 Lv 的白字名牌，看到 4 次就当宠物名（和自己的名牌叠在一起时找不到自己，不学）
+        if let c = mine {
+            for l in lines where MobTags.parse(l.text) == nil {
+                let t = l.text.trimmingCharacters(in: .whitespaces)
+                guard NpcTags.name(t) != nil, t != playerName(), !pets.contains(t) else { continue }
+                let dx = ((l.minX + l.maxX) / 2 - Double(c.x)) * Double(img.width) / 2, dy = ((l.minY + l.maxY) / 2 - Double(c.y)) * Double(img.height) / 2
+                guard abs(dx) < 160, abs(dy) < 40 else { continue }
+                petSeen[t, default: 0] += 1
+                if petSeen[t]! >= 4 { pets.insert(t); UserDefaults.standard.set(pets.sorted(), forKey: "petNames"); trace("collect: 认成宠物名 \(t)（不当怪）") }
+            }
+        }
+        for t in MobTags.read(lines, known: known, skip: [playerName()] + pets.sorted()) where mobs.saw(t.name, lv: t.lv, map: key, at: Date(), sure: t.sure) { changed = true; trace("collect: \(key) 有 Lv.\(t.lv) \(t.name)") }
+        if changed { saveMobs(); onChange?() }
     }
 
     // MARK: 没有地图资料时带路
@@ -46,15 +134,21 @@ final class MapCollectModel: ObservableObject {
         guard NavDB.shared.maps.isEmpty, let n = NpcTags.name(raw), let k = steadyMap, let x = meFx, Date().timeIntervalSince(meAt) < 5 else { return }
         if met.see(n, map: k, fx: x, ax: spot?.x, ay: spot?.y, at: Date(), talk: true) { trace("collect: 说过话的 NPC \(n) 在 \(k) \(x)"); saveMet() }
     }
-    /// 每 4 秒看一眼画面里的黄字名牌
+    /// 每 4 秒看一眼画面里的黄字名牌（NPC）；每 2.5 秒看一眼怪物名牌
     private func tagTick(_ locator: GameWindowLocator, _ g: GameWindowInfo, _ client: OCRClient) async {
-        guard NavDB.shared.maps.isEmpty, !covered(), Date().timeIntervalSince(tagAt) > 4, let key = steadyMap, let me = meFx, viewW > 20, Date().timeIntervalSince(meAt) < 1.5 else { return }
-        tagAt = Date()
+        guard NavDB.shared.maps.isEmpty, !covered(), let key = steadyMap else { return }
+        let npcDue = Date().timeIntervalSince(tagAt) > 4 && meFx != nil && viewW > 20 && Date().timeIntervalSince(meAt) < 1.5
+        let mobDue = Date().timeIntervalSince(mobAt) > 2.5
+        guard npcDue || mobDue else { return }
         let win = g.frameTopLeft.size, name = playerName()
         // 标题栏下面到聊天框上面；左上角小地图、右上角任务追踪里的黄字不是名牌，靠名字格式和两次位置一样挡掉
         let r = CGRect(x: 0, y: 28, width: win.width, height: win.height - 28 - 150)
+        guard r.height > 200, let img = await withTimeout(2, { await locator.capture(g, rect: r, outputScale: 2) }) else { return }
+        if mobDue { mobAt = Date(); await mobPass(img, key: key, client) }
+        guard npcDue, let me = meFx, collector.current == key else { return }
+        tagAt = Date()
         let here = spot
-        guard r.height > 200, let shape = TagShape.make(name), let img = await withTimeout(2, { await locator.capture(g, rect: r, outputScale: 2) }),
+        guard let shape = TagShape.make(name),
               let mine = await Task.detached(operation: { shape.spot(img, scale: 2) }).value,
               let y = await Task.detached(operation: { NpcTags.isolate(img) }).value,
               let lines = await withTimeout(3, { client.recognize(y) }), collector.current == key else { return }
@@ -194,7 +288,7 @@ final class MapCollectModel: ObservableObject {
         let now = Date()
         if collector.needsTitle(s) {
             if s.titlePrint != ocrPrint {
-                ocrPrint = s.titlePrint; ocrTries = 0
+                ocrPrint = s.titlePrint; ocrTries = 0; titleAt = now; titleReads = 0
                 // 小地图窗口的宽度跟着地名长短变：标题变了先重新量，按旧宽度截会少半截（“Tree Dungeon, Forest Up”），量出来不一样就等下一帧
                 lastFind = Date()
                 guard let small = await withTimeout(2, { await locator.capture(g, rect: win, outputScale: 1) }) else { ocrPrint = 0; return }
@@ -206,13 +300,20 @@ final class MapCollectModel: ObservableObject {
             let m = NSEvent.mouseLocation, top = NSScreen.screens.first?.frame.maxY ?? 0
             let onTitle = CGRect(x: g.frameTopLeft.minX + b.minX, y: g.frameTopLeft.minY + b.minY, width: b.width, height: 72).insetBy(dx: -30, dy: -30).contains(CGPoint(x: m.x, y: top - m.y))
             if !onTitle, ocrTries < 6, let c = MiniMap.titleImage(img, rect: title) {
-                ocrTries += 1
-                if let l = await withTimeout(3, { client.recognize(c) }), let t = MapCollector.parseTitle(l) { collector.setTitle(s.titlePrint, street: t.street, name: t.name) }
+                // 子进程忙（在读经验、金币）返回空：不算一次，下一下再试
+                if let l = await withTimeout(3, { client.recognize(c) }) {
+                    ocrTries += 1; titleReads += 1
+                    if let t = MapCollector.parseTitle(l) { collector.setTitle(s.titlePrint, street: t.street, name: t.name) }
+                    else if ocrTries == 6 { trace("collect: 标题认了 6 次没认出 \(l.map(\.text))") }
+                }
             }
         }
         let was = collector.current
         let fed = collector.feed(s, at: now)
-        if collector.current != was { enteredAt = now; meFx = nil }
+        if collector.current != was {
+            enteredAt = now; meFx = nil
+            trace(String(format: "collect: 换图 → %@，看到新标题后 %.1f 秒认出（读了 %d 次）", collector.current ?? "?", now.timeIntervalSince(titleAt), titleReads))
+        }
         if let m = s.me, s.view.width > 0, !collector.needsTitle(s) { meFx = Double(m.x / s.view.width); viewW = Double(s.view.width); meAt = now } else if now.timeIntervalSince(meAt) > 3 { meFx = nil }
         if NavDB.shared.maps.isEmpty { current = collector.current; onMe?() }
         if let k = collector.current, !collector.needsTitle(s) {
@@ -267,7 +368,7 @@ struct HuntView: View {
                     }
                     ForEach(v.drops.sorted { ($0.value, $1.key) > ($1.value, $0.key) }, id: \.key) { n, c in
                         let s = exp.hunt.sources(of: n, mobs: mobs)
-                        HStack(spacing: 6) { ItemIconView(name: n, fallback: " ").frame(width: 34, height: 32); Text("\(ItemDB.shared.exact(n)?.zh ?? n) ×\(c)" + (s.isEmpty ? "" : s.count == 1 ? "　可能是 \(NavDB.shared.mobName(s[0])) 掉的" : "　" + s.prefix(4).map { NavDB.shared.mobName($0) }.joined(separator: "、") + " 之一")).font(.system(size: 10)).foregroundStyle(.secondary) }.padding(.leading, 14)
+                        HStack(spacing: 6) { ItemIconView(name: n, fallback: " ").frame(width: 34, height: 32); Text("\(ItemDB.shared.exact(n)?.zh ?? ItemNames.zh(n) ?? n) ×\(c)" + (s.isEmpty ? "" : s.count == 1 ? "　可能是 \(NavDB.shared.mobName(s[0])) 掉的" : "　" + s.prefix(4).map { NavDB.shared.mobName($0) }.joined(separator: "、") + " 之一")).font(.system(size: 10)).foregroundStyle(.secondary) }.padding(.leading, 14)
                     }
                 }
             }

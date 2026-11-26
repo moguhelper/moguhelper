@@ -69,11 +69,13 @@ public enum WalkNav {
         public var next: String? = nil
         public init(label: String, map: String, fx: Double? = nil, ax: Double? = nil, ay: Double? = nil) { self.label = label; self.map = map; self.fx = fx; self.ax = ax; self.ay = ay }
         public var isNpc: Bool { label.hasPrefix("找 ") }
-        public var isItem: Bool { label.hasPrefix("捡 ") }
+        /// 去捡东西、去打怪（都是“还差东西”的那一步）
+        public var isItem: Bool { label.hasPrefix("捡 ") || label.hasPrefix("打 ") }
         func same(_ o: Goal) -> Bool { label == o.label && map == o.map }
     }
     /// 任务文字里提到的、自己见过的 NPC 和地图；再加上捡到过的要交的东西
-    public static func goals(text: String, items: [String], pack: MoguPack) -> [Goal] {
+    /// from：现在在哪张图（去打怪时挑近的）
+    public static func goals(text: String, items: [String], pack: MoguPack, from: String? = nil) -> [Goal] {
         var out: [Goal] = []
         func has(_ w: String) -> Bool {
             text.range(of: "(?<![A-Za-z])" + NSRegularExpression.escapedPattern(for: w) + "(?![A-Za-z])", options: .regularExpression) != nil
@@ -81,16 +83,36 @@ public enum WalkNav {
         let names = Set((pack.npcs ?? [:]).values.flatMap(\.keys))
         // “Nella” 已经算在 “Nella the Elder” 里的不重复
         for n in names.sorted(by: { ($0.count, $1) > ($1.count, $0) }) where has(n) && !out.contains(where: { $0.label.hasPrefix("找 ") && $0.label.contains(n) }) {
-            for (k, d) in (pack.npcs ?? [:]).sorted(by: { $0.key < $1.key }) { if let x = d[n], let m = pack.maps[k] { out.append(Goal(label: "找 \(n)（\(m.name)）", map: k, fx: x.first, ax: x.count == 3 ? x[1] : nil, ay: x.count == 3 ? x[2] : nil)) } }
+            for k in npcMaps(n, pack: pack, from: from) { if let x = pack.npcs?[k]?[n], let m = pack.maps[k] { out.append(Goal(label: "找 \(n)（\(m.name)）", map: k, fx: x.first, ax: x.count == 3 ? x[1] : nil, ay: x.count == 3 ? x[2] : nil)) } }
         }
-        for i in items { for p in ([i] + QuestTips.drops(of: i)).flatMap({ pack.places($0) }).sorted(by: { ($0.n, $1.key) > ($1.n, $0.key) }).prefix(1) { if let m = pack.maps[p.key] { out.append(Goal(label: "捡 \(i)（\(m.name)）", map: p.key)) } } }
-        // 没捡到过：经验里说的图自己走过，也能带去
-        for i in items where !out.contains(where: { $0.label.hasPrefix("捡 \(i)（") }) {
-            if let m = QuestTips.spots(i).lazy.compactMap({ s in pack.maps.first { $0.value.name == s } }).first { out.append(Goal(label: "捡 \(i)（\(m.value.name)）", map: m.key)) }
+        // 任务要的东西、要打的怪一定要告诉玩家（用户定）。顺序：
+        // 1. 自己所在的图就有这种怪：就在这里打（资料里的只数不准，玩家看到满图都是）
+        // 2. 离现在最近的、有这种怪的图（攻略资料 + 自己见过的；用户定：按远近，不按只数）
+        // 3. 自己捡到过的图；4. 经验里写的图
+        for i in items {
+            let m = mobFor(i, pack: pack)
+            if out.contains(where: { $0.label.hasPrefix("打 \(m)（") }) { continue }
+            if let f = from, pack.haunts(m).contains(where: { $0.key == f }), let mp = pack.maps[f] { out.append(Goal(label: "打 \(m)（\(mp.name)）", map: f)); continue }
+            if let k = pack.nearestHaunt(m, from: from), let mp = pack.maps[k] { out.append(Goal(label: "打 \(m)（\(mp.name)）", map: k)); continue }
+            if let p = ([i] + QuestTips.drops(of: i)).flatMap({ pack.places($0) }).sorted(by: { ($0.n, $1.key) > ($1.n, $0.key) }).first, let mp = pack.maps[p.key] { out.append(Goal(label: "捡 \(i)（\(mp.name)）", map: p.key)); continue }
+            if let mp = QuestTips.spots(i).lazy.compactMap({ s in pack.maps.first { $0.value.name == s } }).first { out.append(Goal(label: "捡 \(i)（\(mp.value.name)）", map: mp.key)) }
         }
         // 只是提到的地名不算要去（用户不要）
         return Array(out.prefix(6))
     }
+    /// 这样东西打谁掉：经验 / 任务卡里写的；资料里本身就是怪；名字是“怪名 + 一个词”的（Blue Mushroom Cap → Blue Mushroom）
+    public static func mobFor(_ i: String, pack: MoguPack) -> String {
+        if let m = QuestTips.mob(i) { return m }
+        if !pack.haunts(i).isEmpty { return i }
+        let names = Set((pack.mobs ?? [:]).values.flatMap(\.keys))
+        return names.filter { i.count > $0.count + 1 && i.lowercased().hasPrefix($0.lowercased() + " ") }.max { $0.count < $1.count } ?? i
+    }
+    /// 带路目标里的怪名：“打 Ribbon Pig（L Forest I）” → Ribbon Pig
+    public static func mobOf(_ g: Goal) -> String? {
+        guard g.label.hasPrefix("打 "), let r = g.label.range(of: "（") else { return nil }
+        return String(g.label[g.label.index(g.label.startIndex, offsetBy: 2)..<r.lowerBound])
+    }
+
     /// 去一张图：走过的直接去；没走过的，去攻略里那条路上离它最近、走过的那张
     public static func place(_ n: String, pack: MoguPack) -> Goal? {
         if let m = pack.maps.first(where: { $0.value.name == n }) { return Goal(label: "去 \(n)", map: m.key) }
@@ -105,7 +127,31 @@ public enum WalkNav {
     /// 打开任务就自动带路去哪：没接、东西齐了 → 找人；还差东西 → 去捡到过的地方
     public static func auto(_ goals: [Goal], accepted: Bool, ready: Bool) -> Goal? {
         let npc = goals.first(where: \.isNpc), item = goals.first(where: \.isItem)
-        return accepted && !ready ? item ?? npc : npc ?? item
+        // 接了、东西没齐：只带去收集；不知道去哪收集就不带（别一直指着交任务的人）
+        return accepted && !ready ? item : npc ?? item
+    }
+    /// 正文写着“什么怪都会掉”（活动道具）：“dropped by monsters Lv. 10 and above”“dropped by all monsters”
+    public static func anyMob(_ text: String) -> String? {
+        if let r = text.range(of: "(?i)dropped by (?:all |any )?monsters?\\s*(?:of\\s*)?(?:Lv\\.?|level)\\s*(\\d{1,3})\\s*(?:and|or)\\s*(?:above|higher)", options: .regularExpression),
+           let n = text[r].range(of: "\\d{1,3}", options: .regularExpression) { return "打 \(text[r][n]) 级以上的怪都会掉，就近打就行" }
+        if text.range(of: "(?i)dropped by (?:all|any) monsters", options: .regularExpression) != nil { return "打什么怪都会掉，就近打就行" }
+        return nil
+    }
+    /// 这个 NPC 在哪几张图（组队任务的隐藏图里也有同名的）：近的在前，隐藏街道放最后
+    public static func npcMaps(_ n: String, pack: MoguPack, from: String?) -> [String] {
+        func hops(_ k: String) -> Int { guard let f = from else { return 0 }; return f == k ? 0 : pack.route(from: f, to: k)?.count ?? 99 }
+        func hidden(_ k: String) -> Int { pack.maps[k]?.street == "Hidden Street" ? 1 : 0 }
+        return (pack.npcs ?? [:]).filter { $0.value[n] != nil && pack.maps[$0.key] != nil }.keys.sorted { (hidden($0), hops($0), $0) < (hidden($1), hops($1), $1) }
+    }
+    /// 任务正文里写的交任务的人：“Bring them to the Maple Administrator”“Take it to Shumi”。
+    /// names：见过的、资料里有的 NPC 名字。先找 to/bring 后面的；没有就只提到一个的
+    public static func endNpc(text: String, names: [String]) -> String? {
+        let hit = names.filter { $0.count >= 3 && text.range(of: "\\b" + NSRegularExpression.escapedPattern(for: $0) + "\\b", options: .regularExpression) != nil }
+        let to = hit.filter { n in text.range(of: "\\b(to|for|give|bring|tell|see|visit|meet)\\s+(the\\s+)?" + NSRegularExpression.escapedPattern(for: n) + "\\b", options: [.regularExpression, .caseInsensitive]) != nil }
+        let pick = to.isEmpty ? hit : to
+        // 名字包含在更长名字里的不算（Alex / Alex the Kid）
+        let best = pick.filter { n in !pick.contains { $0 != n && $0.contains(n) } }
+        return Set(best).count == 1 ? best[0] : nil
     }
     /// 任务文字里像人名、地名，但自己没见过的：告诉用户要找谁、去哪
     public static func unknown(text: String, pack: MoguPack) -> [String] {
@@ -118,6 +164,28 @@ public enum WalkNav {
             if w.count >= 4, !seen.contains(w), !out.contains(w), !["Maple", "Level", "Quest"].contains(w) { out.append(w) }
         }
         return Array(out.prefix(3))
+    }
+    /// 坐出租车、用回城卷更快（和自用版一样：省下两张图以上才提）。出租车位置来自资料里的 NPC（Regular Cab），回城回哪来自资料里的“最近的城”
+    public static func shortcut(_ pack: MoguPack, from: String, to: String) -> String? {
+        guard from != to, pack.maps[to] != nil else { return nil }
+        let cabs = Set((pack.npcs ?? [:]).filter { $0.value.keys.contains { $0.hasSuffix("Cab") } }.keys.filter { pack.maps[$0] != nil })
+        func hops(_ a: String) -> Int? { a == to ? 0 : pack.route(from: a, to: to)?.count }
+        func name(_ k: String) -> String { pack.maps[k]?.name ?? k }
+        func rest(_ n: Int) -> String { n == 0 ? "，就在城里" : "，再走 \(n) 张图" }
+        var best: (cost: Int, text: String)?
+        func consider(_ c: Int, _ t: String) { if c < (best?.cost ?? Int.max) { best = (c, t) } }
+        if cabs.contains(from) {
+            for t in cabs.sorted() where t != from { if let h = hops(t) { consider(1 + h, "坐出租车到「\(name(t))」" + rest(h)) } }
+        }
+        if let town = pack.maps[from]?.town, town != from {
+            if let h = hops(town) { consider(1 + h, "用回城卷回「\(name(town))」" + rest(h)) }
+            if cabs.contains(town) {
+                for t in cabs.sorted() where t != town { if let h = hops(t) { consider(2 + h, "用回城卷回「\(name(town))」，坐出租车到「\(name(t))」" + rest(h)) } }
+            }
+        }
+        guard let b = best else { return nil }
+        if let walk = pack.route(from: from, to: to), walk.count - b.cost < 2 { return nil }
+        return b.text + (b.text.contains("出租车") ? "（出租车要付车费）" : "")
     }
     /// 现在往哪走。me：自己在小地图画面里的左右位置
     public static func hint(_ pack: MoguPack, from: String, goal g: Goal, me: Double?, at: (x: Double?, y: Double?)? = nil) -> NavHint? {

@@ -239,6 +239,15 @@ public enum ChatParser {
         return Double(good) / Double(tokens.count) < 0.7
     }
 
+    /// 聊天框里单独一行只有一个像名字的词（JUcyr、PICAT、MiD4ng）：多半是名牌或认残的半行，不是消息，别拿去翻
+    public static func lonelyName(_ m: ChatMessage) -> Bool {
+        guard m.kind == .system else { return false }
+        let t = m.raw.trimmingCharacters(in: .whitespaces)
+        guard t.range(of: "^[A-Za-z][A-Za-z0-9_]{1,13}$", options: .regularExpression) != nil else { return false }
+        let odd = t.dropFirst().contains { $0.isUppercase || $0.isNumber || $0 == "_" }
+        return odd || !Words.isWord(t.lowercased())
+    }
+
     /// 以问号结尾（后面可以再跟 ! . 等）
     public static func isQuestion(_ s: String) -> Bool {
         s.range(of: "[?？][\\s?？!！.。~)）\"']*$", options: .regularExpression) != nil

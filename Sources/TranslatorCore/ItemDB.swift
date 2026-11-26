@@ -214,6 +214,13 @@ extension ItemDB {
         let ok = n.lowercased().split(whereSeparator: { !$0.isLetter && $0 != "'" }).allSatisfy { $0.count >= 2 && SpellCheck.isCorrect(String($0)) }
         return (key(n), ok ? n : "", i.n)
     }
+    /// 逐像素读到的名字前半截被挡住（“Pumpkin Piece” 只读到 “Piece”）：是见过的名字的后半截就算那个；对上好几个分不清的不要
+    public static func tailName(_ n: String, in known: [String]) -> String? {
+        if known.contains(n) { return n }
+        let tails = Set(known.filter { $0.count > n.count && $0.hasSuffix(" " + n) })
+        if tails.count == 1 { return tails.first }
+        return tails.isEmpty ? n : nil
+    }
     /// 捡到的东西叫什么。有物品表：要在表里。没有物品表（公开版）：只认按字形逐像素读到的（exact），认花的不要
     public func pickedName(_ text: String, exact: Bool, known: [String] = []) -> (name: String, n: Int)? {
         guard let i = HuntLog.item(text) else { return nil }
@@ -221,6 +228,8 @@ extension ItemDB {
         // 普通识别读到的：以前见过这个名字才算，用见过的写法
         if !exact { return Self.seenName(i.name, in: known).map { ($0, i.n) } }
         guard HuntLog.category(text) != nil, i.name.range(of: "^[A-Z0-9][A-Za-z0-9'’.,():%+& -]{2,39}$", options: .regularExpression) != nil else { return nil }
-        return (i.name, i.n)
+        // 前半截被挡住（“Bows” ← “Arrows for Bows”）：见过的名字和攻略站物品名单里只有一个这样结尾的就补全
+        if let t = Self.tailName(i.name, in: known), t != i.name || known.contains(t) { return (t, i.n) }
+        return Self.tailName(i.name, in: ItemNames.all).map { ($0, i.n) }
     }
 }

@@ -2,7 +2,6 @@
 // - 只用系统“屏幕录制”权限截取游戏窗口画面，在内存里识别文字后翻译，截图不保存到硬盘。
 // - 不读取/修改游戏内存，不注入进程，不抓网络包，不改游戏文件。
 // - 不向游戏发送任何按键或点击；悬浮窗口全部“鼠标穿透”。
-// - 鼠标指向翻译只读取光标位置和 ⌥ 键是否按下，不监听键盘输入。
 // - 翻译用 macOS 自带的本地翻译，聊天内容不发到网上。
 import AppKit
 import SwiftUI
@@ -47,7 +46,6 @@ final class AppController: NSObject, NSApplicationDelegate {
     private let hoverClient = OCRClient(idleStop: 90)   // 鼠标指向、物品说明识别（另一个子进程，互不等待；空闲 90 秒自动释放）
 
     private let side = SidePanel()
-    private let hoverTip = HoverTip()
     private let selector = RegionSelector()
 
     private var statusItem: NSStatusItem!
@@ -112,23 +110,9 @@ final class AppController: NSObject, NSApplicationDelegate {
     }
     private var dumpIndex = 0
     private var busySince = Date()
-    private var hoverBusy = false
-    private var lastHoverKey = ""
     private var selecting = false
 
     private var paused = false
-    /// 鼠标指向翻译的触发键（只读取“是否按下”，不拦截按键；注意它也会传给游戏）
-    private var hoverKey: String {
-        get { UserDefaults.standard.string(forKey: "hoverKey") ?? "⌥" }
-        set { UserDefaults.standard.set(newValue, forKey: "hoverKey") }
-    }
-    private static let hoverKeys: [(String, NSEvent.ModifierFlags)] = [("⌥", .option), ("⌘", .command), ("⌃", .control), ("⇧", .shift)]
-    private var hoverFlag: NSEvent.ModifierFlags { Self.hoverKeys.first { $0.0 == hoverKey }?.1 ?? .option }
-
-    private var hoverEnabled: Bool {
-        get { UserDefaults.standard.object(forKey: "hover") as? Bool ?? true }
-        set { UserDefaults.standard.set(newValue, forKey: "hover") }
-    }
 
     // 每种窗口大小各存一个聊天区域
     private func regionKey(_ size: CGSize) -> String { "region-\(Int(size.width))x\(Int(size.height))" }
@@ -203,9 +187,6 @@ final class AppController: NSObject, NSApplicationDelegate {
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] _ in
             Task { @MainActor in await self?.tooltipTick() }
         }
-        Timer.scheduledTimer(withTimeInterval: 0.15, repeats: true) { [weak self] _ in
-            Task { @MainActor in await self?.hoverTick() }
-        }
         nav.collect = mapCollect
         nav.myLevel = { [weak self] in self?.expMonitor.model.level }
         nav.playerName = { [weak self] in self?.expMonitor.model.name ?? "" }
@@ -250,12 +231,25 @@ final class AppController: NSObject, NSApplicationDelegate {
         mapCollect.playerName = { [weak self] in self?.expMonitor.model.name ?? "" }
         mapCollect.covered = { [weak self] in guard let self else { return true }; return self.questLayout != nil || self.shopRect != nil || self.npcTalk.map { Date().timeIntervalSince($0.t) < 4 } ?? false }
         mapCollect.onMe = { [weak self] in self?.walkTick() }
+        nav.onGain = { [weak self] k, n in self?.mapCollect.gained(k, n) }
+        nav.npcNames = { [weak self] in Array(Set((self?.walkData().npcs ?? [:]).values.flatMap(\.keys))) }
+        nav.onTitle = { [weak self] l in
+            guard let self else { return }
+            self.mapCollect.titleLine(l, known: Set(self.walkData().maps.values.map { MapCollector.streetKey($0.street) }))
+        }
+        nav.seenMobs = { [weak self] in
+            guard let self, let k = self.mapCollect.current else { return [] }
+            return self.mapCollect.mobs.list(k).map { (name: $0.name, lv: $0.mob.lv, kills: $0.mob.kills) }
+        }
         nav.lastTalk = { [weak self] in self?.npcTalk.flatMap { Date().timeIntervalSince($0.t) < 120 ? $0.name : nil } }
         nav.seenPlaces = { [weak self] n in
             guard let self else { return [] }
             let p = self.walkData()
             // 打某种怪：它掉的东西在哪捡到过也算
-            let mine = ([n] + QuestTips.drops(of: n)).flatMap { p.places($0) }.sorted { ($0.n, $1.key) > ($1.n, $0.key) }.compactMap { p.maps[$0.key]?.name }
+            var mine = ([n] + QuestTips.drops(of: n)).flatMap { p.places($0) }.sorted { ($0.n, $1.key) > ($1.n, $0.key) }.compactMap { p.maps[$0.key]?.name }
+            // 自己见过、打过这种怪的图（近的在前）
+            if let k = p.bestHaunt(n, from: self.mapCollect.current), let m = p.maps[k]?.name, !mine.contains(m) { mine.insert(m, at: 0) }
+            for h in p.haunts(n) { if let m = p.maps[h.key]?.name, !mine.contains(m) { mine.append(m) } }
             return mine + QuestTips.spots(n).filter { !mine.contains($0) }
         }
         nav.walkHere = { [weak self] in self.flatMap { s in s.mapCollect.current.flatMap { s.walkData().maps[$0]?.name } } }
@@ -263,13 +257,15 @@ final class AppController: NSObject, NSApplicationDelegate {
         nav.walkNpc = { [weak self] n in
             guard let self else { return nil }
             let p = self.walkData()
-            return (p.npcs ?? [:]).sorted { $0.key < $1.key }.first { $0.value[n] != nil }.flatMap { p.maps[$0.key]?.name }
+            return WalkNav.npcMaps(n, pack: p, from: self.mapCollect.current).first.flatMap { p.maps[$0]?.name }
         }
         nav.walkHops = { [weak self] n in
             guard let self, let at = self.mapCollect.current else { return nil }
             let p = self.walkData()
-            guard let k = p.maps.first(where: { $0.value.name == n })?.key else { return nil }
-            return k == at ? 0 : p.route(from: at, to: k)?.count
+            // 同名的图可能有几张（隐藏街道里也有）：取最近的
+            let ks = p.maps.filter { $0.value.name == n }.keys
+            if ks.contains(at) { return 0 }
+            return ks.compactMap { p.route(from: at, to: $0)?.count }.min()
         }
         nav.onWalk = { [weak self] in self?.walkPack = nil; self?.walkTick() }
         // 地图采集：每 0.5 秒看一眼小地图（标题变了才识别文字）
@@ -363,21 +359,26 @@ final class AppController: NSObject, NSApplicationDelegate {
     private var walkPack: (pack: MoguPack, at: Date)?
     private func walkData() -> MoguPack {
         if let p = walkPack, Date().timeIntervalSince(p.at) < 10 { return p.pack }
-        let own = MoguPack(maps: mapCollect.maps, drops: expMonitor.hunt.maps.mapValues { $0.drops }, npcs: mapCollect.met.maps.mapValues { $0.mapValues(\.list) }, day: "")
+        let own = MoguPack(maps: mapCollect.maps, drops: expMonitor.hunt.maps.mapValues { $0.drops }, npcs: mapCollect.met.maps.mapValues { $0.mapValues(\.list) }, mobs: mapCollect.mobs.packed, day: "")
         let p = MoguPack.merged(own: own, packStore.packs.map(\.pack))
         walkPack = (p, Date())
         return p
     }
     private func walkTick() {
         guard NavDB.shared.maps.isEmpty else { return }
+        nav.refreshSeen()
         let p = walkData()
         if let t = nav.target {
             let text = [t.giver ?? "", nav.fromNpc ?? "", nav.endNpc ?? "", t.en ?? "", (t.zh ?? [:]).keys.sorted().joined(separator: ". ")].joined(separator: " ")
             let left = nav.tipMobs + nav.progress.filter { $0.value.count == 2 && $0.value[0] < $0.value[1] }.keys.sorted()
-            nav.setWalk(goals: WalkNav.goals(text: text, items: left, pack: p), unknown: WalkNav.unknown(text: text, pack: p))
+            nav.setWalk(goals: WalkNav.goals(text: text, items: left, pack: p, from: mapCollect.current), unknown: WalkNav.unknown(text: text, pack: p))
         } else { nav.setWalk(goals: [], unknown: []) }
         nav.autoWalk()
-        guard let g = nav.walkGoal else { return }
+        mapCollect.setReference(packStore.packs.flatMap { $0.pack.maps.map { ($0.key, ($0.value.street, $0.value.name)) } })
+        guard let g = nav.walkGoal else { nav.setWalk(shortcut: nil); return }
+        let cab = mapCollect.current.flatMap { WalkNav.shortcut(p, from: $0, to: g.map) }
+        if cab != nav.shortcut { trace("nav: 出租车 \(cab ?? "不用")") }
+        nav.setWalk(shortcut: cab)
         nav.setWalk(hint: mapCollect.current.flatMap { WalkNav.hint(p, from: $0, goal: g, me: mapCollect.meFx, at: mapCollect.spot) } ?? NavHint(dir: .none, text: mapCollect.current == nil ? "还不知道你在哪，把小地图展开" : "走过的门还连不到那里"))
     }
     private var packWindow: NSWindow?
@@ -568,14 +569,6 @@ final class AppController: NSObject, NSApplicationDelegate {
         m.removeAllItems()
         m.addItem(switchItem("物品说明（鼠标停在物品上）", on: tipEnabled, action: #selector(toggleTip)))
         m.addItem(switchItem("任务、NPC 对话、商店聊天", on: questEnabled, action: #selector(toggleQuest)))
-        m.addItem(switchItem("指哪翻哪（按住 \(hoverKey)）", on: hoverEnabled, action: #selector(toggleHover)))
-        if hoverEnabled {
-            m.addItem(sub("触发键", Self.hoverKeys.map { (k, _) in
-                let it = NSMenuItem(title: "按住 \(k)", action: #selector(pickHoverKey(_:)), keyEquivalent: "")
-                it.representedObject = k; it.target = self; it.state = k == hoverKey ? .on : .off
-                return it
-            }))
-        }
 
         // ── 任务和路线。有地图资料才有箭头、导航采集
         m = navMenu
@@ -863,7 +856,7 @@ final class AppController: NSObject, NSApplicationDelegate {
         if !onScreen, !gameHidden {
             gameHidden = true
             trace("game window off screen: hide all")
-            hideAll(); questReset(); npcReset(); shopReset(); tipReset("游戏窗口不在屏幕上"); hoverTip.hide()
+            hideAll(); questReset(); npcReset(); shopReset(); tipReset("游戏窗口不在屏幕上")
         } else if onScreen, gameHidden {
             gameHidden = false
             trace("game window back on screen")
@@ -949,14 +942,14 @@ final class AppController: NSObject, NSApplicationDelegate {
                 doc.paragraphs = QuestDoc.parseContent(bodyLines).1
                 // 不在游戏窗口上盖译文（用户定）：认出任务、看进度，怎么完成由任务导航用自己的话写。
                 // 只用这一屏看到的数字，滚动拼接里可能留着旧的
-                let seenObj: [(name: String, count: String)] = QuestDoc.parseContent(cl).objectives.map { (name: $0.0, count: $0.1) }
+                let seenObj: [(name: String, count: String)] = QuestDoc.parseContent(cl).objectives.map { (name: ItemNames.clean($0.0), count: $0.1) }
                 var target = NavDB.shared.target(title: doc.title, paragraphs: doc.paragraphs, summary: summary.joined(separator: " "), objectives: seenObj)
                 if target == nil, !doc.title.isEmpty {
                     // 资料里没有的任务：标题、目标、摘要用系统翻译，只写要做什么
                     var t = NavTarget(title: await tr.translateQuestName(doc.title), start: nil, end: nil, questId: nil)
                     var zh: [String: String] = [:]
                     for o in seenObj { zh[o.name] = await tr.objectiveZh(o.name, title: doc.title, context: all.map(\.text)) }
-                    t.zh = zh; t.accepted = seenObj.isEmpty ? nil : true; t.giver = TipPlan.starter(summary + doc.paragraphs + all.map(\.text))
+                    t.zh = zh; t.part = seenObj.isEmpty ? (cl.contains { $0.text.range(of: "[0-9Oo]+\\s*/\\s*[0-9]+", options: .regularExpression) != nil } ? nil : NavTarget.talkPart(doc.paragraphs)) : seenObj.map(\.name).sorted().joined(separator: "|"); t.accepted = seenObj.isEmpty ? nil : true; t.giver = TipPlan.starter(summary + doc.paragraphs + all.map(\.text))
                     var d = QuestDoc(); d.title = doc.title; d.paragraphs = summary.isEmpty ? Array(doc.paragraphs.suffix(1)) : summary
                     let b = (await tr.translateQuest(d)).paragraphs.joined(separator: " ")
                     t.brief = b.isEmpty ? nil : b.count > 90 ? String(b.prefix(90)) + "…" : b
@@ -1285,7 +1278,6 @@ final class AppController: NSObject, NSApplicationDelegate {
         // 物品说明关着时，只在背包开着的时候看（取图标用），不显示
         let bagOpen = expEnabled && (expMonitor.model.mesoSeen.map { Date().timeIntervalSince($0) < 3 } ?? false)
         guard tipEnabled || bagOpen, !paused, !selecting, !tipBusy, !gameHidden, let g = locator.current else { return }
-        if NSEvent.modifierFlags.contains(hoverFlag) { return }      // 按住指向翻译键时让给逐行翻译
         let mouse = NSEvent.mouseLocation
         if hypot(mouse.x - lastMouse.x, mouse.y - lastMouse.y) > 2 { lastMouse = mouse; mouseStillSince = Date() }
         let m = Coords.toTopLeft(mouse)
@@ -1540,11 +1532,6 @@ final class AppController: NSObject, NSApplicationDelegate {
 
         hideTips()
         for (i, (zh, box)) in shown.enumerated() where i < tipPanels.count {
-            if tipMode == .side {
-                side.showHover(shown.map { $0.0.plainText }.joined(separator: "\n\n"))
-                if !side.panel.isVisible { side.place(beside: win); side.panel.orderFrontRegardless() }
-                break
-            }
             tipPanels[i].panel.level = NSWindow.Level(rawValue: max(NSWindow.Level.popUpMenu.rawValue, g.layer + 2))
             tipPanels[i].show(zh, box: box, game: win, mode: tipMode)
             if tipLog { trace("tip show[\(i)] box=\(box.integral) panel=\(tipPanels[i].panel.frame.integral)") }
@@ -1606,14 +1593,9 @@ final class AppController: NSObject, NSApplicationDelegate {
         side.chatFontSize = CGFloat(s.tag)
         rebuildMenu()
     }
-    @objc private func pickHoverKey(_ s: NSMenuItem) {
-        if let k = s.representedObject as? String { hoverKey = k }
-        rebuildMenu()
-    }
-    @objc private func toggleHover() { hoverEnabled.toggle(); hoverTip.hide(); rebuildMenu() }
     @objc private func togglePause() { paused.toggle(); if paused { hideOverlays() }; applyMode(); rebuildMenu() }
     /// 盖在游戏画面上的翻译全收起来
-    private func hideOverlays() { questReset(); npcReset(); shopReset(); tipReset("收起"); hoverTip.hide(); navArrow.hide() }
+    private func hideOverlays() { questReset(); npcReset(); shopReset(); tipReset("收起"); navArrow.hide() }
     @objc private func clearHistory() { history.removeAll(); chatHistory.clear(); shopHistory.clear(); side.show(history); side.showShop([]) }
 
     /// 重新启动自己（授权屏幕录制后需要重启才生效）
@@ -1713,7 +1695,6 @@ final class AppController: NSObject, NSApplicationDelegate {
         // 悬浮窗、覆盖层始终比游戏窗口高一级（游戏激活时会提高自己的层级）
         let above = NSWindow.Level(rawValue: max(NSWindow.Level.floating.rawValue, g.layer + 1))
         if !sideBehind, side.panel.level != above { side.panel.level = above }
-        hoverTip.panel.level = NSWindow.Level(rawValue: max(NSWindow.Level.popUpMenu.rawValue, g.layer + 2))
 
         // 跟着游戏窗口移动
         side.place(beside: g.frameTopLeft)
@@ -1760,7 +1741,7 @@ final class AppController: NSObject, NSApplicationDelegate {
         }
         let parsed = ChatParser.parse(lines, systemStarts: glossary.templateRegexes)
         // 认花了的消息（固定句子能对上的除外）：翻译记录里保留原来那条
-        let garbled = parsed.map { !glossary.matchesFixed($0.raw) && ChatParser.looksGarbled($0, knownWords: knownWords) }
+        let garbled = parsed.map { !glossary.matchesFixed($0.raw) && (ChatParser.looksGarbled($0, knownWords: knownWords) || ChatParser.lonelyName($0)) }
         let msgs = zip(parsed, garbled).filter { !$0.1 }.map(\.0)
         let appName = g.scWindow.owningApplication?.applicationName ?? "?"
         // 菜单宽度由最长的一行决定：状态写短一点（游戏名不写），菜单就不会撑得很宽
@@ -1817,43 +1798,6 @@ final class AppController: NSObject, NSApplicationDelegate {
         }
         return buf.map { $0 / 16 }   // 降低精度，忽略细微闪动
     }
-
-    // MARK: 鼠标指向翻译：按住 ⌥ 时，识别鼠标所在的那一行
-
-    private func hoverTick() async {
-        guard hoverEnabled, !paused, !selecting, !hoverBusy, !gameHidden else { return }
-        // 只读取“⌥ 键当前是否按下”和光标位置，不监听键盘输入
-        guard NSEvent.modifierFlags.contains(hoverFlag), let g = locator.current else {
-            if !lastHoverKey.isEmpty { hoverTip.hide(); lastHoverKey = "" }
-            return
-        }
-        let mouse = NSEvent.mouseLocation
-        let m = Coords.toTopLeft(mouse)
-        let win = g.frameTopLeft
-        guard win.contains(m) else { hoverTip.hide(); return }
-        let local = CGPoint(x: m.x - win.minX, y: m.y - win.minY)
-        let rect = CGRect(x: local.x - 220, y: local.y - 22, width: 440, height: 44)
-            .intersection(CGRect(origin: .zero, size: win.size))
-        guard rect.width > 20, rect.height > 10 else { return }
-
-        hoverBusy = true; defer { hoverBusy = false }
-        let loc = self.locator
-        guard let img = await withTimeout(3, { await loc.capture(g, rect: rect) }) else { return }
-        let hclient = self.hoverClient
-        guard let lines = await withTimeout(5, { hclient.recognize(img) }), !lines.isEmpty else { return }
-        // 选垂直方向离鼠标最近的一行
-        let cy = (local.y - rect.minY) / rect.height
-        guard let best = lines.min(by: { abs(($0.minY + $0.maxY) / 2 - cy) < abs(($1.minY + $1.maxY) / 2 - cy) }) else { return }
-        let text = best.text.trimmingCharacters(in: .whitespaces)
-        guard text.count >= 2 else { return }
-        if text == lastHoverKey { hoverTip.show(hoverTip.panel.isVisible ? currentHover : "…", near: NSEvent.mouseLocation); return }
-        lastHoverKey = text
-        let zh = await translateSafe(ChatParser.classify(text, minY: 0, maxY: 0))
-        currentHover = "\(zh)\n\(text)"
-        side.showHover(currentHover)
-        hoverTip.show(currentHover, near: NSEvent.mouseLocation)
-    }
-    private var currentHover = ""
 }
 
 MainActor.assumeIsolated {

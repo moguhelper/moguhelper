@@ -8,7 +8,11 @@ public struct QuestOpen: Codable, Sendable, Equatable {
     public var seen: Date
     public init(_ t: NavTarget, progress: [String: [Int]] = [:], seen: Date = Date()) { target = t; self.progress = progress; self.seen = seen }
     public var key: String { Self.key(target) }
-    public static func key(_ t: NavTarget) -> String { t.questId.map(String.init) ?? t.title }
+    public static func key(_ t: NavTarget) -> String { t.questId.map(String.init) ?? cleanTitle(t.title) + (t.part.map { "#" + $0 } ?? "") }
+    /// 标题前面认花的符号（“› Nella 和废弃都市…”）不算：不然同一个任务会存成两份
+    public static func cleanTitle(_ s: String) -> String {
+        String(s.drop { !($0.isLetter || $0.isNumber || $0 == "[" || $0 == "【") }).trimmingCharacters(in: .whitespaces)
+    }
 }
 /// 已接任务的清单
 public struct QuestBook: Codable, Sendable, Equatable {
@@ -42,16 +46,38 @@ public struct QuestBook: Codable, Sendable, Equatable {
     }
     /// 没有资料（公开版）：追踪框里是英文任务名，清单里是中文的，靠目标名字和要几个对上（像两个任务的不猜）
     public func match(_ it: QuestHelperItem) -> QuestOpen? {
-        let hit = open.filter { o in o.target.questId == nil && it.objectives.contains { x in
+        func score(_ o: QuestOpen) -> Int { it.objectives.filter { x in
             guard let p = o.progress[x.name], p.count == 2, let n = x.count.split(separator: "/").last.flatMap({ Int($0) }) else { return false }
             return p[1] == n
-        } }
-        return hit.count == 1 ? hit[0] : nil
+        }.count }
+        let hit = open.filter { $0.target.questId == nil && score($0) > 0 }
+        guard let best = hit.map(score).max() else { return nil }
+        // 对上几个：对上的目标多的；一样多的取最近看到的（重复存下的旧的不挡路）
+        let top = hit.filter { score($0) == best }
+        if top.count == 1 { return top[0] }
+        let parts = Set(top.map { QuestOpen.cleanTitle($0.target.title) })
+        return parts.count == 1 ? top.max { $0.seen < $1.seen } : nil
     }
     /// 以前记下的认花的目标去掉（资料里没有的任务才会有）
     public mutating func clean() {
         for i in open.indices where open[i].target.questId == nil { open[i].progress = open[i].progress.filter { QuestHelper.plausible($0.key) }
-            let u = QuestHelper.unify(open[i].progress, with: [:]); open[i].progress = u.read.filter { !u.drop.contains($0.key) } }
+            let u = QuestHelper.unify(open[i].progress, with: [:]); open[i].progress = u.read.filter { !u.drop.contains($0.key) }
+            open[i].target.title = QuestOpen.cleanTitle(open[i].target.title)
+            // 知道这个任务要哪几样的：别的任务留下的进度去掉
+            if let p = open[i].target.part { let want = Set(p.split(separator: "|").map(String.init)); open[i].progress = open[i].progress.filter { want.contains($0.key) } }
+        }
+        // 同一个标题：要的东西有重叠（或有一份没记要什么）的是同一个任务，留最近的
+        let sorted = open.sorted { $0.seen > $1.seen }
+        var kept: [QuestOpen] = []
+        for o in sorted {
+            let same = kept.contains { k in
+                guard k.target.questId == nil, o.target.questId == nil, k.target.title == o.target.title else { return false }
+                let a = Set((k.target.part ?? "").split(separator: "|").map(String.init)), b = Set((o.target.part ?? "").split(separator: "|").map(String.init))
+                return o.target.part == nil || a.isEmpty || !a.isDisjoint(with: b) || a.contains { x in b.contains { Fuzzy.distance(Array(x), Array($0), limit: 2) <= 2 } }
+            }
+            if !same { kept.append(o) }
+        }
+        open = open.filter { o in kept.contains { $0.key == o.key && $0.seen == o.seen } }
         let all = open.sorted { $0.seen > $1.seen }
         var keep: [QuestOpen] = []
         for o in all where !keep.contains(where: { Self.twin($0, o) }) { keep.append(o) }

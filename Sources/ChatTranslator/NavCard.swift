@@ -15,6 +15,25 @@ final class NavModel: ObservableObject {
     @Published var moving = false
     // 采集向导：开着时箭头带路去采下一个门，任务导航先让开
     weak var collect: MapCollectModel? { didSet { collect?.onChange = { [weak self] in self?.updateGuide() }; onEnter = { [weak self] a, b in self?.collect?.entered(from: a, to: b) } } }
+    /// 没有地图资料时：小地图标题读到的几行（室内图收起的一行标题要靠它认）
+    var onTitle: (([String]) -> Void)?
+    /// 追踪框里某个目标涨了几个
+    var onGain: ((String, Int) -> Void)?
+    /// 没有怪物资料时：自己在这张图见过、打过的怪
+    var seenMobs: (() -> [(name: String, lv: Int?, kills: Int)])?
+    struct SeenMob: Equatable { var name: String, lv: Int?, kills: Int }
+    @Published private(set) var seenHere: [SeenMob] = []
+    func refreshSeen() {
+        let l = (seenMobs?() ?? []).map { SeenMob(name: $0.name, lv: $0.lv, kills: $0.kills) }
+        if l != seenHere { seenHere = l }
+    }
+    /// 这种怪是不是现在的任务要打的（打它，或收集它掉的）
+    func taskMob(_ m: String) -> (text: String, done: Bool)? {
+        guard target?.accepted == true || !progress.isEmpty else { return nil }
+        if let p = progress[m], p.count == 2 { return p[0] >= p[1] ? ("任务 ✓", true) : ("任务 \(p[0])/\(p[1])", false) }
+        if tipAll.contains(m) || tipMobs.contains(m) { return tipLeft(m).map { ("任务 \($0[0])/\($0[1])", false) } ?? ("任务 ✓", true) }
+        return nil
+    }
     /// 任务追踪里东西的数量（双复核用）
     var onCounts: (([(String, Int)]) -> Void)?
     @Published private(set) var guide: GuideStep?
@@ -64,12 +83,17 @@ final class NavModel: ObservableObject {
     private var walkPicked: String?
     func autoWalk() {
         guard let t = target, walkPicked != QuestOpen.key(t) else { return }
-        let done = !progress.isEmpty && progress.values.allSatisfy { $0.count == 2 && $0[0] >= $0[1] }
+        // 没看到进度（只要说话的任务）当作齐了
+        let done = progress.values.allSatisfy { $0.count == 2 && $0[0] >= $0[1] }
         // 知道找谁接、找谁交的：按点中的这一步；点的那样没去过就不带，别带到别处
         let g = endNpc != nil || fromNpc != nil ? walkFor(goal) : WalkNav.auto(walkGoals, accepted: t.accepted == true, ready: done)
-        if g != walkGoal { walkGoal = g; walkHint = nil; updateHint() }
+        if g != walkGoal {
+            trace("nav: 自动带路 \(g?.label ?? "不带（东西没齐、不知道去哪收集）") 步骤 \(goal) 交给 \(endNpc ?? "?")")
+            walkGoal = g; walkHint = nil; updateHint()
+        }
     }
     func setWalk(goal: WalkNav.Goal?) { walkPicked = target.map { QuestOpen.key($0) }; walkGoal = goal; walkHint = nil; onWalk?(); updateHint() }
+    func setWalk(shortcut s: String?) { if s != shortcut { shortcut = s } }
     func setWalk(hint: NavHint?) { guard walkHint != hint else { return }; walkHint = hint; updateHint() }
     var onWalk: (() -> Void)?
     var active: Bool { walkGoal != nil || target != nil || guideOn || listOnly || stage != nil || mobFocus != nil }
@@ -178,6 +202,8 @@ final class NavModel: ObservableObject {
         guard let t = target else { return }
         var read = NavDB.shared.progress(objectives, target: t)
         if !sure { read = progressGuard.accept(read, now: progress) }
+        // 追踪框里的数涨了：告诉走图记录（公开版记“这张图有这种怪”）
+        if !sure { for (k, v) in read { if let o = progress[k], o.count == 2, v.count == 2, o[1] == v[1], v[0] > o[0], v[0] - o[0] <= 10 { onGain?(k, v[0] - o[0]) } } }
         // 追踪框里某样东西的数量在这张图涨了：记下这里捡到过
         if !sure, !mapStale, let m = mapId, let key = NavDB.shared.mapKey(m) {
             let items = Set(t.questId.flatMap { NavDB.shared.quest($0) }?.items.map(\.name) ?? [])
@@ -245,6 +271,11 @@ final class NavModel: ObservableObject {
     func itemState(_ n: String) -> State { progress[n].map { $0[0] >= $0[1] ? .done : $0[0] > 0 ? .doing : .todo } ?? .todo }
     func countText(_ n: String) -> String { progress[n].map { " \($0[0])/\($0[1])" } ?? "" }
     /// 还没够、又没有哪里出的资料的东西
+    /// 要收集、已经够了的（按钮上打绿色 ✓，和打怪一样别收起来）
+    var doneItems: [String] {
+        guard let t = target else { return [] }
+        return progress.filter { $0.value.count == 2 && $0.value[0] >= $0.value[1] && NavDB.shared.mob(forObjective: $0.key, target: t) == nil && tipMob($0.key) == nil }.keys.sorted()
+    }
     var unknownItems: [String] {
         guard let t = target else { return [] }
         return progress.filter { $0.value[0] < $0.value[1] && NavDB.shared.mob(forObjective: $0.key, target: t) == nil }.keys.sorted()
@@ -261,7 +292,12 @@ final class NavModel: ObservableObject {
     var tip: String? { target.flatMap { $0.questId == nil ? QuestTips.note(text: $0.en ?? "", items: progress.keys.sorted()) : nil } }
     private var tipItems: [String] { progress.keys.sorted() }
     /// 找谁接、找谁交（经验里有的，或刚和谁说完话接的）
-    var fromText: String? { target.flatMap { t in QuestTips.from(text: t.en ?? "", items: tipItems) ?? t.giver.map { g in g + (walkNpc?(g).map { "（\($0)）" } ?? "") } } }
+    var fromText: String? { target.flatMap { t in QuestTips.from(text: t.en ?? "", items: tipItems) ?? (t.giver ?? acceptedFrom(t)).map { g in g + (walkNpc?(g).map { "（\($0)）" } ?? "") } } }
+    /// 早就接了、没看到是谁给的：正文里只提到一个 NPC 就是他（活动任务 “Maple Administrator is handing out gifts”）；没接的不猜，免得带错人
+    private func acceptedFrom(_ t: NavTarget) -> String? {
+        guard t.accepted == true else { return nil }
+        return WalkNav.endNpc(text: t.en ?? "", names: npcNames?() ?? [])
+    }
     var walkHere: (() -> String?)?
     /// 走过的图（按名字）→ 可以带去
     var walkMap: ((String) -> WalkNav.Goal?)?
@@ -292,11 +328,18 @@ final class NavModel: ObservableObject {
     /// 这个任务要打的怪，打够的也在
     var tipAll: [String] { Array(Set(progress.keys.compactMap { tipMob($0) })).sorted() }
     /// 还要打的怪（打它本身、它掉的东西合成一个）
-    var tipMobs: [String] { Array(Set(unknownItems.compactMap { tipMob($0) })).sorted() }
-    private func tipLeft(_ m: String) -> [Int]? { (progress[m].map { [$0] } ?? []).first { $0[0] < $0[1] } ?? progress.filter { tipMob($0.key) == m && $0.value[0] < $0.value[1] }.sorted { $0.key < $1.key }.first?.value }
+    var tipMobs: [String] { Array(Set(unknownItems.compactMap { tipMob($0) })).filter { tipLeft($0) != nil }.sorted() }
+    /// 这种怪还差多少：任务要的是它掉的东西（Pig's Ribbon）就只看东西够没够，别看以前误记的“打怪 0/20”
+    private func tipLeft(_ m: String) -> [Int]? {
+        let drops = progress.filter { $0.key != m && tipMob($0.key) == m && $0.value.count == 2 }
+        if !drops.isEmpty { return drops.filter { $0.value[0] < $0.value[1] }.sorted { $0.key < $1.key }.first?.value }
+        return (progress[m].map { [$0] } ?? []).first { $0.count == 2 && $0[0] < $0[1] }
+    }
     func tipCount(_ m: String) -> String { tipLeft(m).map { " \($0[0])/\($0[1])" } ?? "" }
     var fromNpc: String? { fromText?.components(separatedBy: "（")[0] }
-    var endNpc: String? { target.flatMap { QuestTips.npc(text: $0.en ?? "", items: tipItems) ?? $0.giver } }
+    var endNpc: String? { target.flatMap { QuestTips.npc(text: $0.en ?? "", items: tipItems) ?? WalkNav.endNpc(text: $0.en ?? "", names: npcNames?() ?? []) ?? $0.giver } }
+    /// 见过的、资料里有的 NPC 名字（从任务正文里认交任务的人）
+    var npcNames: (() -> [String])?
     private var endTown: String? { endNpc.flatMap { n in walkNpc?(n) ?? target.flatMap { QuestTips.town(text: $0.en ?? "", items: tipItems) } } }
     var endText: String? { endNpc.map { n in n + (endTown.map { "（\($0)）" } ?? "") } }
     func pick(_ g: Goal) {
@@ -308,13 +351,18 @@ final class NavModel: ObservableObject {
         guard NavDB.shared.maps.isEmpty, target != nil else { return nil }
         func at(_ who: String, _ p: String) -> String? {
             let h = walkHops?(p)
-            return h == 0 ? nil : "目的地：\(who) 在「\(p)」" + (h.map { "，走路 \($0) 张图" } ?? (QuestTips.way(p).last.map { "，从 \($0) 进" + (QuestTips.hiddenDoor(p) ? "（隐藏门）" : "") } ?? "，还没走过"))
+            if h == 0 { return "就在这张图：\(who)" }
+            return "目的地：\(who) 在「\(p)」" + (h.map { "，走路 \($0) 张图" } ?? (QuestTips.way(p).last.map { "，从 \($0) 进" + (QuestTips.hiddenDoor(p) ? "（隐藏门）" : "") } ?? "，还没走过"))
         }
         switch goal {
         case .start:
             guard let t = fromText, let n = fromNpc, let i = t.firstIndex(of: "（") else { return nil }
             return at(n, String(t[t.index(after: i)...].dropLast()))
         case .find(let n):
+            // 和箭头带去的那张图一致
+            if let g = walkFor(goal), let a = g.label.range(of: "（"), let b = g.label.range(of: "）", options: .backwards), a.upperBound <= b.lowerBound {
+                return at(WalkNav.mobOf(g).map { name($0) } ?? name(n), String(g.label[a.upperBound..<b.lowerBound]))
+            }
             let l = seenPlaces?(n) ?? []
             return (l.first { walkHops?($0) != nil } ?? l.first).flatMap { at(name(n), $0) }
         case .end: return endNpc.flatMap { n in endTown.flatMap { at(n, $0) } }
@@ -325,7 +373,10 @@ final class NavModel: ObservableObject {
     private func walkFor(_ g: Goal) -> WalkNav.Goal? {
         switch g {
         case .start: fromNpc.flatMap { n in walkGoals.first { $0.label.hasPrefix("找 \(n)（") } }
-        case .find(let n): walkGoals.first { $0.label.hasPrefix("捡 \(n)（") } ?? (seenPlaces?(n) ?? []).lazy.compactMap { self.walkMap?($0) }.first
+        case .find(let n): walkGoals.first { $0.label.hasPrefix("捡 \(n)（") || $0.label.hasPrefix("打 \(n)（") }
+            // 要的东西打谁掉：“打 Ribbon Pig” 也算 Pig's Ribbon、“打 Blue Mushroom” 也算 Blue Mushroom Cap
+            ?? walkGoals.first { g in WalkNav.mobOf(g).map { m in QuestTips.mob(n) == m || n.lowercased().hasPrefix(m.lowercased() + " ") } ?? false }
+            ?? (seenPlaces?(n) ?? []).lazy.compactMap { self.walkMap?($0) }.first
         case .end: endNpc.flatMap { n in walkGoals.first { $0.label.hasPrefix("找 \(n)（") } ?? endTown.flatMap { walkMap?($0) } }
         default: nil
         }
@@ -354,13 +405,25 @@ final class NavModel: ObservableObject {
         // 同一个任务、只是这次识别略有出入：进度和手动选的目标留着
         // 已经接了的不会变回没接（这次没看到进度而已）
         var t = t
+        // 同名、要的东西完全不一样：是同一组里的另一个任务（看不到要的东西时当成同一个）
+        if let a = t?.part, let b = target?.part, a != b, Set(a.split(separator: "|")).isDisjoint(with: b.split(separator: "|")) == false || NavTarget.samePart(a, b) { t?.part = b }
+        // 以前存的任务没有 part：和已记下的进度比，一样都对不上也算另一个
+        let mine = target?.part.map { Set($0.split(separator: "|").map(String.init)) } ?? Set(progress.keys)
+        let other = t?.part != nil && !mine.isEmpty && t?.part != target?.part && (target?.part != nil || Set(t!.part!.split(separator: "|").map(String.init)).isDisjoint(with: mine))
+        if t?.part == nil, t?.title == target?.title { t?.part = target?.part }
         // accepted == false：在“可接”页看到的（放弃了又能接），以它为准
         if t != nil, t?.title == target?.title, target?.accepted == true, t?.accepted == nil { t?.accepted = true; t?.notStarted = false }
         guard t != target else { return }
-        let same = t != nil && t?.title == target?.title && t?.notStarted == target?.notStarted && t?.mobs == target?.mobs
+        let same = t != nil && !other && t?.title == target?.title && t?.notStarted == target?.notStarted && t?.mobs == target?.mobs
         if t != nil, closed { closed = false; UserDefaults.standard.set(false, forKey: "navClosed") }
         target = t
         UserDefaults.standard.set(t.flatMap { try? JSONEncoder().encode($0) }, forKey: "navTarget")
+        // 任务窗口里看得到全部目标（part）：不在里面的进度是别的任务留下的，去掉
+        if same, let p = t?.part {
+            let keep = Set(p.split(separator: "|").map(String.init))
+            let stale = progress.keys.filter { !keep.contains($0) }
+            if !stale.isEmpty { for k in stale { progress[k] = nil }; UserDefaults.standard.set(progress, forKey: "navProgress"); trace("nav: 去掉别的任务留下的进度 \(stale.sorted())") }
+        }
         if !same {
             progress = [:]; progressGuard = ProgressGuard(); UserDefaults.standard.removeObject(forKey: "navProgress")
             goal = Self.firstGoal(t)
@@ -375,6 +438,7 @@ final class NavModel: ObservableObject {
         if let t { if t.accepted == true { note(t, progress) } else if t.accepted == false { drop(QuestOpen.key(t)) } }
         update()
         trace("nav: 目标 \(t.map { "\($0.title) \($0.questId ?? 0)" } ?? "无")")
+        if let t, t.questId == nil { trace("nav: 任务经验 " + (QuestTips.matched(text: t.en ?? "", items: progress.keys.sorted()).map { "对上 \($0)" } ?? "没有（任务卡 \(QuestCards.count) 张）")) }
         onQuestChange?()
     }
     private func update() {
@@ -414,7 +478,7 @@ final class NavModel: ObservableObject {
             switch goal {
             case .find(let n):
                 let p = seenPlaces?(n).first
-                h = NavHint(dir: .none, text: p.map { "\(name(n)) 在 \($0)，这张图还没走过" } ?? "还不知道 \(name(n)) 在哪")
+                h = NavHint(dir: .none, text: p.map { "\(name(n)) 在 \($0)，这张图还没走过" } ?? WalkNav.anyMob(target?.en ?? "").map { "\(name(n))：\($0)" } ?? "还不知道 \(name(n)) 在哪")
             case .start: h = target?.accepted == true ? nil : fromText.map { NavHint(dir: .none, text: "找 \($0)，还没见过") }
             default: h = endText.map { NavHint(dir: .none, text: "找 \($0)，还没见过") }
             }
@@ -505,13 +569,13 @@ final class NavModel: ObservableObject {
     func close() { closed = true; UserDefaults.standard.set(true, forKey: "navClosed"); if target == nil { objectWillChange.send(); onQuestChange?() }; setTarget(nil) }
 
     private var helperStep: Int?
-    /// 每 3 秒：看右上角的 Quest Helper，更新进度；没在导航时自动导航第一个追踪的任务
+    /// 每 3 秒：看右上角的 Quest Helper（玩家可能把它往下挪，躲开 buff 图标：范围放大到右边上半截，靠标题认），更新进度；没在导航时自动导航第一个追踪的任务
     func helperTick(locator: GameWindowLocator, g: GameWindowInfo, client: OCRClient) async {
         loadBook()
         guard !helperBusy, target != nil || !closed else { return }
         helperBusy = true; defer { helperBusy = false }
         let win = g.frameTopLeft.size
-        let r = CGRect(x: win.width - 240, y: 28, width: 240, height: 250).intersection(CGRect(origin: .zero, size: win))
+        let r = CGRect(x: win.width - 260, y: 28, width: 260, height: 400).intersection(CGRect(origin: .zero, size: win))
         guard let img = await withTimeout(2, { await locator.capture(g, rect: r, outputScale: 2) }),
               let raw = await withTimeout(3, { client.recognize(img) }) else { return }
         guard var items = QuestHelper.parse(raw) else { return }
@@ -526,6 +590,11 @@ final class NavModel: ObservableObject {
         let step = QuestHelper.nextStep(items, target: target)
         if let step, step.0.questId == helperStep { let was = target.map { QuestOpen.key($0) }; setTarget(step.0); if let was { drop(was) } }
         helperStep = step?.0.questId
+        // 正在带路的任务（公开版）：追踪框里的目标和它对得上（名字一样、要几个一样）就直接用，不用先在清单里对号
+        if !NavDB.shared.hasQuests, let t = target, t.questId == nil,
+           let it = items.first(where: { it in it.objectives.contains { x in progress[x.name].map { $0.count == 2 && "\($0[1])" == x.count.split(separator: "/").last.map(String.init) } ?? false } }) {
+            setProgress(it.objectives, sure: false)
+        }
         // 追踪里的都是接了的：记进清单（现在导航的由下面处理）
         for it in items where !it.objectives.isEmpty && !NavDB.shared.hasQuests {
             guard let o = book.match(it) else { continue }
@@ -757,6 +826,7 @@ final class NavModel: ObservableObject {
         guard let id = found else {
             misses += 1; pending = nil
             trace("nav: 没认出地图 \(lines.map(\.text))")
+            onTitle?(lines.map(\.text))
             if misses >= 3, !mapStale { mapStale = true; updateHint() }
             return
         }
@@ -830,10 +900,21 @@ struct MobRows: View {
     }
     var body: some View {
         let list = model.mobsHere
+        if MobBook.shared.isEmpty, !model.seenHere.isEmpty { seen(model.seenHere) }
         if !list.isEmpty {
             Text("这张图要打的" + (model.mapStale ? "（上次认出的图）" : "")).font(.system(size: 10)).foregroundStyle(Color.mSub)
             if !small, list.count <= 5 { ForEach(list, id: \.name) { row($0.name, $0.n) } } else { strip(list) }
         }
+    }
+    /// 公开版：自己在这张图见过的怪（打怪时的名牌、追踪框涨了），任务要打的在前
+    @ViewBuilder private func seen(_ l: [NavModel.SeenMob]) -> some View {
+        let all = l.sorted { (model.taskMob($0.name).map { $0.done ? 1 : 0 } ?? 2, $0.lv ?? 999, $0.name) < (model.taskMob($1.name).map { $0.done ? 1 : 0 } ?? 2, $1.lv ?? 999, $1.name) }
+        Text("这张图见过的怪" + (small ? "" : "（打怪时看到名字就记下）")).font(.system(size: 10)).foregroundStyle(Color.mSub)
+        FlowChips(items: all.prefix(small ? 6 : 12).map { m in
+            let t = model.taskMob(m.name)
+            let zh = QuestTips.mobZh(m.name).map { "\($0) " } ?? ""
+            return (zh + m.name + (m.lv.map { " Lv.\($0)" } ?? "") + (t.map { " · " + $0.text } ?? ""), t.map { $0.done ? Color(nsColor: Maple.done) : Color(nsColor: Maple.warn) } ?? Color.mText)
+        })
     }
     private func detail(_ n: String, _ k: Int) -> String {
         let i = MobBook.shared.info(n)
@@ -869,6 +950,20 @@ struct MobRows: View {
                     }.frame(maxWidth: .infinity)
                         .background(RoundedRectangle(cornerRadius: 4).fill(model.mobFocus == m.name ? Color(nsColor: Maple.warn).opacity(0.25) : Color.black.opacity(0.04)))
                 }.buttonStyle(.plain).help(NavDB.shared.mobName(m.name) + "：" + detail(m.name, m.n) + (t.map { " · " + $0.text } ?? "") + "。点一下箭头带路")
+            }
+        }
+    }
+}
+
+/// 一排会换行的小标签
+private struct FlowChips: View {
+    let items: [(String, Color)]
+    var body: some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 110), spacing: 4, alignment: .leading)], alignment: .leading, spacing: 3) {
+            ForEach(Array(items.enumerated()), id: \.offset) { _, it in
+                Text(it.0).font(.system(size: 10, weight: .semibold)).foregroundStyle(it.1).lineLimit(1).minimumScaleFactor(0.75)
+                    .padding(.horizontal, 5).frame(height: 17).frame(maxWidth: .infinity, alignment: .leading)
+                    .background(RoundedRectangle(cornerRadius: 4).fill(Color.black.opacity(0.05)))
             }
         }
     }
@@ -978,12 +1073,15 @@ struct NavCard: View {
                     // 三步：接 → 收集 / 打怪 → 交。每步灰 = 没开始、橙 = 进行中、绿 = 完成
                     if let n = q.start { pick((q.accepted == true ? "已接 ✓ " : "去接 ") + NavDB.shared.npcName(n), .start, model.startState) }
                     if q.start == nil, q.questId == nil, let n = model.fromNpc { pick((q.accepted == true ? "已接 ✓ " : "去接 ") + n, .start, q.accepted == true ? .done : .doing) }
+                    // 不知道是谁给的，也要让人看出已经接了
+                    else if q.start == nil, q.questId == nil, q.accepted == true { pick("已接 ✓", .start, .done) }
                     // 只列还没够的（够了的在下面“要完成”里是绿的）；全够了只剩一个绿勾
                     ForEach(q.mobs.filter { !model.mobDone($0) || model.goal == .mob($0) && !model.ready }, id: \.self) { m in
                         pick((q.mobGuess ? "打 \(m)？" : "打 \(m)") + model.progressText(m), .mob(m), model.mobState(m)) }
                     if case .mob(let m) = model.goal, !q.mobs.contains(m), !model.mobDone(m) { pick("打 \(m)？" + model.progressText(m), .mob(m), model.mobState(m)) }
                     // 要打的都列：够了的绿色 ✓（用户要求，别收起来）
                     ForEach(model.tipAll, id: \.self) { m in pick("打 " + model.name(m) + (model.tipMobs.contains(m) ? model.tipCount(m) : " ✓"), .find(m), model.tipMobs.contains(m) ? .doing : .done) }
+                    ForEach(model.doneItems, id: \.self) { n in pick("找 " + model.name(n) + " ✓", .find(n), .done) }
                     ForEach(model.unknownItems.filter { model.tipMob($0) == nil }, id: \.self) { n in
                         pick(model.useUp(n) ? "用掉 " + model.name(n) : "找 " + model.name(n) + model.countText(n), .find(n), .doing) }
                     if model.ready {
@@ -1178,7 +1276,9 @@ final class NavArrowPanel: NSObject {
     init(_ model: NavModel) {
         self.model = model
         super.init()
-        panel.contentView = NSHostingView(rootView: NavArrowView(model: model))
+        let host = DragHost(rootView: AnyView(NavArrowView(model: model)))
+        host.canDrag = { [weak self] in self?.movable == true }
+        panel.contentView = host
         NotificationCenter.default.addObserver(self, selector: #selector(moved), name: NSWindow.didMoveNotification, object: panel)
     }
     /// 移动模式：可以用鼠标拖；关掉后恢复鼠标穿透
@@ -1215,6 +1315,15 @@ final class NavArrowPanel: NSObject {
         if !panel.isVisible { panel.orderFrontRegardless() }
     }
     func hide() { if panel.isVisible { panel.orderOut(nil) } }
+}
+
+/// 导航条的内容：移动模式下按住哪里都能拖（SwiftUI 自己会吞掉鼠标，窗口背景拖动不起作用；游戏在前台时第一下点击也要收）
+private final class DragHost: NSHostingView<AnyView> {
+    var canDrag: () -> Bool = { false }
+    override func acceptsFirstMouse(for event: NSEvent?) -> Bool { canDrag() }
+    override func mouseDown(with event: NSEvent) {
+        if canDrag(), let w = window { w.performDrag(with: event) } else { super.mouseDown(with: event) }
+    }
 }
 
 /// 面板顶部最多能用多高（SidePanel 按面板高度算）

@@ -1,0 +1,6410 @@
+{
+ "_说明": "任务卡（知识包）。事实来自 maplestory-classic.com 的任务页（其数据源 OSMS Data Explorer，CC BY 4.0），有改动：只取事实、重新组织。不含掉落（掉落由玩家自己记）。说明文字是自己写的。",
+ "license": "数据部分 CC BY 4.0：OSMS Data Explorer，经 maplestory-classic.com",
+ "cards": [
+  {
+   "id": "mcw.a-blacksmith-in-my-own-right",
+   "title": "A Blacksmith in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "prev": [
+    "Silas Irons in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Dark Axe Stump",
+     "where": [
+      "East Rocky Mountain V",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain VI"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Zombie Mushroom",
+     "where": [
+      "Ant Tunnel III",
+      "Ant Tunnel II",
+      "Deep Ant Tunnel I"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Orihalcon Ingot",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Gold Ingot",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-blacksmith-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-carpenter-in-my-own-right",
+   "title": "A Carpenter in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "prev": [
+    "Vicious in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Dark Axe Stump",
+     "where": [
+      "East Rocky Mountain V",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain VI"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "The Red Relaxer",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-carpenter-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-father-s-love-for-his-daughter",
+   "title": "A Father's Love for His Daughter",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Family Reunited",
+   "start": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Bruce's Cooking Ingredients"
+   ],
+   "end": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Bruce's Special Cake",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-father-s-love-for-his-daughter"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-leatherworker-in-my-own-right",
+   "title": "A Leatherworker in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "JM From tha Streetz Looking for a Partner"
+   ],
+   "end": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Wild Boar",
+     "where": [
+      "The Land of Wild Boar II",
+      "Land of Wild Boar",
+      "West Rocky Mountain IV"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Red Chair",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-leatherworker-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-lost-thank-you",
+   "title": "A Lost Thank-You",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "What the City Taught Me",
+   "start": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "First Greeting with Alex, the Town Resident",
+    "Mother's Gold Watch"
+   ],
+   "end": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Alex's Gift Sack",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-lost-thank-you"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-rainbow-snail-shell-that-makes-wishes-come-true",
+   "title": "A rainbow snail shell that makes wishes come true!?",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "arc": "Legend of the Snail",
+   "start": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "What I Learned About Snails"
+   ],
+   "end": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Rainbow-colored Snail Shell",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-rainbow-snail-shell-that-makes-wishes-come-true"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-tailor-in-my-own-right",
+   "title": "A Tailor in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Francois in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Wild Boar",
+     "where": [
+      "The Land of Wild Boar II",
+      "Land of Wild Boar",
+      "West Rocky Mountain IV"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Red Starry Bandana",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-tailor-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.a-weaponcrafter-in-my-own-right",
+   "title": "A Weaponcrafter in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "prev": [
+    "Mr. Thunder in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Iron Hog",
+     "where": [
+      "Pig Park II",
+      "Pig Park",
+      "Someone Else's House"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Monkey Wrench",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/a-weaponcrafter-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.alex-s-request",
+   "title": "Alex's Request",
+   "level": {
+    "min": 18
+   },
+   "region": "Victoria Island",
+   "arc": "Alex the Runaway Kid",
+   "start": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/alex-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.an-arcforger-in-my-own-right",
+   "title": "An Arcforger in My Own Right!",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "prev": [
+    "Chrishrama in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Horny Mushroom",
+     "where": [
+      "Ant Tunnel IV",
+      "Ant Tunnel III",
+      "1st Accompaniment (Bonus)"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Topaz",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/an-arcforger-in-my-own-right"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.andre-s-request",
+   "title": "Andre's Request",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Shumi's Request"
+   ],
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Octopus",
+     "where": [
+      "Damp Tree-Forest",
+      "Damp Forest",
+      "Caution Falling Down"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Octopus Leg",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Pure Water",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/andre-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.arcon-s-blood",
+   "title": "Arcon's Blood?",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "prev": [
+    "Making a Sparkling Rock"
+   ],
+   "end": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Zombie Mushroom",
+     "where": [
+      "Ant Tunnel III",
+      "Ant Tunnel II",
+      "Deep Ant Tunnel I"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Charm of the Undead",
+     "n": 40
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/arcon-s-blood"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.arwen-and-the-glass-shoe",
+   "title": "Arwen and the Glass Shoe",
+   "level": {
+    "min": 29
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Arwen the Fairy",
+    "place": "Ellinia"
+   },
+   "end": {
+    "npc": "Arwen the Fairy",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Arwen's Glass Shoe",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/arwen-and-the-glass-shoe"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-alex-the-town-resident",
+   "title": "Asking After Alex, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Alex, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-alex-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-anne-the-town-resident",
+   "title": "Asking After Anne, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Anne, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-anne-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-athena-pierce",
+   "title": "Asking After Athena Pierce",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-athena-pierce"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-bruce-the-town-resident",
+   "title": "Asking After Bruce, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Bruce, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-bruce-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-camila-the-town-resident",
+   "title": "Asking After Camila, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Camila, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-camila-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-chief-stan",
+   "title": "Asking After Chief Stan",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Chief Stan"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-chief-stan"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-chun-ji",
+   "title": "Asking After Chun Ji",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Chun Ji"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-chun-ji"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-dark-lord",
+   "title": "Asking After Dark Lord",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Dark Lord"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-dark-lord"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-icarus-the-town-resident",
+   "title": "Asking After Icarus, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Icarus, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-icarus-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-jake-the-town-resident",
+   "title": "Asking After Jake, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Jake, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-jake-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-jane-doe-the-town-resident",
+   "title": "Asking After Jane Doe, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Jane Doe, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-jane-doe-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-maya-the-town-resident",
+   "title": "Asking After Maya, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Maya, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-maya-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-mr-pickall-the-town-resident",
+   "title": "Asking After Mr. Pickall, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Mr. Pickall, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-mr-pickall-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-mrs-ming-ming-the-town-resident",
+   "title": "Asking After Mrs. Ming Ming, the Town Resident.",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Mrs. Ming Ming, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-mrs-ming-ming-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-nella-the-town-resident",
+   "title": "Asking After Nella, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Nella, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-nella-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-pia-the-town-resident",
+   "title": "Asking After Pia, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Pia, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-pia-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-rina-the-town-resident",
+   "title": "Asking After Rina, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Rina, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-rina-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-after-shumi-the-town-resident",
+   "title": "Asking After Shumi, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Shumi, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/asking-after-shumi-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.asking-perion-for-help",
+   "title": "Asking Perion for Help",
+   "level": {
+    "min": 13
+   },
+   "region": "Victoria Island",
+   "arc": "Welcome to the Free Market!",
+   "start": {
+    "npc": "Lewis",
+    "place": "Free Market Entrance"
+   },
+   "prev": [
+    "Chief Stan's Reply"
+   ],
+   "end": {
+    "npc": "Lewis",
+    "place": "Free Market Entrance"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Lewis's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/asking-perion-for-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.bad-for-business",
+   "title": "Bad for Business",
+   "level": {
+    "min": 26
+   },
+   "region": "Victoria Island",
+   "arc": "Bad for Business",
+   "start": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "end": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Evil Eye",
+     "where": [
+      "The Cave of Evil Eye III",
+      "The Cave of Evil Eye II",
+      "Ant Tunnel Park"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/bad-for-business"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.biggs-s-collection-of-items",
+   "title": "Biggs's Collection of Items",
+   "level": {
+    "min": 3
+   },
+   "region": "Maple Island",
+   "start": {
+    "npc": "Biggs",
+    "place": "Southperry"
+   },
+   "end": {
+    "npc": "Biggs",
+    "place": "Southperry"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Blue Snail Shell",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Orange Mushroom Cap",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/biggs-s-collection-of-items"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.borrowing-sera-s-mirror",
+   "title": "Borrowing Sera's Mirror",
+   "level": {
+    "min": 1
+   },
+   "region": "Maple Island",
+   "arc": "Sera's Mirror",
+   "start": {
+    "npc": "Heena",
+    "place": "Mushroom Town - West Entrance"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/borrowing-sera-s-mirror"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.bruce-s-cooking-ingredients",
+   "title": "Bruce's Cooking Ingredients",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Family Reunited",
+   "start": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Mrs. Ming Ming's Advice"
+   ],
+   "end": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Firewood",
+     "n": 15
+    },
+    {
+     "do": "collect",
+     "what": "Egg",
+     "n": 3
+    },
+    {
+     "do": "collect",
+     "what": "Apple",
+     "n": 3
+    },
+    {
+     "do": "collect",
+     "what": "Orange",
+     "n": 3
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/bruce-s-cooking-ingredients"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.bruce-s-dilemma",
+   "title": "Bruce's Dilemma",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Family Reunited",
+   "start": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "prev": [
+    "I Need to Find My Daughter 2",
+    "First Greeting with Bruce, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/bruce-s-dilemma"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.camila-s-gem",
+   "title": "Camila's Gem",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Camila",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Camila",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Sparkling Glass Marble",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/camila-s-gem"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chief-stan-s-hammer",
+   "title": "Chief Stan's Hammer",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "After the Festival Ends...",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Chief Stan's Past"
+   ],
+   "end": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Old Chief Stan's Hammer",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chief-stan-s-hammer"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chief-stan-s-past",
+   "title": "Chief Stan's Past",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "After the Festival Ends...",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Mrs. Ming Ming's Concern"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/chief-stan-s-past"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chief-stan-s-reply",
+   "title": "Chief Stan's Reply",
+   "level": {
+    "min": 13
+   },
+   "region": "Victoria Island",
+   "arc": "Welcome to the Free Market!",
+   "start": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Welcome to the Free Market!"
+   ],
+   "end": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Chief Stan's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chief-stan-s-reply"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chief-stan-s-signature",
+   "title": "Chief Stan's Signature",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "prev": [
+    "The Filing Error"
+   ],
+   "end": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Incomplete Ledger",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chief-stan-s-signature"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chris-s-request",
+   "title": "Chris's Request",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Other Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Dr. Faymus's Request"
+   ],
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Stiff Feather",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Leather",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chris-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chrishrama-in-need-of-an-apprentice",
+   "title": "Chrishrama in Need of an Apprentice",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "end": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Dark Stump",
+     "where": [
+      "West Domain of Perion",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain V"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Garnet Ore",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chrishrama-in-need-of-an-apprentice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.chrishrama-in-need-of-help",
+   "title": "Chrishrama in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "prev": [
+    "Chrishrama in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Fragment of Magic",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/chrishrama-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.cutthroat-manny-s-request",
+   "title": "Cutthroat Manny's Request",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Other Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Chris's Request"
+   ],
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Evil Eye",
+     "where": [
+      "The Cave of Evil Eye III",
+      "The Cave of Evil Eye II",
+      "Ant Tunnel Park"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Evil Eye Tail",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/cutthroat-manny-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.dances-with-balrog-s-reply",
+   "title": "Dances with Balrog's Reply",
+   "level": {
+    "min": 13
+   },
+   "region": "Victoria Island",
+   "arc": "Welcome to the Free Market!",
+   "start": {
+    "npc": "Dances with Balrog",
+    "place": "Warriors' Sanctuary"
+   },
+   "prev": [
+    "Asking Perion for Help"
+   ],
+   "end": {
+    "npc": "Dances with Balrog",
+    "place": "Warriors' Sanctuary"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dances with Balrog's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/dances-with-balrog-s-reply"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.delivering-a-box-of-fossils",
+   "title": "Delivering a Box of Fossils",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Winston's Fossil Dig-up",
+   "start": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "prev": [
+    "Searching for Fossils"
+   ],
+   "end": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Winston's Recommendation",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Fossil Box",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/delivering-a-box-of-fossils"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.delivering-the-weird-medicine",
+   "title": "Delivering the Weird Medicine",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "prev": [
+    "Making Sparkling Rock"
+   ],
+   "end": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Weird Medicine",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/delivering-the-weird-medicine"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.don-hwang-s-request",
+   "title": "Don Hwang's Request",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Orange Mushroom",
+     "where": [
+      "Mushroom Garden",
+      "Dangerous Forest",
+      "The Field East of Amherst"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Ribbon Pig",
+     "where": [
+      "L Forest I",
+      "Pig Town",
+      "The Forest East of Henesys"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Orange Mushroom Cap",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Pig's Ribbon",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/don-hwang-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.donating-to-henesys",
+   "title": "Donating to Henesys",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Blue Snail Shell",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/donating-to-henesys"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.donating-to-kerning-city",
+   "title": "Donating to Kerning City",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Red Snail Shell",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/donating-to-kerning-city"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.dr-faymus-s-request",
+   "title": "Dr. Faymus's Request",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Other Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Andre's Request"
+   ],
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Jr. Necki",
+     "where": [
+      "Dangerous Croko I",
+      "Dangerous Croko II",
+      "The Swamp of Despair III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Horny Mushroom",
+     "where": [
+      "Ant Tunnel IV",
+      "Ant Tunnel III",
+      "1st Accompaniment (Bonus)"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Jr. Necki Skin",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Horny Mushroom Cap",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/dr-faymus-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.eliminate-monsters-from-the-site",
+   "title": "Eliminate Monsters from the Site",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "arc": "Shawn the Excavator's Request",
+   "start": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "prev": [
+    "Shawn the Excavator's Request"
+   ],
+   "end": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Wooden Mask",
+     "where": [
+      "Excavation Site II",
+      "Excavation Site I",
+      "Excavation Site III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Rocky Mask",
+     "where": [
+      "Excavation Site III",
+      "Excavation Site II"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/eliminate-monsters-from-the-site"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.estelle-s-request",
+   "title": "Estelle's Request",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "arc": "Mrs. Ming Ming's Second Worry",
+   "start": {
+    "npc": "Estelle",
+    "place": "The Field South of Ellinia"
+   },
+   "prev": [
+    "Mrs. Ming Ming's Second Worry"
+   ],
+   "end": {
+    "npc": "Estelle",
+    "place": "The Field South of Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Garnet",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/estelle-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.estelle-s-special-sauce",
+   "title": "Estelle's Special Sauce",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "arc": "Mrs. Ming Ming's Second Worry",
+   "start": {
+    "npc": "Estelle",
+    "place": "The Field South of Ellinia"
+   },
+   "prev": [
+    "Estelle's Request"
+   ],
+   "end": {
+    "npc": "Estelle",
+    "place": "The Field South of Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Pig's Head",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Octopus Leg",
+     "n": 30
+    },
+    {
+     "do": "collect",
+     "what": "Estelle's Special Sauce",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/estelle-s-special-sauce"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-a-new-adventure-awaits",
+   "title": "[Event] A New Adventure Awaits",
+   "level": {
+    "min": 20
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "[Event] Beyond the Unknown"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-a-new-adventure-awaits"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-a-strange-and-familiar-wood",
+   "title": "[Event] A Strange and Familiar Wood",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Arwen the Fairy",
+    "place": "Ellinia"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-a-strange-and-familiar-wood"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-beyond-the-unknown",
+   "title": "[Event] Beyond the Unknown",
+   "level": {
+    "min": 15
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Arwen the Fairy",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "[Event] A Strange and Familiar Wood"
+   ],
+   "end": {
+    "npc": "Arwen the Fairy",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Glowing Mushroom",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-beyond-the-unknown"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-escaped-thanksgiving-turkey",
+   "title": "[Event] Escaped Thanksgiving Turkey",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Grandma Benson",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-escaped-thanksgiving-turkey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-founder-s-first-step",
+   "title": "[Event] Founder's First Step",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-founder-s-first-step"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-gathering-leaves",
+   "title": "[Event] Gathering Leaves",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Letter L",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter E",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter A",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter F",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter P",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter O",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter I",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter N",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter T",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Letter S",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-gathering-leaves"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-gift-for-the-new-journey",
+   "title": "[Event] Gift for the New Journey",
+   "level": {
+    "min": 8
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-gift-for-the-new-journey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-growing-leaf",
+   "title": "[Event] Growing Leaf",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Reddened Maple Leaf",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-growing-leaf"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-halloween-candies",
+   "title": "[Event] Halloween Candies",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Malady",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Malady",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Halloween Candies",
+     "n": 100
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-halloween-candies"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-moon-bunny-s-rice-cake",
+   "title": "[Event] Moon Bunny's Rice Cake",
+   "level": {
+    "min": 11
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Tory",
+    "place": "Henesys Park"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-moon-bunny-s-rice-cake"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-thanksgiving-pumpkin-pie-500012",
+   "title": "[Event] Thanksgiving Pumpkin Pie",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Grandma Benson",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-thanksgiving-pumpkin-pie-500012"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-thanksgiving-pumpkin-pie-500013",
+   "title": "[Event] Thanksgiving Pumpkin Pie",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "prev": [
+    "[Event] Thanksgiving Pumpkin Pie"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-thanksgiving-pumpkin-pie-500013"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-fifth-mark",
+   "title": "[Event] The Fifth Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The Fourth Mark"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-fifth-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-final-mark",
+   "title": "[Event] The Final Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The Fifth Mark"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-final-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-first-mark",
+   "title": "[Event] The First Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The Marks We Leave Behind"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-first-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-fourth-mark",
+   "title": "[Event] The Fourth Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The Third Mark"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-fourth-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-journey-begins",
+   "title": "[Event] The Journey Begins",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Maple Leaf",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-the-journey-begins"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-marks-we-leave-behind",
+   "title": "[Event] The Marks We Leave Behind",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-marks-we-leave-behind"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-new-journey-begins",
+   "title": "[Event] The New Journey Begins",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Maple Administrator",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Maple Leaf",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/event-the-new-journey-begins"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-one-who-sealed-the-darkness",
+   "title": "[Event] The One Who Sealed the Darkness",
+   "level": {
+    "min": 15
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "prev": [
+    "[Event] Beyond the Unknown"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-one-who-sealed-the-darkness"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-second-mark",
+   "title": "[Event] The Second Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The First Mark"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-second-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-the-third-mark",
+   "title": "[Event] The Third Mark",
+   "level": {
+    "min": 25
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Jay",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] The Second Mark"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-the-third-mark"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.event-trick-or-treat",
+   "title": "[Event] Trick or Treat!",
+   "level": {
+    "min": 10
+   },
+   "region": "Event",
+   "start": {
+    "npc": "Malady",
+    "place": "Henesys"
+   },
+   "prev": [
+    "[Event] Halloween Candies"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/event-trick-or-treat"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.finding-sophia",
+   "title": "Finding Sophia",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "prev": [
+    "Maya of Henesys"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/finding-sophia"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.finding-the-instructor-bowman",
+   "title": "Finding the Instructor (Bowman)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Bowman's Next Journey",
+   "start": {
+    "npc": "Athena Pierce",
+    "place": "Bowman Instructional School"
+   },
+   "prev": [
+    "The Bowman's Next Journey"
+   ],
+   "end": {
+    "npc": "Athena Pierce",
+    "place": "Bowman Instructional School"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Athena Pierce's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/finding-the-instructor-bowman"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.finding-the-instructor-magician",
+   "title": "Finding the Instructor (Magician)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Magician's Next Journey",
+   "start": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "prev": [
+    "The Magician's Next Journey"
+   ],
+   "end": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Grendel the Really Old's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/finding-the-instructor-magician"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.finding-the-instructor-thief",
+   "title": "Finding the Instructor (Thief)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Thief's Next Journey",
+   "start": {
+    "npc": "Dark Lord",
+    "place": "Thieves' Hideout"
+   },
+   "prev": [
+    "The Thief's Next Journey"
+   ],
+   "end": {
+    "npc": "Dark Lord",
+    "place": "Thieves' Hideout"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Dark Lord's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/finding-the-instructor-thief"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.finding-the-instructor-warrior",
+   "title": "Finding the Instructor (Warrior)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Warrior's Next Journey",
+   "start": {
+    "npc": "Dances with Balrog",
+    "place": "Warriors' Sanctuary"
+   },
+   "prev": [
+    "The Warrior's Next Journey"
+   ],
+   "end": {
+    "npc": "Dances with Balrog",
+    "place": "Warriors' Sanctuary"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dances with Balrog's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/finding-the-instructor-warrior"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-alex-the-town-resident",
+   "title": "First Greeting with Alex, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-alex-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-anne-the-town-resident",
+   "title": "First Greeting with Anne, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-anne-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-athena-pierce",
+   "title": "First Greeting with Athena Pierce",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-athena-pierce"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-bruce-the-town-resident",
+   "title": "First Greeting with Bruce, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-bruce-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-camila-the-town-resident",
+   "title": "First Greeting with Camila, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-camila-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-chief-stan",
+   "title": "First Greeting with Chief Stan",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-chief-stan"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-chun-ji",
+   "title": "First Greeting with Chun Ji",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-chun-ji"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-dark-lord",
+   "title": "First Greeting with Dark Lord",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-dark-lord"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-icarus-the-town-resident",
+   "title": "First Greeting with Icarus, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-icarus-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-jake-the-town-resident",
+   "title": "First Greeting with Jake, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-jake-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-jane-doe-the-town-resident",
+   "title": "First Greeting with Jane Doe, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-jane-doe-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-maya-the-town-resident",
+   "title": "First Greeting with Maya, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-maya-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-mr-pickall-the-town-resident",
+   "title": "First Greeting with Mr. Pickall, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-mr-pickall-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-mrs-ming-ming-the-town-resident",
+   "title": "First Greeting with Mrs. Ming Ming, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-mrs-ming-ming-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-nella-the-town-resident",
+   "title": "First Greeting with Nella, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-nella-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-pia-the-town-resident",
+   "title": "First Greeting with Pia, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-pia-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-rina-the-town-resident",
+   "title": "First Greeting with Rina, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-rina-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.first-greeting-with-shumi-the-town-resident",
+   "title": "First Greeting with Shumi, the Town Resident",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Community Board",
+    "place": "Henesys"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/first-greeting-with-shumi-the-town-resident"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.fixing-blackbull-s-house",
+   "title": "Fixing Blackbull's House",
+   "level": {
+    "min": 11
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Blackbull",
+    "place": "Perion"
+   },
+   "end": {
+    "npc": "Blackbull",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stump",
+     "where": [
+      "The Tree That Grew II",
+      "The Field South of Ellinia",
+      "The Tree That Grew III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Dark Stump",
+     "where": [
+      "West Domain of Perion",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain V"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Tree Branch",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/fixing-blackbull-s-house"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.forest-of-patience-sabitrama-and-the-diet-medicine",
+   "title": "[Forest of Patience] Sabitrama and the Diet Medicine",
+   "level": {
+    "min": 25
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Sabitrama",
+    "place": "Sleepywood"
+   },
+   "end": {
+    "npc": "Sabitrama",
+    "place": "Sleepywood"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Pink Anthurium",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/forest-of-patience-sabitrama-and-the-diet-medicine"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.francois-in-need-of-an-apprentice",
+   "title": "Francois in Need of an Apprentice",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "end": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Dark Stump",
+     "where": [
+      "West Domain of Perion",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain V"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/francois-in-need-of-an-apprentice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.francois-in-need-of-help",
+   "title": "Francois in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Francois in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Francois",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Spool of Thread",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/francois-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.getting-arcon-s-blood",
+   "title": "Getting Arcon's Blood",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "prev": [
+    "Arcon's Blood?"
+   ],
+   "end": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Squishy Liquid",
+     "n": 30
+    },
+    {
+     "do": "collect",
+     "what": "Arcon's Blood",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 30
+    },
+    {
+     "do": "collect",
+     "what": "Octopus Leg",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/getting-arcon-s-blood"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.grandfather-s-vitamin-gummy",
+   "title": "Grandfather's Vitamin Gummy",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Jake's Trauma",
+   "start": {
+    "npc": "Mr. Goldstein",
+    "place": "Lith Harbor"
+   },
+   "prev": [
+    "The Final Ingredient for the Cure"
+   ],
+   "end": {
+    "npc": "Mr. Goldstein",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Vitamin Gummy",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/grandfather-s-vitamin-gummy"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.hero-of-the-story",
+   "title": "Hero of the Story",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "arc": "Legend of the Snail",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "The Old Snail"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/hero-of-the-story"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.how-to-enjoy-mushrooms-even-more",
+   "title": "How to Enjoy Mushrooms Even More",
+   "level": {
+    "min": 14
+   },
+   "region": "Victoria Island",
+   "arc": "Father's Mushroom Stew",
+   "start": {
+    "npc": "Shane",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "How to Enjoy Mushrooms"
+   ],
+   "end": {
+    "npc": "Shane",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Green Mushroom Cap",
+     "n": 15
+    },
+    {
+     "do": "collect",
+     "what": "Lemon",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/how-to-enjoy-mushrooms-even-more"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.how-to-enjoy-mushrooms",
+   "title": "How to Enjoy Mushrooms",
+   "level": {
+    "min": 14
+   },
+   "region": "Victoria Island",
+   "arc": "Father's Mushroom Stew",
+   "start": {
+    "npc": "Shane",
+    "place": "Ellinia"
+   },
+   "end": {
+    "npc": "Shane",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Green Mushroom Cap",
+     "n": 15
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/how-to-enjoy-mushrooms"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.i-m-bored-1",
+   "title": "I'm Bored 1",
+   "level": {
+    "min": 11
+   },
+   "region": "Victoria Island",
+   "arc": "I'm Bored",
+   "start": {
+    "npc": "Icarus",
+    "place": "Kerning City"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/i-m-bored-1"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.i-m-bored-2",
+   "title": "I'm Bored 2",
+   "level": {
+    "min": 11
+   },
+   "region": "Victoria Island",
+   "arc": "I'm Bored",
+   "start": {
+    "npc": "Icarus",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "I'm Bored 1"
+   ],
+   "end": {
+    "npc": "Icarus",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Tree Branch",
+     "n": 12
+    },
+    {
+     "do": "collect",
+     "what": "Squishy Liquid",
+     "n": 12
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/i-m-bored-2"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.i-need-help-on-my-homework",
+   "title": "I Need Help on My Homework!",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "I Need Help on My Homework!",
+   "start": {
+    "npc": "Wing the Fairy",
+    "place": "Ellinia"
+   },
+   "end": {
+    "npc": "Wing the Fairy",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Squishy Liquid",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Slime Bubble",
+     "n": 3
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/i-need-help-on-my-homework"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.i-need-to-find-my-daughter-1",
+   "title": "I Need to Find My Daughter 1",
+   "level": {
+    "min": 11
+   },
+   "region": "Victoria Island",
+   "arc": "I Need to Find My Daughter",
+   "start": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "prev": [
+    "The Reason Behind the Mushroom Studies",
+    "The Stump Horror Story"
+   ],
+   "end": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Ayan's Toy Sword",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/i-need-to-find-my-daughter-1"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.i-need-to-find-my-daughter-2",
+   "title": "I Need to Find My Daughter 2",
+   "level": {
+    "min": 11
+   },
+   "region": "Victoria Island",
+   "arc": "I Need to Find My Daughter",
+   "start": {
+    "npc": "Ayan",
+    "place": "Perion"
+   },
+   "prev": [
+    "I Need to Find My Daughter 1"
+   ],
+   "end": {
+    "npc": "Ayan",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Ayan's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/i-need-to-find-my-daughter-2"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.it-s-all-in-the-mind",
+   "title": "It's All in the Mind",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Jake's Trauma",
+   "start": {
+    "npc": "Mong from Kong",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Grandfather's Vitamin Gummy"
+   ],
+   "end": {
+    "npc": "Mong from Kong",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Special Stirge Phobia Cure",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/it-s-all-in-the-mind"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.jane-and-the-mushroom",
+   "title": "Jane and the Mushroom",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Jane",
+    "place": "Lith Harbor"
+   },
+   "end": {
+    "npc": "Jane",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Blue Mushroom",
+     "where": [
+      "The Blue Mushroom Forest",
+      "The Breathing Rock",
+      "The Entrance of Golem's Temple"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Horny Mushroom",
+     "where": [
+      "Ant Tunnel IV",
+      "Ant Tunnel III",
+      "1st Accompaniment (Bonus)"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Blue Mushroom Cap",
+     "n": 15
+    },
+    {
+     "do": "collect",
+     "what": "Horny Mushroom Cap",
+     "n": 15
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/jane-and-the-mushroom"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.jm-from-tha-streetz-in-need-of-help",
+   "title": "JM From tha Streetz in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "JM From tha Streetz Looking for a Partner"
+   ],
+   "end": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Jr. Necki",
+     "where": [
+      "Dangerous Croko I",
+      "Dangerous Croko II",
+      "The Swamp of Despair III"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Jr. Necki Skin",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/jm-from-tha-streetz-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.jm-from-tha-streetz-looking-for-a-partner",
+   "title": "JM From tha Streetz Looking for a Partner",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "end": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Pig",
+     "where": [
+      "Thicket Around the Beach II",
+      "A Hill West of Henesys",
+      "The Forest East of Henesys"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Leather",
+     "n": 5
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/jm-from-tha-streetz-looking-for-a-partner"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.letter-for-lucas",
+   "title": "Letter for Lucas",
+   "level": {
+    "min": 2
+   },
+   "region": "Maple Island",
+   "arc": "Please bring this letter to Lucas",
+   "start": {
+    "npc": "Maria",
+    "place": "A Split Road"
+   },
+   "end": {
+    "npc": "Maria",
+    "place": "A Split Road"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Maria's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/letter-for-lucas"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.looking-for-a-house-looking-for-a-house-kerning-city",
+   "title": "Looking for a House",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Home in Kerning City",
+   "start": {
+    "npc": "Jack",
+    "place": "Kerning City Civic Center"
+   },
+   "prev": [
+    "The Right to Own a Home"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/looking-for-a-house-looking-for-a-house-kerning-city"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.looking-for-a-house",
+   "title": "Looking for a House",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Home in Henesys",
+   "start": {
+    "npc": "Tommy",
+    "place": "Henesys Town Hall"
+   },
+   "prev": [
+    "The Right to Own a Home"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/looking-for-a-house"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.luke-the-security-guy",
+   "title": "Luke the Security Guy",
+   "level": {
+    "min": 19
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Luke",
+    "place": "Henesys Dungeon Entrance"
+   },
+   "end": {
+    "npc": "Luke",
+    "place": "Henesys Dungeon Entrance"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Jr. Necki",
+     "where": [
+      "Dangerous Croko I",
+      "Dangerous Croko II",
+      "The Swamp of Despair III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Stirge",
+     "where": [
+      "Dangerous Steam",
+      "Transfer Area",
+      "Dark Cave"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Salad",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Jr. Necki Skin",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Stirge Wing",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/luke-the-security-guy"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mai-s-training",
+   "title": "Mai's Training",
+   "level": {
+    "min": 3
+   },
+   "region": "Maple Island",
+   "arc": "Mai's Training",
+   "start": {
+    "npc": "Mai",
+    "place": "A Split Road"
+   },
+   "prev": [
+    "Sam's Suggestion"
+   ],
+   "end": {
+    "npc": "Mai",
+    "place": "A Split Road"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Blue Snail",
+     "where": [
+      "Snail Hunting Ground III",
+      "Forest West of Henesys",
+      "Right Around Lith Harbor"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Shroom",
+     "where": [
+      "Mushroom Garden",
+      "The Hill East of Henesys",
+      "The Field West of Amherst"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Red Snail",
+     "where": [
+      "The Field West of Amherst",
+      "Construction Site North of Kerning City",
+      "West Rocky Mountain I"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mai-s-training"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-match-cards-set",
+   "title": "Make a Match Cards Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Match Cards",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Monster Card",
+     "n": 15
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-match-cards-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-octopus-and-mushroom-omok-set",
+   "title": "Make a Octopus & Mushroom Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "Make a Pig & Mushroom Omok Set"
+   ],
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Octopus",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Mushroom",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-octopus-and-mushroom-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-pig-and-mushroom-omok-set",
+   "title": "Make a Pig & Mushroom Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "Make a Slime & Octopus Omok Set"
+   ],
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Pig",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Mushroom",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-pig-and-mushroom-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-pig-and-octopus-omok-set",
+   "title": "Make a Pig & Octopus Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "Make a Octopus & Mushroom Omok Set"
+   ],
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Pig",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Octopus",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-pig-and-octopus-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-slime-and-mushroom-omok-set",
+   "title": "Make a Slime & Mushroom Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Slime",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Mushroom",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-slime-and-mushroom-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-slime-and-octopus-omok-set",
+   "title": "Make a Slime & Octopus Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "Make a Slime & Pig Omok Set"
+   ],
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Slime",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Octopus",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-slime-and-octopus-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.make-a-slime-and-pig-omok-set",
+   "title": "Make a Slime & Pig Omok Set",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "arc": "Maple World's Unique Fun: Omok",
+   "start": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "prev": [
+    "Make a Slime & Mushroom Omok Set"
+   ],
+   "end": {
+    "npc": "Casey",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Omok Table",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Slime",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Omok Piece: Pig",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/make-a-slime-and-pig-omok-set"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.making-a-sparkling-rock",
+   "title": "Making a Sparkling Rock",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Sophia",
+    "place": "Perion Department Store"
+   },
+   "prev": [
+    "Finding Sophia"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/making-a-sparkling-rock"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.making-sparkling-rock",
+   "title": "Making Sparkling Rock",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Sophia",
+    "place": "Perion Department Store"
+   },
+   "prev": [
+    "Getting Arcon's Blood"
+   ],
+   "end": {
+    "npc": "Sophia",
+    "place": "Perion Department Store"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Sparkling Rock",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/making-sparkling-rock"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.making-the-medicine",
+   "title": "Making the Medicine",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Jake's Trauma",
+   "start": {
+    "npc": "Mong from Kong",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Stirge Phobia"
+   ],
+   "end": {
+    "npc": "Mong from Kong",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Bubbling's Huge Bubble",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Stirge Wing",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/making-the-medicine"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.maya-of-henesys",
+   "title": "Maya of Henesys",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "Maya and the Weird Medicine",
+   "start": {
+    "npc": "Maya",
+    "place": "Henesys Townstreet"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/maya-of-henesys"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.maya-s-first-collection",
+   "title": "Maya's First Collection",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Collecting For Maya",
+   "start": {
+    "npc": "Maya",
+    "place": "Henesys Townstreet"
+   },
+   "prev": [
+    "Delivering the Weird Medicine"
+   ],
+   "end": {
+    "npc": "Maya",
+    "place": "Henesys Townstreet"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Orange Mushroom Cap",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Green Mushroom Cap",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Blue Mushroom Cap",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Horny Mushroom Cap",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/maya-s-first-collection"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.maya-s-second-collection",
+   "title": "Maya's Second Collection",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Collecting For Maya",
+   "start": {
+    "npc": "Maya",
+    "place": "Henesys Townstreet"
+   },
+   "prev": [
+    "Maya's First Collection"
+   ],
+   "end": {
+    "npc": "Maya",
+    "place": "Henesys Townstreet"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Pig's Ribbon",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Bubbling's Huge Bubble",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Fire Boar's Tooth",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Tablecloth",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/maya-s-second-collection"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.memories-of-youth",
+   "title": "Memories of Youth",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "After the Festival Ends...",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Chief Stan's Hammer"
+   ],
+   "end": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Chief Stan's Hammer",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/memories-of-youth"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mother-s-gold-watch",
+   "title": "Mother's Gold Watch",
+   "level": {
+    "min": 18
+   },
+   "region": "Victoria Island",
+   "arc": "Alex the Runaway Kid",
+   "start": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Talking to Stan"
+   ],
+   "end": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Old Gold Watch",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mother-s-gold-watch"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mr-thunder-in-need-of-an-apprentice",
+   "title": "Mr. Thunder in Need of an Apprentice",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "prev": [
+    "Silas Irons in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Bronze Ingot",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Iron Ingot",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mr-thunder-in-need-of-an-apprentice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mr-thunder-in-need-of-help",
+   "title": "Mr. Thunder in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "prev": [
+    "Mr. Thunder in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Mr. Thunder",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Axe Stump",
+     "where": [
+      "The Forest North of Ellinia",
+      "Deep Valley III",
+      "East Rocky Mountain II"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Screw",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mr-thunder-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mrs-ming-ming-s-advice",
+   "title": "Mrs. Ming Ming's Advice",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Family Reunited",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Bruce's Dilemma"
+   ],
+   "end": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Mrs. Ming Ming's Cooking Recipe",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mrs-ming-ming-s-advice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mrs-ming-ming-s-concern",
+   "title": "Mrs. Ming Ming's Concern",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "After the Festival Ends...",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "First Greeting with Mrs. Ming Ming, the Town Resident",
+    "Estelle's Special Sauce"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/mrs-ming-ming-s-concern"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mrs-ming-ming-s-first-worry",
+   "title": "Mrs. Ming Ming's First Worry",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Slime Bubble",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Pig's Ribbon",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/mrs-ming-ming-s-first-worry"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.mrs-ming-ming-s-second-worry",
+   "title": "Mrs. Ming Ming's Second Worry",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "arc": "Mrs. Ming Ming's Second Worry",
+   "start": {
+    "npc": "Mrs. Ming Ming",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Mrs. Ming Ming's First Worry"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/mrs-ming-ming-s-second-worry"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.nella-s-old-memory",
+   "title": "Nella's Old Memory",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "What the City Taught Me",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Too Shy to Say It Himself"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/nella-s-old-memory"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.not-ready-to-go-home-yet",
+   "title": "Not Ready to Go Home Yet",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "What the City Taught Me",
+   "start": {
+    "npc": "JM From tha Streetz",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "One More Debt to Repay"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/not-ready-to-go-home-yet"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.notes-on-the-board",
+   "title": "Notes on the Board",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "arc": "Missing Explorers",
+   "start": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "end": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Horny Mushroom",
+     "where": [
+      "Ant Tunnel IV",
+      "Ant Tunnel III",
+      "1st Accompaniment (Bonus)"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/notes-on-the-board"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.olaf-s-first-training",
+   "title": "Olaf's First Training",
+   "level": {
+    "min": 8
+   },
+   "region": "Victoria Island",
+   "arc": "Olaf's Training",
+   "start": {
+    "npc": "Olaf",
+    "place": "Lith Harbor"
+   },
+   "end": {
+    "npc": "Olaf",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stump",
+     "where": [
+      "The Tree That Grew II",
+      "The Field South of Ellinia",
+      "The Tree That Grew III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Slime",
+     "where": [
+      "The Tree That Grew II",
+      "The Forest North of Ellinia",
+      "The Forest of Wisdom"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/olaf-s-first-training"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.olaf-s-second-training",
+   "title": "Olaf's Second Training",
+   "level": {
+    "min": 8
+   },
+   "region": "Victoria Island",
+   "arc": "Olaf's Training",
+   "start": {
+    "npc": "Olaf",
+    "place": "Lith Harbor"
+   },
+   "prev": [
+    "Olaf's First Training"
+   ],
+   "end": {
+    "npc": "Olaf",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Pig",
+     "where": [
+      "Thicket Around the Beach II",
+      "A Hill West of Henesys",
+      "The Forest East of Henesys"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Orange Mushroom",
+     "where": [
+      "Mushroom Garden",
+      "Dangerous Forest",
+      "The Field East of Amherst"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/olaf-s-second-training"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.one-more-debt-to-repay",
+   "title": "One More Debt to Repay",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "What the City Taught Me",
+   "start": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Nella's Old Memory"
+   ],
+   "end": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "A Gift for JM",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/one-more-debt-to-repay"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.phil-s-call",
+   "title": "Phil's Call",
+   "level": {
+    "min": 8
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Phil",
+    "place": "Lith Harbor"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/phil-s-call"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.pia-and-the-blue-mushroom",
+   "title": "Pia and the Blue Mushroom",
+   "level": {
+    "min": 16
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "end": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Green Mushroom Cap",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Blue Mushroom Cap",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/pia-and-the-blue-mushroom"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.pio-s-collecting-recycled-goods",
+   "title": "Pio's Collecting Recycled Goods",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "start": {
+    "npc": "Pio",
+    "place": "Amherst"
+   },
+   "end": {
+    "npc": "Pio",
+    "place": "Amherst"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Rusty Screw",
+     "n": 2
+    },
+    {
+     "do": "collect",
+     "what": "Old Wooden Board",
+     "n": 2
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/pio-s-collecting-recycled-goods"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.planting-trees",
+   "title": "Planting Trees",
+   "level": {
+    "min": 19
+   },
+   "region": "Victoria Island",
+   "arc": "Planting Trees",
+   "start": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "prev": [
+    "Progress on Fossil Research"
+   ],
+   "end": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Seedling",
+     "n": 50
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/planting-trees"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.progress-on-fossil-research",
+   "title": "Progress on Fossil Research",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Dr. Betty's Research on Plants",
+   "start": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Transporting Drake's Skull"
+   ],
+   "end": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Firewood",
+     "n": 15
+    },
+    {
+     "do": "collect",
+     "what": "Fossil Report",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Stump's Teardrop",
+     "n": 1
+    },
+    {
+     "do": "collect",
+     "what": "Weighted Earrings",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/progress-on-fossil-research"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.proof-of-companionship",
+   "title": "Proof of Companionship",
+   "level": {
+    "min": 21
+   },
+   "region": "Victoria Island",
+   "arc": "First Time Together",
+   "start": {
+    "npc": "Lakelis",
+    "place": "Kerning City"
+   },
+   "end": {
+    "npc": "Lakelis",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "King Slime"
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/proof-of-companionship"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.proof-of-qualification-bowman",
+   "title": "Proof of Qualification (Bowman)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Bowman's Next Journey",
+   "start": {
+    "npc": "Bowman Job Instructor",
+    "place": "The Road to the Dungeon"
+   },
+   "prev": [
+    "Test of Qualification (Bowman)"
+   ],
+   "end": {
+    "npc": "Bowman Job Instructor",
+    "place": "The Road to the Dungeon"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Proof of a Hero (Bowman)",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/proof-of-qualification-bowman"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.proof-of-qualification-magician",
+   "title": "Proof of Qualification (Magician)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Magician's Next Journey",
+   "start": {
+    "npc": "Magician Job Instructor",
+    "place": "The Forest North of Ellinia"
+   },
+   "prev": [
+    "Test of Qualification (Magician)"
+   ],
+   "end": {
+    "npc": "Magician Job Instructor",
+    "place": "The Forest North of Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Proof of a Hero (Magician)",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/proof-of-qualification-magician"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.proof-of-qualification-thief",
+   "title": "Proof of Qualification (Thief)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Thief's Next Journey",
+   "start": {
+    "npc": "Thief Job Instructor",
+    "place": "Construction Site North of Kerning City"
+   },
+   "prev": [
+    "Test of Qualification (Thief)"
+   ],
+   "end": {
+    "npc": "Thief Job Instructor",
+    "place": "Construction Site North of Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Proof of a Hero (Thief)",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/proof-of-qualification-thief"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.proof-of-qualification-warrior",
+   "title": "Proof of Qualification (Warrior)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Warrior's Next Journey",
+   "start": {
+    "npc": "Warrior Job Instructor",
+    "place": "West Rocky Mountain IV"
+   },
+   "prev": [
+    "Test of Qualification (Warrior)"
+   ],
+   "end": {
+    "npc": "Warrior Job Instructor",
+    "place": "West Rocky Mountain IV"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Proof of a Hero (Warrior)",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/proof-of-qualification-warrior"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-1",
+   "title": "Rain's Maple Quiz 1",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-1"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-2",
+   "title": "Rain's Maple Quiz 2",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 1"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-2"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-3",
+   "title": "Rain's Maple Quiz 3",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 2"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-3"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-4",
+   "title": "Rain's Maple Quiz 4",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 3"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-4"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-5",
+   "title": "Rain's Maple Quiz 5",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 4"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-5"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-6",
+   "title": "Rain's Maple Quiz 6",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 5"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-6"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.rain-s-maple-quiz-7",
+   "title": "Rain's Maple Quiz 7",
+   "level": {
+    "min": 5
+   },
+   "region": "Maple Island",
+   "arc": "Rain's Maple Quiz",
+   "start": {
+    "npc": "Rain",
+    "place": "Amherst"
+   },
+   "prev": [
+    "Rain's Maple Quiz 6"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/rain-s-maple-quiz-7"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.regained-vitality",
+   "title": "Regained Vitality",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "After the Festival Ends...",
+   "start": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Memories of Youth"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/regained-vitality"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.repairing-the-book",
+   "title": "Repairing the Book",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "prev": [
+    "Chief Stan's Signature"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/repairing-the-book"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.research-on-animal-fossils",
+   "title": "Research on Animal Fossils",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Dr. Betty's Research on Plants",
+   "start": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Research on Plant Fossils"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/research-on-animal-fossils"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.research-on-plant-fossils",
+   "title": "Research on Plant Fossils",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Dr. Betty's Research on Plants",
+   "start": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Delivering a Box of Fossils"
+   ],
+   "end": {
+    "npc": "Betty",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Plant Sample",
+     "n": 8
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/research-on-plant-fossils"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.roger-s-apple",
+   "title": "Roger's Apple",
+   "level": {
+    "min": 1
+   },
+   "region": "Maple Island",
+   "start": {
+    "npc": "Roger",
+    "place": "Mushroom Town (Roger)"
+   },
+   "end": {
+    "npc": "Roger",
+    "place": "Mushroom Town"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Roger's Apple",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/roger-s-apple"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.sam-s-suggestion",
+   "title": "Sam's Suggestion",
+   "level": {
+    "min": 1
+   },
+   "region": "Maple Island",
+   "start": {
+    "npc": "Sam",
+    "place": "Henesys Weapon Store"
+   },
+   "end": {
+    "npc": "Sam",
+    "place": "Henesys Weapon Store"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Snail",
+     "where": [
+      "Snail Hunting Ground I",
+      "Snail Hunting Ground II",
+      "Snail Hunting Ground III"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/sam-s-suggestion"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.searching-for-fossils",
+   "title": "Searching for Fossils",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Winston's Fossil Dig-up",
+   "start": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "end": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Axe Stump",
+     "where": [
+      "The Forest North of Ellinia",
+      "Deep Valley III",
+      "East Rocky Mountain II"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Plant Fossil",
+     "n": 12
+    },
+    {
+     "do": "collect",
+     "what": "Animal Fossil",
+     "n": 12
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/searching-for-fossils"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.shawn-the-excavator-s-request",
+   "title": "Shawn the Excavator's Request",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "arc": "Shawn the Excavator's Request",
+   "start": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "prev": [
+    "Planting Trees"
+   ],
+   "end": {
+    "npc": "Winston",
+    "place": "East Rocky Mountain II"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Wooden Board",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Slate",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/shawn-the-excavator-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.shumi-s-request",
+   "title": "Shumi's Request",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "Nella & Kerning City Citizen's Request",
+   "start": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Don Hwang's Request"
+   ],
+   "end": {
+    "npc": "Nella",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Dark Stump",
+     "where": [
+      "West Domain of Perion",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain V"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Leaf",
+     "n": 15
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/shumi-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.silas-irons-in-need-of-an-apprentice",
+   "title": "Silas Irons in Need of an Apprentice",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "end": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stump",
+     "where": [
+      "The Tree That Grew II",
+      "The Field South of Ellinia",
+      "The Tree That Grew III"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Dark Stump",
+     "where": [
+      "West Domain of Perion",
+      "East Rocky Mountain IV",
+      "East Rocky Mountain V"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Bronze Ore",
+     "n": 5
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/silas-irons-in-need-of-an-apprentice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.silas-irons-in-need-of-help",
+   "title": "Silas Irons in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "prev": [
+    "Silas Irons in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Silas Irons",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Bubbling",
+     "where": [
+      "Line 1 (Area 1)",
+      "B1 (Subway Depot)"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Mithril Ingot",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/silas-irons-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.snail-hunt",
+   "title": "Snail Hunt",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "arc": "Legend of the Snail",
+   "start": {
+    "npc": "Wing the Fairy",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Hero of the Story"
+   ],
+   "end": {
+    "npc": "Wing the Fairy",
+    "place": "Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Snail Shell",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Blue Snail Shell",
+     "n": 20
+    },
+    {
+     "do": "collect",
+     "what": "Red Snail Shell",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/snail-hunt"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.stirge-phobia",
+   "title": "Stirge Phobia",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Jake's Trauma",
+   "start": {
+    "npc": "Jake",
+    "place": "Subway Ticketing Booth"
+   },
+   "prev": [
+    "First Greeting with Jake, the Town Resident"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/stirge-phobia"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.stranger-s-identity",
+   "title": "Stranger's Identity",
+   "level": {
+    "min": 23
+   },
+   "region": "Victoria Island",
+   "arc": "Mystery of Niora Hospital",
+   "start": {
+    "npc": "Jane Doe",
+    "place": "Niora Hospital"
+   },
+   "prev": [
+    "Stranger's Request"
+   ],
+   "end": {
+    "npc": "Jane Doe",
+    "place": "Niora Hospital"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Zombie Mushroom",
+     "where": [
+      "Ant Tunnel III",
+      "Ant Tunnel II",
+      "Deep Ant Tunnel I"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Charm of the Undead",
+     "n": 25
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/stranger-s-identity"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.stranger-s-request",
+   "title": "Stranger's Request",
+   "level": {
+    "min": 23
+   },
+   "region": "Victoria Island",
+   "arc": "Mystery of Niora Hospital",
+   "start": {
+    "npc": "Jane Doe",
+    "place": "Niora Hospital"
+   },
+   "end": {
+    "npc": "Jane Doe",
+    "place": "Niora Hospital"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stirge",
+     "where": [
+      "Dangerous Steam",
+      "Transfer Area",
+      "Dark Cave"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Broken Mirror Glass",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/stranger-s-request"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.talking-to-stan",
+   "title": "Talking to Stan",
+   "level": {
+    "min": 18
+   },
+   "region": "Victoria Island",
+   "arc": "Alex the Runaway Kid",
+   "start": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "prev": [
+    "Alex's Request"
+   ],
+   "end": {
+    "npc": "Chief Stan",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Green Mushroom",
+     "where": [
+      "West Rocky Mountain III",
+      "Tree Dungeon, Forest Up North IV",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Blue Mushroom",
+     "where": [
+      "The Blue Mushroom Forest",
+      "The Breathing Rock",
+      "The Entrance of Golem's Temple"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Green Mushroom Cap",
+     "n": 15
+    },
+    {
+     "do": "collect",
+     "what": "Blue Mushroom Cap",
+     "n": 15
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/talking-to-stan"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.tapping-at-the-window",
+   "title": "Tapping at the Window",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Sleepless in Sleepywood",
+   "start": {
+    "npc": "Hotel Receptionist",
+    "place": "Sleepywood Hotel"
+   },
+   "end": {
+    "npc": "Hotel Receptionist",
+    "place": "Sleepywood Hotel"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stirge",
+     "where": [
+      "Dangerous Steam",
+      "Transfer Area",
+      "Dark Cave"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Stirge Wing",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/tapping-at-the-window"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.teo-s-even-weirder-hobby",
+   "title": "Teo's Even Weirder Hobby",
+   "level": {
+    "min": 8
+   },
+   "region": "Victoria Island",
+   "arc": "Teo's Collection",
+   "start": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "prev": [
+    "Teo's Weird Hobby"
+   ],
+   "end": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Pig",
+     "where": [
+      "Thicket Around the Beach II",
+      "A Hill West of Henesys",
+      "The Forest East of Henesys"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Pig's Head",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/teo-s-even-weirder-hobby"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.teo-s-weird-hobby",
+   "title": "Teo's Weird Hobby",
+   "level": {
+    "min": 8
+   },
+   "region": "Victoria Island",
+   "arc": "Teo's Collection",
+   "start": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "end": {
+    "npc": "Teo",
+    "place": "Lith Harbor"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Slime",
+     "where": [
+      "The Tree That Grew II",
+      "The Forest North of Ellinia",
+      "The Forest of Wisdom"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Slime Bubble",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/teo-s-weird-hobby"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.test-of-qualification-bowman",
+   "title": "Test of Qualification (Bowman)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Bowman's Next Journey",
+   "start": {
+    "npc": "Bowman Job Instructor",
+    "place": "The Road to the Dungeon"
+   },
+   "prev": [
+    "Finding the Instructor (Bowman)"
+   ],
+   "end": {
+    "npc": "Bowman Job Instructor",
+    "place": "The Road to the Dungeon"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dark Marble (Bowman)",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/test-of-qualification-bowman"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.test-of-qualification-magician",
+   "title": "Test of Qualification (Magician)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Magician's Next Journey",
+   "start": {
+    "npc": "Magician Job Instructor",
+    "place": "The Forest North of Ellinia"
+   },
+   "prev": [
+    "Finding the Instructor (Magician)"
+   ],
+   "end": {
+    "npc": "Magician Job Instructor",
+    "place": "The Forest North of Ellinia"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dark Marble (Magician)",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/test-of-qualification-magician"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.test-of-qualification-thief",
+   "title": "Test of Qualification (Thief)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Thief's Next Journey",
+   "start": {
+    "npc": "Thief Job Instructor",
+    "place": "Construction Site North of Kerning City"
+   },
+   "prev": [
+    "Finding the Instructor (Thief)"
+   ],
+   "end": {
+    "npc": "Thief Job Instructor",
+    "place": "Construction Site North of Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dark Marble (Thief)",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/test-of-qualification-thief"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.test-of-qualification-warrior",
+   "title": "Test of Qualification (Warrior)",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Warrior's Next Journey",
+   "start": {
+    "npc": "Warrior Job Instructor",
+    "place": "West Rocky Mountain IV"
+   },
+   "prev": [
+    "Finding the Instructor (Warrior)"
+   ],
+   "end": {
+    "npc": "Warrior Job Instructor",
+    "place": "West Rocky Mountain IV"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Dark Marble (Warrior)",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/test-of-qualification-warrior"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-best-dad",
+   "title": "The Best Dad",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Family Reunited",
+   "start": {
+    "npc": "Ayan",
+    "place": "Perion"
+   },
+   "prev": [
+    "A Father's Love for His Daughter"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-best-dad"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-bowman-s-next-journey",
+   "title": "The Bowman's Next Journey",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Bowman's Next Journey",
+   "start": {
+    "npc": "Athena Pierce",
+    "place": "Bowman Instructional School"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-bowman-s-next-journey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-chime-that-rings-alone",
+   "title": "The Chime That Rings Alone",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Sleepless in Sleepywood",
+   "start": {
+    "npc": "Hotel Receptionist",
+    "place": "Sleepywood Hotel"
+   },
+   "prev": [
+    "Tapping at the Window"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-chime-that-rings-alone"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-dark-lord-s-signature",
+   "title": "The Dark Lord's Signature",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Dark Lord",
+    "place": "Thieves' Hideout"
+   },
+   "prev": [
+    "The Faded Ink"
+   ],
+   "end": {
+    "npc": "Dark Lord",
+    "place": "Thieves' Hideout"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Stamped Ledger",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-dark-lord-s-signature"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-faded-ink",
+   "title": "The Faded Ink",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "prev": [
+    "Repairing the Book"
+   ],
+   "end": {
+    "npc": "Chrishrama",
+    "place": "Sleepywood"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Bound Ledger",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-faded-ink"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-filing-error",
+   "title": "The Filing Error",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Lyn the Librarian",
+    "place": "The Circulation Desk"
+   },
+   "end": {
+    "npc": "Lyn the Librarian",
+    "place": "The Circulation Desk"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Torn Ledger Pages",
+     "n": 25
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-filing-error"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-final-ingredient-for-the-cure",
+   "title": "The Final Ingredient for the Cure",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Jake's Trauma",
+   "start": {
+    "npc": "Mong from Kong",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "Making the Medicine"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-final-ingredient-for-the-cure"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-glowing-charms",
+   "title": "The Glowing Charms",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "arc": "Missing Explorers",
+   "start": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "prev": [
+    "Notes on the Board"
+   ],
+   "end": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Charm of the Undead",
+     "n": 30
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-glowing-charms"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-last-note",
+   "title": "The Last Note",
+   "level": {
+    "min": 24
+   },
+   "region": "Victoria Island",
+   "arc": "Missing Explorers",
+   "start": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "prev": [
+    "The Glowing Charms"
+   ],
+   "end": {
+    "npc": "Worn Notice Board",
+    "place": "Ant Tunnel Park"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Evil Eye",
+     "where": [
+      "The Cave of Evil Eye III",
+      "The Cave of Evil Eye II",
+      "Ant Tunnel Park"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-last-note"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-magician-s-next-journey",
+   "title": "The Magician's Next Journey",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Magician's Next Journey",
+   "start": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-magician-s-next-journey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-old-snail",
+   "title": "The Old Snail",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "arc": "Legend of the Snail",
+   "start": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "end": {
+    "npc": "Pia",
+    "place": "Henesys Park"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "The Snail Legend",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-old-snail"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-reason-behind-the-mushroom-studies",
+   "title": "The Reason Behind the Mushroom Studies",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "Reason Behind the Mushroom Studies",
+   "start": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "end": {
+    "npc": "Bruce",
+    "place": "Henesys"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Shroom",
+     "where": [
+      "Mushroom Garden",
+      "The Hill East of Henesys",
+      "The Field West of Amherst"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Orange Mushroom",
+     "where": [
+      "Mushroom Garden",
+      "Dangerous Forest",
+      "The Field East of Amherst"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Mushroom Spore",
+     "n": 10
+    },
+    {
+     "do": "collect",
+     "what": "Orange Mushroom Cap",
+     "n": 10
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-reason-behind-the-mushroom-studies"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-right-to-own-a-home-the-right-to-own-a-home-kerning-city",
+   "title": "The Right to Own a Home",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Home in Kerning City",
+   "start": {
+    "npc": "Roxy",
+    "place": "Kerning City Civic Center"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-right-to-own-a-home-the-right-to-own-a-home-kerning-city"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-right-to-own-a-home",
+   "title": "The Right to Own a Home",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "A Home in Henesys",
+   "start": {
+    "npc": "Arthur",
+    "place": "Henesys Town Hall"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-right-to-own-a-home"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-smell-below",
+   "title": "The Smell Below",
+   "level": {
+    "min": 22
+   },
+   "region": "Victoria Island",
+   "arc": "Smell Below",
+   "start": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "prev": [
+    "Delivering the Weird Medicine"
+   ],
+   "end": {
+    "npc": "Manji",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Horny Mushroom",
+     "where": [
+      "Ant Tunnel IV",
+      "Ant Tunnel III",
+      "1st Accompaniment (Bonus)"
+     ]
+    },
+    {
+     "do": "kill",
+     "what": "Zombie Mushroom",
+     "where": [
+      "Ant Tunnel III",
+      "Ant Tunnel II",
+      "Deep Ant Tunnel I"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-smell-below"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-stump-horror-story",
+   "title": "The Stump Horror Story",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "arc": "Stump Horror Story",
+   "start": {
+    "npc": "Ayan",
+    "place": "Perion"
+   },
+   "end": {
+    "npc": "Ayan",
+    "place": "Perion"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stump",
+     "where": [
+      "The Tree That Grew II",
+      "The Field South of Ellinia",
+      "The Tree That Grew III"
+     ]
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/the-stump-horror-story"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-thief-s-next-journey",
+   "title": "The Thief's Next Journey",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Thief's Next Journey",
+   "start": {
+    "npc": "Dark Lord",
+    "place": "Thieves' Hideout"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-thief-s-next-journey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.the-warrior-s-next-journey",
+   "title": "The Warrior's Next Journey",
+   "level": {
+    "min": 30
+   },
+   "region": "Victoria Island",
+   "arc": "Warrior's Next Journey",
+   "start": {
+    "npc": "Dances with Balrog",
+    "place": "Warriors' Sanctuary"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/the-warrior-s-next-journey"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.to-henesys-the-prairie-town",
+   "title": "To Henesys, the Prairie Town",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/to-henesys-the-prairie-town"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.to-the-gray-city-kerning-city",
+   "title": "To the Gray City, Kerning City",
+   "level": {
+    "min": 12
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Arthur",
+    "place": "Henesys Town Hall"
+   },
+   "prev": [
+    "To Henesys, the Prairie Town"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/to-the-gray-city-kerning-city"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.todd-s-how-to-hunt",
+   "title": "Todd's How-to-Hunt",
+   "level": {
+    "min": 1
+   },
+   "region": "Maple Island",
+   "start": {
+    "npc": "Todd",
+    "place": "East Entrance to Mushroom Town"
+   },
+   "end": {
+    "npc": "Todd",
+    "place": "East Entrance to Mushroom Town"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Tutorial Jr. Sentinel"
+    },
+    {
+     "do": "collect",
+     "what": "Jr. Sentinel Shellpiece",
+     "n": 3
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/todd-s-how-to-hunt"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.too-shy-to-say-it-himself",
+   "title": "Too Shy to Say It Himself",
+   "level": {
+    "min": 27
+   },
+   "region": "Victoria Island",
+   "arc": "What the City Taught Me",
+   "start": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "prev": [
+    "A Lost Thank-You"
+   ],
+   "end": {
+    "npc": "Alex",
+    "place": "Kerning City"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "A Gift for Nella",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/too-shy-to-say-it-himself"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.transporting-drake-s-skull",
+   "title": "Transporting Drake's Skull",
+   "level": {
+    "min": 17
+   },
+   "region": "Victoria Island",
+   "arc": "Dr. Betty's Research on Plants",
+   "start": {
+    "npc": "Anne",
+    "place": "The Hill East of Henesys"
+   },
+   "prev": [
+    "Research on Animal Fossils"
+   ],
+   "end": {
+    "npc": "Anne",
+    "place": "The Hill East of Henesys"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Stuffed Drake Skull",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/transporting-drake-s-skull"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.vicious-in-need-of-an-apprentice",
+   "title": "Vicious in Need of an Apprentice",
+   "level": {
+    "min": 10
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "end": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Stump",
+     "where": [
+      "The Tree That Grew II",
+      "The Field South of Ellinia",
+      "The Tree That Grew III"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Tree Branch",
+     "n": 20
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/vicious-in-need-of-an-apprentice"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.vicious-in-need-of-help",
+   "title": "Vicious in Need of Help",
+   "level": {
+    "min": 15
+   },
+   "region": "Victoria Island",
+   "start": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "prev": [
+    "Vicious in Need of an Apprentice"
+   ],
+   "end": {
+    "npc": "Vicious",
+    "place": "Henesys Market"
+   },
+   "steps": [
+    {
+     "do": "kill",
+     "what": "Axe Stump",
+     "where": [
+      "The Forest North of Ellinia",
+      "Deep Valley III",
+      "East Rocky Mountain II"
+     ]
+    },
+    {
+     "do": "collect",
+     "what": "Processed Wood",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/vicious-in-need-of-help"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.we-hold-your-place",
+   "title": "We Hold Your Place",
+   "level": {
+    "min": 28
+   },
+   "region": "Victoria Island",
+   "arc": "Caretaker's Ledger",
+   "start": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "prev": [
+    "The Dark Lord's Signature"
+   ],
+   "end": {
+    "npc": "Grendel the Really Old",
+    "place": "Magic Library"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Amended Ledger",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/we-hold-your-place"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.welcome-to-the-free-market",
+   "title": "Welcome to the Free Market!",
+   "level": {
+    "min": 13
+   },
+   "region": "Victoria Island",
+   "arc": "Welcome to the Free Market!",
+   "start": {
+    "npc": "Lewis",
+    "place": "Free Market Entrance"
+   },
+   "end": {
+    "npc": "Lewis",
+    "place": "Free Market Entrance"
+   },
+   "steps": [
+    {
+     "do": "collect",
+     "what": "Lewis's Letter",
+     "n": 1
+    }
+   ],
+   "src": [
+    "maplestory-classic.com/quests/welcome-to-the-free-market"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.what-i-learned-about-snails",
+   "title": "What I Learned About Snails",
+   "level": {
+    "min": 20
+   },
+   "region": "Victoria Island",
+   "arc": "Legend of the Snail",
+   "start": {
+    "npc": "Wing the Fairy",
+    "place": "Ellinia"
+   },
+   "prev": [
+    "Snail Hunt"
+   ],
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/what-i-learned-about-snails"
+   ],
+   "checked": false
+  },
+  {
+   "id": "mcw.what-sen-wants-to-eat",
+   "title": "What Sen wants to eat",
+   "level": {
+    "min": 1
+   },
+   "region": "Maple Island",
+   "arc": "Nina and Sen's Dinner Menu",
+   "start": {
+    "npc": "Nina",
+    "place": "Mushroom Town (Nina)"
+   },
+   "steps": [],
+   "src": [
+    "maplestory-classic.com/quests/what-sen-wants-to-eat"
+   ],
+   "checked": false
+  }
+ ]
+}

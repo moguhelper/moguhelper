@@ -12,6 +12,9 @@ public struct BagLearn: Codable, Sendable {
     private struct Page: Codable, Sendable { var slots: [Slot?], at: Date }
     private struct Pick: Codable, Sendable { var name: String, n: Int, at: Date }
     var known: [Known] = [], votes: [Vote] = []
+    /// 分不清的：这一格可能是哪几样（捡的数一样）。每次对比取交集，剩一样、又对上过两回就是它
+    struct Cand: Codable, Sendable { var print: [Int], names: [String], seen: [Double] }
+    var cands: [Cand]? = nil
     /// 追踪框总数对上过的
     private var marks: [Vote] = [], totals: [String: (n: Int, at: Date)] = [:]
     private var pages: [Page] = [], picks: [Pick] = []
@@ -49,10 +52,10 @@ public struct BagLearn: Codable, Sendable {
         guard let a = d.first, a.1 <= 5, d.count < 2 || d[1].1 - a.1 >= 5 else { return nil }
         return a.0
     }
-    enum CodingKeys: CodingKey { case known, votes, pages, picks, owner, tabs }
+    enum CodingKeys: CodingKey { case known, votes, pages, picks, owner, tabs, cands }
     public mutating func use(_ name: String) {
         guard name != owner else { return }
-        if owner != nil { pages = []; picks = [] }
+        if owner != nil { pages = []; picks = []; cands = nil }
         owner = name; now = []; waiting = []; totals = [:]
     }
     public private(set) var dirty = false
@@ -86,19 +89,27 @@ public struct BagLearn: Codable, Sendable {
         }
         return ok >= 2
     }
-    /// 看到一屏（30 格，nil = 没看清）。连着两次一样就记下，背包马上关掉也行；过 1.5 秒再比（settle）
+    /// 看到一屏（30 格，nil = 没看清）。看一眼（一帧）就记；同一次打开里后面的帧更清楚（淡入完了），换成后面的。过 1.5 秒再比（settle）
     public mutating func see(_ slots: [Slot?], at t: Date) {
-        // 一格一格确认：闪一下、半透明的那几格当没看清，别的照样算
         let old = now, near = t.timeIntervalSince(since) < 1.2
         now = slots; since = t
-        guard near, old.count == slots.count else { return }
-        let slots = zip(slots, old).map { x, y -> Slot? in
-            guard let x, let y, x.n == y.n, x.print.isEmpty ? y.print.isEmpty : Self.like(x.print, y.print) else { return nil }
-            return x
+        var use = slots
+        // 连着两帧：一格一格确认，闪一下、半透明的那几格当没看清；这样剩得太少就用这一帧原样
+        if near, old.count == slots.count {
+            let both = zip(slots, old).map { x, y -> Slot? in
+                guard let x, let y, x.n == y.n, x.print.isEmpty ? y.print.isEmpty : Self.like(x.print, y.print) else { return nil }
+                return x
+            }
+            if both.filter({ $0 != nil }).count >= 12 { use = both }
         }
-        guard slots.filter({ $0 != nil }).count >= 12 else { return }
-        if let w = waiting.last, t.timeIntervalSince(w.at) < 1, w.slots == slots { return }
-        waiting.append(Page(slots: slots, at: t))
+        guard use.filter({ $0 != nil }).count >= 12 else { return }
+        if let w = waiting.last, t.timeIntervalSince(w.at) < 1.2 {
+            if w.slots == use { return }
+            // 同一次打开：留后面这帧（读到的数多的优先）
+            if use.filter({ $0?.n != nil }).count >= w.slots.filter({ $0?.n != nil }).count { waiting[waiting.count - 1] = Page(slots: use, at: t) }
+            return
+        }
+        waiting.append(Page(slots: use, at: t))
         if waiting.count > 20 { waiting.removeFirst() }
     }
     /// 任务追踪框里写的“36/10 Orange Mushroom Cap”：名字和一共几个
@@ -119,13 +130,16 @@ public struct BagLearn: Codable, Sendable {
     private mutating func compare(_ slots: [Slot?], at t: Date) -> [String] {
         var new = byTotal(slots, at: t)
         let olds = pages.filter { samePage($0.slots, slots) }.sorted { $0.at > $1.at }
-        for o in olds { new += diff(o, slots, at: t) }
+        // 日志只留和最近那一份比的结果（最有用）；和更早的比也照样学
+        for (i, o) in olds.enumerated() { let keep = log; new += diff(o, slots, at: t); if i > 0 { log = keep } }
         // 隔 5 秒以上、或有变化才多存一份
         if let l = olds.first {
             // 没变化：这一份一直管到现在
             if l.slots == slots, let k = pages.firstIndex(where: { $0.at == l.at }) { pages[k].at = t; dirty = true; return new }
             if t.timeIntervalSince(l.at) < 5 { return new }
         }
+        // 背包一直开着、画面有点小变化：同一次打开只留最新的一份，别把以前几次挤掉
+        if let k = pages.indices.last, t.timeIntervalSince(pages[k].at) < 3 { pages[k] = Page(slots: slots, at: t); dirty = true; return new }
         pages.append(Page(slots: slots, at: t)); dirty = true
         // 同一页最多留 6 份，一共 30 份
         if olds.count >= 6, let a = olds.last?.at { pages.removeAll { $0.at == a } }
@@ -158,6 +172,33 @@ public struct BagLearn: Codable, Sendable {
         }
         return new
     }
+    /// 多了的不认识的格子正好和捡的不认识的东西一样多（没漏记）：每格记下可能是哪几样，和以前的取交集
+    private mutating func narrow(_ up: [(print: [Int], n: Int, unsure: Bool)], _ got: [String: (lo: Int, hi: Int)], sig: Double) -> [String] {
+        let learned = Set(known.map(\.name))
+        let cells = up.filter { u in name(u.print) == nil && !known.contains { Self.far($0.print, u.print) <= 6 } }
+        let names = got.filter { !learned.contains($0.key) }
+        guard !cells.isEmpty, cells.count == names.count, cells.count <= 6 else { return [] }
+        var c = cands ?? []
+        for x in cells {
+            let may = names.filter { $0.value.lo <= x.n && x.n <= $0.value.hi }.keys.sorted()
+            guard !may.isEmpty else { return [] }
+            if let k = c.firstIndex(where: { Self.like($0.print, x.print) }) {
+                let both = c[k].names.filter(may.contains)
+                if both.isEmpty { c[k] = Cand(print: x.print, names: may, seen: [sig]) }      // 前后矛盾：重来
+                else { c[k].names = both; if !c[k].seen.contains(sig) { c[k].seen.append(sig) } }
+            } else { c.append(Cand(print: x.print, names: may, seen: [sig])) }
+        }
+        if c.count > 60 { c.removeFirst(c.count - 60) }
+        cands = c; dirty = true
+        // 剩一样、对上过两回，而且这个名字没被别的格子也认定
+        var new: [String] = []
+        while let x = (cands ?? []).first(where: { x in x.names.count == 1 && x.seen.count >= 2 && !(cands ?? []).contains { !Self.like($0.print, x.print) && $0.names == x.names } }) {
+            let w = x.names[0]
+            if learned.contains(w) || new.contains(w) { cands?.removeAll { Self.like($0.print, x.print) }; continue }
+            learn(w, x.print); new.append(w)
+        }
+        return new
+    }
     /// 这一屏是背包哪一页：看认识的东西捡的时候写的是哪一页
     private func tab(_ slots: [Slot?]) -> String? {
         var c: [String: Int] = [:]
@@ -166,6 +207,7 @@ public struct BagLearn: Codable, Sendable {
     }
     private mutating func learn(_ w: String, _ p: [Int]) {
         known.append(Known(name: w, print: p)); dirty = true
+        if var c = cands { c.removeAll { Self.like($0.print, p) }; for i in c.indices { c[i].names.removeAll { $0 == w } }; cands = c.filter { !$0.names.isEmpty } }
         votes.removeAll { $0.name == w || Self.like($0.print, p) }; marks.removeAll { $0.name == w || Self.like($0.print, p) }
     }
     private mutating func diff(_ old: Page, _ slots: [Slot?], at t: Date) -> [String] {
@@ -192,7 +234,8 @@ public struct BagLearn: Codable, Sendable {
         }
         let up = change.filter { !$0.unsure && $0.n > 0 }
         log = "\(Int(t.timeIntervalSince(old.at))) 秒 捡到 \(got.map { "\($0.key) \($0.value.lo)~\($0.value.hi)" }.sorted()) 多了 \(up.map(\.n)) 看不准 \(change.filter(\.unsure).count)"
-        guard up.count <= 8 else { return [] }      // 一下变一大片：整理过、搬过东西
+        // 一下变一大片：整理过、搬过东西。只数不认识的格子（打一阵怪，认识的东西多了很多格是正常的）
+        guard up.filter({ name($0.print) == nil }).count <= 8 else { log += " → 不认识的格子变了太多，当成整理过"; return [] }
         var new: [String] = []
         // 认识的全排除，只有一种不认识的多了、也只捡过一种没图标的：就是它
         let odd = change.filter { name($0.print) == nil && ($0.unsure || $0.n != 0) }
@@ -205,6 +248,9 @@ public struct BagLearn: Codable, Sendable {
             if c.n > w.value.hi { extra.append((w.key, c.n - w.value.hi)) }
             return [w.key]
         }
+        // 只拿这一页的东西去对（捡的时候写着别的页签的不算：箭在 Use 页）
+        new += narrow(up, who, sig: old.at.timeIntervalSinceReferenceDate)
+        if let c = cands, !c.isEmpty { log += " → 候选 \(c.suffix(4).map { "\($0.names.joined(separator: "/"))×\($0.seen.count)" })" }
         for c in up where name(c.print) == nil && !known.contains(where: { Self.far($0.print, c.print) <= 6 }) {
             let names = Set(known.map(\.name))
             // 数量只可能是一样东西、这样东西也只对上一格

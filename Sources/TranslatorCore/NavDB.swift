@@ -43,6 +43,18 @@ public struct NavTarget: Codable, Sendable, Equatable {
     public var giver: String? = nil
     /// 资料里没有的任务：屏幕上的英文（找人名、地名用，只存本机）
     public var en: String? = nil
+    /// 资料里没有的任务：要的东西（屏幕上的英文名，排好序）。同名的几个任务（“Nella & Kerning City Citizens” 里 Don Hwang、Shumi 的委托）靠它分开
+    public var part: String? = nil
+    /// 没有要收集的东西（只要找人说话的一步）：用正文开头区分是系列里的哪一步（“说:idelivered…”）
+    public static func talkPart(_ paragraphs: [String]) -> String? {
+        let s = String(paragraphs.joined(separator: " ").lowercased().filter(\.isLetter).prefix(40))
+        return s.count >= 20 ? "说:" + s : nil
+    }
+    /// 两个“说:”是不是同一步（识别有一两个字母出入）
+    public static func samePart(_ a: String, _ b: String) -> Bool {
+        guard a.hasPrefix("说:"), b.hasPrefix("说:") else { return a == b }
+        return Fuzzy.distance(Array(a), Array(b), limit: 6) <= 6
+    }
     /// 几级才能交（屏幕上写的“Reaching Level 10”，或资料里的）
     public var level: Int? = nil
     public init(title: String, start: Int? = nil, end: Int? = nil, questId: Int? = nil, notStarted: Bool = false) { self.title = title; self.start = start; self.end = end; self.questId = questId; self.notStarted = notStarted }
@@ -199,7 +211,7 @@ public final class NavDB: @unchecked Sendable {
     /// 怪物名（头顶显示英文，中英都写）
     public func mobName(_ en: String) -> String { zhMob[en].map { "\($0) \(en)" } ?? en }
     /// 任务物品名：先用任务名字表（和任务窗口译文一致），再查物品表
-    public func itemName(_ en: String) -> String { zhItem[en] ?? ItemDB.shared.exact(en)?.zh ?? en }
+    public func itemName(_ en: String) -> String { zhItem[en] ?? ItemDB.shared.exact(en)?.zh ?? ItemNames.zh(en) ?? en }
     /// 整段就是一个怪物、NPC、地图名，只认错一个字母（Stume → Stump）：改回来。本来就是名字、是普通单词、像好几个名字的不动
     public func fixName(_ s: String) -> String {
         let k = Fuzzy.normalize(s)
@@ -653,6 +665,15 @@ extension NavDB {
             let have = String(tail.dropLast(need.count + 1))
             if let v = Int(have), String(v) == have { hits.insert("\(v) / \(need)") }
         } }
+        // 没有任务表（公开版）：斜杠可能在哪几个位置，拆出来“有几个 ≤ 要几个”、都不以 0 开头的只有一种才算（O730 → 0 / 30）
+        if quests.isEmpty {
+            let d = Array(tail)
+            for i in 1..<max(1, d.count - 1) where "71lI|".contains(d[i]) {
+                let have = String(d[..<i]), need = String(d[(i + 1)...])
+                guard let a = Int(have), let b = Int(need), String(a) == have, String(b) == need, b > 0, a <= b, b <= 999 else { continue }
+                hits.insert("\(a) / \(b)")
+            }
+        }
         return hits.count == 1 ? "\(name) \(hits.first!)" : s
     }
 }

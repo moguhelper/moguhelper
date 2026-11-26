@@ -1,4 +1,4 @@
-// 旁边的翻译面板 + 鼠标指向翻译的小气泡 + 框选区域。
+// 旁边的翻译面板 + 框选区域。
 // 全部是我们自己的窗口，由系统叠放在游戏上方或旁边；游戏本身不受影响。
 // 悬浮在游戏上的窗口都设为“鼠标穿透”，点击会直接落到游戏上。
 import AppKit
@@ -29,14 +29,12 @@ final class SidePanel: NSObject {
     let panel = makePanel(clickThrough: false)
     private let textView: NSTextView
     private let scroll: NSScrollView
-    private let hoverLabel = NSTextField(wrappingLabelWithString: "按住触发键（默认 ⌥），把鼠标移到游戏里的英文上，这里会显示翻译")
     var showOriginal = true
     let space = SideSpace()
-    /// 先给聊天留够高度（至少三四条），剩下的才给顶部；指向翻译按一行算，字多时不让顶部跟着跳
+    /// 先给聊天留够高度（至少三四条），剩下的才给顶部
     private func updateBudget() {
         let chat: CGFloat = chatTitle.isHidden ? 0 : MapleCardView.strip + 5 + max(150, actualFontSize * 13) + 5
-        let hover = MapleCardView.strip + 5 + 30 + 6
-        let b = max(100, panel.frame.height - (4 + Maple.titleBar) - 5 - chat - hover - 8)
+        let b = max(100, panel.frame.height - (4 + Maple.titleBar) - 5 - chat - 8)
         if abs(space.budget - b) > 0.5 { space.budget = b }
     }
     /// 聊天翻译的中文字号（英文原文小 2 号）；0 = 自动：面板矮（800×600 窗口）用 11，高的用 14
@@ -45,7 +43,6 @@ final class SidePanel: NSObject {
     private var lastEntries: [Entry] = []
     private func refresh() {
         updateBudget()
-        hoverLabel.font = .systemFont(ofSize: max(11, actualFontSize - 1))
         render(lastEntries)
     }
     private var scrollBelowStatus: NSLayoutConstraint!, scrollBelowTitle: NSLayoutConstraint!
@@ -84,9 +81,8 @@ final class SidePanel: NSObject {
     private let header = NSView()
     private var headerHeight: NSLayoutConstraint!
     private var headerContent: NSView?
-    private var chatCard = NSView(), hoverCard = NSView()
+    private var chatCard = NSView()
     private let chatTitle = NSTextField(labelWithString: "聊天翻译")
-    private var hoverBelowChat: NSLayoutConstraint!, hoverBelowHeader: NSLayoutConstraint!
 
     override init() {
         // 冒险岛窗口样式；固定浅色外观（系统深色模式下文字不能变白）
@@ -109,22 +105,17 @@ final class SidePanel: NSObject {
         let bar = MapleScroller()
         scroll.verticalScroller = bar
 
-        hoverLabel.font = .systemFont(ofSize: 11)
-        hoverLabel.textColor = Maple.sub
-        let hoverTitle = NSTextField(labelWithString: "鼠标指向翻译")
-        hoverTitle.font = .boldSystemFont(ofSize: 12)
         let title = chatTitle
 
         statusLabel.font = .systemFont(ofSize: 11)
         statusLabel.textColor = Maple.warn
         selectButton.isBordered = false
-        // 聊天翻译、指向翻译各放在一块白底内板上（和顶部的角色、收益一样）
-        chatCard = MapleCardView(); hoverCard = MapleCardView()
+        // 聊天翻译放在一块白底内板上（和顶部的角色、收益一样）
+        chatCard = MapleCardView()
         title.font = .systemFont(ofSize: 11, weight: .bold); title.textColor = .white
-        hoverTitle.font = .systemFont(ofSize: 11, weight: .bold); hoverTitle.textColor = .white
-        for v in [chatCard, hoverCard] { v.translatesAutoresizingMaskIntoConstraints = false; root.addSubview(v) }
+        chatCard.translatesAutoresizingMaskIntoConstraints = false; root.addSubview(chatCard)
         shopButton.isBordered = false; shopButton.target = self; shopButton.action = #selector(toggleShop)
-        for v in [header, scroll, hoverLabel, hoverTitle, title, statusLabel, selectButton, shopButton] as [NSView] {
+        for v in [header, scroll, title, statusLabel, selectButton, shopButton] as [NSView] {
             v.translatesAutoresizingMaskIntoConstraints = false
             root.addSubview(v)
         }
@@ -149,16 +140,7 @@ final class SidePanel: NSObject {
             scroll.leadingAnchor.constraint(equalTo: chatCard.leadingAnchor),
             scroll.trailingAnchor.constraint(equalTo: chatCard.trailingAnchor, constant: -4),
             scroll.bottomAnchor.constraint(equalTo: chatCard.bottomAnchor, constant: -4),
-            hoverCard.leadingAnchor.constraint(equalTo: root.leadingAnchor, constant: 8),
-            hoverCard.trailingAnchor.constraint(equalTo: root.trailingAnchor, constant: -8),
-            hoverCard.bottomAnchor.constraint(equalTo: root.bottomAnchor, constant: -8),
-            hoverTitle.centerYAnchor.constraint(equalTo: hoverCard.topAnchor, constant: MapleCardView.strip / 2),
-            hoverTitle.leadingAnchor.constraint(equalTo: hoverCard.leadingAnchor, constant: 10),
-            hoverLabel.topAnchor.constraint(equalTo: hoverCard.topAnchor, constant: MapleCardView.strip + 5),
-            hoverLabel.leadingAnchor.constraint(equalTo: hoverCard.leadingAnchor, constant: 10),
-            hoverLabel.trailingAnchor.constraint(equalTo: hoverCard.trailingAnchor, constant: -10),
-            hoverLabel.bottomAnchor.constraint(equalTo: hoverCard.bottomAnchor, constant: -6),
-            hoverLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 30),
+            chatCard.bottomAnchor.constraint(equalTo: root.bottomAnchor, constant: -8),
         ])
         scrollBelowStatus = scroll.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 2)
         scrollBelowTitle = scroll.topAnchor.constraint(equalTo: chatCard.topAnchor, constant: MapleCardView.strip + 1)
@@ -166,9 +148,6 @@ final class SidePanel: NSObject {
         chatTitle.lineBreakMode = .byTruncatingTail
         chatTitle.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         chatTitle.trailingAnchor.constraint(lessThanOrEqualTo: selectButton.leadingAnchor, constant: -6).isActive = true
-        hoverBelowChat = hoverCard.topAnchor.constraint(equalTo: chatCard.bottomAnchor, constant: 5)
-        hoverBelowHeader = hoverCard.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5)
-        hoverBelowChat.isActive = true
         panel.contentView = root
         // 一直停在最新；只有用户自己往上滚才停，滚回底部又继续。上面的内容变高变矮（聊天框跟着变）也不能丢
         bar.onUser = { [weak self] in self?.userScrolled() }
@@ -188,14 +167,12 @@ final class SidePanel: NSObject {
         scroll.reflectScrolledClipView(scroll.contentView)
     }
 
-    /// 聊天翻译不是“旁边”模式时，面板里只放角色、经验、指向翻译（聊天卡片收起）
+    /// 聊天翻译关着时，面板里只放角色、经验、任务（聊天卡片收起）
     func setChatVisible(_ on: Bool) {
         for v in [chatCard, scroll, shopButton] as [NSView] { v.isHidden = !on }
         selectButton.isHidden = !on || shopOn
         statusLabel.isHidden = !on || statusLabel.stringValue.isEmpty
         chatTitle.isHidden = !on
-        hoverBelowChat.isActive = on
-        hoverBelowHeader.isActive = !on
         updateBudget()
     }
 
@@ -265,50 +242,6 @@ final class SidePanel: NSObject {
         stick()
         scroll.reflectScrolledClipView(scroll.contentView)
     }
-
-    func showHover(_ text: String) { hoverLabel.stringValue = text; hoverLabel.textColor = Maple.text }
-}
-
-// MARK: - 鼠标指向翻译的小气泡（鼠标穿透）
-
-final class HoverTip {
-    let panel = makePanel(clickThrough: true)
-    private let label = NSTextField(wrappingLabelWithString: "")
-
-    init() {
-        panel.level = .popUpMenu
-        let bg = NSView()
-        bg.wantsLayer = true
-        bg.layer?.backgroundColor = NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.15, alpha: 0.92).cgColor
-        bg.layer?.cornerRadius = 6
-        label.font = .systemFont(ofSize: 14)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        bg.addSubview(label)
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: bg.leadingAnchor, constant: 8),
-            label.trailingAnchor.constraint(equalTo: bg.trailingAnchor, constant: -8),
-            label.topAnchor.constraint(equalTo: bg.topAnchor, constant: 5),
-            label.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -5),
-        ])
-        panel.contentView = bg
-    }
-
-    func show(_ text: String, near mouse: NSPoint) {
-        label.stringValue = text
-        label.preferredMaxLayoutWidth = 360
-        let size = label.fittingSize
-        let w = min(size.width, 360) + 16, h = size.height + 10
-        var f = CGRect(x: mouse.x + 14, y: mouse.y - h - 18, width: w, height: h)
-        if let vis = NSScreen.screens.first(where: { $0.frame.contains(mouse) })?.visibleFrame {
-            if f.maxX > vis.maxX { f.origin.x = mouse.x - w - 14 }
-            if f.minY < vis.minY { f.origin.y = mouse.y + 18 }
-        }
-        panel.setFrame(f, display: true)
-        panel.orderFrontRegardless()
-    }
-
-    func hide() { panel.orderOut(nil) }
 }
 
 // MARK: - 框选聊天区域：在游戏窗口上铺一层半透明遮罩，用鼠标拖一个框（只在我们自己的窗口里接收鼠标）

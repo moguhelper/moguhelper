@@ -1,0 +1,10025 @@
+{
+"source": "OSMS Data Explorer (CC BY 4.0) via maplestory-classic.com, modified: names and kinds only",
+"items": [
+{
+"en": "10,000 Meso Pouch",
+"k": "potion"
+},
+{
+"en": "2x EXP Coupon (30 min)",
+"k": "use"
+},
+{
+"en": "3x EXP Coupon (15 min)",
+"k": "use"
+},
+{
+"en": "5 O'Clock Shadow",
+"k": "cash"
+},
+{
+"en": "50,000 Meso Pouch",
+"k": "potion"
+},
+{
+"en": "80's Knit Pullover",
+"k": "cash"
+},
+{
+"en": "A Gift for JM",
+"k": "quest"
+},
+{
+"en": "A Gift for Nella",
+"k": "quest"
+},
+{
+"en": "AP Reset Scroll",
+"k": "cash"
+},
+{
+"en": "Adamantium Arrows for Bows",
+"k": "ammo"
+},
+{
+"en": "Adamantium Avarice",
+"k": "weapon"
+},
+{
+"en": "Adamantium Guards",
+"k": "weapon"
+},
+{
+"en": "Adamantium Igor",
+"k": "weapon"
+},
+{
+"en": "Adamantium Ingot",
+"k": "etc"
+},
+{
+"en": "Adamantium Knuckle",
+"k": "armor"
+},
+{
+"en": "Adamantium Legend Shield",
+"k": "armor"
+},
+{
+"en": "Adamantium Ore",
+"k": "etc"
+},
+{
+"en": "Adamantium Tower Shield",
+"k": "armor"
+},
+{
+"en": "Adventurer's Journal",
+"k": "use"
+},
+{
+"en": "Adventurer's Journal - Page 2",
+"k": "use"
+},
+{
+"en": "Adventurer's Journal - Page 3",
+"k": "use"
+},
+{
+"en": "Adventurer's Journal - Page 4",
+"k": "use"
+},
+{
+"en": "Adventurer's Journal - Page 5",
+"k": "use"
+},
+{
+"en": "Adventurer's Journal - Page 6",
+"k": "use"
+},
+{
+"en": "Alex's Gift Sack",
+"k": "quest"
+},
+{
+"en": "Alien Mug",
+"k": "cash"
+},
+{
+"en": "Alligator Skin Pouch",
+"k": "quest"
+},
+{
+"en": "Alston's Ledger Page",
+"k": "quest"
+},
+{
+"en": "Aluminum Baseball Bat",
+"k": "weapon"
+},
+{
+"en": "Amended Ledger",
+"k": "quest"
+},
+{
+"en": "Amethyst",
+"k": "etc"
+},
+{
+"en": "Amethyst Earrings",
+"k": "accessory"
+},
+{
+"en": "Amethyst Ore",
+"k": "etc"
+},
+{
+"en": "Amorian Pink Skirt",
+"k": "cash"
+},
+{
+"en": "Ancient Scroll",
+"k": "quest"
+},
+{
+"en": "Andre's Seafood Soup",
+"k": "potion"
+},
+{
+"en": "Angel Halo",
+"k": "cash"
+},
+{
+"en": "Angel Wand",
+"k": "cash"
+},
+{
+"en": "Angel Wings",
+"k": "weapon"
+},
+{
+"en": "Angelic Ribbon",
+"k": "cash"
+},
+{
+"en": "Animal Fossil",
+"k": "quest"
+},
+{
+"en": "Animal Fur Bundle",
+"k": "etc"
+},
+{
+"en": "Anvil",
+"k": "setup"
+},
+{
+"en": "Apple",
+"k": "potion"
+},
+{
+"en": "Aqua Brace",
+"k": "armor"
+},
+{
+"en": "Aqua Golden Circlet",
+"k": "armor"
+},
+{
+"en": "Aqua Platina",
+"k": "armor"
+},
+{
+"en": "Aqua Platina Pants",
+"k": "armor"
+},
+{
+"en": "Aquamarine",
+"k": "etc"
+},
+{
+"en": "Aquamarine Ore",
+"k": "etc"
+},
+{
+"en": "Aqumander Tail",
+"k": "etc"
+},
+{
+"en": "Arc Staff",
+"k": "weapon"
+},
+{
+"en": "Arcane Station",
+"k": "setup"
+},
+{
+"en": "Arcforging Kit",
+"k": "potion"
+},
+{
+"en": "Archer Pants",
+"k": "armor"
+},
+{
+"en": "Arcon Figure",
+"k": "setup"
+},
+{
+"en": "Arcon's Blood",
+"k": "quest"
+},
+{
+"en": "Armor Crafting Catalyst",
+"k": "etc"
+},
+{
+"en": "Arrows for Bows",
+"k": "ammo"
+},
+{
+"en": "Arrows for Crossbows",
+"k": "ammo"
+},
+{
+"en": "Arwen's Glass Shoe",
+"k": "quest"
+},
+{
+"en": "Asianic Bow",
+"k": "weapon"
+},
+{
+"en": "Assorted Pottery Set",
+"k": "setup"
+},
+{
+"en": "Athena Pierce's Box",
+"k": "quest"
+},
+{
+"en": "Athena Pierce's Letter",
+"k": "quest"
+},
+{
+"en": "Atmospheric Effect Box",
+"k": "use"
+},
+{
+"en": "Auto HP Potion Skill",
+"k": "cash"
+},
+{
+"en": "Auto MP Potion Skill",
+"k": "cash"
+},
+{
+"en": "Auto Move Skill",
+"k": "cash"
+},
+{
+"en": "Autumn Leaf Wreath",
+"k": "setup"
+},
+{
+"en": "Avatar Gift Box",
+"k": "use"
+},
+{
+"en": "Aviator Shades",
+"k": "cash"
+},
+{
+"en": "Axe Pole Arm",
+"k": "weapon"
+},
+{
+"en": "Ayan's Letter",
+"k": "quest"
+},
+{
+"en": "Ayan's Toy Sword",
+"k": "quest"
+},
+{
+"en": "Baby Turkey Carriage Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Bain's Spiky Collar",
+"k": "etc"
+},
+{
+"en": "Balanche",
+"k": "weapon"
+},
+{
+"en": "Bamboo Spear",
+"k": "weapon"
+},
+{
+"en": "Bamboo Sword",
+"k": "weapon"
+},
+{
+"en": "Bandage Strip",
+"k": "cash"
+},
+{
+"en": "Bartos's Letter",
+"k": "quest"
+},
+{
+"en": "Basic Archer Gloves",
+"k": "armor"
+},
+{
+"en": "Basic Wildcats Baseball Pants",
+"k": "cash"
+},
+{
+"en": "Battle Axe",
+"k": "weapon"
+},
+{
+"en": "Battle Bow",
+"k": "weapon"
+},
+{
+"en": "Battle Crossbow",
+"k": "weapon"
+},
+{
+"en": "Battle Scar",
+"k": "cash"
+},
+{
+"en": "Battle Shield",
+"k": "armor"
+},
+{
+"en": "Bazlud",
+"k": "weapon"
+},
+{
+"en": "Beach Chair(Blue)",
+"k": "setup"
+},
+{
+"en": "Beach Chair(Red)",
+"k": "setup"
+},
+{
+"en": "Beaded Cross Earrings",
+"k": "cash"
+},
+{
+"en": "Bear Huntertop",
+"k": "armor"
+},
+{
+"en": "Beauty Album Skin Slot Film",
+"k": "cash"
+},
+{
+"en": "Beetle Long Sleeve",
+"k": "cash"
+},
+{
+"en": "Beginner's Garnier",
+"k": "weapon"
+},
+{
+"en": "Beginner's Long Sword",
+"k": "weapon"
+},
+{
+"en": "Beginner's Triangular Zamadar",
+"k": "weapon"
+},
+{
+"en": "Beginner's War Bow",
+"k": "weapon"
+},
+{
+"en": "Beginner's Wooden Wand",
+"k": "weapon"
+},
+{
+"en": "Beige Checkered Hat",
+"k": "cash"
+},
+{
+"en": "Beige Double Coat",
+"k": "cash"
+},
+{
+"en": "Beige Elf Shoes",
+"k": "armor"
+},
+{
+"en": "Beige Lineros",
+"k": "armor"
+},
+{
+"en": "Beige Linnex",
+"k": "armor"
+},
+{
+"en": "Beige Nitty",
+"k": "armor"
+},
+{
+"en": "Beige Patriot",
+"k": "armor"
+},
+{
+"en": "Beige Plain Robe",
+"k": "armor"
+},
+{
+"en": "Beige Umbrella",
+"k": "weapon"
+},
+{
+"en": "Bennis Chain Pants",
+"k": "armor"
+},
+{
+"en": "Beret",
+"k": "cash"
+},
+{
+"en": "Betty's report",
+"k": "quest"
+},
+{
+"en": "Big Rabbit Feet",
+"k": "cash"
+},
+{
+"en": "Binding Bridle",
+"k": "etc"
+},
+{
+"en": "Black Amoria Skirt",
+"k": "armor"
+},
+{
+"en": "Black Amoria Top",
+"k": "armor"
+},
+{
+"en": "Black Armine",
+"k": "armor"
+},
+{
+"en": "Black Armine Skirt",
+"k": "armor"
+},
+{
+"en": "Black Bandage",
+"k": "cash"
+},
+{
+"en": "Black Bandana",
+"k": "armor"
+},
+{
+"en": "Black Baseball Cap",
+"k": "armor"
+},
+{
+"en": "Black Baseball Cleats",
+"k": "cash"
+},
+{
+"en": "Black Bennis Chainmail",
+"k": "armor"
+},
+{
+"en": "Black Blazer",
+"k": "cash"
+},
+{
+"en": "Black Blue-Lined Shoes",
+"k": "armor"
+},
+{
+"en": "Black Cat Gloves",
+"k": "armor"
+},
+{
+"en": "Black Christmas Recharger Chair",
+"k": "setup"
+},
+{
+"en": "Black Cloth Pants",
+"k": "armor"
+},
+{
+"en": "Black Cloth Pants (Female)",
+"k": "armor"
+},
+{
+"en": "Black Cloth Vest",
+"k": "armor"
+},
+{
+"en": "Black Cloth Vest (Female)",
+"k": "armor"
+},
+{
+"en": "Black Coat of Death",
+"k": "cash"
+},
+{
+"en": "Black Crystal",
+"k": "etc"
+},
+{
+"en": "Black Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Black Dragon Robe",
+"k": "armor"
+},
+{
+"en": "Black Dress Shoes",
+"k": "cash"
+},
+{
+"en": "Black Duo",
+"k": "armor"
+},
+{
+"en": "Black Dye",
+"k": "etc"
+},
+{
+"en": "Black Enamel Boots",
+"k": "armor"
+},
+{
+"en": "Black Feather",
+"k": "quest"
+},
+{
+"en": "Black Feather Hat",
+"k": "armor"
+},
+{
+"en": "Black Friday Mystery Fashion Crate",
+"k": "cash"
+},
+{
+"en": "Black Fur Wrap Coat",
+"k": "cash"
+},
+{
+"en": "Black Gaia Cape",
+"k": "armor"
+},
+{
+"en": "Black Ghetto Beanie",
+"k": "armor"
+},
+{
+"en": "Black Gomushin",
+"k": "armor"
+},
+{
+"en": "Black Green-Lined Shoes",
+"k": "armor"
+},
+{
+"en": "Black Hat",
+"k": "cash"
+},
+{
+"en": "Black Headband",
+"k": "armor"
+},
+{
+"en": "Black Hunter",
+"k": "armor"
+},
+{
+"en": "Black Hunter Boots",
+"k": "armor"
+},
+{
+"en": "Black Huntress Armor",
+"k": "armor"
+},
+{
+"en": "Black Huntress Pants",
+"k": "armor"
+},
+{
+"en": "Black Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Black Jangoon Pants",
+"k": "armor"
+},
+{
+"en": "Black Jangoon Skirt",
+"k": "armor"
+},
+{
+"en": "Black Jester",
+"k": "armor"
+},
+{
+"en": "Black Justice Cape",
+"k": "armor"
+},
+{
+"en": "Black Kitty",
+"k": "cash"
+},
+{
+"en": "Black Knucklevest",
+"k": "armor"
+},
+{
+"en": "Black Knucklevest Pants",
+"k": "armor"
+},
+{
+"en": "Black Lappy Boots",
+"k": "armor"
+},
+{
+"en": "Black Leather Boots",
+"k": "cash"
+},
+{
+"en": "Black Loosecap",
+"k": "armor"
+},
+{
+"en": "Black Lutia",
+"k": "armor"
+},
+{
+"en": "Black Magic Cape",
+"k": "armor"
+},
+{
+"en": "Black Magic Shoes",
+"k": "armor"
+},
+{
+"en": "Black Marker",
+"k": "armor"
+},
+{
+"en": "Black Maro",
+"k": "armor"
+},
+{
+"en": "Black Martial Arts Pants",
+"k": "armor"
+},
+{
+"en": "Black Napoleon",
+"k": "armor"
+},
+{
+"en": "Black Nitty",
+"k": "armor"
+},
+{
+"en": "Black Paint Brush",
+"k": "weapon"
+},
+{
+"en": "Black Pao",
+"k": "armor"
+},
+{
+"en": "Black Pao Bottoms",
+"k": "armor"
+},
+{
+"en": "Black Pig",
+"k": "cash"
+},
+{
+"en": "Black Polyfeather Hat",
+"k": "armor"
+},
+{
+"en": "Black Red-Lined Shoes",
+"k": "armor"
+},
+{
+"en": "Black Robin Hat",
+"k": "armor"
+},
+{
+"en": "Black Sack",
+"k": "use"
+},
+{
+"en": "Black Sack: Mano",
+"k": "use"
+},
+{
+"en": "Black Sack: Mushmom",
+"k": "use"
+},
+{
+"en": "Black Sack: Rotten Mushmum",
+"k": "use"
+},
+{
+"en": "Black Sack: Shade",
+"k": "use"
+},
+{
+"en": "Black Sack: Stumpy",
+"k": "use"
+},
+{
+"en": "Black Sack: Zombie Mushmom",
+"k": "use"
+},
+{
+"en": "Black Salt Shoes",
+"k": "armor"
+},
+{
+"en": "Black Scarab",
+"k": "weapon"
+},
+{
+"en": "Black Shoes of Death",
+"k": "cash"
+},
+{
+"en": "Black Skull Hooded Vest",
+"k": "cash"
+},
+{
+"en": "Black Sneak",
+"k": "armor"
+},
+{
+"en": "Black Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Black Snowshoes",
+"k": "armor"
+},
+{
+"en": "Black Split",
+"k": "armor"
+},
+{
+"en": "Black Split Pants",
+"k": "armor"
+},
+{
+"en": "Black Split Piece",
+"k": "armor"
+},
+{
+"en": "Black Split Skirt",
+"k": "armor"
+},
+{
+"en": "Black Steal",
+"k": "armor"
+},
+{
+"en": "Black Steal Pants",
+"k": "armor"
+},
+{
+"en": "Black Suit Pants",
+"k": "cash"
+},
+{
+"en": "Black Sunglasses",
+"k": "cash"
+},
+{
+"en": "Black Swimming Cap",
+"k": "armor"
+},
+{
+"en": "Black Thief Hood",
+"k": "armor"
+},
+{
+"en": "Black Tiny Swim Shorts",
+"k": "cash"
+},
+{
+"en": "Black Tube",
+"k": "weapon"
+},
+{
+"en": "Black Umbrella",
+"k": "weapon"
+},
+{
+"en": "Black Wind Shoes",
+"k": "armor"
+},
+{
+"en": "Black Wizard Robe",
+"k": "armor"
+},
+{
+"en": "Black Yellow-Lined Shoes",
+"k": "armor"
+},
+{
+"en": "Blackbull's Deed to the Land",
+"k": "quest"
+},
+{
+"en": "Blade of Harmony",
+"k": "weapon"
+},
+{
+"en": "Blazing Sword",
+"k": "cash"
+},
+{
+"en": "Bloctopus Key Chain",
+"k": "etc"
+},
+{
+"en": "Blood Avarice",
+"k": "weapon"
+},
+{
+"en": "Blood Battle Grieves",
+"k": "armor"
+},
+{
+"en": "Blood Camel Boots",
+"k": "armor"
+},
+{
+"en": "Blood Chaos Robe",
+"k": "armor"
+},
+{
+"en": "Blood Fitted Mail",
+"k": "armor"
+},
+{
+"en": "Blood Gigantic",
+"k": "weapon"
+},
+{
+"en": "Blood Mesana",
+"k": "armor"
+},
+{
+"en": "Blood Moss Boots",
+"k": "armor"
+},
+{
+"en": "Blood Nightfox",
+"k": "armor"
+},
+{
+"en": "Blood Platina Pants",
+"k": "armor"
+},
+{
+"en": "Blood Slain",
+"k": "weapon"
+},
+{
+"en": "Blood Sneak",
+"k": "armor"
+},
+{
+"en": "Blood Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Bloody Mantis",
+"k": "armor"
+},
+{
+"en": "Bloody Mantis Pants",
+"k": "armor"
+},
+{
+"en": "Bloody Platina",
+"k": "armor"
+},
+{
+"en": "Bloody Rose",
+"k": "setup"
+},
+{
+"en": "Blossom Antennae",
+"k": "armor"
+},
+{
+"en": "Blue Amoria Skirt",
+"k": "armor"
+},
+{
+"en": "Blue Amoria Top",
+"k": "armor"
+},
+{
+"en": "Blue Anakamoon",
+"k": "armor"
+},
+{
+"en": "Blue Anakarune",
+"k": "armor"
+},
+{
+"en": "Blue Ankle-strap Sandals",
+"k": "armor"
+},
+{
+"en": "Blue Apprentice Hat",
+"k": "armor"
+},
+{
+"en": "Blue Arten",
+"k": "armor"
+},
+{
+"en": "Blue Avenger",
+"k": "armor"
+},
+{
+"en": "Blue Aviator Shades",
+"k": "cash"
+},
+{
+"en": "Blue Axe",
+"k": "weapon"
+},
+{
+"en": "Blue Bamboo Hat",
+"k": "armor"
+},
+{
+"en": "Blue Bandana",
+"k": "armor"
+},
+{
+"en": "Blue Baseball Cap",
+"k": "armor"
+},
+{
+"en": "Blue Basic Boots",
+"k": "armor"
+},
+{
+"en": "Blue Bell Dress",
+"k": "cash"
+},
+{
+"en": "Blue Bennis Chainmail",
+"k": "armor"
+},
+{
+"en": "Blue Bennis Chainmail (Female)",
+"k": "armor"
+},
+{
+"en": "Blue Bone Helm",
+"k": "armor"
+},
+{
+"en": "Blue Book Bag",
+"k": "cash"
+},
+{
+"en": "Blue Bucket Hat",
+"k": "cash"
+},
+{
+"en": "Blue Burgler",
+"k": "armor"
+},
+{
+"en": "Blue Calaf",
+"k": "armor"
+},
+{
+"en": "Blue Calas",
+"k": "armor"
+},
+{
+"en": "Blue Cap",
+"k": "cash"
+},
+{
+"en": "Blue Carzen Boots",
+"k": "armor"
+},
+{
+"en": "Blue Chaos Robe",
+"k": "armor"
+},
+{
+"en": "Blue China",
+"k": "armor"
+},
+{
+"en": "Blue China Pants",
+"k": "armor"
+},
+{
+"en": "Blue Chinese Undead Costume",
+"k": "cash"
+},
+{
+"en": "Blue Chinese Undead Hat",
+"k": "cash"
+},
+{
+"en": "Blue Choro",
+"k": "armor"
+},
+{
+"en": "Blue Cloth Pants",
+"k": "armor"
+},
+{
+"en": "Blue Cloth Pants (Female)",
+"k": "armor"
+},
+{
+"en": "Blue Cloth Vest",
+"k": "armor"
+},
+{
+"en": "Blue Cloth Vest (Female)",
+"k": "armor"
+},
+{
+"en": "Blue Counter",
+"k": "weapon"
+},
+{
+"en": "Blue Crusader Chainmail",
+"k": "armor"
+},
+{
+"en": "Blue Diros",
+"k": "armor"
+},
+{
+"en": "Blue Distinction",
+"k": "armor"
+},
+{
+"en": "Blue Doros Robe",
+"k": "armor"
+},
+{
+"en": "Blue Dragon",
+"k": "armor"
+},
+{
+"en": "Blue Duke",
+"k": "armor"
+},
+{
+"en": "Blue Duo",
+"k": "armor"
+},
+{
+"en": "Blue Dye",
+"k": "etc"
+},
+{
+"en": "Blue Elf Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Enamel Boots",
+"k": "armor"
+},
+{
+"en": "Blue Engrit",
+"k": "armor"
+},
+{
+"en": "Blue Eyes",
+"k": "armor"
+},
+{
+"en": "Blue Fairy Skirt",
+"k": "armor"
+},
+{
+"en": "Blue Fairy Top",
+"k": "armor"
+},
+{
+"en": "Blue Feather Hat",
+"k": "armor"
+},
+{
+"en": "Blue Flowery Tube",
+"k": "weapon"
+},
+{
+"en": "Blue Frill Blouse",
+"k": "cash"
+},
+{
+"en": "Blue Gaia Cape",
+"k": "armor"
+},
+{
+"en": "Blue Ghetto Beanie",
+"k": "armor"
+},
+{
+"en": "Blue Gidder Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Goldrunners",
+"k": "armor"
+},
+{
+"en": "Blue Goldwind Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Goni Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Gore Boots",
+"k": "armor"
+},
+{
+"en": "Blue Guiltian",
+"k": "armor"
+},
+{
+"en": "Blue Guise",
+"k": "armor"
+},
+{
+"en": "Blue Hawkeye",
+"k": "armor"
+},
+{
+"en": "Blue Headband",
+"k": "armor"
+},
+{
+"en": "Blue High Boots",
+"k": "armor"
+},
+{
+"en": "Blue Hinkel",
+"k": "weapon"
+},
+{
+"en": "Blue Hunter",
+"k": "armor"
+},
+{
+"en": "Blue Hunter Boots",
+"k": "armor"
+},
+{
+"en": "Blue Hunter's Armor",
+"k": "armor"
+},
+{
+"en": "Blue Hunter's Pants",
+"k": "armor"
+},
+{
+"en": "Blue Icarus Cape",
+"k": "armor"
+},
+{
+"en": "Blue Ice Queen",
+"k": "armor"
+},
+{
+"en": "Blue Ice Queen Skirt",
+"k": "armor"
+},
+{
+"en": "Blue Infinium Circlet",
+"k": "armor"
+},
+{
+"en": "Blue Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Blue Jangoon Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Jean Shorts",
+"k": "armor"
+},
+{
+"en": "Blue Jester",
+"k": "armor"
+},
+{
+"en": "Blue Jewelry Boots",
+"k": "armor"
+},
+{
+"en": "Blue Justice Cape",
+"k": "armor"
+},
+{
+"en": "Blue Kendo Robe",
+"k": "armor"
+},
+{
+"en": "Blue Kitty Hood",
+"k": "cash"
+},
+{
+"en": "Blue Knucklevest Pants",
+"k": "armor"
+},
+{
+"en": "Blue Lapiz Sandals",
+"k": "armor"
+},
+{
+"en": "Blue Lappy Boots",
+"k": "armor"
+},
+{
+"en": "Blue Legolia",
+"k": "armor"
+},
+{
+"en": "Blue Legolia Pants",
+"k": "armor"
+},
+{
+"en": "Blue Legolier",
+"k": "armor"
+},
+{
+"en": "Blue Legolier Pants",
+"k": "armor"
+},
+{
+"en": "Blue Lineros",
+"k": "armor"
+},
+{
+"en": "Blue Linnex",
+"k": "armor"
+},
+{
+"en": "Blue Lolico Armor",
+"k": "armor"
+},
+{
+"en": "Blue Lolico Pants",
+"k": "armor"
+},
+{
+"en": "Blue Loosecap",
+"k": "armor"
+},
+{
+"en": "Blue Lorin",
+"k": "armor"
+},
+{
+"en": "Blue Lumati",
+"k": "armor"
+},
+{
+"en": "Blue Lutia",
+"k": "armor"
+},
+{
+"en": "Blue Magic Cape",
+"k": "armor"
+},
+{
+"en": "Blue Magic Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Malady's Candy",
+"k": "potion"
+},
+{
+"en": "Blue Marble Slippers",
+"k": "cash"
+},
+{
+"en": "Blue Maro",
+"k": "armor"
+},
+{
+"en": "Blue Matty",
+"k": "armor"
+},
+{
+"en": "Blue Metal Gear",
+"k": "armor"
+},
+{
+"en": "Blue Moon",
+"k": "accessory"
+},
+{
+"en": "Blue Moon Conehat",
+"k": "armor"
+},
+{
+"en": "Blue Moon Gloves",
+"k": "armor"
+},
+{
+"en": "Blue Moon Pants",
+"k": "armor"
+},
+{
+"en": "Blue Moon Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Moonlight",
+"k": "armor"
+},
+{
+"en": "Blue Morrican",
+"k": "armor"
+},
+{
+"en": "Blue Mushroom Cap",
+"k": "etc"
+},
+{
+"en": "Blue Mystique",
+"k": "armor"
+},
+{
+"en": "Blue Mystique Pants",
+"k": "armor"
+},
+{
+"en": "Blue Mystique Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Napoleon",
+"k": "armor"
+},
+{
+"en": "Blue Nightfox",
+"k": "armor"
+},
+{
+"en": "Blue Nightshift",
+"k": "armor"
+},
+{
+"en": "Blue Nightshift Pants",
+"k": "armor"
+},
+{
+"en": "Blue Ninja Sandals",
+"k": "armor"
+},
+{
+"en": "Blue Noel",
+"k": "armor"
+},
+{
+"en": "Blue One-lined T-Shirt",
+"k": "armor"
+},
+{
+"en": "Blue Oriental Helmet",
+"k": "armor"
+},
+{
+"en": "Blue Orientican",
+"k": "armor"
+},
+{
+"en": "Blue Orientican Pants",
+"k": "armor"
+},
+{
+"en": "Blue Pajama Hat",
+"k": "cash"
+},
+{
+"en": "Blue Pao",
+"k": "armor"
+},
+{
+"en": "Blue Pao Bottoms",
+"k": "armor"
+},
+{
+"en": "Blue Patriot",
+"k": "armor"
+},
+{
+"en": "Blue Penance",
+"k": "armor"
+},
+{
+"en": "Blue Picnic Hat",
+"k": "cash"
+},
+{
+"en": "Blue Pierre Shoes",
+"k": "armor"
+},
+{
+"en": "Blue Piette Pants",
+"k": "armor"
+},
+{
+"en": "Blue Pilfer",
+"k": "armor"
+},
+{
+"en": "Blue Plain Robe",
+"k": "armor"
+},
+{
+"en": "Blue Pole-Feather Hat",
+"k": "armor"
+},
+{
+"en": "Blue Polka-Dot Pajama Pants",
+"k": "cash"
+},
+{
+"en": "Blue Polka-Dot Pajama Top",
+"k": "cash"
+},
+{
+"en": "Blue Potion",
+"k": "potion"
+},
+{
+"en": "Blue Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Blue Qi Pao",
+"k": "armor"
+},
+{
+"en": "Blue Qi Pao Pants",
+"k": "armor"
+},
+{
+"en": "Blue Qi Pao Skirt",
+"k": "armor"
+},
+{
+"en": "Blue Requiem",
+"k": "armor"
+},
+{
+"en": "Blue Requierre",
+"k": "armor"
+},
+{
+"en": "Blue Robin Hat",
+"k": "armor"
+},
+{
+"en": "Blue Rubber Boots",
+"k": "armor"
+},
+{
+"en": "Blue Sauna Robe",
+"k": "armor"
+},
+{
+"en": "Blue Savata",
+"k": "armor"
+},
+{
+"en": "Blue Scarab",
+"k": "weapon"
+},
+{
+"en": "Blue Seal Cushion",
+"k": "setup"
+},
+{
+"en": "Blue Seraphis",
+"k": "armor"
+},
+{
+"en": "Blue Sergeant",
+"k": "armor"
+},
+{
+"en": "Blue Shark",
+"k": "armor"
+},
+{
+"en": "Blue Shark Skirt",
+"k": "armor"
+},
+{
+"en": "Blue Shouldermail",
+"k": "armor"
+},
+{
+"en": "Blue Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Blue Silky Boots",
+"k": "armor"
+},
+{
+"en": "Blue Sky",
+"k": "armor"
+},
+{
+"en": "Blue Snail Shell",
+"k": "etc"
+},
+{
+"en": "Blue Sneak",
+"k": "armor"
+},
+{
+"en": "Blue Sneakers",
+"k": "armor"
+},
+{
+"en": "Blue Snow Flower Wear",
+"k": "cash"
+},
+{
+"en": "Blue Snowshoes",
+"k": "armor"
+},
+{
+"en": "Blue Sonata",
+"k": "armor"
+},
+{
+"en": "Blue Split Piece",
+"k": "armor"
+},
+{
+"en": "Blue Starlight",
+"k": "armor"
+},
+{
+"en": "Blue Steal",
+"k": "armor"
+},
+{
+"en": "Blue Steal Pants",
+"k": "armor"
+},
+{
+"en": "Blue Steel-Tip Boots",
+"k": "armor"
+},
+{
+"en": "Blue Striped Undershirt",
+"k": "armor"
+},
+{
+"en": "Blue Studded Pants",
+"k": "armor"
+},
+{
+"en": "Blue Studded Top",
+"k": "armor"
+},
+{
+"en": "Blue Swimming Cap",
+"k": "armor"
+},
+{
+"en": "Blue Tai",
+"k": "armor"
+},
+{
+"en": "Blue Thief Hood",
+"k": "armor"
+},
+{
+"en": "Blue Tiberian",
+"k": "armor"
+},
+{
+"en": "Blue Top Hat",
+"k": "cash"
+},
+{
+"en": "Blue Toy Block",
+"k": "etc"
+},
+{
+"en": "Blue Training Pants",
+"k": "armor"
+},
+{
+"en": "Blue Training Shirt",
+"k": "armor"
+},
+{
+"en": "Blue Viola",
+"k": "quest"
+},
+{
+"en": "Blue White-Lined Boots",
+"k": "armor"
+},
+{
+"en": "Blue Whitebottom Boots",
+"k": "armor"
+},
+{
+"en": "Blue Willow",
+"k": "armor"
+},
+{
+"en": "Blue Wizard Robe",
+"k": "armor"
+},
+{
+"en": "Blue Wizardry Hat",
+"k": "armor"
+},
+{
+"en": "Blue Woodsman Boots",
+"k": "armor"
+},
+{
+"en": "Blue-Lined Kismet",
+"k": "armor"
+},
+{
+"en": "Blue-Striped Boxers",
+"k": "armor"
+},
+{
+"en": "Blueberry Lolica Armor",
+"k": "armor"
+},
+{
+"en": "Blush",
+"k": "cash"
+},
+{
+"en": "Bomber Jacket",
+"k": "cash"
+},
+{
+"en": "Bone Buckled Slacks",
+"k": "cash"
+},
+{
+"en": "Bone Helm",
+"k": "armor"
+},
+{
+"en": "Booster Shoes",
+"k": "cash"
+},
+{
+"en": "Bottomwear DEF Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Bottomwear DEF Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Bottomwear DEF Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Bottomwear DEF Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Bottomwear HP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Bottomwear HP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Bottomwear HP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Bottomwear HP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Bottomwear MP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Bottomwear MP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Bottomwear MP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Bottomwear MP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Bound Ledger",
+"k": "quest"
+},
+{
+"en": "Bow Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Bow Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Bow Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Bow Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Brass Candlestick",
+"k": "setup"
+},
+{
+"en": "Brick Pile",
+"k": "setup"
+},
+{
+"en": "Broadsword",
+"k": "weapon"
+},
+{
+"en": "Broken Mirror Glass",
+"k": "quest"
+},
+{
+"en": "Broken Wooden Bow",
+"k": "quest"
+},
+{
+"en": "Bronze Aroa Boots",
+"k": "armor"
+},
+{
+"en": "Bronze Arrows for Bows",
+"k": "ammo"
+},
+{
+"en": "Bronze Arrows for Crossbows",
+"k": "ammo"
+},
+{
+"en": "Bronze Chain Boots",
+"k": "armor"
+},
+{
+"en": "Bronze Clench",
+"k": "armor"
+},
+{
+"en": "Bronze Crusader Helm",
+"k": "armor"
+},
+{
+"en": "Bronze Football Helmet",
+"k": "armor"
+},
+{
+"en": "Bronze Full Helm",
+"k": "armor"
+},
+{
+"en": "Bronze Gigantic",
+"k": "weapon"
+},
+{
+"en": "Bronze Grieves",
+"k": "armor"
+},
+{
+"en": "Bronze Guardian",
+"k": "weapon"
+},
+{
+"en": "Bronze Helmet",
+"k": "armor"
+},
+{
+"en": "Bronze Husk",
+"k": "armor"
+},
+{
+"en": "Bronze Identity",
+"k": "armor"
+},
+{
+"en": "Bronze Igor",
+"k": "weapon"
+},
+{
+"en": "Bronze Ingot",
+"k": "etc"
+},
+{
+"en": "Bronze Koif",
+"k": "armor"
+},
+{
+"en": "Bronze Mischief",
+"k": "armor"
+},
+{
+"en": "Bronze Missel",
+"k": "armor"
+},
+{
+"en": "Bronze Ore",
+"k": "etc"
+},
+{
+"en": "Bronze Planet",
+"k": "armor"
+},
+{
+"en": "Bronze Platine",
+"k": "armor"
+},
+{
+"en": "Bronze Platine Pants",
+"k": "armor"
+},
+{
+"en": "Bronze Pow",
+"k": "armor"
+},
+{
+"en": "Bronze Pride",
+"k": "armor"
+},
+{
+"en": "Bronze Rover",
+"k": "armor"
+},
+{
+"en": "Bronze Scaler",
+"k": "armor"
+},
+{
+"en": "Bronze Viking Helm",
+"k": "armor"
+},
+{
+"en": "Bronze Wolfskin",
+"k": "armor"
+},
+{
+"en": "Brown Able Skirt",
+"k": "armor"
+},
+{
+"en": "Brown Ankle-strap Sandals",
+"k": "armor"
+},
+{
+"en": "Brown Apprentice Hat",
+"k": "armor"
+},
+{
+"en": "Brown Archer Top",
+"k": "armor"
+},
+{
+"en": "Brown Aroa Boots",
+"k": "armor"
+},
+{
+"en": "Brown Bamboo Hat",
+"k": "armor"
+},
+{
+"en": "Brown Bandage",
+"k": "cash"
+},
+{
+"en": "Brown Baseball Cap",
+"k": "armor"
+},
+{
+"en": "Brown Basic Boots",
+"k": "armor"
+},
+{
+"en": "Brown Burgler",
+"k": "armor"
+},
+{
+"en": "Brown China",
+"k": "armor"
+},
+{
+"en": "Brown China Pants",
+"k": "armor"
+},
+{
+"en": "Brown Choro",
+"k": "armor"
+},
+{
+"en": "Brown Corporal",
+"k": "armor"
+},
+{
+"en": "Brown Corporal Pants",
+"k": "armor"
+},
+{
+"en": "Brown Cotton Shorts",
+"k": "armor"
+},
+{
+"en": "Brown Distinction",
+"k": "armor"
+},
+{
+"en": "Brown Doroness Robe",
+"k": "armor"
+},
+{
+"en": "Brown Doros Robe",
+"k": "armor"
+},
+{
+"en": "Brown Duo",
+"k": "armor"
+},
+{
+"en": "Brown Feather Hat",
+"k": "armor"
+},
+{
+"en": "Brown Ghetto Beanie",
+"k": "armor"
+},
+{
+"en": "Brown Gidder Shoes",
+"k": "armor"
+},
+{
+"en": "Brown Guiltian",
+"k": "armor"
+},
+{
+"en": "Brown Guise",
+"k": "armor"
+},
+{
+"en": "Brown Hard Leather Boots",
+"k": "armor"
+},
+{
+"en": "Brown Hard Leather Pants",
+"k": "armor"
+},
+{
+"en": "Brown Hard Leather Top",
+"k": "armor"
+},
+{
+"en": "Brown Hawkeye",
+"k": "armor"
+},
+{
+"en": "Brown High Boots",
+"k": "armor"
+},
+{
+"en": "Brown Hunter",
+"k": "armor"
+},
+{
+"en": "Brown Hunter Boots",
+"k": "armor"
+},
+{
+"en": "Brown Jack Boots",
+"k": "armor"
+},
+{
+"en": "Brown Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Brown Jangoon Pants",
+"k": "armor"
+},
+{
+"en": "Brown Jangoon Shoes",
+"k": "armor"
+},
+{
+"en": "Brown Jangoon Skirt",
+"k": "armor"
+},
+{
+"en": "Brown Jester",
+"k": "armor"
+},
+{
+"en": "Brown Kitty",
+"k": "cash"
+},
+{
+"en": "Brown Lamelle",
+"k": "armor"
+},
+{
+"en": "Brown Lapiz Sandals",
+"k": "armor"
+},
+{
+"en": "Brown Legolia",
+"k": "armor"
+},
+{
+"en": "Brown Legolia Pants",
+"k": "armor"
+},
+{
+"en": "Brown Legolier",
+"k": "armor"
+},
+{
+"en": "Brown Legolier Pants",
+"k": "armor"
+},
+{
+"en": "Brown Lolico Armor",
+"k": "armor"
+},
+{
+"en": "Brown Lolico Pants",
+"k": "armor"
+},
+{
+"en": "Brown Loosecap",
+"k": "armor"
+},
+{
+"en": "Brown Lorin",
+"k": "armor"
+},
+{
+"en": "Brown Marker",
+"k": "armor"
+},
+{
+"en": "Brown Martial Arts Pants",
+"k": "armor"
+},
+{
+"en": "Brown Matty",
+"k": "armor"
+},
+{
+"en": "Brown Moon",
+"k": "armor"
+},
+{
+"en": "Brown Moon Conehat",
+"k": "armor"
+},
+{
+"en": "Brown Moon Gloves",
+"k": "armor"
+},
+{
+"en": "Brown Moon Pants",
+"k": "armor"
+},
+{
+"en": "Brown Moonlight",
+"k": "armor"
+},
+{
+"en": "Brown Nightfox",
+"k": "armor"
+},
+{
+"en": "Brown Nightshift",
+"k": "armor"
+},
+{
+"en": "Brown Nightshift Pants",
+"k": "armor"
+},
+{
+"en": "Brown Pierre Shoes",
+"k": "armor"
+},
+{
+"en": "Brown Piette",
+"k": "armor"
+},
+{
+"en": "Brown Piette Pants",
+"k": "armor"
+},
+{
+"en": "Brown Piettra",
+"k": "armor"
+},
+{
+"en": "Brown Piettra Skirt",
+"k": "armor"
+},
+{
+"en": "Brown Pilfer",
+"k": "armor"
+},
+{
+"en": "Brown Pole-Feather Hat",
+"k": "armor"
+},
+{
+"en": "Brown Polyfeather Hat",
+"k": "armor"
+},
+{
+"en": "Brown Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Brown Puppy",
+"k": "cash"
+},
+{
+"en": "Brown Ramel Skirt",
+"k": "armor"
+},
+{
+"en": "Brown Requiem",
+"k": "armor"
+},
+{
+"en": "Brown Requierre",
+"k": "armor"
+},
+{
+"en": "Brown Robin Hat",
+"k": "armor"
+},
+{
+"en": "Brown Scarab",
+"k": "weapon"
+},
+{
+"en": "Brown Skullcap",
+"k": "armor"
+},
+{
+"en": "Brown Sneak",
+"k": "armor"
+},
+{
+"en": "Brown Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Brown Sonata",
+"k": "armor"
+},
+{
+"en": "Brown Starlight",
+"k": "armor"
+},
+{
+"en": "Brown Steel-Tip Boots",
+"k": "armor"
+},
+{
+"en": "Brown Studded Pants",
+"k": "armor"
+},
+{
+"en": "Brown Studded Top",
+"k": "armor"
+},
+{
+"en": "Brown Tiberian",
+"k": "armor"
+},
+{
+"en": "Brown Training Pants",
+"k": "armor"
+},
+{
+"en": "Brown Training Shirt",
+"k": "armor"
+},
+{
+"en": "Brown Winter Hat",
+"k": "armor"
+},
+{
+"en": "Brown Woodsman Boots",
+"k": "armor"
+},
+{
+"en": "Bruce's Special Cake",
+"k": "quest"
+},
+{
+"en": "Bubbling's Huge Bubble",
+"k": "etc"
+},
+{
+"en": "Buck",
+"k": "weapon"
+},
+{
+"en": "Buffoon's Grandpa Clock",
+"k": "etc"
+},
+{
+"en": "Buffy Hat",
+"k": "etc"
+},
+{
+"en": "Bunny Costume",
+"k": "cash"
+},
+{
+"en": "Bunny Hat",
+"k": "cash"
+},
+{
+"en": "Bunny Slippers",
+"k": "cash"
+},
+{
+"en": "Bunny-Padded Snowboard Pants",
+"k": "cash"
+},
+{
+"en": "Butterfly Ball Mask",
+"k": "cash"
+},
+{
+"en": "Butterfly Skirt",
+"k": "cash"
+},
+{
+"en": "Cake",
+"k": "potion"
+},
+{
+"en": "Camping Boots",
+"k": "cash"
+},
+{
+"en": "Camping Tent",
+"k": "setup"
+},
+{
+"en": "Cap of Memories",
+"k": "armor"
+},
+{
+"en": "Cape Accuracy Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape Accuracy Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape Accuracy Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape Accuracy Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape DEX Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape DEX Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape DEX Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape DEX Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape INT Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape INT Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape INT Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape INT Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape LUK Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape LUK Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape LUK Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape LUK Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape Magic Def. Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape Magic Def. Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape Magic Def. Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape Magic Def. Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape STR Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape STR Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape STR Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape STR Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cape Weapon Def. Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Cape Weapon Def. Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Cape Weapon Def. Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Cape Weapon Def. Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Cashier: Teddy Bear Clerk",
+"k": "cash"
+},
+{
+"en": "Cass",
+"k": "weapon"
+},
+{
+"en": "Cat Hat",
+"k": "cash"
+},
+{
+"en": "Cat Lolita Gloves",
+"k": "cash"
+},
+{
+"en": "Cat Lolita Shoes",
+"k": "cash"
+},
+{
+"en": "Cat Soul",
+"k": "cash"
+},
+{
+"en": "Cat Suit",
+"k": "cash"
+},
+{
+"en": "Cat's Eye",
+"k": "accessory"
+},
+{
+"en": "Cellion Tail",
+"k": "etc"
+},
+{
+"en": "Cerebes Tooth",
+"k": "etc"
+},
+{
+"en": "Charge UP Chair",
+"k": "setup"
+},
+{
+"en": "Charm of the Undead",
+"k": "etc"
+},
+{
+"en": "Cheap Battery",
+"k": "etc"
+},
+{
+"en": "Cherry Bed",
+"k": "setup"
+},
+{
+"en": "Cherry Bench",
+"k": "setup"
+},
+{
+"en": "Cherry Bookshelf",
+"k": "setup"
+},
+{
+"en": "Cherry Lattice Window",
+"k": "setup"
+},
+{
+"en": "Cherry Wardrobe",
+"k": "setup"
+},
+{
+"en": "Cherub's Bow",
+"k": "cash"
+},
+{
+"en": "Chewing Panda Chair",
+"k": "setup"
+},
+{
+"en": "Chief Gray's Sign",
+"k": "etc"
+},
+{
+"en": "Chief Stan Hat",
+"k": "armor"
+},
+{
+"en": "Chief Stan's Hammer",
+"k": "quest"
+},
+{
+"en": "Chief Stan's Letter",
+"k": "quest"
+},
+{
+"en": "Christmas Box",
+"k": "setup"
+},
+{
+"en": "Christmas Tree Chair",
+"k": "setup"
+},
+{
+"en": "Chrono",
+"k": "weapon"
+},
+{
+"en": "Cider",
+"k": "use"
+},
+{
+"en": "Clang Claw",
+"k": "etc"
+},
+{
+"en": "Claw Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Claw Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Claw Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Claw Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Clear Chair",
+"k": "setup"
+},
+{
+"en": "Clock Spring",
+"k": "etc"
+},
+{
+"en": "Coconut",
+"k": "etc"
+},
+{
+"en": "Coconut Knife",
+"k": "weapon"
+},
+{
+"en": "Coffin of Gloom",
+"k": "cash"
+},
+{
+"en": "Cog",
+"k": "etc"
+},
+{
+"en": "Cold Eye Tail",
+"k": "etc"
+},
+{
+"en": "Colorful Tube",
+"k": "weapon"
+},
+{
+"en": "Companion's Magic Box",
+"k": "use"
+},
+{
+"en": "Composite Bow",
+"k": "weapon"
+},
+{
+"en": "Corked Storage Jar",
+"k": "setup"
+},
+{
+"en": "Count Dracula Cape",
+"k": "cash"
+},
+{
+"en": "Coupon",
+"k": "quest"
+},
+{
+"en": "Cozy Coffeehouse",
+"k": "cash"
+},
+{
+"en": "Cracked Black Crystal",
+"k": "quest"
+},
+{
+"en": "Cranberry Sauce",
+"k": "use"
+},
+{
+"en": "Crescent Polearm",
+"k": "weapon"
+},
+{
+"en": "Crimson Balrog Helmet",
+"k": "setup"
+},
+{
+"en": "Croco Skin",
+"k": "etc"
+},
+{
+"en": "Cromi",
+"k": "weapon"
+},
+{
+"en": "Crossbow",
+"k": "weapon"
+},
+{
+"en": "Crossbow Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Crossbow Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Crossbow Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Crossbow Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Crusader T-Shirt",
+"k": "cash"
+},
+{
+"en": "Crystal Flower Earrings",
+"k": "accessory"
+},
+{
+"en": "Cuddle Bear",
+"k": "cash"
+},
+{
+"en": "Cuddly Polar Bear",
+"k": "setup"
+},
+{
+"en": "Curse Eye Tail",
+"k": "etc"
+},
+{
+"en": "Cursed Doll",
+"k": "etc"
+},
+{
+"en": "Custom Colorblend Eye Color Coupon",
+"k": "cash"
+},
+{
+"en": "Custom Eye Color Coupon",
+"k": "cash"
+},
+{
+"en": "Custom Hair Dye Coupon",
+"k": "cash"
+},
+{
+"en": "Custom Mix Dye Coupon",
+"k": "cash"
+},
+{
+"en": "Cutlus",
+"k": "weapon"
+},
+{
+"en": "Dagger Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Dagger Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Dagger Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Dagger Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Dances with Balrog's Letter",
+"k": "quest"
+},
+{
+"en": "Dankke",
+"k": "weapon"
+},
+{
+"en": "Dark Anakamoon",
+"k": "armor"
+},
+{
+"en": "Dark Anakarune",
+"k": "armor"
+},
+{
+"en": "Dark Arten",
+"k": "armor"
+},
+{
+"en": "Dark Avarice",
+"k": "weapon"
+},
+{
+"en": "Dark Avenger",
+"k": "armor"
+},
+{
+"en": "Dark Brace",
+"k": "armor"
+},
+{
+"en": "Dark Briggon",
+"k": "armor"
+},
+{
+"en": "Dark Brown Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Dark Brown Stealer",
+"k": "armor"
+},
+{
+"en": "Dark Brown Stealer Pants",
+"k": "armor"
+},
+{
+"en": "Dark Burgler",
+"k": "armor"
+},
+{
+"en": "Dark Calaf",
+"k": "armor"
+},
+{
+"en": "Dark Calas",
+"k": "armor"
+},
+{
+"en": "Dark Carzen Boots",
+"k": "armor"
+},
+{
+"en": "Dark Chaos Robe",
+"k": "armor"
+},
+{
+"en": "Dark Cleave",
+"k": "armor"
+},
+{
+"en": "Dark Clench",
+"k": "armor"
+},
+{
+"en": "Dark Crusader Chainmail",
+"k": "armor"
+},
+{
+"en": "Dark Crystal",
+"k": "etc"
+},
+{
+"en": "Dark Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Dark Devil Hat",
+"k": "cash"
+},
+{
+"en": "Dark Distinction",
+"k": "armor"
+},
+{
+"en": "Dark Dome",
+"k": "armor"
+},
+{
+"en": "Dark Elf Shoes",
+"k": "armor"
+},
+{
+"en": "Dark Enamel Suit",
+"k": "cash"
+},
+{
+"en": "Dark Engrit",
+"k": "armor"
+},
+{
+"en": "Dark Eyes",
+"k": "armor"
+},
+{
+"en": "Dark Garner",
+"k": "armor"
+},
+{
+"en": "Dark Gigantic",
+"k": "weapon"
+},
+{
+"en": "Dark Golden Circlet",
+"k": "armor"
+},
+{
+"en": "Dark Guardian",
+"k": "weapon"
+},
+{
+"en": "Dark Guiltian",
+"k": "armor"
+},
+{
+"en": "Dark Guise",
+"k": "armor"
+},
+{
+"en": "Dark Hawkeye",
+"k": "armor"
+},
+{
+"en": "Dark Hunter's Armor",
+"k": "armor"
+},
+{
+"en": "Dark Hunter's Pants",
+"k": "armor"
+},
+{
+"en": "Dark Husk",
+"k": "armor"
+},
+{
+"en": "Dark Identity",
+"k": "armor"
+},
+{
+"en": "Dark Infinium Circlet",
+"k": "armor"
+},
+{
+"en": "Dark Jr. Yeti Skin",
+"k": "etc"
+},
+{
+"en": "Dark Knuckle",
+"k": "armor"
+},
+{
+"en": "Dark Leatty Furball",
+"k": "etc"
+},
+{
+"en": "Dark Legolia",
+"k": "armor"
+},
+{
+"en": "Dark Legolia Pants",
+"k": "armor"
+},
+{
+"en": "Dark Legolier",
+"k": "armor"
+},
+{
+"en": "Dark Legolier Pants",
+"k": "armor"
+},
+{
+"en": "Dark Lineros",
+"k": "armor"
+},
+{
+"en": "Dark Linnex",
+"k": "armor"
+},
+{
+"en": "Dark Lorin",
+"k": "armor"
+},
+{
+"en": "Dark Manute",
+"k": "armor"
+},
+{
+"en": "Dark Marble (Bowman)",
+"k": "quest"
+},
+{
+"en": "Dark Marble (Magician)",
+"k": "quest"
+},
+{
+"en": "Dark Marble (Thief)",
+"k": "quest"
+},
+{
+"en": "Dark Marble (Warrior)",
+"k": "quest"
+},
+{
+"en": "Dark Master Sergeant",
+"k": "armor"
+},
+{
+"en": "Dark Master Sergeant Kilt",
+"k": "armor"
+},
+{
+"en": "Dark Matty",
+"k": "armor"
+},
+{
+"en": "Dark Mesana",
+"k": "armor"
+},
+{
+"en": "Dark Mischief",
+"k": "armor"
+},
+{
+"en": "Dark Moon Conehat",
+"k": "armor"
+},
+{
+"en": "Dark Moon Shoes",
+"k": "armor"
+},
+{
+"en": "Dark Moonlight",
+"k": "armor"
+},
+{
+"en": "Dark Moss Boots",
+"k": "armor"
+},
+{
+"en": "Dark Nependeath Seed",
+"k": "etc"
+},
+{
+"en": "Dark Nightshift",
+"k": "armor"
+},
+{
+"en": "Dark Nightshift Pants",
+"k": "armor"
+},
+{
+"en": "Dark Noel",
+"k": "armor"
+},
+{
+"en": "Dark Orientican",
+"k": "armor"
+},
+{
+"en": "Dark Orientican Pants",
+"k": "armor"
+},
+{
+"en": "Dark Patriot",
+"k": "armor"
+},
+{
+"en": "Dark Penance",
+"k": "armor"
+},
+{
+"en": "Dark Pepe Beak",
+"k": "etc"
+},
+{
+"en": "Dark Piette",
+"k": "armor"
+},
+{
+"en": "Dark Piette Pants",
+"k": "armor"
+},
+{
+"en": "Dark Piettra",
+"k": "armor"
+},
+{
+"en": "Dark Piettra Skirt",
+"k": "armor"
+},
+{
+"en": "Dark Pilfer",
+"k": "armor"
+},
+{
+"en": "Dark Pole-Feather Hat",
+"k": "armor"
+},
+{
+"en": "Dark Requiem",
+"k": "armor"
+},
+{
+"en": "Dark Requierre",
+"k": "armor"
+},
+{
+"en": "Dark Rider",
+"k": "cash"
+},
+{
+"en": "Dark Savata",
+"k": "armor"
+},
+{
+"en": "Dark Scorpio",
+"k": "armor"
+},
+{
+"en": "Dark Scorpio Pants",
+"k": "armor"
+},
+{
+"en": "Dark Seraphis",
+"k": "armor"
+},
+{
+"en": "Dark Shadow",
+"k": "armor"
+},
+{
+"en": "Dark Shadow (Female)",
+"k": "armor"
+},
+{
+"en": "Dark Shadow Pants",
+"k": "armor"
+},
+{
+"en": "Dark Shadow Pants (Female)",
+"k": "armor"
+},
+{
+"en": "Dark Shouldermail",
+"k": "armor"
+},
+{
+"en": "Dark Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Dark Silver Stealer",
+"k": "armor"
+},
+{
+"en": "Dark Silver Stealer Pants",
+"k": "armor"
+},
+{
+"en": "Dark Slain",
+"k": "weapon"
+},
+{
+"en": "Dark Sneak",
+"k": "armor"
+},
+{
+"en": "Dark Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Dark Starlight",
+"k": "armor"
+},
+{
+"en": "Dark Stone Golem Rubble",
+"k": "etc"
+},
+{
+"en": "Dark Studded Pants",
+"k": "armor"
+},
+{
+"en": "Dark Studded Top",
+"k": "armor"
+},
+{
+"en": "Dark Suit",
+"k": "cash"
+},
+{
+"en": "Dark Tiberian",
+"k": "armor"
+},
+{
+"en": "Dark Trigger",
+"k": "armor"
+},
+{
+"en": "Dark War Boots",
+"k": "armor"
+},
+{
+"en": "Dark Willow",
+"k": "armor"
+},
+{
+"en": "Dark Wolfskin",
+"k": "armor"
+},
+{
+"en": "Dark Yeti Horn",
+"k": "etc"
+},
+{
+"en": "Deadly Fin",
+"k": "weapon"
+},
+{
+"en": "Decayed Charm",
+"k": "etc"
+},
+{
+"en": "Deciphered Document",
+"k": "quest"
+},
+{
+"en": "Deep Buffoon's Rock Piece",
+"k": "etc"
+},
+{
+"en": "Deer Huntertop",
+"k": "armor"
+},
+{
+"en": "Demon Goblin",
+"k": "cash"
+},
+{
+"en": "Denim Cargos",
+"k": "cash"
+},
+{
+"en": "Destructive Potion",
+"k": "potion"
+},
+{
+"en": "Detective Hat",
+"k": "cash"
+},
+{
+"en": "Devil Horns",
+"k": "cash"
+},
+{
+"en": "Devil Wings",
+"k": "cash"
+},
+{
+"en": "Devilish Horns",
+"k": "cash"
+},
+{
+"en": "Dexterity Crystal",
+"k": "etc"
+},
+{
+"en": "Dexterity Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Dexterity Potion",
+"k": "use"
+},
+{
+"en": "Diamond",
+"k": "etc"
+},
+{
+"en": "Diamond Ore",
+"k": "etc"
+},
+{
+"en": "Dino Boy",
+"k": "cash"
+},
+{
+"en": "Dino Girl",
+"k": "cash"
+},
+{
+"en": "Dirty Bandage",
+"k": "etc"
+},
+{
+"en": "Doombringer",
+"k": "weapon"
+},
+{
+"en": "Double Axe",
+"k": "weapon"
+},
+{
+"en": "Double Item Megaphone",
+"k": "cash"
+},
+{
+"en": "Double-Rooted Red Ginseng",
+"k": "quest"
+},
+{
+"en": "Dr. Lim Hat",
+"k": "armor"
+},
+{
+"en": "Dragon Skin",
+"k": "etc"
+},
+{
+"en": "Dragon Skull Chair",
+"k": "setup"
+},
+{
+"en": "Dragonfly Wings",
+"k": "cash"
+},
+{
+"en": "Drake Skull",
+"k": "etc"
+},
+{
+"en": "Drake's Blood",
+"k": "use"
+},
+{
+"en": "Drake's Meat",
+"k": "use"
+},
+{
+"en": "Dried Squid",
+"k": "potion"
+},
+{
+"en": "Dual Pirate's Propeller",
+"k": "etc"
+},
+{
+"en": "Duskmander Tail",
+"k": "etc"
+},
+{
+"en": "Eagle Crow",
+"k": "weapon"
+},
+{
+"en": "Earring Crit. Damage Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring Crit. Damage Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring Crit. Damage Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring Crit. Damage Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Earring DEX Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring DEX Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring DEX Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring DEX Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Earring Evasion Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring Evasion Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring Evasion Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring Evasion Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Earring INT Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring INT Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring INT Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring INT Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Earring LUK Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring LUK Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring LUK Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring LUK Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Earring STR Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Earring STR Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Earring STR Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Earring STR Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Echopus Leg",
+"k": "etc"
+},
+{
+"en": "Egg",
+"k": "potion"
+},
+{
+"en": "Elda's Last Message",
+"k": "quest"
+},
+{
+"en": "Elda's Name-Charm",
+"k": "quest"
+},
+{
+"en": "Elixir",
+"k": "potion"
+},
+{
+"en": "Elizabeth Dress",
+"k": "cash"
+},
+{
+"en": "Elizabeth Fan",
+"k": "cash"
+},
+{
+"en": "Elizabeth Hat",
+"k": "cash"
+},
+{
+"en": "Eloon",
+"k": "weapon"
+},
+{
+"en": "Emerald",
+"k": "etc"
+},
+{
+"en": "Emerald Battle Grieves",
+"k": "armor"
+},
+{
+"en": "Emerald Dome",
+"k": "armor"
+},
+{
+"en": "Emerald Earrings",
+"k": "accessory"
+},
+{
+"en": "Emerald Fitted Mail",
+"k": "armor"
+},
+{
+"en": "Emerald Hildon Boots",
+"k": "armor"
+},
+{
+"en": "Emerald Ore",
+"k": "etc"
+},
+{
+"en": "Emerald Staff",
+"k": "weapon"
+},
+{
+"en": "Emergency Rescue Tube",
+"k": "weapon"
+},
+{
+"en": "Encrypted Document",
+"k": "quest"
+},
+{
+"en": "Eos Rock Scroll",
+"k": "quest"
+},
+{
+"en": "Equip Tab 5-slot Coupon",
+"k": "cash"
+},
+{
+"en": "Estelle's Special Sauce",
+"k": "quest"
+},
+{
+"en": "Esther Shield",
+"k": "armor"
+},
+{
+"en": "Etc Tab 5-Slot Coupon",
+"k": "cash"
+},
+{
+"en": "Event Trophy",
+"k": "quest"
+},
+{
+"en": "Evil Eye Tail",
+"k": "etc"
+},
+{
+"en": "Evil Skull",
+"k": "cash"
+},
+{
+"en": "Evil Spirit",
+"k": "etc"
+},
+{
+"en": "Evil Tale",
+"k": "weapon"
+},
+{
+"en": "Evil Wings",
+"k": "weapon"
+},
+{
+"en": "Exit Sign",
+"k": "setup"
+},
+{
+"en": "Expanded Auto Move Skill",
+"k": "cash"
+},
+{
+"en": "Eye of Fire",
+"k": "quest"
+},
+{
+"en": "Faded Bell-Bottom Jeans",
+"k": "cash"
+},
+{
+"en": "Faded Maple Leaf Earrings",
+"k": "accessory"
+},
+{
+"en": "Fairy Crystal Ball",
+"k": "setup"
+},
+{
+"en": "Fairy Dust",
+"k": "quest"
+},
+{
+"en": "Fairy Kitchen Rack",
+"k": "setup"
+},
+{
+"en": "Fairy Study Books",
+"k": "setup"
+},
+{
+"en": "Fairy Tapestry",
+"k": "setup"
+},
+{
+"en": "Fairy Wand",
+"k": "weapon"
+},
+{
+"en": "Fairy Wing",
+"k": "etc"
+},
+{
+"en": "Fairy's Honey",
+"k": "use"
+},
+{
+"en": "Fairy's Tentacle",
+"k": "etc"
+},
+{
+"en": "Fall Store Permit",
+"k": "cash"
+},
+{
+"en": "Fat Sausage",
+"k": "potion"
+},
+{
+"en": "Fern Face Coupon",
+"k": "potion"
+},
+{
+"en": "Field Dagger",
+"k": "weapon"
+},
+{
+"en": "Fire Boar's Tooth",
+"k": "etc"
+},
+{
+"en": "Fire Extinguisher",
+"k": "setup"
+},
+{
+"en": "Fire Hydrant",
+"k": "setup"
+},
+{
+"en": "Fire Ore",
+"k": "quest"
+},
+{
+"en": "Fire Sentinel Shellpiece",
+"k": "etc"
+},
+{
+"en": "Firebomb Flame",
+"k": "etc"
+},
+{
+"en": "Firefly Earrings",
+"k": "accessory"
+},
+{
+"en": "Firefly Lantern",
+"k": "setup"
+},
+{
+"en": "Fireman's Axe",
+"k": "weapon"
+},
+{
+"en": "Firewood",
+"k": "etc"
+},
+{
+"en": "Fireworks",
+"k": "cash"
+},
+{
+"en": "Fish Spear",
+"k": "weapon"
+},
+{
+"en": "Flame Golden Circlet",
+"k": "armor"
+},
+{
+"en": "Flaming Feather",
+"k": "quest"
+},
+{
+"en": "Flower Bud Ceiling Light",
+"k": "setup"
+},
+{
+"en": "Fluffy Cat Hood",
+"k": "cash"
+},
+{
+"en": "Fluffy Cat Outfit",
+"k": "cash"
+},
+{
+"en": "Fly-Eye Wing",
+"k": "etc"
+},
+{
+"en": "Flying Medicine",
+"k": "quest"
+},
+{
+"en": "Fork on a Stick",
+"k": "weapon"
+},
+{
+"en": "Forked Dagger",
+"k": "weapon"
+},
+{
+"en": "Forked Spear",
+"k": "weapon"
+},
+{
+"en": "Fossil Box",
+"k": "quest"
+},
+{
+"en": "Fossil Report",
+"k": "quest"
+},
+{
+"en": "Fragment of Magic",
+"k": "etc"
+},
+{
+"en": "Frameless Glasses",
+"k": "cash"
+},
+{
+"en": "Free Spirit",
+"k": "etc"
+},
+{
+"en": "Fresh Milk",
+"k": "quest"
+},
+{
+"en": "Fried Chicken",
+"k": "potion"
+},
+{
+"en": "Frieren Face Coupon",
+"k": "potion"
+},
+{
+"en": "Frog Label Ring",
+"k": "cash"
+},
+{
+"en": "Frog Word Bubble Ring",
+"k": "cash"
+},
+{
+"en": "Fruit Knife",
+"k": "weapon"
+},
+{
+"en": "Frying Pan",
+"k": "weapon"
+},
+{
+"en": "Funky Xylophone Leggings",
+"k": "cash"
+},
+{
+"en": "Furnace Chair",
+"k": "setup"
+},
+{
+"en": "Fusion Mace",
+"k": "weapon"
+},
+{
+"en": "Fuzzy Kitty Chair",
+"k": "setup"
+},
+{
+"en": "GM Black Sack: Jr. Balrog Level 80",
+"k": "use"
+},
+{
+"en": "GM Black Sack: King Slime Level 32",
+"k": "use"
+},
+{
+"en": "GM Black Sack: Mano Level 20",
+"k": "use"
+},
+{
+"en": "GM Black Sack: Mushmom Level 40",
+"k": "use"
+},
+{
+"en": "GM Black Sack: Rotten Mushmom Level 60",
+"k": "use"
+},
+{
+"en": "GM Black Sack: Zombie Mushmom Level 50",
+"k": "use"
+},
+{
+"en": "GM's Blessing of Precision",
+"k": "potion"
+},
+{
+"en": "GM's Blessing of Wind",
+"k": "potion"
+},
+{
+"en": "GM's Blessing of the Keen Eye",
+"k": "potion"
+},
+{
+"en": "Gargoyle Wings",
+"k": "cash"
+},
+{
+"en": "Garnet",
+"k": "etc"
+},
+{
+"en": "Garnet Ore",
+"k": "etc"
+},
+{
+"en": "Garnier",
+"k": "weapon"
+},
+{
+"en": "Gatekeeper Armband",
+"k": "etc"
+},
+{
+"en": "Gentleman's Mustache",
+"k": "cash"
+},
+{
+"en": "Gephart",
+"k": "weapon"
+},
+{
+"en": "Ghost Costume",
+"k": "cash"
+},
+{
+"en": "Ghost Pirate Key",
+"k": "etc"
+},
+{
+"en": "Ghost Suit",
+"k": "cash"
+},
+{
+"en": "Giant Tree's Bough",
+"k": "etc"
+},
+{
+"en": "Giant Tree's Rotten Bough",
+"k": "etc"
+},
+{
+"en": "Gift for the New Journey",
+"k": "use"
+},
+{
+"en": "Gigantic Sledge",
+"k": "weapon"
+},
+{
+"en": "Gigantic Viking Hat",
+"k": "etc"
+},
+{
+"en": "Gladius",
+"k": "weapon"
+},
+{
+"en": "Gloves Accuracy Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Gloves Accuracy Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Gloves Accuracy Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Gloves Accuracy Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Gloves Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Gloves Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Gloves Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Gloves Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Gloves Crit. Rate Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Gloves Crit. Rate Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Gloves Crit. Rate Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Gloves Crit. Rate Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Gloves Magic Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Gloves Magic Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Gloves Magic Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Gloves Magic Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Glowing Dust",
+"k": "quest"
+},
+{
+"en": "Glowing Mushroom",
+"k": "quest"
+},
+{
+"en": "Glowing Mushroom Spore",
+"k": "etc"
+},
+{
+"en": "Glowing Pumpkin Basket",
+"k": "cash"
+},
+{
+"en": "Glowshroom Planter",
+"k": "setup"
+},
+{
+"en": "Glowspore Lamp",
+"k": "quest"
+},
+{
+"en": "Glowspore Pendant Lights",
+"k": "setup"
+},
+{
+"en": "Glowspore Tree",
+"k": "setup"
+},
+{
+"en": "Glowspore Ward",
+"k": "quest"
+},
+{
+"en": "Goggled Black Cap",
+"k": "cash"
+},
+{
+"en": "Gold Ancient Shield",
+"k": "armor"
+},
+{
+"en": "Gold Arbion",
+"k": "armor"
+},
+{
+"en": "Gold Brace",
+"k": "armor"
+},
+{
+"en": "Gold Brist",
+"k": "armor"
+},
+{
+"en": "Gold Burgernet Helm",
+"k": "armor"
+},
+{
+"en": "Gold Burgonet Helm",
+"k": "armor"
+},
+{
+"en": "Gold Chain Boots",
+"k": "armor"
+},
+{
+"en": "Gold Cleave",
+"k": "armor"
+},
+{
+"en": "Gold Dragon",
+"k": "armor"
+},
+{
+"en": "Gold Drop Earrings",
+"k": "accessory"
+},
+{
+"en": "Gold Earrings",
+"k": "accessory"
+},
+{
+"en": "Gold Eyes",
+"k": "armor"
+},
+{
+"en": "Gold Hildon Boots",
+"k": "armor"
+},
+{
+"en": "Gold Ingot",
+"k": "etc"
+},
+{
+"en": "Gold Kitty Slippers",
+"k": "cash"
+},
+{
+"en": "Gold Lapiz Sandals",
+"k": "armor"
+},
+{
+"en": "Gold Manute",
+"k": "armor"
+},
+{
+"en": "Gold Moon Shoes",
+"k": "armor"
+},
+{
+"en": "Gold Moss Boots",
+"k": "armor"
+},
+{
+"en": "Gold Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Gold Ore",
+"k": "etc"
+},
+{
+"en": "Gold Pow",
+"k": "armor"
+},
+{
+"en": "Gold Rover",
+"k": "armor"
+},
+{
+"en": "Gold Scaler",
+"k": "armor"
+},
+{
+"en": "Gold Seal Cushion",
+"k": "setup"
+},
+{
+"en": "Gold Sharp Helm",
+"k": "armor"
+},
+{
+"en": "Gold Sneak",
+"k": "armor"
+},
+{
+"en": "Gold Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Gold Sylvia",
+"k": "armor"
+},
+{
+"en": "Gold Titans",
+"k": "weapon"
+},
+{
+"en": "Gold War Boots",
+"k": "armor"
+},
+{
+"en": "Golden Crow",
+"k": "weapon"
+},
+{
+"en": "Golden Hinkel",
+"k": "weapon"
+},
+{
+"en": "Golden Mole",
+"k": "weapon"
+},
+{
+"en": "Golden Pride",
+"k": "armor"
+},
+{
+"en": "Golden River",
+"k": "weapon"
+},
+{
+"en": "Golden Stirge Wing",
+"k": "etc"
+},
+{
+"en": "Granny's Food Stand",
+"k": "cash"
+},
+{
+"en": "Grape Juice",
+"k": "potion"
+},
+{
+"en": "Gravy",
+"k": "potion"
+},
+{
+"en": "Great Blue Helmet",
+"k": "armor"
+},
+{
+"en": "Great Brown Helmet",
+"k": "armor"
+},
+{
+"en": "Great Red Helmet",
+"k": "armor"
+},
+{
+"en": "Greater Teru Bozu Chair",
+"k": "setup"
+},
+{
+"en": "Green Able Armor",
+"k": "armor"
+},
+{
+"en": "Green Able Armor Skirt",
+"k": "armor"
+},
+{
+"en": "Green Apple",
+"k": "potion"
+},
+{
+"en": "Green Archer Top",
+"k": "armor"
+},
+{
+"en": "Green Arianne",
+"k": "armor"
+},
+{
+"en": "Green Arianne Skirt",
+"k": "armor"
+},
+{
+"en": "Green Armine",
+"k": "armor"
+},
+{
+"en": "Green Armine Skirt",
+"k": "armor"
+},
+{
+"en": "Green Aroa Boots",
+"k": "armor"
+},
+{
+"en": "Green Avelin",
+"k": "armor"
+},
+{
+"en": "Green Avelin Skirt",
+"k": "armor"
+},
+{
+"en": "Green Bamboo Hat",
+"k": "armor"
+},
+{
+"en": "Green Bennis Chainmail",
+"k": "armor"
+},
+{
+"en": "Green Bennis Chainmail (Female)",
+"k": "armor"
+},
+{
+"en": "Green Burgler",
+"k": "armor"
+},
+{
+"en": "Green Camping Hat",
+"k": "cash"
+},
+{
+"en": "Green Camping Shirt",
+"k": "cash"
+},
+{
+"en": "Green Camping Shorts",
+"k": "cash"
+},
+{
+"en": "Green Chair",
+"k": "setup"
+},
+{
+"en": "Green China",
+"k": "armor"
+},
+{
+"en": "Green China Pants",
+"k": "armor"
+},
+{
+"en": "Green Christmas Recharger Chair",
+"k": "setup"
+},
+{
+"en": "Green Diros",
+"k": "armor"
+},
+{
+"en": "Green Distinction",
+"k": "armor"
+},
+{
+"en": "Green Elf Shoes",
+"k": "armor"
+},
+{
+"en": "Green Fairy Skirt",
+"k": "armor"
+},
+{
+"en": "Green Fairy Top",
+"k": "armor"
+},
+{
+"en": "Green Feather Hat",
+"k": "armor"
+},
+{
+"en": "Green Ghetto Beanie",
+"k": "armor"
+},
+{
+"en": "Green Goldrunners",
+"k": "armor"
+},
+{
+"en": "Green Goldwind Shoes",
+"k": "armor"
+},
+{
+"en": "Green Goni Shoes",
+"k": "armor"
+},
+{
+"en": "Green Gore Boots",
+"k": "armor"
+},
+{
+"en": "Green Guise",
+"k": "armor"
+},
+{
+"en": "Green Hard Leather Boots",
+"k": "armor"
+},
+{
+"en": "Green Hawkeye",
+"k": "armor"
+},
+{
+"en": "Green Headband",
+"k": "armor"
+},
+{
+"en": "Green Hunter",
+"k": "armor"
+},
+{
+"en": "Green Hunter Boots",
+"k": "armor"
+},
+{
+"en": "Green Hunter's Armor",
+"k": "armor"
+},
+{
+"en": "Green Hunter's Pants",
+"k": "armor"
+},
+{
+"en": "Green Huntress Armor",
+"k": "armor"
+},
+{
+"en": "Green Huntress Pants",
+"k": "armor"
+},
+{
+"en": "Green Hwarang Shirt",
+"k": "armor"
+},
+{
+"en": "Green Icarus Cape",
+"k": "armor"
+},
+{
+"en": "Green Ice Queen",
+"k": "armor"
+},
+{
+"en": "Green Ice Queen Skirt",
+"k": "armor"
+},
+{
+"en": "Green Jack Boots",
+"k": "armor"
+},
+{
+"en": "Green Jester",
+"k": "armor"
+},
+{
+"en": "Green Knucklevest",
+"k": "armor"
+},
+{
+"en": "Green Lamelle",
+"k": "armor"
+},
+{
+"en": "Green Lappy Boots",
+"k": "armor"
+},
+{
+"en": "Green Leather Hoodwear",
+"k": "armor"
+},
+{
+"en": "Green Legolia",
+"k": "armor"
+},
+{
+"en": "Green Legolia Pants",
+"k": "armor"
+},
+{
+"en": "Green Legolier",
+"k": "armor"
+},
+{
+"en": "Green Legolier Pants",
+"k": "armor"
+},
+{
+"en": "Green Lineros",
+"k": "armor"
+},
+{
+"en": "Green Linnex",
+"k": "armor"
+},
+{
+"en": "Green Loosecap",
+"k": "armor"
+},
+{
+"en": "Green Lumati",
+"k": "armor"
+},
+{
+"en": "Green Malady's Candy",
+"k": "potion"
+},
+{
+"en": "Green Marker",
+"k": "armor"
+},
+{
+"en": "Green Maro",
+"k": "armor"
+},
+{
+"en": "Green Matty",
+"k": "armor"
+},
+{
+"en": "Green Moon Conehat",
+"k": "armor"
+},
+{
+"en": "Green Morrican",
+"k": "armor"
+},
+{
+"en": "Green Mushroom Cap",
+"k": "etc"
+},
+{
+"en": "Green Napoleon",
+"k": "armor"
+},
+{
+"en": "Green Orientican",
+"k": "armor"
+},
+{
+"en": "Green Orientican Pants",
+"k": "armor"
+},
+{
+"en": "Green Overall",
+"k": "cash"
+},
+{
+"en": "Green Paint Brush",
+"k": "weapon"
+},
+{
+"en": "Green Patriot",
+"k": "armor"
+},
+{
+"en": "Green Picnicwear",
+"k": "cash"
+},
+{
+"en": "Green Pilfer",
+"k": "armor"
+},
+{
+"en": "Green Plain Robe",
+"k": "armor"
+},
+{
+"en": "Green Pole-Feather Hat",
+"k": "armor"
+},
+{
+"en": "Green Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Green Ramel Skirt",
+"k": "armor"
+},
+{
+"en": "Green Robin Hat",
+"k": "armor"
+},
+{
+"en": "Green Scarab",
+"k": "weapon"
+},
+{
+"en": "Green Seraphis",
+"k": "armor"
+},
+{
+"en": "Green Shivermail",
+"k": "armor"
+},
+{
+"en": "Green Shivermail Skirt",
+"k": "armor"
+},
+{
+"en": "Green Silky Boots",
+"k": "armor"
+},
+{
+"en": "Green Skullcap",
+"k": "armor"
+},
+{
+"en": "Green Snowshoes",
+"k": "armor"
+},
+{
+"en": "Green Sonata",
+"k": "armor"
+},
+{
+"en": "Green Sports Goggles",
+"k": "cash"
+},
+{
+"en": "Green Starlight",
+"k": "armor"
+},
+{
+"en": "Green Steel-Tip Boots",
+"k": "armor"
+},
+{
+"en": "Green T-Shirt",
+"k": "armor"
+},
+{
+"en": "Green Thief Hood",
+"k": "armor"
+},
+{
+"en": "Green Tiberian",
+"k": "armor"
+},
+{
+"en": "Green Umbrella",
+"k": "weapon"
+},
+{
+"en": "Green White-Lined Boots",
+"k": "armor"
+},
+{
+"en": "Green Winter Hat",
+"k": "armor"
+},
+{
+"en": "Green Wizard Robe",
+"k": "armor"
+},
+{
+"en": "Green Wizardry Hat",
+"k": "armor"
+},
+{
+"en": "Green Woodsman Boots",
+"k": "armor"
+},
+{
+"en": "Grendel the Really Old's Letter",
+"k": "quest"
+},
+{
+"en": "Grey Able Armor",
+"k": "armor"
+},
+{
+"en": "Grey Able Skirt",
+"k": "armor"
+},
+{
+"en": "Grey Seal Cushion",
+"k": "setup"
+},
+{
+"en": "Grey Skull Overall",
+"k": "cash"
+},
+{
+"en": "Grey T-Shirt",
+"k": "armor"
+},
+{
+"en": "Grey Thick Sweat Pants",
+"k": "armor"
+},
+{
+"en": "Grey Visor Beanie",
+"k": "cash"
+},
+{
+"en": "Gross Jaeger",
+"k": "weapon"
+},
+{
+"en": "Grupin Tail",
+"k": "etc"
+},
+{
+"en": "Halfmoon Zamadar",
+"k": "weapon"
+},
+{
+"en": "Halloween Broomstick Chair",
+"k": "setup"
+},
+{
+"en": "Halloween Candies",
+"k": "quest"
+},
+{
+"en": "Halloween Mystery Fashion Crate",
+"k": "cash"
+},
+{
+"en": "Hamburger",
+"k": "potion"
+},
+{
+"en": "Hammer",
+"k": "weapon"
+},
+{
+"en": "Hand Axe",
+"k": "weapon"
+},
+{
+"en": "Hard Briefcase",
+"k": "weapon"
+},
+{
+"en": "Hard Walnut",
+"k": "etc"
+},
+{
+"en": "Hardwood Wand",
+"k": "weapon"
+},
+{
+"en": "Harvest Feast Table",
+"k": "setup"
+},
+{
+"en": "Harvest Hay Bale",
+"k": "setup"
+},
+{
+"en": "Hat Accuracy Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Hat Accuracy Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Hat Accuracy Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Hat Accuracy Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Hat HP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Hat HP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Hat HP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Hat HP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Hat MP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Hat MP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Hat MP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Hat MP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Hat of Death",
+"k": "cash"
+},
+{
+"en": "Hawkhead",
+"k": "weapon"
+},
+{
+"en": "Hearthkeeper's Journal",
+"k": "quest"
+},
+{
+"en": "Hearthkeeper's Lantern",
+"k": "setup"
+},
+{
+"en": "Heavy Hammer",
+"k": "weapon"
+},
+{
+"en": "Heavy Mace",
+"k": "weapon"
+},
+{
+"en": "Heckler",
+"k": "weapon"
+},
+{
+"en": "Hector Tail",
+"k": "etc"
+},
+{
+"en": "Hella's Pendant",
+"k": "quest"
+},
+{
+"en": "Henesys Earrings",
+"k": "accessory"
+},
+{
+"en": "Henesys Flag",
+"k": "setup"
+},
+{
+"en": "Henesys Resident's Chair",
+"k": "setup"
+},
+{
+"en": "Henesys Table",
+"k": "setup"
+},
+{
+"en": "Hero's Gladius",
+"k": "quest"
+},
+{
+"en": "Himmel Face Coupon",
+"k": "potion"
+},
+{
+"en": "Hinakazari Chair",
+"k": "setup"
+},
+{
+"en": "Hip Hop Sweats",
+"k": "cash"
+},
+{
+"en": "Hired Merchants Box",
+"k": "use"
+},
+{
+"en": "Hollow Bakery Basket",
+"k": "setup"
+},
+{
+"en": "Hollow Extract",
+"k": "potion"
+},
+{
+"en": "Hollow Nest Bed",
+"k": "setup"
+},
+{
+"en": "Hollow Oak Dresser",
+"k": "setup"
+},
+{
+"en": "Holy Cross Earrings",
+"k": "accessory"
+},
+{
+"en": "Holy Spear",
+"k": "weapon"
+},
+{
+"en": "Honorbound",
+"k": "weapon"
+},
+{
+"en": "Horny Mushroom Cap",
+"k": "etc"
+},
+{
+"en": "Horse Skull",
+"k": "etc"
+},
+{
+"en": "Hot Dog",
+"k": "potion"
+},
+{
+"en": "Hot Dog Supreme",
+"k": "potion"
+},
+{
+"en": "Hunter's Bow",
+"k": "weapon"
+},
+{
+"en": "Husky",
+"k": "cash"
+},
+{
+"en": "Hwabi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Ice Chair",
+"k": "setup"
+},
+{
+"en": "Ice Cold Red",
+"k": "cash"
+},
+{
+"en": "Ice Cream Pop",
+"k": "potion"
+},
+{
+"en": "Ice Jeans",
+"k": "armor"
+},
+{
+"en": "Ice Piece",
+"k": "etc"
+},
+{
+"en": "Ice Sentinel Shellpiece",
+"k": "etc"
+},
+{
+"en": "Ice Wand",
+"k": "weapon"
+},
+{
+"en": "Icicle",
+"k": "ammo"
+},
+{
+"en": "Igloo",
+"k": "setup"
+},
+{
+"en": "Ilbi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Iljimae Mask",
+"k": "cash"
+},
+{
+"en": "Incomplete Ledger",
+"k": "quest"
+},
+{
+"en": "Indigo Miniskirt",
+"k": "armor"
+},
+{
+"en": "Indigo Mop",
+"k": "weapon"
+},
+{
+"en": "Ink of Truth",
+"k": "quest"
+},
+{
+"en": "Inkwell Hat",
+"k": "armor"
+},
+{
+"en": "Inkwell's Blessing",
+"k": "use"
+},
+{
+"en": "Iron Arrows for Bows",
+"k": "ammo"
+},
+{
+"en": "Iron Arrows for Crossbows",
+"k": "ammo"
+},
+{
+"en": "Iron Axe",
+"k": "weapon"
+},
+{
+"en": "Iron Ball",
+"k": "weapon"
+},
+{
+"en": "Iron Burgernet Helm",
+"k": "armor"
+},
+{
+"en": "Iron Burgonet Helm",
+"k": "armor"
+},
+{
+"en": "Iron Chain Boots",
+"k": "armor"
+},
+{
+"en": "Iron Dagger",
+"k": "weapon"
+},
+{
+"en": "Iron Hog's Metal Hoof",
+"k": "etc"
+},
+{
+"en": "Iron Ingot",
+"k": "etc"
+},
+{
+"en": "Iron Knuckle",
+"k": "armor"
+},
+{
+"en": "Iron Mace",
+"k": "weapon"
+},
+{
+"en": "Iron Ore",
+"k": "etc"
+},
+{
+"en": "Iron Viking Helm",
+"k": "armor"
+},
+{
+"en": "It's a Hoot! Chair",
+"k": "setup"
+},
+{
+"en": "Item Megaphone",
+"k": "cash"
+},
+{
+"en": "Ivory Shouldermail",
+"k": "armor"
+},
+{
+"en": "Ivory Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Jacker",
+"k": "weapon"
+},
+{
+"en": "Janitor's Mop",
+"k": "weapon"
+},
+{
+"en": "Jean Capris",
+"k": "armor"
+},
+{
+"en": "Jean Shorts",
+"k": "cash"
+},
+{
+"en": "Jewel Chain Jeans",
+"k": "cash"
+},
+{
+"en": "Jeweled Katar",
+"k": "weapon"
+},
+{
+"en": "Jousting Helmet",
+"k": "armor"
+},
+{
+"en": "Jr. Balrog Horn",
+"k": "setup"
+},
+{
+"en": "Jr. Balrog Invasion",
+"k": "potion"
+},
+{
+"en": "Jr. Boogie Horn",
+"k": "etc"
+},
+{
+"en": "Jr. Cerebes Tooth",
+"k": "etc"
+},
+{
+"en": "Jr. Necki Skin",
+"k": "etc"
+},
+{
+"en": "Jr. Pepe's Fish",
+"k": "etc"
+},
+{
+"en": "Jr. Sentinel Shellpiece",
+"k": "etc"
+},
+{
+"en": "Jr. Yeti Skin",
+"k": "etc"
+},
+{
+"en": "Juno",
+"k": "armor"
+},
+{
+"en": "Jurgen Wristguard",
+"k": "armor"
+},
+{
+"en": "Kadomatsu",
+"k": "setup"
+},
+{
+"en": "Kandine",
+"k": "weapon"
+},
+{
+"en": "Kerning City Earrings",
+"k": "accessory"
+},
+{
+"en": "Kerning City Flag",
+"k": "setup"
+},
+{
+"en": "Kerning City Resident's Chair",
+"k": "setup"
+},
+{
+"en": "Kerning City Street Sign",
+"k": "setup"
+},
+{
+"en": "Kerning City Table",
+"k": "setup"
+},
+{
+"en": "Khaki Shadow",
+"k": "armor"
+},
+{
+"en": "Khaki Shadow Pants",
+"k": "armor"
+},
+{
+"en": "King Slime Balloon",
+"k": "setup"
+},
+{
+"en": "Kitty Chat Ring",
+"k": "cash"
+},
+{
+"en": "Kitty Hoodie",
+"k": "cash"
+},
+{
+"en": "Knuckle Mace",
+"k": "weapon"
+},
+{
+"en": "Korean Fan",
+"k": "weapon"
+},
+{
+"en": "Kotatsu",
+"k": "setup"
+},
+{
+"en": "Kumbi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Kuniragi Hat",
+"k": "cash"
+},
+{
+"en": "Lakelis Statue",
+"k": "setup"
+},
+{
+"en": "Lazy Buffy Marble",
+"k": "etc"
+},
+{
+"en": "Leaf",
+"k": "etc"
+},
+{
+"en": "Leaf Earrings",
+"k": "accessory"
+},
+{
+"en": "Leaf Garland",
+"k": "setup"
+},
+{
+"en": "Leaf Points (1,000) Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Leaf Points (10,000) Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Leaf Points (100,000) Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Leaf Points (5,000) Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Leaf Points (50,000) Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Leather",
+"k": "etc"
+},
+{
+"en": "Leather Purse",
+"k": "weapon"
+},
+{
+"en": "Leather Sandals",
+"k": "armor"
+},
+{
+"en": "Leatherworking Kit",
+"k": "potion"
+},
+{
+"en": "Leatherworking Station",
+"k": "setup"
+},
+{
+"en": "Leatty Furball",
+"k": "etc"
+},
+{
+"en": "Lemon",
+"k": "potion"
+},
+{
+"en": "Lemona",
+"k": "armor"
+},
+{
+"en": "Leopard Print Coat",
+"k": "cash"
+},
+{
+"en": "Leopard Print Hat",
+"k": "cash"
+},
+{
+"en": "Leopard Print Shoes",
+"k": "cash"
+},
+{
+"en": "Letter A",
+"k": "setup"
+},
+{
+"en": "Letter E",
+"k": "setup"
+},
+{
+"en": "Letter F",
+"k": "setup"
+},
+{
+"en": "Letter I",
+"k": "setup"
+},
+{
+"en": "Letter L",
+"k": "setup"
+},
+{
+"en": "Letter N",
+"k": "setup"
+},
+{
+"en": "Letter O",
+"k": "setup"
+},
+{
+"en": "Letter P",
+"k": "setup"
+},
+{
+"en": "Letter S",
+"k": "setup"
+},
+{
+"en": "Letter T",
+"k": "setup"
+},
+{
+"en": "Lewis's Letter",
+"k": "quest"
+},
+{
+"en": "Lie Detector Test",
+"k": "potion"
+},
+{
+"en": "Life Scroll",
+"k": "quest"
+},
+{
+"en": "Ligator Skin",
+"k": "etc"
+},
+{
+"en": "Light Blue Ripped Jeans",
+"k": "cash"
+},
+{
+"en": "Light Mantis",
+"k": "armor"
+},
+{
+"en": "Light Mantis Pants",
+"k": "armor"
+},
+{
+"en": "Light Purple Umbrella",
+"k": "weapon"
+},
+{
+"en": "Light Scorpio",
+"k": "armor"
+},
+{
+"en": "Light Scorpio Pants",
+"k": "armor"
+},
+{
+"en": "Lightning Earrings",
+"k": "accessory"
+},
+{
+"en": "Lined Hip-Hop Pants",
+"k": "cash"
+},
+{
+"en": "Lion Huntertop",
+"k": "armor"
+},
+{
+"en": "Lion's Fang",
+"k": "weapon"
+},
+{
+"en": "Lioner Tail",
+"k": "etc"
+},
+{
+"en": "Lionheart",
+"k": "weapon"
+},
+{
+"en": "Little Bug",
+"k": "setup"
+},
+{
+"en": "Little Red Riding Dress",
+"k": "cash"
+},
+{
+"en": "Little Sunflower",
+"k": "setup"
+},
+{
+"en": "Lollipop",
+"k": "weapon"
+},
+{
+"en": "Long Sword",
+"k": "weapon"
+},
+{
+"en": "Long Wild Vine",
+"k": "setup"
+},
+{
+"en": "Lorang Claw",
+"k": "etc"
+},
+{
+"en": "Love Gloves",
+"k": "cash"
+},
+{
+"en": "Low-Rise Ripped Jeans",
+"k": "cash"
+},
+{
+"en": "Lucas' Letter",
+"k": "quest"
+},
+{
+"en": "Lucia Hat",
+"k": "cash"
+},
+{
+"en": "Lucia Outfit",
+"k": "cash"
+},
+{
+"en": "Lucida Tail",
+"k": "etc"
+},
+{
+"en": "Luck Crystal",
+"k": "etc"
+},
+{
+"en": "Luck Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Luminous Magical Resonance",
+"k": "quest"
+},
+{
+"en": "Lunar Pixie's Moonpiece",
+"k": "etc"
+},
+{
+"en": "Lupin Doll",
+"k": "etc"
+},
+{
+"en": "Lupin's Banana",
+"k": "etc"
+},
+{
+"en": "Luster Pixie's Sunpiece",
+"k": "etc"
+},
+{
+"en": "Lycanthrope Toenail",
+"k": "etc"
+},
+{
+"en": "MT-09's Fuel",
+"k": "etc"
+},
+{
+"en": "Mace",
+"k": "weapon"
+},
+{
+"en": "Machete",
+"k": "weapon"
+},
+{
+"en": "Magic Box",
+"k": "quest"
+},
+{
+"en": "Magic Potion",
+"k": "use"
+},
+{
+"en": "Magical Destruction Bow",
+"k": "weapon"
+},
+{
+"en": "Maid Dress",
+"k": "cash"
+},
+{
+"en": "Maid Headband",
+"k": "cash"
+},
+{
+"en": "Maid Shoes",
+"k": "cash"
+},
+{
+"en": "Malady's Experimental Frog",
+"k": "etc"
+},
+{
+"en": "Man's Shirts",
+"k": "cash"
+},
+{
+"en": "Mana Elixir",
+"k": "potion"
+},
+{
+"en": "Mano Statue",
+"k": "setup"
+},
+{
+"en": "Maple Leaf",
+"k": "quest"
+},
+{
+"en": "Maple Tree Chair",
+"k": "setup"
+},
+{
+"en": "Maple-Stein Face",
+"k": "cash"
+},
+{
+"en": "Maple-Stein Head",
+"k": "cash"
+},
+{
+"en": "MapleStory Community VIP Chat Ring Exchange Coupon",
+"k": "use"
+},
+{
+"en": "MapleStory Community VIP Exchange Gift Box",
+"k": "use"
+},
+{
+"en": "MapleStory Community VIP Label Ring Exchange Coupon",
+"k": "use"
+},
+{
+"en": "MapleStory Fest 2026 Staff Chair",
+"k": "setup"
+},
+{
+"en": "MapleStory Fest 2026 Surprise Gift Box",
+"k": "use"
+},
+{
+"en": "MapleStory Invincible Hat",
+"k": "armor"
+},
+{
+"en": "Maplestory Patrol Hat",
+"k": "armor"
+},
+{
+"en": "Maria's Letter",
+"k": "quest"
+},
+{
+"en": "Marine Shadow",
+"k": "armor"
+},
+{
+"en": "Marine Shadow Pants",
+"k": "armor"
+},
+{
+"en": "Mark of the Beta",
+"k": "armor"
+},
+{
+"en": "Maroon Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Maroon Jangoon Shoes",
+"k": "armor"
+},
+{
+"en": "Maroon Moon",
+"k": "armor"
+},
+{
+"en": "Maroon Moon Pants",
+"k": "armor"
+},
+{
+"en": "Mateon's Tentacle",
+"k": "etc"
+},
+{
+"en": "Meat",
+"k": "potion"
+},
+{
+"en": "Meba",
+"k": "weapon"
+},
+{
+"en": "Mecateon's Laser Gun",
+"k": "etc"
+},
+{
+"en": "Mechanical Heart",
+"k": "etc"
+},
+{
+"en": "Medical Eye Patch",
+"k": "cash"
+},
+{
+"en": "Medicine With Weird Vibes",
+"k": "etc"
+},
+{
+"en": "Megaphone",
+"k": "cash"
+},
+{
+"en": "Melting Cheese",
+"k": "potion"
+},
+{
+"en": "Memory Powder",
+"k": "quest"
+},
+{
+"en": "Meshcap",
+"k": "cash"
+},
+{
+"en": "Metal Axe",
+"k": "weapon"
+},
+{
+"en": "Metal Bookshelf",
+"k": "setup"
+},
+{
+"en": "Metal Ceiling Light",
+"k": "setup"
+},
+{
+"en": "Metal Gear",
+"k": "armor"
+},
+{
+"en": "Metal Koif",
+"k": "armor"
+},
+{
+"en": "Metal Scale",
+"k": "setup"
+},
+{
+"en": "Metal Silver Earrings",
+"k": "accessory"
+},
+{
+"en": "Metal Trash Can",
+"k": "setup"
+},
+{
+"en": "Metal Wall Light",
+"k": "setup"
+},
+{
+"en": "Metal Wand",
+"k": "weapon"
+},
+{
+"en": "Metal Wardrobe",
+"k": "setup"
+},
+{
+"en": "Metal Window",
+"k": "setup"
+},
+{
+"en": "Metal Window with Curtains",
+"k": "setup"
+},
+{
+"en": "Michael Wings",
+"k": "cash"
+},
+{
+"en": "Mikhail",
+"k": "weapon"
+},
+{
+"en": "Military Shorts",
+"k": "cash"
+},
+{
+"en": "Milk Jug",
+"k": "quest"
+},
+{
+"en": "Mini Kargo",
+"k": "cash"
+},
+{
+"en": "Mithril Arrows for Crossbows",
+"k": "ammo"
+},
+{
+"en": "Mithril Axe",
+"k": "weapon"
+},
+{
+"en": "Mithril Battle Grieves",
+"k": "armor"
+},
+{
+"en": "Mithril Brist",
+"k": "armor"
+},
+{
+"en": "Mithril Buckler",
+"k": "armor"
+},
+{
+"en": "Mithril Crusader Helm",
+"k": "armor"
+},
+{
+"en": "Mithril Football Helmet",
+"k": "armor"
+},
+{
+"en": "Mithril Full Helm",
+"k": "armor"
+},
+{
+"en": "Mithril Guards",
+"k": "weapon"
+},
+{
+"en": "Mithril Helmet",
+"k": "armor"
+},
+{
+"en": "Mithril Hildon Boots",
+"k": "armor"
+},
+{
+"en": "Mithril Husk",
+"k": "armor"
+},
+{
+"en": "Mithril Ingot",
+"k": "etc"
+},
+{
+"en": "Mithril Koif",
+"k": "armor"
+},
+{
+"en": "Mithril Maul",
+"k": "weapon"
+},
+{
+"en": "Mithril Mischief",
+"k": "armor"
+},
+{
+"en": "Mithril Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Mithril Ore",
+"k": "etc"
+},
+{
+"en": "Mithril Planet",
+"k": "armor"
+},
+{
+"en": "Mithril Platine",
+"k": "armor"
+},
+{
+"en": "Mithril Platine Pants",
+"k": "armor"
+},
+{
+"en": "Mithril Pole Arm",
+"k": "weapon"
+},
+{
+"en": "Mithril Scaler",
+"k": "armor"
+},
+{
+"en": "Mithril Sharp Helm",
+"k": "armor"
+},
+{
+"en": "Mithril Titans",
+"k": "weapon"
+},
+{
+"en": "Mithril Tower Shield",
+"k": "armor"
+},
+{
+"en": "Mithril Trigger",
+"k": "armor"
+},
+{
+"en": "Mithril Viking Helm",
+"k": "armor"
+},
+{
+"en": "Mithril Wand",
+"k": "weapon"
+},
+{
+"en": "Mithril War Boots",
+"k": "armor"
+},
+{
+"en": "Mithril Wolfskin",
+"k": "armor"
+},
+{
+"en": "Miwok Chief's Chair",
+"k": "setup"
+},
+{
+"en": "Mix-n-Match Sneakers",
+"k": "cash"
+},
+{
+"en": "Mochi Ice Cream Chair",
+"k": "setup"
+},
+{
+"en": "Mokbi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Monkey Wrench",
+"k": "weapon"
+},
+{
+"en": "Monotone Jacket",
+"k": "cash"
+},
+{
+"en": "Monster Card",
+"k": "quest"
+},
+{
+"en": "Moon Bunny Costume",
+"k": "cash"
+},
+{
+"en": "Moon Bunny Gloves",
+"k": "cash"
+},
+{
+"en": "Moon Bunny Hat",
+"k": "armor"
+},
+{
+"en": "Moon Bunny Headgear",
+"k": "cash"
+},
+{
+"en": "Moon Bunny Paws",
+"k": "cash"
+},
+{
+"en": "Moon Bunny Statue",
+"k": "setup"
+},
+{
+"en": "Moon Bunny's Flower Rice Cake",
+"k": "use"
+},
+{
+"en": "Moon Bunny's Fullmoon Rice Cake",
+"k": "use"
+},
+{
+"en": "Moon Bunny's Rice Cake",
+"k": "potion"
+},
+{
+"en": "Moon Rock",
+"k": "etc"
+},
+{
+"en": "Moon Star Chair",
+"k": "setup"
+},
+{
+"en": "Moon and Sun Cape",
+"k": "cash"
+},
+{
+"en": "Moonlight Antennae",
+"k": "armor"
+},
+{
+"en": "Moss Antennae",
+"k": "armor"
+},
+{
+"en": "Mossy Display Shelf",
+"k": "setup"
+},
+{
+"en": "Motor",
+"k": "etc"
+},
+{
+"en": "Mountain Crossbow",
+"k": "weapon"
+},
+{
+"en": "Mrs. Ming Ming's Cooking Recipe",
+"k": "quest"
+},
+{
+"en": "Mrs. Ming Ming's Stew",
+"k": "potion"
+},
+{
+"en": "Mummy Hat",
+"k": "cash"
+},
+{
+"en": "Mummy Mask",
+"k": "cash"
+},
+{
+"en": "Mummy Suit",
+"k": "cash"
+},
+{
+"en": "Muscle Man T",
+"k": "cash"
+},
+{
+"en": "Mushmom Balloon",
+"k": "setup"
+},
+{
+"en": "Mushmom Spore",
+"k": "etc"
+},
+{
+"en": "Mushroom Hair Pin",
+"k": "cash"
+},
+{
+"en": "Mushroom House Elf",
+"k": "cash"
+},
+{
+"en": "Mushroom Spore",
+"k": "etc"
+},
+{
+"en": "Music Box",
+"k": "setup"
+},
+{
+"en": "My Buddy Rex",
+"k": "cash"
+},
+{
+"en": "Myen's Ward Scrolls",
+"k": "quest"
+},
+{
+"en": "Mysterious Meso Pouch",
+"k": "potion"
+},
+{
+"en": "Mystery Colorblend Eye Color Coupon",
+"k": "cash"
+},
+{
+"en": "Mystery Face Coupon",
+"k": "cash"
+},
+{
+"en": "Mystery Fashion Crate",
+"k": "cash"
+},
+{
+"en": "Mystery Hair Color Coupon",
+"k": "cash"
+},
+{
+"en": "Mystery Hair Coupon",
+"k": "cash"
+},
+{
+"en": "Mystery Mix Dye Coupon",
+"k": "cash"
+},
+{
+"en": "Mystic Shield",
+"k": "armor"
+},
+{
+"en": "Nakamaki",
+"k": "weapon"
+},
+{
+"en": "Natalie's Fashion Box (F)",
+"k": "use"
+},
+{
+"en": "Natalie's Fashion Box (M)",
+"k": "use"
+},
+{
+"en": "Nemi Hat",
+"k": "armor"
+},
+{
+"en": "Neocora",
+"k": "weapon"
+},
+{
+"en": "Nependeath Seed",
+"k": "etc"
+},
+{
+"en": "Newspaper Sword",
+"k": "weapon"
+},
+{
+"en": "Niam",
+"k": "weapon"
+},
+{
+"en": "Nick's Ring",
+"k": "quest"
+},
+{
+"en": "Nimble Wristguard",
+"k": "armor"
+},
+{
+"en": "No Biking Sign",
+"k": "setup"
+},
+{
+"en": "No Smoking Sign",
+"k": "setup"
+},
+{
+"en": "Oak Barrel",
+"k": "setup"
+},
+{
+"en": "Oak Bench",
+"k": "setup"
+},
+{
+"en": "Oak Window",
+"k": "setup"
+},
+{
+"en": "Oaker Garner",
+"k": "armor"
+},
+{
+"en": "Oaker Scorpio",
+"k": "armor"
+},
+{
+"en": "Oaker Scorpio Pants",
+"k": "armor"
+},
+{
+"en": "Oaker Shouldermail",
+"k": "armor"
+},
+{
+"en": "Oaker Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Ocean Mesana",
+"k": "armor"
+},
+{
+"en": "Octopus & Mushroom Omok Set",
+"k": "etc"
+},
+{
+"en": "Octopus Leg",
+"k": "etc"
+},
+{
+"en": "Old Bronze Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Old Chief Stan's Hammer",
+"k": "quest"
+},
+{
+"en": "Old Gladius",
+"k": "weapon"
+},
+{
+"en": "Old Gold Watch",
+"k": "quest"
+},
+{
+"en": "Old Map Piece (1/4)",
+"k": "quest"
+},
+{
+"en": "Old Map Piece (2/4)",
+"k": "quest"
+},
+{
+"en": "Old Map Piece (3/4)",
+"k": "quest"
+},
+{
+"en": "Old Map Piece (4/4)",
+"k": "quest"
+},
+{
+"en": "Old Mithril Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Old Raggedy Cape",
+"k": "armor"
+},
+{
+"en": "Old Ring",
+"k": "quest"
+},
+{
+"en": "Old School Blazer",
+"k": "cash"
+},
+{
+"en": "Old School Uniform Hat",
+"k": "cash"
+},
+{
+"en": "Old School Uniform Pants",
+"k": "cash"
+},
+{
+"en": "Old School Uniform Skirt",
+"k": "cash"
+},
+{
+"en": "Old School Uniform Top",
+"k": "cash"
+},
+{
+"en": "Old Steel Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Old Wisconsin",
+"k": "armor"
+},
+{
+"en": "Old Wooden Board",
+"k": "quest"
+},
+{
+"en": "Old Wooden Staff",
+"k": "weapon"
+},
+{
+"en": "Olive Beanie",
+"k": "cash"
+},
+{
+"en": "Olivia's Chair",
+"k": "setup"
+},
+{
+"en": "Olympus",
+"k": "weapon"
+},
+{
+"en": "Ominous Rotten Branch",
+"k": "quest"
+},
+{
+"en": "Omok Piece: Mushroom",
+"k": "quest"
+},
+{
+"en": "Omok Piece: Octopus",
+"k": "quest"
+},
+{
+"en": "Omok Piece: Pig",
+"k": "quest"
+},
+{
+"en": "Omok Piece: Slime",
+"k": "quest"
+},
+{
+"en": "Omok Table",
+"k": "quest"
+},
+{
+"en": "One-Handed Axe Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "One-Handed Axe Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "One-Handed Axe Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "One-Handed Axe Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "One-Handed Blunt Weapon Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "One-Handed Blunt Weapon Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "One-Handed Blunt Weapon Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "One-Handed Blunt Weapon Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "One-Handed Sword Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "One-Handed Sword Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "One-Handed Sword Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "One-Handed Sword Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "One-Handed Weapon Crafting Catalyst",
+"k": "etc"
+},
+{
+"en": "Opal",
+"k": "etc"
+},
+{
+"en": "Opal Ore",
+"k": "etc"
+},
+{
+"en": "Orange",
+"k": "potion"
+},
+{
+"en": "Orange Baseball Jacket",
+"k": "cash"
+},
+{
+"en": "Orange Calaf",
+"k": "armor"
+},
+{
+"en": "Orange Calas",
+"k": "armor"
+},
+{
+"en": "Orange Golden Circlet",
+"k": "armor"
+},
+{
+"en": "Orange Goldrunners",
+"k": "armor"
+},
+{
+"en": "Orange Hard-Rimmed Glasses",
+"k": "cash"
+},
+{
+"en": "Orange High Boots",
+"k": "armor"
+},
+{
+"en": "Orange Hooded Vest",
+"k": "cash"
+},
+{
+"en": "Orange Hooded Zip-Up",
+"k": "cash"
+},
+{
+"en": "Orange Juice",
+"k": "potion"
+},
+{
+"en": "Orange Lolica Armor",
+"k": "armor"
+},
+{
+"en": "Orange Mushroom Cap",
+"k": "etc"
+},
+{
+"en": "Orange Mushroom Daydream",
+"k": "potion"
+},
+{
+"en": "Orange Mushroom Hat",
+"k": "cash"
+},
+{
+"en": "Orange Mushroom Invasion",
+"k": "potion"
+},
+{
+"en": "Orange Potion",
+"k": "potion"
+},
+{
+"en": "Orange Split Piece",
+"k": "armor"
+},
+{
+"en": "Orange Sporty T-Shirt",
+"k": "armor"
+},
+{
+"en": "Orange Tai",
+"k": "armor"
+},
+{
+"en": "Orange Toy Hammer",
+"k": "cash"
+},
+{
+"en": "Orange Whitebottom Boots",
+"k": "armor"
+},
+{
+"en": "Orbis Rock Scroll",
+"k": "quest"
+},
+{
+"en": "Orihalcon Arbion",
+"k": "armor"
+},
+{
+"en": "Orihalcon Burgernet Helm",
+"k": "armor"
+},
+{
+"en": "Orihalcon Burgonet Helm",
+"k": "armor"
+},
+{
+"en": "Orihalcon Camel Boots",
+"k": "armor"
+},
+{
+"en": "Orihalcon Hildon Boots",
+"k": "armor"
+},
+{
+"en": "Orihalcon Ingot",
+"k": "etc"
+},
+{
+"en": "Orihalcon Master Sergeant",
+"k": "armor"
+},
+{
+"en": "Orihalcon Master Sergeant Kilt",
+"k": "armor"
+},
+{
+"en": "Orihalcon Missel",
+"k": "armor"
+},
+{
+"en": "Orihalcon Ore",
+"k": "etc"
+},
+{
+"en": "Orihalcon Platine",
+"k": "armor"
+},
+{
+"en": "Orihalcon Platine Pants",
+"k": "armor"
+},
+{
+"en": "Overall Armor DEF Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEF Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEF Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEF Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEX Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEX Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEX Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Overall Armor DEX Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Overall Armor INT Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Overall Armor INT Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Overall Armor INT Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Overall Armor INT Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Overall Armor LUK Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Overall Armor LUK Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Overall Armor LUK Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Overall Armor LUK Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Overall Armor STR Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Overall Armor STR Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Overall Armor STR Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Overall Armor STR Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Painting of Rotten Mushmom",
+"k": "setup"
+},
+{
+"en": "Painting of Shade",
+"k": "setup"
+},
+{
+"en": "Painting of Zombie Mushmom",
+"k": "setup"
+},
+{
+"en": "Pale Maple Leaf",
+"k": "setup"
+},
+{
+"en": "Palm Tree Beach Chair",
+"k": "setup"
+},
+{
+"en": "Pan Lid",
+"k": "armor"
+},
+{
+"en": "Panda",
+"k": "cash"
+},
+{
+"en": "Panda Doll",
+"k": "etc"
+},
+{
+"en": "Pansy Earrings",
+"k": "accessory"
+},
+{
+"en": "Paper Document",
+"k": "quest"
+},
+{
+"en": "Pass",
+"k": "quest"
+},
+{
+"en": "Patched Denim Jeans",
+"k": "cash"
+},
+{
+"en": "Patissier Hat",
+"k": "cash"
+},
+{
+"en": "Patissier Uniform",
+"k": "cash"
+},
+{
+"en": "Pelvic Bone",
+"k": "etc"
+},
+{
+"en": "Pelvis Hoodie",
+"k": "cash"
+},
+{
+"en": "Penguin Slippers",
+"k": "cash"
+},
+{
+"en": "Pepe Beak",
+"k": "etc"
+},
+{
+"en": "Pet Ability Transfer Scroll",
+"k": "etc"
+},
+{
+"en": "Pet Equip Jump Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Jump Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Jump Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Jump Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Speed Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Speed Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Speed Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Pet Equip Speed Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Pet Food",
+"k": "potion"
+},
+{
+"en": "Pet Name Tag",
+"k": "cash"
+},
+{
+"en": "Pickaxe",
+"k": "weapon"
+},
+{
+"en": "Pie Flour",
+"k": "quest"
+},
+{
+"en": "Piece of Ice",
+"k": "etc"
+},
+{
+"en": "Pierced Apple",
+"k": "cash"
+},
+{
+"en": "Pig & Mushroom Omok Set",
+"k": "etc"
+},
+{
+"en": "Pig & Octopus Omok Set",
+"k": "etc"
+},
+{
+"en": "Pig Illustrated",
+"k": "weapon"
+},
+{
+"en": "Pig's Head",
+"k": "etc"
+},
+{
+"en": "Pig's Ribbon",
+"k": "etc"
+},
+{
+"en": "Pillow",
+"k": "cash"
+},
+{
+"en": "Pink Allstar",
+"k": "cash"
+},
+{
+"en": "Pink Anthurium",
+"k": "quest"
+},
+{
+"en": "Pink Arianne",
+"k": "armor"
+},
+{
+"en": "Pink Arianne Skirt",
+"k": "armor"
+},
+{
+"en": "Pink Beach Chair",
+"k": "setup"
+},
+{
+"en": "Pink Bunny",
+"k": "cash"
+},
+{
+"en": "Pink Cotton Boxers",
+"k": "armor"
+},
+{
+"en": "Pink Down Parka",
+"k": "cash"
+},
+{
+"en": "Pink Galoshes",
+"k": "cash"
+},
+{
+"en": "Pink Goldrunners",
+"k": "armor"
+},
+{
+"en": "Pink Goldwind Shoes",
+"k": "armor"
+},
+{
+"en": "Pink Jester",
+"k": "armor"
+},
+{
+"en": "Pink Knitted Gumball",
+"k": "cash"
+},
+{
+"en": "Pink Laced Cap",
+"k": "cash"
+},
+{
+"en": "Pink Layered Skirt",
+"k": "cash"
+},
+{
+"en": "Pink Moon Conehat",
+"k": "armor"
+},
+{
+"en": "Pink Mystique",
+"k": "armor"
+},
+{
+"en": "Pink Mystique Pants",
+"k": "armor"
+},
+{
+"en": "Pink Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Pink Qi Pao",
+"k": "armor"
+},
+{
+"en": "Pink Rabbit Puppet",
+"k": "cash"
+},
+{
+"en": "Pink Seal Cushion",
+"k": "setup"
+},
+{
+"en": "Pink Snowboard Pants",
+"k": "cash"
+},
+{
+"en": "Pink Snowboard Top",
+"k": "cash"
+},
+{
+"en": "Pink Starry Shirt",
+"k": "armor"
+},
+{
+"en": "Pink Store Permit",
+"k": "cash"
+},
+{
+"en": "Pink Sweater",
+"k": "cash"
+},
+{
+"en": "Pink Tank Top",
+"k": "armor"
+},
+{
+"en": "Pink Teddy Chair",
+"k": "setup"
+},
+{
+"en": "Pink Viola",
+"k": "quest"
+},
+{
+"en": "Pink Whitebottom Boots",
+"k": "armor"
+},
+{
+"en": "Pink-Flowered Earrings",
+"k": "accessory"
+},
+{
+"en": "Pizza",
+"k": "potion"
+},
+{
+"en": "Plane Controller",
+"k": "etc"
+},
+{
+"en": "Plant Fossil",
+"k": "quest"
+},
+{
+"en": "Plant Sample",
+"k": "quest"
+},
+{
+"en": "Plastic Bottle",
+"k": "weapon"
+},
+{
+"en": "Plastic Crown",
+"k": "etc"
+},
+{
+"en": "Plastic Slingshot",
+"k": "cash"
+},
+{
+"en": "Plateon's Helmet",
+"k": "etc"
+},
+{
+"en": "Plunger",
+"k": "weapon"
+},
+{
+"en": "Pointed Shovel",
+"k": "weapon"
+},
+{
+"en": "Poisonous Mushroom",
+"k": "etc"
+},
+{
+"en": "Polar Bear Chair",
+"k": "setup"
+},
+{
+"en": "Pole Arm",
+"k": "weapon"
+},
+{
+"en": "Polearm Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Polearm Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Polearm Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Polearm Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Poor Ribbon Pig Chair",
+"k": "setup"
+},
+{
+"en": "Portrait of Helena",
+"k": "setup"
+},
+{
+"en": "Portrait of the Dark Lord",
+"k": "setup"
+},
+{
+"en": "Potted Sunflower",
+"k": "setup"
+},
+{
+"en": "Power Crystal",
+"k": "etc"
+},
+{
+"en": "Power Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Power Elixir",
+"k": "potion"
+},
+{
+"en": "Pre-School Pants",
+"k": "cash"
+},
+{
+"en": "Premium Trenchcoat",
+"k": "cash"
+},
+{
+"en": "Prep School Uniform",
+"k": "cash"
+},
+{
+"en": "Prep School Uniform Pants",
+"k": "cash"
+},
+{
+"en": "Prep Uniform",
+"k": "cash"
+},
+{
+"en": "Primrose Seed",
+"k": "etc"
+},
+{
+"en": "Prisoner Pants",
+"k": "cash"
+},
+{
+"en": "Prisoner Top",
+"k": "cash"
+},
+{
+"en": "Processed Cloth",
+"k": "etc"
+},
+{
+"en": "Processed Leather",
+"k": "etc"
+},
+{
+"en": "Processed Parchment",
+"k": "etc"
+},
+{
+"en": "Processed Wood",
+"k": "etc"
+},
+{
+"en": "Propeller",
+"k": "etc"
+},
+{
+"en": "Puffy Brown Hat",
+"k": "cash"
+},
+{
+"en": "Pumpkin Basket",
+"k": "weapon"
+},
+{
+"en": "Pumpkin Harvest Wagon",
+"k": "setup"
+},
+{
+"en": "Pumpkin Hat",
+"k": "cash"
+},
+{
+"en": "Pumpkin Headgear",
+"k": "cash"
+},
+{
+"en": "Pumpkin Pie",
+"k": "use"
+},
+{
+"en": "Pumpkin Piece",
+"k": "quest"
+},
+{
+"en": "Pumpkin Suit",
+"k": "cash"
+},
+{
+"en": "Pure Water",
+"k": "potion"
+},
+{
+"en": "Purple Arianne",
+"k": "armor"
+},
+{
+"en": "Purple Arianne Skirt",
+"k": "armor"
+},
+{
+"en": "Purple Avenger",
+"k": "armor"
+},
+{
+"en": "Purple Barstool",
+"k": "setup"
+},
+{
+"en": "Purple Carzen Boots",
+"k": "armor"
+},
+{
+"en": "Purple Doroness Robe",
+"k": "armor"
+},
+{
+"en": "Purple Fairy Skirt",
+"k": "armor"
+},
+{
+"en": "Purple Fairy Top",
+"k": "armor"
+},
+{
+"en": "Purple Goldwind Shoes",
+"k": "armor"
+},
+{
+"en": "Purple Goni Shoes",
+"k": "armor"
+},
+{
+"en": "Purple Jewelry Boots",
+"k": "armor"
+},
+{
+"en": "Purple Moonlight",
+"k": "armor"
+},
+{
+"en": "Purple Morrican",
+"k": "armor"
+},
+{
+"en": "Purple Mystique",
+"k": "armor"
+},
+{
+"en": "Purple Mystique Pants",
+"k": "armor"
+},
+{
+"en": "Purple Mystique Shoes",
+"k": "armor"
+},
+{
+"en": "Purple Nightfox",
+"k": "armor"
+},
+{
+"en": "Purple Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Purple Qi Pao Pants",
+"k": "armor"
+},
+{
+"en": "Purple Qi Pao Skirt",
+"k": "armor"
+},
+{
+"en": "Purple Salt Shoes",
+"k": "armor"
+},
+{
+"en": "Purple Shadow",
+"k": "armor"
+},
+{
+"en": "Purple Shadow Pants",
+"k": "armor"
+},
+{
+"en": "Purple Shivermail",
+"k": "armor"
+},
+{
+"en": "Purple Shivermail Skirt",
+"k": "armor"
+},
+{
+"en": "Purple Split",
+"k": "armor"
+},
+{
+"en": "Purple Steal",
+"k": "armor"
+},
+{
+"en": "Purple Steal Pants",
+"k": "armor"
+},
+{
+"en": "Purple Steel-Tip Boots",
+"k": "armor"
+},
+{
+"en": "Purple Tube",
+"k": "weapon"
+},
+{
+"en": "Rabbit Bottom",
+"k": "cash"
+},
+{
+"en": "Rabbit Huntertop",
+"k": "armor"
+},
+{
+"en": "Rabbit Sofa",
+"k": "setup"
+},
+{
+"en": "Rabbit Top",
+"k": "cash"
+},
+{
+"en": "Race Ace Cap",
+"k": "cash"
+},
+{
+"en": "Race Ace Suit",
+"k": "cash"
+},
+{
+"en": "Race Queen Boots",
+"k": "cash"
+},
+{
+"en": "Race Queen Uniform",
+"k": "cash"
+},
+{
+"en": "Raffle Petal",
+"k": "etc"
+},
+{
+"en": "Rafflesia Petal",
+"k": "etc"
+},
+{
+"en": "Ragged Gomushin",
+"k": "cash"
+},
+{
+"en": "Ragged Top",
+"k": "cash"
+},
+{
+"en": "Rainbow Knit",
+"k": "cash"
+},
+{
+"en": "Rainbow-colored Snail Shell",
+"k": "potion"
+},
+{
+"en": "Rat Trap",
+"k": "etc"
+},
+{
+"en": "Razor",
+"k": "weapon"
+},
+{
+"en": "Receiving Apparatus",
+"k": "etc"
+},
+{
+"en": "Red / Gold Stealer Pants",
+"k": "armor"
+},
+{
+"en": "Red Amoria Skirt",
+"k": "armor"
+},
+{
+"en": "Red Amoria Top",
+"k": "armor"
+},
+{
+"en": "Red Anakamoon",
+"k": "armor"
+},
+{
+"en": "Red Anakarune",
+"k": "armor"
+},
+{
+"en": "Red Ankle-strap Sandals",
+"k": "armor"
+},
+{
+"en": "Red Apprentice Hat",
+"k": "armor"
+},
+{
+"en": "Red Arten",
+"k": "armor"
+},
+{
+"en": "Red Avenger",
+"k": "armor"
+},
+{
+"en": "Red Bandana",
+"k": "armor"
+},
+{
+"en": "Red Baseball Cap",
+"k": "armor"
+},
+{
+"en": "Red Bean Porridge",
+"k": "use"
+},
+{
+"en": "Red Bean Sundae",
+"k": "potion"
+},
+{
+"en": "Red Bennis Chainmail",
+"k": "armor"
+},
+{
+"en": "Red Bennis Chainmail (Female)",
+"k": "armor"
+},
+{
+"en": "Red Bone Helm",
+"k": "armor"
+},
+{
+"en": "Red Brick",
+"k": "weapon"
+},
+{
+"en": "Red Burgler",
+"k": "armor"
+},
+{
+"en": "Red Calaf",
+"k": "armor"
+},
+{
+"en": "Red Calas",
+"k": "armor"
+},
+{
+"en": "Red Cape",
+"k": "quest"
+},
+{
+"en": "Red Chair",
+"k": "setup"
+},
+{
+"en": "Red China",
+"k": "armor"
+},
+{
+"en": "Red China Pants",
+"k": "armor"
+},
+{
+"en": "Red Choro",
+"k": "armor"
+},
+{
+"en": "Red Christmas Recharger Chair",
+"k": "setup"
+},
+{
+"en": "Red Cleave",
+"k": "armor"
+},
+{
+"en": "Red Cloth Pants",
+"k": "armor"
+},
+{
+"en": "Red Cloth Pants (Female)",
+"k": "armor"
+},
+{
+"en": "Red Cloth Vest",
+"k": "armor"
+},
+{
+"en": "Red Cloth Vest (Female)",
+"k": "armor"
+},
+{
+"en": "Red Cross Earrings",
+"k": "accessory"
+},
+{
+"en": "Red Cross Shield",
+"k": "armor"
+},
+{
+"en": "Red Diros",
+"k": "armor"
+},
+{
+"en": "Red Distinction",
+"k": "armor"
+},
+{
+"en": "Red Doroness Robe",
+"k": "armor"
+},
+{
+"en": "Red Duke",
+"k": "armor"
+},
+{
+"en": "Red Dye",
+"k": "etc"
+},
+{
+"en": "Red Enamel Boots",
+"k": "armor"
+},
+{
+"en": "Red Engrit",
+"k": "armor"
+},
+{
+"en": "Red Feather Hat",
+"k": "armor"
+},
+{
+"en": "Red Flowery Tube",
+"k": "weapon"
+},
+{
+"en": "Red Gaia Cape",
+"k": "armor"
+},
+{
+"en": "Red Ghetto Beanie",
+"k": "armor"
+},
+{
+"en": "Red Gold Stealer",
+"k": "armor"
+},
+{
+"en": "Red Goni Shoes",
+"k": "armor"
+},
+{
+"en": "Red Gore Boots",
+"k": "armor"
+},
+{
+"en": "Red Guiltian",
+"k": "armor"
+},
+{
+"en": "Red Guise",
+"k": "armor"
+},
+{
+"en": "Red Hat",
+"k": "cash"
+},
+{
+"en": "Red Hawkeye",
+"k": "armor"
+},
+{
+"en": "Red Headband",
+"k": "armor"
+},
+{
+"en": "Red Hinkel",
+"k": "weapon"
+},
+{
+"en": "Red Hip Hop",
+"k": "cash"
+},
+{
+"en": "Red Hip-Hop Pants",
+"k": "cash"
+},
+{
+"en": "Red Hood Bandana",
+"k": "cash"
+},
+{
+"en": "Red Hooded Coat",
+"k": "cash"
+},
+{
+"en": "Red Hunter",
+"k": "armor"
+},
+{
+"en": "Red Hunter Boots",
+"k": "armor"
+},
+{
+"en": "Red Hunter's Armor",
+"k": "armor"
+},
+{
+"en": "Red Hunter's Pants",
+"k": "armor"
+},
+{
+"en": "Red Huntress Pants",
+"k": "armor"
+},
+{
+"en": "Red Hwarang Shirt",
+"k": "armor"
+},
+{
+"en": "Red Ice Queen",
+"k": "armor"
+},
+{
+"en": "Red Ice Queen Skirt",
+"k": "armor"
+},
+{
+"en": "Red Infinium Circlet",
+"k": "armor"
+},
+{
+"en": "Red Jack Boots",
+"k": "armor"
+},
+{
+"en": "Red Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Red Jangoon Skirt",
+"k": "armor"
+},
+{
+"en": "Red Jewelry Boots",
+"k": "armor"
+},
+{
+"en": "Red Justice Cape",
+"k": "armor"
+},
+{
+"en": "Red Katana",
+"k": "weapon"
+},
+{
+"en": "Red Kendo Robe",
+"k": "armor"
+},
+{
+"en": "Red Knucklevest",
+"k": "armor"
+},
+{
+"en": "Red Knucklevest Pants",
+"k": "armor"
+},
+{
+"en": "Red Lamelle",
+"k": "armor"
+},
+{
+"en": "Red Lapiz Sandals",
+"k": "armor"
+},
+{
+"en": "Red Lappy Boots",
+"k": "armor"
+},
+{
+"en": "Red Legolia",
+"k": "armor"
+},
+{
+"en": "Red Legolia Pants",
+"k": "armor"
+},
+{
+"en": "Red Legolier",
+"k": "armor"
+},
+{
+"en": "Red Legolier Pants",
+"k": "armor"
+},
+{
+"en": "Red Loose Sox",
+"k": "cash"
+},
+{
+"en": "Red Loose-Fit Beanie",
+"k": "cash"
+},
+{
+"en": "Red Loosecap",
+"k": "armor"
+},
+{
+"en": "Red Lumati",
+"k": "armor"
+},
+{
+"en": "Red Lutia",
+"k": "armor"
+},
+{
+"en": "Red Magic Cape",
+"k": "armor"
+},
+{
+"en": "Red Magic Shoes",
+"k": "armor"
+},
+{
+"en": "Red Malady's Candy",
+"k": "potion"
+},
+{
+"en": "Red Maro",
+"k": "armor"
+},
+{
+"en": "Red Martial Arts Pants",
+"k": "armor"
+},
+{
+"en": "Red Matty",
+"k": "armor"
+},
+{
+"en": "Red Miniskirt",
+"k": "armor"
+},
+{
+"en": "Red Moon",
+"k": "armor"
+},
+{
+"en": "Red Moon Gloves",
+"k": "armor"
+},
+{
+"en": "Red Moon Pants",
+"k": "armor"
+},
+{
+"en": "Red Moon Shoes",
+"k": "armor"
+},
+{
+"en": "Red Moonlight",
+"k": "armor"
+},
+{
+"en": "Red Mystique",
+"k": "armor"
+},
+{
+"en": "Red Mystique Pants",
+"k": "armor"
+},
+{
+"en": "Red Mystique Shoes",
+"k": "armor"
+},
+{
+"en": "Red Napoleon",
+"k": "armor"
+},
+{
+"en": "Red Nightshift",
+"k": "armor"
+},
+{
+"en": "Red Nightshift Pants",
+"k": "armor"
+},
+{
+"en": "Red Ninja Sandals",
+"k": "armor"
+},
+{
+"en": "Red Noel",
+"k": "armor"
+},
+{
+"en": "Red Oriental Helmet",
+"k": "armor"
+},
+{
+"en": "Red Orientican",
+"k": "armor"
+},
+{
+"en": "Red Orientican Pants",
+"k": "armor"
+},
+{
+"en": "Red Pao",
+"k": "armor"
+},
+{
+"en": "Red Pao Bottoms",
+"k": "armor"
+},
+{
+"en": "Red Penance",
+"k": "armor"
+},
+{
+"en": "Red Pierre Shoes",
+"k": "armor"
+},
+{
+"en": "Red Pilfer",
+"k": "armor"
+},
+{
+"en": "Red Pole-Feather Hat",
+"k": "armor"
+},
+{
+"en": "Red Polyfeather Hat",
+"k": "armor"
+},
+{
+"en": "Red Potion",
+"k": "potion"
+},
+{
+"en": "Red Qi Pao",
+"k": "armor"
+},
+{
+"en": "Red Qi Pao Pants",
+"k": "armor"
+},
+{
+"en": "Red Qi Pao Skirt",
+"k": "armor"
+},
+{
+"en": "Red Rain Boots",
+"k": "cash"
+},
+{
+"en": "Red Ramel Skirt",
+"k": "armor"
+},
+{
+"en": "Red Requiem",
+"k": "armor"
+},
+{
+"en": "Red Requierre",
+"k": "armor"
+},
+{
+"en": "Red Ribbon",
+"k": "cash"
+},
+{
+"en": "Red Ribbon Shoes",
+"k": "cash"
+},
+{
+"en": "Red Robin Hat",
+"k": "armor"
+},
+{
+"en": "Red Round Chair",
+"k": "setup"
+},
+{
+"en": "Red Rubber Boots",
+"k": "armor"
+},
+{
+"en": "Red Sailor Shirt",
+"k": "cash"
+},
+{
+"en": "Red Sailor Skirt",
+"k": "cash"
+},
+{
+"en": "Red Salt Shoes",
+"k": "armor"
+},
+{
+"en": "Red Sauna Robe",
+"k": "armor"
+},
+{
+"en": "Red Savata",
+"k": "armor"
+},
+{
+"en": "Red Seraphis",
+"k": "armor"
+},
+{
+"en": "Red Sergeant",
+"k": "armor"
+},
+{
+"en": "Red Sergeant Kilt",
+"k": "armor"
+},
+{
+"en": "Red Shadow",
+"k": "armor"
+},
+{
+"en": "Red Shadow Pants",
+"k": "armor"
+},
+{
+"en": "Red Shark",
+"k": "armor"
+},
+{
+"en": "Red Shark Skirt",
+"k": "armor"
+},
+{
+"en": "Red Shivermail",
+"k": "armor"
+},
+{
+"en": "Red Shivermail Skirt",
+"k": "armor"
+},
+{
+"en": "Red Shouldermail",
+"k": "armor"
+},
+{
+"en": "Red Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Red Silky Boots",
+"k": "armor"
+},
+{
+"en": "Red Skull Overall",
+"k": "cash"
+},
+{
+"en": "Red Skullcap",
+"k": "armor"
+},
+{
+"en": "Red Snail Daydream",
+"k": "potion"
+},
+{
+"en": "Red Snail Invasion",
+"k": "potion"
+},
+{
+"en": "Red Snail Shell",
+"k": "etc"
+},
+{
+"en": "Red Sneakers",
+"k": "armor"
+},
+{
+"en": "Red Snowshoes",
+"k": "armor"
+},
+{
+"en": "Red Sonata",
+"k": "armor"
+},
+{
+"en": "Red Split",
+"k": "armor"
+},
+{
+"en": "Red Starlight",
+"k": "armor"
+},
+{
+"en": "Red Starry Bandana",
+"k": "armor"
+},
+{
+"en": "Red Steal",
+"k": "armor"
+},
+{
+"en": "Red Steal Pants",
+"k": "armor"
+},
+{
+"en": "Red Striped T-Shirt",
+"k": "armor"
+},
+{
+"en": "Red Striped Top",
+"k": "armor"
+},
+{
+"en": "Red Swimming Cap",
+"k": "armor"
+},
+{
+"en": "Red Tai",
+"k": "armor"
+},
+{
+"en": "Red Thief Hood",
+"k": "armor"
+},
+{
+"en": "Red Tiberian",
+"k": "armor"
+},
+{
+"en": "Red Top Hat",
+"k": "cash"
+},
+{
+"en": "Red Trainer Jacket",
+"k": "cash"
+},
+{
+"en": "Red Trainer Pants",
+"k": "cash"
+},
+{
+"en": "Red Training Shorts",
+"k": "cash"
+},
+{
+"en": "Red Triangular Shield",
+"k": "armor"
+},
+{
+"en": "Red Umbrella",
+"k": "weapon"
+},
+{
+"en": "Red Umbrella Chair",
+"k": "setup"
+},
+{
+"en": "Red Viper",
+"k": "weapon"
+},
+{
+"en": "Red Whip",
+"k": "weapon"
+},
+{
+"en": "Red White-Lined Boots",
+"k": "armor"
+},
+{
+"en": "Red Whitebottom Boots",
+"k": "armor"
+},
+{
+"en": "Red Willow",
+"k": "armor"
+},
+{
+"en": "Red Wizardry Hat",
+"k": "armor"
+},
+{
+"en": "Red-Hearted Earrings",
+"k": "accessory"
+},
+{
+"en": "Red-Lined Kismet",
+"k": "armor"
+},
+{
+"en": "Reddened Maple Leaf",
+"k": "setup"
+},
+{
+"en": "Redemption",
+"k": "weapon"
+},
+{
+"en": "Reef Claw",
+"k": "weapon"
+},
+{
+"en": "Regular Store Permit",
+"k": "cash"
+},
+{
+"en": "Reindeer Milk",
+"k": "potion"
+},
+{
+"en": "Reinforced Safe",
+"k": "setup"
+},
+{
+"en": "Reinforced Wooden Chest",
+"k": "setup"
+},
+{
+"en": "Repaired Wooden Bow",
+"k": "quest"
+},
+{
+"en": "Return Scroll - Nearest Town",
+"k": "use"
+},
+{
+"en": "Return Scroll to El Nath",
+"k": "use"
+},
+{
+"en": "Return Scroll to Ellinia",
+"k": "use"
+},
+{
+"en": "Return Scroll to Forgotten Hollow",
+"k": "use"
+},
+{
+"en": "Return Scroll to Henesys",
+"k": "use"
+},
+{
+"en": "Return Scroll to Kerning City",
+"k": "use"
+},
+{
+"en": "Return Scroll to Lith Harbor",
+"k": "use"
+},
+{
+"en": "Return Scroll to My Home",
+"k": "use"
+},
+{
+"en": "Return Scroll to Orbis",
+"k": "use"
+},
+{
+"en": "Return Scroll to Perion",
+"k": "use"
+},
+{
+"en": "Return Scroll to Sleepywood",
+"k": "use"
+},
+{
+"en": "Rib",
+"k": "etc"
+},
+{
+"en": "Ribbon Pig Daydream",
+"k": "potion"
+},
+{
+"en": "Ribbon Pig Invasion",
+"k": "potion"
+},
+{
+"en": "Ribboned Pig Headband",
+"k": "armor"
+},
+{
+"en": "Rina's Unagi Special",
+"k": "quest"
+},
+{
+"en": "Ripped Jeans",
+"k": "cash"
+},
+{
+"en": "Rising Star Baggy Digs",
+"k": "cash"
+},
+{
+"en": "Roast Turkey Platter",
+"k": "setup"
+},
+{
+"en": "Roasted Relaxer",
+"k": "setup"
+},
+{
+"en": "Roasted Relaxer Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Roasted Turkey",
+"k": "potion"
+},
+{
+"en": "Roger's Apple",
+"k": "potion"
+},
+{
+"en": "Rombot's Memory Card",
+"k": "etc"
+},
+{
+"en": "Rookie Pants",
+"k": "armor"
+},
+{
+"en": "Rope-Wrapped Jug",
+"k": "setup"
+},
+{
+"en": "Rotten Mushmom Cap",
+"k": "etc"
+},
+{
+"en": "Rotten Root Fragment",
+"k": "quest"
+},
+{
+"en": "Rower",
+"k": "weapon"
+},
+{
+"en": "Rustic Bed",
+"k": "setup"
+},
+{
+"en": "Rusty Safe",
+"k": "setup"
+},
+{
+"en": "Rusty Screw",
+"k": "quest"
+},
+{
+"en": "Ryden",
+"k": "weapon"
+},
+{
+"en": "SP Reset Scroll",
+"k": "cash"
+},
+{
+"en": "Sabre",
+"k": "weapon"
+},
+{
+"en": "Sabretooth",
+"k": "weapon"
+},
+{
+"en": "Safety Charm",
+"k": "cash"
+},
+{
+"en": "Sai",
+"k": "weapon"
+},
+{
+"en": "Salad",
+"k": "potion"
+},
+{
+"en": "Sandblasted Jeans",
+"k": "armor"
+},
+{
+"en": "Sap of Ancient Tree",
+"k": "use"
+},
+{
+"en": "Sapphire",
+"k": "etc"
+},
+{
+"en": "Sapphire Camel Boots",
+"k": "armor"
+},
+{
+"en": "Sapphire Clench",
+"k": "armor"
+},
+{
+"en": "Sapphire Earrings",
+"k": "accessory"
+},
+{
+"en": "Sapphire Fitted Mail",
+"k": "armor"
+},
+{
+"en": "Sapphire Gigantic",
+"k": "weapon"
+},
+{
+"en": "Sapphire Ore",
+"k": "etc"
+},
+{
+"en": "Sapphire Slain",
+"k": "weapon"
+},
+{
+"en": "Sapphire Staff",
+"k": "weapon"
+},
+{
+"en": "Saw",
+"k": "weapon"
+},
+{
+"en": "Scimitar",
+"k": "weapon"
+},
+{
+"en": "Scorched Arcon Scroll",
+"k": "quest"
+},
+{
+"en": "Scream Mask",
+"k": "cash"
+},
+{
+"en": "Screw",
+"k": "etc"
+},
+{
+"en": "Scroll Crafting Catalyst",
+"k": "etc"
+},
+{
+"en": "Scroll of Secrets",
+"k": "quest"
+},
+{
+"en": "Scythe",
+"k": "weapon"
+},
+{
+"en": "Sealed Bottle",
+"k": "etc"
+},
+{
+"en": "Sealed Teddy Bear",
+"k": "etc"
+},
+{
+"en": "Sealed-up Grandpa Clock",
+"k": "etc"
+},
+{
+"en": "Seclusion Wristguard",
+"k": "armor"
+},
+{
+"en": "Secret Book",
+"k": "quest"
+},
+{
+"en": "Seedling",
+"k": "etc"
+},
+{
+"en": "Selective 5-slot Coupon",
+"k": "cash"
+},
+{
+"en": "Sentinel Shellpiece",
+"k": "etc"
+},
+{
+"en": "Sephia Garner",
+"k": "armor"
+},
+{
+"en": "Sera's Mirror",
+"k": "quest"
+},
+{
+"en": "Serpent's Coil",
+"k": "weapon"
+},
+{
+"en": "Serpent's Tongue",
+"k": "weapon"
+},
+{
+"en": "Set Up Tab 5-Slot Coupon",
+"k": "cash"
+},
+{
+"en": "Set of Match Cards",
+"k": "etc"
+},
+{
+"en": "Sewing Machine",
+"k": "setup"
+},
+{
+"en": "Sharpness Potion",
+"k": "potion"
+},
+{
+"en": "Shield Accuracy Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Shield Accuracy Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Shield Accuracy Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Shield Accuracy Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Shield DEF Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Shield DEF Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Shield DEF Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Shield DEF Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Shinkita",
+"k": "weapon"
+},
+{
+"en": "Shoes Evasion Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Shoes Evasion Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Shoes Evasion Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Shoes Evasion Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Shoes Jump Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Shoes Jump Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Shoes Jump Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Shoes Jump Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Shoes Speed Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Shoes Speed Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Shoes Speed Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Shoes Speed Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Short Wild Vine",
+"k": "setup"
+},
+{
+"en": "Shumi's Coin",
+"k": "quest"
+},
+{
+"en": "Shumi's Roll of Cash",
+"k": "quest"
+},
+{
+"en": "Shumi's Sack of Cash",
+"k": "quest"
+},
+{
+"en": "Signature Eye Color Coupon",
+"k": "cash"
+},
+{
+"en": "Signature Face Coupon",
+"k": "cash"
+},
+{
+"en": "Signature Hair Color Coupon",
+"k": "cash"
+},
+{
+"en": "Signature Hair Coupon",
+"k": "cash"
+},
+{
+"en": "Signature Skin Color Coupon",
+"k": "cash"
+},
+{
+"en": "Signature Style Collection",
+"k": "cash"
+},
+{
+"en": "Silver / Black Stealer Pants",
+"k": "armor"
+},
+{
+"en": "Silver Ancient Shield",
+"k": "armor"
+},
+{
+"en": "Silver Battle Grieves",
+"k": "armor"
+},
+{
+"en": "Silver Black Stealer",
+"k": "armor"
+},
+{
+"en": "Silver Chain Boots",
+"k": "armor"
+},
+{
+"en": "Silver Crow",
+"k": "weapon"
+},
+{
+"en": "Silver Crusader Helm",
+"k": "armor"
+},
+{
+"en": "Silver Fitted Mail",
+"k": "armor"
+},
+{
+"en": "Silver Guardian",
+"k": "weapon"
+},
+{
+"en": "Silver Identity",
+"k": "armor"
+},
+{
+"en": "Silver Ingot",
+"k": "etc"
+},
+{
+"en": "Silver Leather Hoodwear",
+"k": "armor"
+},
+{
+"en": "Silver Legend Shield",
+"k": "armor"
+},
+{
+"en": "Silver Master Sergeant",
+"k": "armor"
+},
+{
+"en": "Silver Master Sergeant Kilt",
+"k": "armor"
+},
+{
+"en": "Silver Ore",
+"k": "etc"
+},
+{
+"en": "Silver Planet",
+"k": "armor"
+},
+{
+"en": "Silver Rover",
+"k": "armor"
+},
+{
+"en": "Silver Sylvia",
+"k": "armor"
+},
+{
+"en": "Silver War Boots",
+"k": "armor"
+},
+{
+"en": "Silver Wind Shoes",
+"k": "armor"
+},
+{
+"en": "Single Earring",
+"k": "accessory"
+},
+{
+"en": "Skeledog's Bone",
+"k": "etc"
+},
+{
+"en": "Skull Beanie",
+"k": "cash"
+},
+{
+"en": "Skull Earrings",
+"k": "accessory"
+},
+{
+"en": "Skull Gloves",
+"k": "cash"
+},
+{
+"en": "Skull Patch",
+"k": "cash"
+},
+{
+"en": "Skull Shield",
+"k": "armor"
+},
+{
+"en": "Skull Shirt",
+"k": "cash"
+},
+{
+"en": "Skull T-Shirt",
+"k": "cash"
+},
+{
+"en": "Skull Throne",
+"k": "setup"
+},
+{
+"en": "Sky Blue Laced Cap",
+"k": "cash"
+},
+{
+"en": "Sky Blue Starry Bandana",
+"k": "armor"
+},
+{
+"en": "Sky Blue Umbrella",
+"k": "weapon"
+},
+{
+"en": "Sky Rider Jacket",
+"k": "cash"
+},
+{
+"en": "Sky Shark",
+"k": "armor"
+},
+{
+"en": "Sky Shark Skirt",
+"k": "armor"
+},
+{
+"en": "Sky Sneak",
+"k": "armor"
+},
+{
+"en": "Sky Sneak Pants",
+"k": "armor"
+},
+{
+"en": "Sky-blue Wooden Chair",
+"k": "setup"
+},
+{
+"en": "Skylar",
+"k": "weapon"
+},
+{
+"en": "Slate",
+"k": "etc"
+},
+{
+"en": "Sledgehammer",
+"k": "weapon"
+},
+{
+"en": "Slime & Mushroom Omok Set",
+"k": "etc"
+},
+{
+"en": "Slime & Octopus Omok Set",
+"k": "etc"
+},
+{
+"en": "Slime & Pig Omok Set",
+"k": "etc"
+},
+{
+"en": "Slime Bubble",
+"k": "etc"
+},
+{
+"en": "Slime Hair Pin",
+"k": "cash"
+},
+{
+"en": "Slime Slippers",
+"k": "cash"
+},
+{
+"en": "Slime Stick",
+"k": "cash"
+},
+{
+"en": "Slime T-Shirt",
+"k": "cash"
+},
+{
+"en": "Small Barbed Wire Garden Plot",
+"k": "setup"
+},
+{
+"en": "Small Egg",
+"k": "etc"
+},
+{
+"en": "Small Garden Plot",
+"k": "setup"
+},
+{
+"en": "Small Potted Vine",
+"k": "setup"
+},
+{
+"en": "Small Spaceship",
+"k": "etc"
+},
+{
+"en": "Smelly Gomushin",
+"k": "armor"
+},
+{
+"en": "Smithing Kit",
+"k": "potion"
+},
+{
+"en": "Smooth Horn Marble",
+"k": "quest"
+},
+{
+"en": "Snail Shell",
+"k": "etc"
+},
+{
+"en": "Sniper Potion",
+"k": "use"
+},
+{
+"en": "Snowball",
+"k": "ammo"
+},
+{
+"en": "Soft Feather",
+"k": "etc"
+},
+{
+"en": "Solid Horn",
+"k": "etc"
+},
+{
+"en": "Sophia Pants",
+"k": "armor"
+},
+{
+"en": "Soul Teddy Chair",
+"k": "setup"
+},
+{
+"en": "Space Food",
+"k": "etc"
+},
+{
+"en": "Sparkling Glass Marble",
+"k": "quest"
+},
+{
+"en": "Sparkling Rock",
+"k": "quest"
+},
+{
+"en": "Sparta",
+"k": "weapon"
+},
+{
+"en": "Spear",
+"k": "weapon"
+},
+{
+"en": "Spear Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Spear Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Spear Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Spear Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Special Stirge Phobia Cure",
+"k": "quest"
+},
+{
+"en": "Speed Potion",
+"k": "use"
+},
+{
+"en": "Spiderweb",
+"k": "etc"
+},
+{
+"en": "Spool of Thread",
+"k": "etc"
+},
+{
+"en": "Spring Store Permit",
+"k": "cash"
+},
+{
+"en": "Sprout Antennae",
+"k": "armor"
+},
+{
+"en": "Square Hammer",
+"k": "weapon"
+},
+{
+"en": "Square Shovel",
+"k": "weapon"
+},
+{
+"en": "Squishy Liquid",
+"k": "etc"
+},
+{
+"en": "Squishy Shoes",
+"k": "armor"
+},
+{
+"en": "Staff Magic Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Staff Magic Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Staff Magic Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Staff Magic Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Stamped Ledger",
+"k": "quest"
+},
+{
+"en": "Standing Glowspore Lamp",
+"k": "setup"
+},
+{
+"en": "Star Earrings",
+"k": "accessory"
+},
+{
+"en": "Star Pixie's Starpiece",
+"k": "etc"
+},
+{
+"en": "Star Rock",
+"k": "etc"
+},
+{
+"en": "Stark Face Coupon",
+"k": "potion"
+},
+{
+"en": "Starred Hunting Hat",
+"k": "cash"
+},
+{
+"en": "Starry Sky Blue Beanie",
+"k": "cash"
+},
+{
+"en": "Stealth Suit",
+"k": "cash"
+},
+{
+"en": "Steel Ancient Shield",
+"k": "armor"
+},
+{
+"en": "Steel Arbion",
+"k": "armor"
+},
+{
+"en": "Steel Avarice",
+"k": "weapon"
+},
+{
+"en": "Steel Briggon",
+"k": "armor"
+},
+{
+"en": "Steel Brist",
+"k": "armor"
+},
+{
+"en": "Steel Corporal",
+"k": "armor"
+},
+{
+"en": "Steel Corporal Pants",
+"k": "armor"
+},
+{
+"en": "Steel Drum",
+"k": "setup"
+},
+{
+"en": "Steel Fingerless Gloves",
+"k": "armor"
+},
+{
+"en": "Steel Fitted Mail",
+"k": "armor"
+},
+{
+"en": "Steel Football Helmet",
+"k": "armor"
+},
+{
+"en": "Steel Full Helm",
+"k": "armor"
+},
+{
+"en": "Steel Grieves",
+"k": "armor"
+},
+{
+"en": "Steel Guards",
+"k": "weapon"
+},
+{
+"en": "Steel Helmet",
+"k": "armor"
+},
+{
+"en": "Steel Igor",
+"k": "weapon"
+},
+{
+"en": "Steel Manute",
+"k": "armor"
+},
+{
+"en": "Steel Milk Can",
+"k": "setup"
+},
+{
+"en": "Steel Missel",
+"k": "armor"
+},
+{
+"en": "Steel Nordic Helm",
+"k": "armor"
+},
+{
+"en": "Steel Pipe",
+"k": "weapon"
+},
+{
+"en": "Steel Pow",
+"k": "armor"
+},
+{
+"en": "Steel Pride",
+"k": "armor"
+},
+{
+"en": "Steel Sergeant Kilt",
+"k": "armor"
+},
+{
+"en": "Steel Sharp Helm",
+"k": "armor"
+},
+{
+"en": "Steel Shield",
+"k": "armor"
+},
+{
+"en": "Steel Slain",
+"k": "weapon"
+},
+{
+"en": "Steel Sylvia",
+"k": "armor"
+},
+{
+"en": "Steel Titans",
+"k": "weapon"
+},
+{
+"en": "Steel Tower Shield",
+"k": "armor"
+},
+{
+"en": "Steel Trigger",
+"k": "armor"
+},
+{
+"en": "Steely Throwing Knives",
+"k": "ammo"
+},
+{
+"en": "Sticky Spiderweb",
+"k": "etc"
+},
+{
+"en": "Stiff Feather",
+"k": "etc"
+},
+{
+"en": "Stinger",
+"k": "weapon"
+},
+{
+"en": "Stirge Wing",
+"k": "etc"
+},
+{
+"en": "Stolen Fence",
+"k": "armor"
+},
+{
+"en": "Stone Golem Hand Chair",
+"k": "setup"
+},
+{
+"en": "Stone Golem Rubble",
+"k": "etc"
+},
+{
+"en": "Storage Room 5-slot Coupon",
+"k": "cash"
+},
+{
+"en": "Strange Mushroom Spore",
+"k": "quest"
+},
+{
+"en": "Straw Training Dummy",
+"k": "setup"
+},
+{
+"en": "Strawberry Basket",
+"k": "cash"
+},
+{
+"en": "Strawberry Milk Dress",
+"k": "cash"
+},
+{
+"en": "Strawberry Milk Frill Bonnet",
+"k": "cash"
+},
+{
+"en": "Strawberry Patch",
+"k": "setup"
+},
+{
+"en": "Strawberry Shoes",
+"k": "cash"
+},
+{
+"en": "Studded Polearm",
+"k": "weapon"
+},
+{
+"en": "Stuffed Drake Skull",
+"k": "quest"
+},
+{
+"en": "Stump's Teardrop",
+"k": "quest"
+},
+{
+"en": "Stumpy Figure",
+"k": "setup"
+},
+{
+"en": "Subi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Summer Store Permit",
+"k": "cash"
+},
+{
+"en": "Summoning New-Type Balrog",
+"k": "use"
+},
+{
+"en": "Sunrise Dew",
+"k": "potion"
+},
+{
+"en": "Sunset Dew",
+"k": "potion"
+},
+{
+"en": "Super Megaphone",
+"k": "cash"
+},
+{
+"en": "Superstar Headphones",
+"k": "cash"
+},
+{
+"en": "Supreme Dexterity Potion",
+"k": "use"
+},
+{
+"en": "Supreme Sniper Potion",
+"k": "use"
+},
+{
+"en": "Sword",
+"k": "weapon"
+},
+{
+"en": "Sworn Brother Dagger",
+"k": "weapon"
+},
+{
+"en": "Sylka's Brew",
+"k": "potion"
+},
+{
+"en": "TV Recliner",
+"k": "setup"
+},
+{
+"en": "Table Clock",
+"k": "etc"
+},
+{
+"en": "Tablecloth",
+"k": "etc"
+},
+{
+"en": "Tailoring Kit",
+"k": "potion"
+},
+{
+"en": "Tall Sunflower",
+"k": "setup"
+},
+{
+"en": "Tamus",
+"k": "weapon"
+},
+{
+"en": "Tanathos Strap",
+"k": "etc"
+},
+{
+"en": "Tania Bolero",
+"k": "cash"
+},
+{
+"en": "Tania Cloak",
+"k": "cash"
+},
+{
+"en": "Tania En Fuego",
+"k": "cash"
+},
+{
+"en": "Tania Gloves",
+"k": "cash"
+},
+{
+"en": "Tania Sword",
+"k": "cash"
+},
+{
+"en": "Tania Tailored Jacket",
+"k": "cash"
+},
+{
+"en": "Tania Tartan Pants",
+"k": "cash"
+},
+{
+"en": "Tania Tartan Skirt",
+"k": "cash"
+},
+{
+"en": "Tauromacis Horn",
+"k": "etc"
+},
+{
+"en": "Taurospear Horn",
+"k": "etc"
+},
+{
+"en": "Teddy Bear",
+"k": "cash"
+},
+{
+"en": "Teddy Bear Bed",
+"k": "setup"
+},
+{
+"en": "Teddy Bear Chat Ring",
+"k": "cash"
+},
+{
+"en": "Teddy Bear Costume",
+"k": "cash"
+},
+{
+"en": "Teddy Bear Gloves",
+"k": "cash"
+},
+{
+"en": "Teddy Bear Headgear",
+"k": "cash"
+},
+{
+"en": "Teddy Bear Shoes",
+"k": "cash"
+},
+{
+"en": "Teddy's Cotton",
+"k": "etc"
+},
+{
+"en": "Teddy's Yellow Ribbon",
+"k": "etc"
+},
+{
+"en": "The Blessing",
+"k": "weapon"
+},
+{
+"en": "The Book of Ancient",
+"k": "quest"
+},
+{
+"en": "The Dark Lord's Letter",
+"k": "quest"
+},
+{
+"en": "The First Piece of an Ancient Scroll",
+"k": "quest"
+},
+{
+"en": "The First Trial",
+"k": "setup"
+},
+{
+"en": "The Girl Next Door",
+"k": "quest"
+},
+{
+"en": "The Gold Dragon",
+"k": "weapon"
+},
+{
+"en": "The Green Relaxer",
+"k": "setup"
+},
+{
+"en": "The Judgement",
+"k": "weapon"
+},
+{
+"en": "The Key",
+"k": "quest"
+},
+{
+"en": "The Magic Rock",
+"k": "etc"
+},
+{
+"en": "The Nine Dragons",
+"k": "weapon"
+},
+{
+"en": "The Proof of a Hero (Bowman)",
+"k": "quest"
+},
+{
+"en": "The Proof of a Hero (Magician)",
+"k": "quest"
+},
+{
+"en": "The Proof of a Hero (Thief)",
+"k": "quest"
+},
+{
+"en": "The Proof of a Hero (Warrior)",
+"k": "quest"
+},
+{
+"en": "The Red Relaxer",
+"k": "setup"
+},
+{
+"en": "The Rising",
+"k": "weapon"
+},
+{
+"en": "The Robot Stand",
+"k": "cash"
+},
+{
+"en": "The Second Piece of an Ancient Scroll",
+"k": "quest"
+},
+{
+"en": "The Shining",
+"k": "weapon"
+},
+{
+"en": "The Snail Legend",
+"k": "etc"
+},
+{
+"en": "The Songs of Solomon",
+"k": "potion"
+},
+{
+"en": "The Stirge Seat",
+"k": "setup"
+},
+{
+"en": "The Summoning Rock",
+"k": "etc"
+},
+{
+"en": "The Third Piece of an Ancient Scroll",
+"k": "quest"
+},
+{
+"en": "The Yellow Relaxer",
+"k": "setup"
+},
+{
+"en": "Thief's Note",
+"k": "use"
+},
+{
+"en": "Thorns",
+"k": "weapon"
+},
+{
+"en": "Ticket to Construction Site B1",
+"k": "quest"
+},
+{
+"en": "Ticket to Construction Site B2",
+"k": "quest"
+},
+{
+"en": "Ticket to Construction Site B3",
+"k": "quest"
+},
+{
+"en": "Ticket to Ellinia (Basic)",
+"k": "quest"
+},
+{
+"en": "Ticket to Ellinia (Regular)",
+"k": "quest"
+},
+{
+"en": "Ticket to Ludibrium (Basic)",
+"k": "quest"
+},
+{
+"en": "Ticket to Ludibrium (Regular)",
+"k": "quest"
+},
+{
+"en": "Ticket to Orbis (Basic)",
+"k": "quest"
+},
+{
+"en": "Ticket to Orbis (Regular)",
+"k": "quest"
+},
+{
+"en": "Tiger Mask",
+"k": "cash"
+},
+{
+"en": "Titan",
+"k": "weapon"
+},
+{
+"en": "To My Dear Hero Package",
+"k": "cash"
+},
+{
+"en": "Tobi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Toga",
+"k": "cash"
+},
+{
+"en": "Tomato Tree",
+"k": "setup"
+},
+{
+"en": "Topaz",
+"k": "etc"
+},
+{
+"en": "Topaz Ore",
+"k": "etc"
+},
+{
+"en": "Topwear DEF Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Topwear DEF Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Topwear DEF Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Topwear DEF Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Topwear HP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Topwear HP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Topwear HP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Topwear HP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Topwear MP Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Topwear MP Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Topwear MP Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Topwear MP Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Torn Ledger Pages",
+"k": "quest"
+},
+{
+"en": "Torn Note",
+"k": "quest"
+},
+{
+"en": "Torn-Up Jeans",
+"k": "cash"
+},
+{
+"en": "Tortie Shell",
+"k": "etc"
+},
+{
+"en": "Toy Drum",
+"k": "etc"
+},
+{
+"en": "Toy Duckling",
+"k": "etc"
+},
+{
+"en": "Toy Rifle",
+"k": "cash"
+},
+{
+"en": "Toy Trojan Sword",
+"k": "etc"
+},
+{
+"en": "Transparent Item",
+"k": "quest"
+},
+{
+"en": "Traus",
+"k": "weapon"
+},
+{
+"en": "Treasure Scroll",
+"k": "quest"
+},
+{
+"en": "Tree Branch",
+"k": "etc"
+},
+{
+"en": "Triangular Zamadar",
+"k": "weapon"
+},
+{
+"en": "Triple-Tipped Zamadar",
+"k": "weapon"
+},
+{
+"en": "Turkey",
+"k": "cash"
+},
+{
+"en": "Turkey Egg",
+"k": "use"
+},
+{
+"en": "Turkey Exchange Coupon",
+"k": "use"
+},
+{
+"en": "Turkey Leg",
+"k": "use"
+},
+{
+"en": "Tweed Headband",
+"k": "cash"
+},
+{
+"en": "Two-Handed Axe",
+"k": "weapon"
+},
+{
+"en": "Two-Handed Sword",
+"k": "weapon"
+},
+{
+"en": "Two-Handed Weapon Crafting Catalyst",
+"k": "etc"
+},
+{
+"en": "Two-handed Axe Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Two-handed Axe Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Two-handed Axe Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Two-handed Axe Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Two-handed Blunt Weapon Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Two-handed Blunt Weapon Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Two-handed Blunt Weapon Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Two-handed Blunt Weapon Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Two-handed Sword Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Two-handed Sword Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Two-handed Sword Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Two-handed Sword Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "Umber Mantis",
+"k": "armor"
+},
+{
+"en": "Umber Mantis Pants",
+"k": "armor"
+},
+{
+"en": "Umber Shouldermail",
+"k": "armor"
+},
+{
+"en": "Umber Shouldermail Pants",
+"k": "armor"
+},
+{
+"en": "Unagi",
+"k": "potion"
+},
+{
+"en": "Undershirt",
+"k": "armor"
+},
+{
+"en": "Untainted Mushroom Cap",
+"k": "quest"
+},
+{
+"en": "Use Tab 5-slot Coupon",
+"k": "cash"
+},
+{
+"en": "VIP Mirror",
+"k": "quest"
+},
+{
+"en": "Vaulter 2000",
+"k": "weapon"
+},
+{
+"en": "Very Dry Branch",
+"k": "quest"
+},
+{
+"en": "Viking Sail",
+"k": "etc"
+},
+{
+"en": "Viking Sword",
+"k": "weapon"
+},
+{
+"en": "Violet Platina",
+"k": "armor"
+},
+{
+"en": "Violet Platina Pants",
+"k": "armor"
+},
+{
+"en": "Vitamin Gummy",
+"k": "quest"
+},
+{
+"en": "W Ramen",
+"k": "potion"
+},
+{
+"en": "Wall Fan",
+"k": "setup"
+},
+{
+"en": "Wand Magic Attack Scroll: Chaos",
+"k": "scroll"
+},
+{
+"en": "Wand Magic Attack Scroll: Greater",
+"k": "scroll"
+},
+{
+"en": "Wand Magic Attack Scroll: Intermediate",
+"k": "scroll"
+},
+{
+"en": "Wand Magic Attack Scroll: Lesser",
+"k": "scroll"
+},
+{
+"en": "War Bow",
+"k": "weapon"
+},
+{
+"en": "War Hammer",
+"k": "weapon"
+},
+{
+"en": "Warfare Pants",
+"k": "armor"
+},
+{
+"en": "Warrior Potion",
+"k": "use"
+},
+{
+"en": "Warrior Throne",
+"k": "setup"
+},
+{
+"en": "Washed Jeans",
+"k": "cash"
+},
+{
+"en": "Water of Life",
+"k": "cash"
+},
+{
+"en": "Watermelon",
+"k": "potion"
+},
+{
+"en": "Weaponcrafting Kit",
+"k": "potion"
+},
+{
+"en": "Weaponcrafting Station",
+"k": "setup"
+},
+{
+"en": "Weighted Earrings",
+"k": "accessory"
+},
+{
+"en": "Weird Medicine",
+"k": "quest"
+},
+{
+"en": "Werewolf Toenail",
+"k": "etc"
+},
+{
+"en": "Wheat Sheaves",
+"k": "setup"
+},
+{
+"en": "White Anakamoon",
+"k": "armor"
+},
+{
+"en": "White Anakarune",
+"k": "armor"
+},
+{
+"en": "White Bandage",
+"k": "cash"
+},
+{
+"en": "White Bandana",
+"k": "armor"
+},
+{
+"en": "White Beanie",
+"k": "cash"
+},
+{
+"en": "White Bunny",
+"k": "cash"
+},
+{
+"en": "White Calaf",
+"k": "armor"
+},
+{
+"en": "White Calas",
+"k": "armor"
+},
+{
+"en": "White Casual Suit",
+"k": "cash"
+},
+{
+"en": "White Chaos Robe",
+"k": "armor"
+},
+{
+"en": "White Crusader Chainmail",
+"k": "armor"
+},
+{
+"en": "White Doros Robe",
+"k": "armor"
+},
+{
+"en": "White Dye",
+"k": "etc"
+},
+{
+"en": "White Fang Tail",
+"k": "etc"
+},
+{
+"en": "White Fingerless Gloves",
+"k": "armor"
+},
+{
+"en": "White Gaia Cape",
+"k": "armor"
+},
+{
+"en": "White Gomushin",
+"k": "armor"
+},
+{
+"en": "White Guiltian",
+"k": "armor"
+},
+{
+"en": "White High Top",
+"k": "cash"
+},
+{
+"en": "White Hooded Vest",
+"k": "cash"
+},
+{
+"en": "White Jangoon Pants",
+"k": "armor"
+},
+{
+"en": "White Jeans",
+"k": "cash"
+},
+{
+"en": "White Justice Cape",
+"k": "armor"
+},
+{
+"en": "White Kendo Robe",
+"k": "armor"
+},
+{
+"en": "White Label Ring",
+"k": "cash"
+},
+{
+"en": "White Magic Cape",
+"k": "armor"
+},
+{
+"en": "White Magic Shoes",
+"k": "armor"
+},
+{
+"en": "White Martial Arts Pants",
+"k": "armor"
+},
+{
+"en": "White Martial Arts Shorts",
+"k": "armor"
+},
+{
+"en": "White Mop",
+"k": "weapon"
+},
+{
+"en": "White Napoleon",
+"k": "armor"
+},
+{
+"en": "White Nightfox",
+"k": "armor"
+},
+{
+"en": "White Ninja Sandals",
+"k": "armor"
+},
+{
+"en": "White Piette",
+"k": "armor"
+},
+{
+"en": "White Piettra",
+"k": "armor"
+},
+{
+"en": "White Piettra Skirt",
+"k": "armor"
+},
+{
+"en": "White Polyfeather Hat",
+"k": "armor"
+},
+{
+"en": "White Potion",
+"k": "potion"
+},
+{
+"en": "White Rabbit's Foot",
+"k": "cash"
+},
+{
+"en": "White Seal Cushion",
+"k": "setup"
+},
+{
+"en": "White Seraphis",
+"k": "armor"
+},
+{
+"en": "White Split Pants",
+"k": "armor"
+},
+{
+"en": "White Split Skirt",
+"k": "armor"
+},
+{
+"en": "White Tiger Hat",
+"k": "cash"
+},
+{
+"en": "White Toy Shades",
+"k": "cash"
+},
+{
+"en": "White Tube Top",
+"k": "armor"
+},
+{
+"en": "White Undershirt",
+"k": "armor"
+},
+{
+"en": "White Viola",
+"k": "quest"
+},
+{
+"en": "White Wizard Robe",
+"k": "armor"
+},
+{
+"en": "Wild Boar Tooth",
+"k": "etc"
+},
+{
+"en": "Wild Glowshroom",
+"k": "setup"
+},
+{
+"en": "Wild Kargo Eye",
+"k": "etc"
+},
+{
+"en": "Wild Pants",
+"k": "cash"
+},
+{
+"en": "Wild Plate Mushrooms",
+"k": "setup"
+},
+{
+"en": "Winged Cap",
+"k": "cash"
+},
+{
+"en": "Winston's Recommendation",
+"k": "quest"
+},
+{
+"en": "Winter Supply Bundle",
+"k": "quest"
+},
+{
+"en": "Wisdom Crystal",
+"k": "etc"
+},
+{
+"en": "Wisdom Crystal Ore",
+"k": "etc"
+},
+{
+"en": "Witch Clothes",
+"k": "cash"
+},
+{
+"en": "Witch Hat",
+"k": "cash"
+},
+{
+"en": "Witch's Broomstick",
+"k": "cash"
+},
+{
+"en": "Witchgrass Leaf",
+"k": "quest"
+},
+{
+"en": "Wizard Staff",
+"k": "weapon"
+},
+{
+"en": "Wizard Wand",
+"k": "weapon"
+},
+{
+"en": "Wizet Invincible Hat",
+"k": "armor"
+},
+{
+"en": "Wizet Plain Shoes",
+"k": "armor"
+},
+{
+"en": "Wizet Plain Suit",
+"k": "armor"
+},
+{
+"en": "Wizet Plain Suit Pants",
+"k": "armor"
+},
+{
+"en": "Wizet Secret Agent Suitcase",
+"k": "weapon"
+},
+{
+"en": "Wolbi Throwing Stars",
+"k": "ammo"
+},
+{
+"en": "Woodcrafting Kit",
+"k": "potion"
+},
+{
+"en": "Wooden Baseball Bat",
+"k": "weapon"
+},
+{
+"en": "Wooden Bench",
+"k": "setup"
+},
+{
+"en": "Wooden Board",
+"k": "etc"
+},
+{
+"en": "Wooden Buckler",
+"k": "armor"
+},
+{
+"en": "Wooden Club",
+"k": "weapon"
+},
+{
+"en": "Wooden Legend Shield",
+"k": "armor"
+},
+{
+"en": "Wooden Mallet",
+"k": "weapon"
+},
+{
+"en": "Wooden Scrub Brush",
+"k": "setup"
+},
+{
+"en": "Wooden Staff",
+"k": "weapon"
+},
+{
+"en": "Wooden Sword",
+"k": "weapon"
+},
+{
+"en": "Wooden Top",
+"k": "ammo"
+},
+{
+"en": "Wooden Tub",
+"k": "setup"
+},
+{
+"en": "Wooden Wand",
+"k": "weapon"
+},
+{
+"en": "Woodsman Hat",
+"k": "cash"
+},
+{
+"en": "Woodworking Station",
+"k": "setup"
+},
+{
+"en": "Work Gloves",
+"k": "armor"
+},
+{
+"en": "World's End",
+"k": "setup"
+},
+{
+"en": "Worn Wooden Chest",
+"k": "setup"
+},
+{
+"en": "Worn-Out Goggle",
+"k": "etc"
+},
+{
+"en": "Yellow Able Armor",
+"k": "armor"
+},
+{
+"en": "Yellow Arianne",
+"k": "armor"
+},
+{
+"en": "Yellow Arianne Skirt",
+"k": "armor"
+},
+{
+"en": "Yellow Avelin",
+"k": "armor"
+},
+{
+"en": "Yellow Avelin Skirt",
+"k": "armor"
+},
+{
+"en": "Yellow Bandana",
+"k": "armor"
+},
+{
+"en": "Yellow Baseball Cap",
+"k": "armor"
+},
+{
+"en": "Yellow Basic Boots",
+"k": "armor"
+},
+{
+"en": "Yellow Bennis Chainmail",
+"k": "armor"
+},
+{
+"en": "Yellow Briggon",
+"k": "armor"
+},
+{
+"en": "Yellow Butterfly",
+"k": "setup"
+},
+{
+"en": "Yellow Chair",
+"k": "setup"
+},
+{
+"en": "Yellow Doros Robe",
+"k": "armor"
+},
+{
+"en": "Yellow Duke",
+"k": "armor"
+},
+{
+"en": "Yellow Dye",
+"k": "etc"
+},
+{
+"en": "Yellow Engrit",
+"k": "armor"
+},
+{
+"en": "Yellow Hat",
+"k": "cash"
+},
+{
+"en": "Yellow Headband",
+"k": "armor"
+},
+{
+"en": "Yellow Icarus Cape",
+"k": "armor"
+},
+{
+"en": "Yellow Jangoon Armor",
+"k": "armor"
+},
+{
+"en": "Yellow Metal Gear",
+"k": "armor"
+},
+{
+"en": "Yellow Mop",
+"k": "weapon"
+},
+{
+"en": "Yellow Ninja Sandals",
+"k": "armor"
+},
+{
+"en": "Yellow Pierre Shoes",
+"k": "armor"
+},
+{
+"en": "Yellow Primrose Seed",
+"k": "quest"
+},
+{
+"en": "Yellow Rubber Boots",
+"k": "armor"
+},
+{
+"en": "Yellow Shades",
+"k": "cash"
+},
+{
+"en": "Yellow Spatula",
+"k": "cash"
+},
+{
+"en": "Yellow Square",
+"k": "accessory"
+},
+{
+"en": "Yellow Starry Bandana",
+"k": "armor"
+},
+{
+"en": "Yellow T-Shirt",
+"k": "armor"
+},
+{
+"en": "Yellow Thief Hood",
+"k": "armor"
+},
+{
+"en": "Yellow Tights",
+"k": "cash"
+},
+{
+"en": "Yellow Toy Block",
+"k": "etc"
+},
+{
+"en": "Yellow Umbrella",
+"k": "weapon"
+},
+{
+"en": "Yellow Wind Shoes",
+"k": "armor"
+},
+{
+"en": "Yeti Horn",
+"k": "etc"
+},
+{
+"en": "Yo Yo",
+"k": "cash"
+},
+{
+"en": "Zakum Helmet",
+"k": "armor"
+},
+{
+"en": "Zard",
+"k": "weapon"
+},
+{
+"en": "Zeco",
+"k": "weapon"
+},
+{
+"en": "Zelya's Map Fragment",
+"k": "quest"
+},
+{
+"en": "Zombie Teddy Bear",
+"k": "etc"
+},
+{
+"en": "Zombie's Lost Gold Tooth",
+"k": "etc"
+},
+{
+"en": "Zombie's Lost Tooth",
+"k": "etc"
+}
+]
+}

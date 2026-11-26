@@ -27,7 +27,7 @@ An unofficial, free Chinese helper for MapleStory Classic World on macOS. In dev
 
 **看得懂**
 - 聊天、喇叭、喊买喊卖当场翻成中文，缩写和黑话也翻
-- 鼠标停在装备、物品上看中文说明；按住 ⌥ 指着哪句就翻哪句
+- 鼠标停在装备、物品上看中文说明
 - 打开任务详情，写出中文标题、目标和大意；NPC 让你选的几项列出中文
 
 **算得清**

@@ -249,7 +249,22 @@ public struct QuestDoc: Sendable, Equatable {
 
     /// 正文：按从上到下的顺序，分成任务目标和说明段落。
     /// 段落：上下间距明显大于行距的地方分段；同一段里的折行拼回一句。
-    public static func parseContent(_ lines: [OCRLine]) -> (objectives: [(String, String)], paragraphs: [String]) {
+    /// 目标左边有图标时，名字和数量（“Slime Bubble   1 / 10”）会被认成两行：同一高度、只有数量的那行接回左边的名字后面
+    public static func joinCounts(_ lines: [OCRLine]) -> [OCRLine] {
+        var out = lines, drop = Set<Int>()
+        for (i, c) in lines.enumerated() where c.text.trimmingCharacters(in: .whitespaces).range(of: "^[0-9Oo]+\\s*/\\s*[0-9]+$", options: .regularExpression) != nil {
+            let mid = (c.minY + c.maxY) / 2, h = max(c.maxY - c.minY, 0.01)
+            guard let j = lines.indices.filter({ k in k != i && !drop.contains(k) && lines[k].maxX <= c.minX + 0.01 && abs((lines[k].minY + lines[k].maxY) / 2 - mid) < h * 0.6 && lines[k].text.contains(where: \.isLetter) })
+                    .max(by: { lines[$0].maxX < lines[$1].maxX }) else { continue }
+            out[j].text = lines[j].text.trimmingCharacters(in: .whitespaces) + " " + c.text.trimmingCharacters(in: .whitespaces)
+            out[j].maxX = c.maxX
+            drop.insert(i)
+        }
+        return out.enumerated().filter { !drop.contains($0.offset) }.map(\.element)
+    }
+
+    public static func parseContent(_ lines0: [OCRLine]) -> (objectives: [(String, String)], paragraphs: [String]) {
+        let lines = joinCounts(lines0)
         let ls = lines.filter { $0.text.filter(\.isLetter).count >= 2 }.sorted { $0.minY < $1.minY }
         var objectives: [(String, String)] = []
         var paragraphs: [String] = []
@@ -265,6 +280,7 @@ public struct QuestDoc: Sendable, Equatable {
             if t.lowercased().replacingOccurrences(of: " ", with: "") == "questsummary" { continue }
             // 计数里的 O 认成了字母：“Garnet Ore O/ 1”
             t = t.replacingOccurrences(of: "\\b[Oo]\\s*/\\s*([0-9]+)$", with: "0 / $1", options: .regularExpression)
+            t = NavDB.shared.fixCount(t)          // 斜杠认成 7、1：“Maple Leaf O730”
             if let m = t.range(of: "^(.*?[A-Za-z].*?)\\s+([0-9]+\\s*/\\s*[0-9]+)$", options: .regularExpression), t[m].count == t.count {
                 let parts = t.components(separatedBy: " ")
                 // 最后的 “75 / 75” 可能被拆成几个词
@@ -305,7 +321,7 @@ extension QuestDoc {
     /// “Zombie Mushroom 75 / 75” → (名字, “75/75”)
     static func splitObjective(_ raw: String) -> (String, String)? {
         var t = raw.replacingOccurrences(of: "\\b[Oo]\\s*/\\s*([0-9]+)$", with: "0 / $1", options: .regularExpression)
-        t = t.trimmingCharacters(in: .whitespaces)
+        t = NavDB.shared.fixCount(t.trimmingCharacters(in: .whitespaces))
         guard let r = t.range(of: "[0-9]+\\s*/\\s*[0-9]+$", options: .regularExpression) else { return nil }
         let name = String(t[..<r.lowerBound]).trimmingCharacters(in: .whitespaces)
         guard name.contains(where: \.isLetter) else { return nil }
@@ -410,7 +426,10 @@ public struct QuestZh: Sendable {
 extension ChatTranslator {
     /// 任务目标的名字。认错一两个字母（Leaf → Leat）时，只在这个任务原文提到的怪物、物品里找唯一最像的
     public func objectiveZh(_ name: String, title: String, context: [String], db: QuestDB = .shared) async -> String {
-        await plain(objectiveName(name, title: title, context: context, db: db), quest: true)
+        // 物品名先查表 / 自己翻的名字，和说明框、步骤里的叫法一致（系统翻译会一会儿“丝带”一会儿“蝴蝶结”）
+        let n = objectiveName(name, title: title, context: context, db: db)
+        if let z = ItemDB.shared.find(n)?.zh ?? ItemNames.zh(n) { return z }
+        return await plain(n, quest: true)
     }
     /// “Leaf 0 / 30” 这种目标行
     private static func splitCount(_ s: String) -> Range<String.Index>? { s.range(of: "[0-9Oo]+\\s*/\\s*[0-9]+$", options: .regularExpression) }

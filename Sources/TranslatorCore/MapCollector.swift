@@ -34,6 +34,8 @@ public struct WalkedMap: Codable, Sendable, Equatable {
     public var exits: [WalkedExit] = []
     /// 整张小地图比画面宽多少、高多少（点）
     public var sx: Double? = nil, sy: Double? = nil
+    /// 攻略资料里才有：整张图多高（小地图点，1:16）、回城卷回到哪个城（图 key）
+    public var h: Double? = nil, town: String? = nil
     /// 走通的门：同一目标图算一个
     public var walked: Int { exits.filter(\.door).count }
     public init(street: String, name: String) { self.street = street; self.name = name }
@@ -138,6 +140,31 @@ public final class MapCollector {
     }
     static func key(_ street: String, _ name: String) -> String { String(NavDB.norm(street)) + "|" + String(NavDB.norm(name)) + "|" + NavDB.roman(name) }
 
+    /// 导入资料（攻略整理的地图连接、朋友的 .mogu）里的图：key → (街道, 地名)。认花的标题按它纠正（和自用版认图同一套规则）
+    public var reference: [String: (street: String, name: String)] = [:]
+    /// 认花的标题 → 资料里的图：地名差不多（长名字最多错 3 个字母）、末尾编号一模一样；街道也对得上的优先；两张不同名的一样像就不猜
+    public static func snap(street: String, name: String, in ref: [String: (street: String, name: String)]) -> String? {
+        let n = NavDB.norm(name), r = NavDB.roman(name), st = NavDB.norm(street)
+        guard n.count >= 4 else { return nil }
+        var best: [String] = [], bestD = Int.max
+        for (k, m) in ref where NavDB.roman(m.name) == r {
+            let mn = NavDB.norm(m.name)
+            let allowed = max(0, min(3, mn.count / 6))
+            guard mn.count >= 4, abs(mn.count - n.count) <= allowed else { continue }
+            var d = mn == n ? 0 : Fuzzy.distance(n, mn, limit: allowed)
+            guard d <= allowed else { continue }
+            d = d * 10 + (Fuzzy.distance(st, NavDB.norm(m.street), limit: 3) <= 3 ? 0 : 5)
+            if d < bestD { bestD = d; best = [k] } else if d == bestD { best.append(k) }
+        }
+        guard !best.isEmpty, Set(best.map { ref[$0]!.name }).count == 1 else { return nil }
+        return best.sorted().first
+    }
+    /// 自己没走过、但资料里有：换成资料里的写法
+    private func fromReference(_ street: String, _ name: String) -> (String, String, String)? {
+        guard let k = Self.snap(street: street, name: name, in: reference), let m = reference[k] else { return nil }
+        return (k, m.street, m.name)
+    }
+
     /// 新标题要不要识别
     public func needsTitle(_ s: MapSample) -> Bool { titles[s.titlePrint] == nil }
 
@@ -150,7 +177,11 @@ public final class MapCollector {
             && Fuzzy.distance(NavDB.norm($0.value.street), NavDB.norm(street), limit: 5) <= max(2, NavDB.norm(street).count * 3 / 5) }) { k = same.key }
         // 和见过的只差一个字母：同一张（编号必须一样）
         if maps[k] == nil, let same = maps.keys.filter({ o in o.split(separator: "|", omittingEmptySubsequences: false).last == k.split(separator: "|", omittingEmptySubsequences: false).last && k.count >= 12 && Fuzzy.distance(Array(o), Array(k), limit: 1) <= 1 }).first { k = same }
-        guard let r = reading, r.print == print, r.key == k else { reading = (print, k); return }
+        var street = street, name = name
+        if maps[k] == nil, let f = fromReference(street, name) { (k, street, name) = f }
+        // 认得的图（走过的、资料里有的）读一次就算，换图快；没见过的新名字要连着两次一样（挡住一半的残名不会稳定）
+        let known = maps[k] != nil || reference[k] != nil
+        guard known || reading?.print == print && reading?.key == k else { reading = (print, k); return }
         reading = nil
         titles[print] = k
         if titles.count > 400 { titles = [print: k] }
@@ -198,6 +229,26 @@ public final class MapCollector {
         if s.rings.count > maps[k]!.doors, s.rings.count <= 12 { maps[k]!.doors = s.rings.count; changed = true }
         if let e = edge, t.timeIntervalSince(e.t) > 3 { changed = finishEdge() || changed }
         return changed
+    }
+
+    /// 室内图小地图收起时只有一行标题（“Victoria Road : Kerning City Pharmacy”）：认出来就算换了图（门不记，攻略资料里有）。换了返回 true
+    @discardableResult
+    public func enterTitle(street: String, name: String) -> Bool {
+        var k = Self.key(street, name), street = street, name = name
+        if maps[k] == nil, let f = fromReference(street, name) { (k, street, name) = f }
+        if maps[k] == nil { maps[k] = WalkedMap(street: street, name: name) }
+        guard k != current else { return false }
+        finishEdge()
+        current = k; recent = []; entering = []; edge = nil; track = nil; spot = nil
+        return true
+    }
+    /// 街道名比较用的写法（大小写、空格、认错的 l/1 不管）
+    public static func streetKey(_ s: String) -> String { String(NavDB.norm(s)) }
+    /// 一行标题 → (街道, 地名)。要有冒号；两边都要像名字
+    public static func oneLine(_ s: String) -> (street: String, name: String)? {
+        let p = s.split(separator: ":", maxSplits: 1).map { $0.trimmingCharacters(in: .whitespaces) }
+        guard p.count == 2, p.allSatisfy({ $0.filter(\.isLetter).count >= 4 && $0.first?.isUppercase == true && $0.count <= 40 && $0.contains(where: \.isLowercase) && $0.range(of: "^[A-Za-z0-9'’ .,()<>&-]+$", options: .regularExpression) != nil }) else { return nil }
+        return (p[0], p[1])
     }
 
     /// 过了几秒再定：自己的黄点会盖住脚下的蓝圈，走开了才看得到

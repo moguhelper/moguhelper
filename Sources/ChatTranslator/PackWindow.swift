@@ -8,13 +8,20 @@ final class PackStore: ObservableObject {
     struct Item: Identifiable { var id: String, pack: MoguPack }
     @Published private(set) var packs: [Item] = []
     private let dir = dataDir.appendingPathComponent("导入")
+    /// 随程序附带的攻略整理（地图连接），删不掉；和它一样的导入文件不重复算
+    static let bundledId = "攻略整理（随程序附带）"
     init() {
-        for f in (try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil)) ?? [] where f.pathExtension == "mogu" {
-            if let d = try? Data(contentsOf: f), let p = try? MoguPack.read(d) { packs.append(Item(id: f.deletingPathExtension().lastPathComponent, pack: p)) }
+        if let u = Bundle.main.url(forResource: "GuideMaps", withExtension: "mogu"), let d = try? Data(contentsOf: u), let p = try? MoguPack.read(d) {
+            packs.append(Item(id: Self.bundledId, pack: p))
+            trace("pack: 随程序附带的地图连接 \(p.maps.count) 张图")
         }
-        packs.sort { $0.id < $1.id }
+        for f in (try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil)) ?? [] where f.pathExtension == "mogu" {
+            if let d = try? Data(contentsOf: f), let p = try? MoguPack.read(d), !packs.contains(where: { $0.pack == p }) { packs.append(Item(id: f.deletingPathExtension().lastPathComponent, pack: p)) }
+        }
+        packs.sort { ($0.id == Self.bundledId ? 0 : 1, $0.id) < ($1.id == Self.bundledId ? 0 : 1, $1.id) }
     }
-    func remove(_ id: String) { try? FileManager.default.removeItem(at: dir.appendingPathComponent(id + ".mogu")); packs.removeAll { $0.id == id } }
+    func remove(_ id: String) {
+        guard id != Self.bundledId else { return }; try? FileManager.default.removeItem(at: dir.appendingPathComponent(id + ".mogu")); packs.removeAll { $0.id == id } }
 
     /// 先看清里面有什么，确认了才存
     func open(_ url: URL) {
@@ -98,7 +105,7 @@ struct PackView: View {
         return MoguPack(maps: maps.maps, drops: exp.hunt.maps.mapValues { $0.drops }, npcs: maps.met.maps.mapValues { $0.mapValues(\.list) }, day: f.string(from: Date()))
     }
     private func name(_ p: MoguPack, _ k: String) -> String { p.maps[k].map { "\($0.name)（\($0.street)）" } ?? k }
-    private func zh(_ n: String) -> String { ItemDB.shared.exact(n).map { "\($0.zh) \(n)" } ?? n }
+    private func zh(_ n: String) -> String { (ItemDB.shared.exact(n)?.zh ?? ItemNames.zh(n)).map { "\($0) \(n)" } ?? n }
     var body: some View {
         let mine = own, all = MoguPack.merged(own: mine, store.packs.map(\.pack))
         let q = query.trimmingCharacters(in: .whitespaces).lowercased()
@@ -114,8 +121,16 @@ struct PackView: View {
             Text("自己走过、捡到过的自动记在这里；也可以导入朋友导出的 .mogu。").font(.system(size: 11)).foregroundStyle(.secondary)
             ForEach(store.packs) { p in
                 HStack {
-                    Text("导入的资料：\(p.pack.maps.count) 张图\(p.pack.day.isEmpty ? "" : "（\(p.pack.day)）")").font(.system(size: 11))
-                    Spacer(); Button("删除") { store.remove(p.id) }.controlSize(.mini)
+                    if p.id == PackStore.bundledId {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("攻略整理（随程序附带）：\(p.pack.maps.count) 张图的连接").font(.system(size: 11))
+                            Text("整理自 maplestory-classic.com，原始数据 OSMS Data Explorer（CC BY 4.0），有改动。你自己走过、看到的优先。").font(.system(size: 10)).foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                    } else {
+                        Text("导入的资料：\(p.pack.maps.count) 张图\(p.pack.day.isEmpty ? "" : "（\(p.pack.day)）")").font(.system(size: 11))
+                        Spacer(); Button("删除") { store.remove(p.id) }.controlSize(.mini)
+                    }
                 }
             }
             Divider()

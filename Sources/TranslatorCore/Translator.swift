@@ -40,7 +40,19 @@ public struct Glossary: Sendable {
                 ?? Bundle.module.url(forResource: "Glossary", withExtension: "json") else {
             throw NSError(domain: "Glossary", code: 1, userInfo: [NSLocalizedDescriptionKey: "找不到词表"])
         }
-        let j = try JSONSerialization.jsonObject(with: Data(contentsOf: url)) as! [String: Any]
+        var j = try JSONSerialization.jsonObject(with: Data(contentsOf: url)) as! [String: Any]
+        // 黑话表（Slang.json：网聊通用、网游通用、这款游戏专属三层）合进来；Glossary 里已有的不覆盖
+        if let su = Bundle.main.url(forResource: "Slang", withExtension: "json") ?? Bundle.module.url(forResource: "Slang", withExtension: "json"),
+           let sd = try? Data(contentsOf: su), let s = try? JSONSerialization.jsonObject(with: sd) as? [String: Any] {
+            for layer in ["chat", "game", "maplestory"] {
+                guard let l = s[layer] as? [String: [String: String]] else { continue }
+                for (src, dst) in [("whole", "wholeMessage"), ("abbr", "abbreviations"), ("term", "terms")] {
+                    var d = j[dst] as? [String: String] ?? [:]
+                    for (k, v) in l[src] ?? [:] where d[k.lowercased()] == nil && d[k] == nil { d[k.lowercased()] = v }
+                    j[dst] = d
+                }
+            }
+        }
         // 以符号结尾的缩写（b>、s>、w/）后面可以直接跟字母（“B>fame”）
         let abbr = (j["abbreviations"] as! [String: String]).sorted { $0.key.count > $1.key.count }.map { k, v in
             let tail = k.last!.isLetter || k.last!.isNumber ? "(?![A-Za-z])" : ""
@@ -106,8 +118,8 @@ public struct Glossary: Sendable {
                 var out = re.replacementString(for: m, in: s, offset: 0, template: zh)
                 // 抓出来的正好是物品名：用物品表的译名
                 for g in 1..<max(1, m.numberOfRanges) {
-                    guard let gr = Range(m.range(at: g), in: s), let it = ItemDB.shared.exact(String(s[gr])), !it.zh.isEmpty else { continue }
-                    out = out.replacingOccurrences(of: String(s[gr]), with: it.zh)
+                    guard let gr = Range(m.range(at: g), in: s), let zh = ItemDB.shared.exact(String(s[gr]))?.zh ?? ItemNames.zh(String(s[gr])), !zh.isEmpty else { continue }
+                    out = out.replacingOccurrences(of: String(s[gr]), with: zh)
                 }
                 for (tre, tzh) in terms {
                     out = tre.stringByReplacingMatches(in: out, range: NSRange(out.startIndex..., in: out), withTemplate: NSRegularExpression.escapedTemplate(for: tzh))
@@ -156,7 +168,7 @@ public struct Glossary: Sendable {
 
     public func matchesFixed(_ s: String) -> Bool { matchFixed(s) != nil || matchTemplate(s) != nil }
 
-    func matchWhole(_ s: String) -> String? {
+    public func matchWhole(_ s: String) -> String? {
         let lower = s.lowercased().trimmingCharacters(in: .whitespaces)
         if let exact = wholeMessage[lower] { return exact }          // 带问号的先精确匹配（party? → 组队吗？）
         let key = lower.trimmingCharacters(in: .punctuationCharacters.union(.whitespaces))
@@ -169,7 +181,7 @@ public struct Glossary: Sendable {
         return zh.trimmingCharacters(in: CharacterSet(charactersIn: "。.！! ")) + "？"
     }
 
-    func expandAbbreviations(_ s: String) -> String {
+    public func expandAbbreviations(_ s: String) -> String {
         // 去掉刷屏用的符号串（@@@@@、*****、~~~~~ 等），只留文字内容
         // 问号、感叹号是语气，不能删：一串只留一个
         var out = s.replacingOccurrences(of: "？", with: "?").replacingOccurrences(of: "！", with: "!")
@@ -195,7 +207,7 @@ public struct Glossary: Sendable {
         return (low.hasSuffix("ea") || low.hasSuffix("each") ? "单价 " : "") + (n >= 1e8 ? txt(n / 1e8) + " 亿" : n >= 1e4 ? txt(n / 1e4) + " 万" : txt(n))
     }
     /// 把专有词换成占位符（ZQXA、ZQXB…，系统翻译会原样保留），返回替换后的英文和占位符对照表
-    func protectTerms(_ s: String, quest: Bool = false) -> (String, [(String, String)]) {
+    public func protectTerms(_ s: String, quest: Bool = false) -> (String, [(String, String)]) {
         var out = s
         var map: [(String, String)] = []
         let letters = Array("ABCDEFGHJKLMNPRSTUVWY")
@@ -298,7 +310,7 @@ public actor ChatTranslator {
         var rest = body, head = ""
         if let r = rest.range(of: "^\\[[^\\]]{3,40}\\]\\s*", options: .regularExpression) {
             let en = rest[r].trimmingCharacters(in: CharacterSet(charactersIn: "[] "))
-            head = "[" + (ItemDB.shared.find(en)?.zh ?? en) + "] "
+            head = "[" + (ItemDB.shared.find(en)?.zh ?? ItemNames.zh(en) ?? en) + "] "
             rest = String(rest[r.upperBound...])
         }
         // J> KPQ：想进别人的队
@@ -324,7 +336,7 @@ public actor ChatTranslator {
         if low.hasPrefix("t"), let f = list.range(of: " for ", options: .caseInsensitive) {
             func one(_ x: Substring) async -> String {
                 let p = x.trimmingCharacters(in: .whitespaces)
-                if let e = ItemDB.shared.exact(p) { return e.zh }
+                if let z = ItemDB.shared.exact(p)?.zh ?? ItemNames.zh(p) { return z }
                 return await machineTranslate(glossary.expandAbbreviations(p))
             }
             let a = await one(list[..<f.lowerBound]), b = await one(list[f.upperBound...])
@@ -332,11 +344,11 @@ public actor ChatTranslator {
         }
         let parts = list.split(whereSeparator: { $0 == "," || $0 == "+" }).map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
         func item(_ p: String) -> String? {
-            if p.count >= 4, let e = ItemDB.shared.exact(p) { return e.zh }
+            if p.count >= 4, let z = ItemDB.shared.exact(p)?.zh ?? ItemNames.zh(p) { return z }
             // “Rower 400k”“chain 999k ea”
             guard let m = p.range(of: "(?i)\\s+[0-9]+(\\.[0-9]+)?\\s?[km](\\s*(ea|each))?$", options: .regularExpression), let zh = Glossary.money(String(p[m]).trimmingCharacters(in: .whitespaces)),
-                  p[..<m.lowerBound].count >= 4, let e = ItemDB.shared.exact(String(p[..<m.lowerBound])) else { return nil }
-            return e.zh + " " + zh
+                  p[..<m.lowerBound].count >= 4, let z0 = ItemDB.shared.exact(String(p[..<m.lowerBound]))?.zh ?? ItemNames.zh(String(p[..<m.lowerBound])) else { return nil }
+            return z0 + " " + zh
         }
         if head.isEmpty, !parts.contains(where: { item($0) != nil }) { return nil }
         for p in parts { if let zh = item(p) { await flush(); out.append(zh) } else { plain.append(p) } }
@@ -344,10 +356,22 @@ public actor ChatTranslator {
         return head + verb + out.joined(separator: "、") + tail
     }
 
+    /// “得到 Cake ×20”“交出 Maple Leaf ×30”：表里、词表里都没有的物品名交给系统翻译，英文留在后面方便对游戏里的字
+    func itemLine(_ t: String) async -> String {
+        guard let r = t.range(of: "^(得到|交出) (.+?)( ×[0-9]+)?$", options: .regularExpression), r.lowerBound == t.startIndex else { return t }
+        let head = String(t.prefix(2)), rest = t.dropFirst(3)
+        let count = rest.range(of: " ×[0-9]+$", options: .regularExpression).map { String(rest[$0]) } ?? ""
+        let name = String(count.isEmpty ? rest : rest.dropLast(count.count))
+        guard name.range(of: "^[A-Za-z][A-Za-z0-9'’ .:-]{1,40}$", options: .regularExpression) != nil else { return t }
+        let zh = await machineTranslate(name)
+        guard !zh.isEmpty, zh != name, zh.range(of: "[A-Za-z]{3,}", options: .regularExpression) == nil else { return t }
+        return "\(head) \(zh)（\(name)）\(count)"
+    }
+
     public func translate(_ m: ChatMessage) async -> TranslatedMessage {
         // 1. 固定系统句子 / 句式（最准）
         if let t = glossary.matchFixed(m.raw) ?? glossary.matchTemplate(m.raw) {
-            return TranslatedMessage(message: m, chinese: t, source: "固定句式")
+            return TranslatedMessage(message: m, chinese: await itemLine(t), source: "固定句式")
         }
         let prefix: String
         switch m.kind {
@@ -358,6 +382,9 @@ public actor ChatTranslator {
         // 整行就是一个物品名（鼠标指向商店、背包里的名字）
         if m.kind == .system, let e = ItemDB.shared.exact(m.raw) {
             return TranslatedMessage(message: m, chinese: e.zh, source: "物品表")
+        }
+        if m.kind == .system, let z = ItemNames.zh(m.raw) {
+            return TranslatedMessage(message: m, chinese: z, source: "自己翻的物品名")
         }
         // 带频道标签的消息，内容部分也查一下固定句式（如 [Friend] xxx has logged in.）
         if m.kind != .system, let t = glossary.matchFixed(m.body) ?? glossary.matchTemplate(m.body) {

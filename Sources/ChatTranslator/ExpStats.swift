@@ -242,6 +242,8 @@ final class ExpMonitor: ObservableObject {
         if log.slots.count != model.potions.slots.count || iconsUsed != IconStore.shared.count { iconsUsed = IconStore.shared.count; log.apply(book, icons: IconStore.shared.colors()) }
         if log != model.potions { let fresh = log.slots.count != model.potions.slots.count; model.potions = log; if fresh || !used.isEmpty { savePotions() } }
         for u in used {
+            // 没认出是什么、也没有单价的格子（常是说明框压着认错的）：不算喝掉
+            if let s = model.potions.slots.first(where: { $0.id == u.id }), s.name.isEmpty, s.price == 0 { trace("potion: 第 \(u.id) 格少了 \(u.n) 个，不认识是什么，不记"); continue }
             model.usedPotion(u.id, u.n)
             if let e = model.potions.slots.first(where: { $0.id == u.id })?.en { bagBook.usedUp(e, u.n, at: Date()) }
             if u.cost > 0, let k = currentMap() { hunt.potion(u.cost, map: k); huntDirty = true }
@@ -409,7 +411,8 @@ final class ExpMonitor: ObservableObject {
     /// 公开版：以前逐像素读到过、或取过图标的东西
     private func seenNames() -> [String] {
         guard ItemDB.shared.items.isEmpty else { return [] }
-        return Array(Set(hunt.maps.values.flatMap(\.drops.keys)).union(IconStore.shared.names))
+        // 攻略站的物品名单（知识包）也算见过的：只读到半截、错一两个字母时能补全
+        return Array(Set(hunt.maps.values.flatMap(\.drops.keys)).union(IconStore.shared.names).union(ItemNames.all))
     }
     /// 普通识别读到的：同一条提示几帧读成不同样子，会被当成好几条。几秒内同名的只记一次（宁可少记）
     private var looseAt: [String: Date] = [:], spellSeen: [String: (name: String, at: Date)] = [:]
@@ -420,7 +423,7 @@ final class ExpMonitor: ObservableObject {
             return big(i, text, exact)
         }
         if exact {
-            guard let i = ItemDB.shared.pickedName(text, exact: true) else { return nil }
+            guard let i = ItemDB.shared.pickedName(text, exact: true, known: Array(Set(hunt.maps.values.flatMap(\.drops.keys)).union(IconStore.shared.names))) else { return nil }
             // 刚才这一条已经按认花的记过
             if let t = looseAt[i.name], now.timeIntervalSince(t) < 4 { looseAt[i.name] = nil; return nil }
             exactAt[i.name] = now
@@ -1244,7 +1247,7 @@ struct LootStrip: View {
     }
     var body: some View {
         let s = model.recent.summary(Date()), d = s.drops.sorted { ($0.value, $1.key) > ($1.value, $0.key) }
-        let used = s.used.sorted { $0.value > $1.value }.map { ($0.key, $0.value) }.filter { u in model.potions.slots.first { $0.id == u.0 }?.ignored != true }
+        let used = s.used.sorted { ($0.value, $1.key) > ($1.value, $0.key) }.map { ($0.key, $0.value) }.filter { u in model.potions.slots.first { $0.id == u.0 }?.ignored != true }
         // 像游戏背包的一条：左边图标（新捡的会发光），右边几种、杀几只；点右边展开
         HStack(alignment: .top, spacing: 6) {
             Group {
